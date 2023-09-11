@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 const CenteredFlex = styled(Stack)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
   flexDirection: "row",
 }));
 

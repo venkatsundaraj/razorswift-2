@@ -8,7 +8,7 @@ function CareerCards({ pathways }) {
   return (
     <Grid container spacing={3}>
       {pathways.map((pathway) => (
-        <CareerCardLists pathway={pathway} />
+        <CareerCardLists key={pathway.id} pathway={pathway} />
       ))}
     </Grid>
   );

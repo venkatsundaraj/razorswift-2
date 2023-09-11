@@ -43,10 +43,12 @@ const theme = createTheme({
     primaryPalette: {
       white: "#FFFFFF",
       black: "#3A3A3A",
+      primaryBlack: "#212121",
+      grey: "#707070",
     },
     violetPalette: {
       dark: "#672376",
-      light: "#DAB0E3",
+      light: "#EDD8F2",
       superLight: "#EDD8F2",
     },
   },
@@ -64,7 +66,7 @@ const theme = createTheme({
       fontFamily: bebasNeue.style.fontFamily,
     },
     h3: {
-      fontFamily: bebasNeue.style.fontFamily,
+      fontFamily: urbanist.style.fontFamily,
     },
     h2: {
       fontFamily: bebasNeue.style.fontFamily,
@@ -75,8 +77,20 @@ const theme = createTheme({
     body1: {
       fontFamily: urbanist.style.fontFamily,
     },
+    body2: {
+      fontFamily: urbanist.style.fontFamily,
+    },
+    body3: {
+      fontFamily: urbanist.style.fontFamily,
+    },
     subtitle1: {
       fontFamily: urbanist.style.fontFamily,
+      fontSize: "clamp(14px, 1.6vw, 24px)",
+      lineHeight: "1.5",
+    },
+    subtitle2: {
+      fontFamily: urbanist.style.fontFamily,
+      lineHeight: "1.5",
     },
   },
 
@@ -101,7 +115,7 @@ const theme = createTheme({
           subtitle1: "span",
           subtitle2: "span",
           body1: "p",
-          body2: "span",
+          body2: "p",
         },
       },
       styleOverrides: {},
@@ -120,11 +134,13 @@ const theme = createTheme({
   },
   // Breakpoints
   breakpoints: {
-    xs: 0,
-    sm: 767,
-    md: 992,
-    lg: 1200,
-    xl: 1536,
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
   },
 });
 

@@ -6,26 +6,27 @@ import styled from "@emotion/styled";
 
 const Heading = styled(Typography)(({ theme }) => ({
   lineHeight: 1.05,
-  fontSize: "32px",
-  textTransform: "uppercase",
+  fontSize: "24px",
+  textTransform: "capitalize",
   width: "fit-content",
+  fontWeight: 600,
   [theme.breakpoints.up("md")]: {
-    fontSize: "42px",
+    fontSize: "24px",
   },
   [theme.breakpoints.up("lg")]: {
-    fontSize: "56px",
+    fontSize: "34px",
   },
   [theme.breakpoints.up("xl")]: {
-    fontSize: "72px",
+    fontSize: "38px",
   },
 }));
 
-function PrimaryHeading({ children, ...props }) {
+function SecondaryHeading({ children, ...props }) {
   return (
-    <Heading variant="h2" {...props}>
+    <Heading variant="h3" {...props}>
       {children}
     </Heading>
   );
 }
 
-export default PrimaryHeading;
+export default SecondaryHeading;

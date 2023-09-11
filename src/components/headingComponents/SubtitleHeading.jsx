@@ -5,24 +5,25 @@ import styled from "@emotion/styled";
 const Paragraph = styled(Typography)(({ theme }) => ({
   fontSize: "14px",
   fontWeight: 500,
-  fontFamily: theme.typography.body1,
+  display: "block",
+  fontFamily: theme.typography.subtitle1,
   [theme.breakpoints.up("md")]: {
-    fontSize: "16px",
+    fontSize: "14px",
   },
   [theme.breakpoints.up("lg")]: {
-    fontSize: "18px",
+    fontSize: "16px",
   },
   [theme.breakpoints.up("xl")]: {
-    fontSize: "20px",
+    fontSize: "18px",
   },
 }));
 
-function ParagraphHeading({ children, ...props }) {
+function SubtitleHeading({ children, ...props }) {
   return (
-    <Paragraph variant="body1" {...props}>
+    <Paragraph variant="subtitle1" {...props}>
       {children}
     </Paragraph>
   );
 }
 
-export default ParagraphHeading;
+export default SubtitleHeading;

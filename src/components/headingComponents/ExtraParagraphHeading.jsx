@@ -3,26 +3,28 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Paragraph = styled(Typography)(({ theme }) => ({
-  fontSize: "14px",
-  fontWeight: 500,
+  fontSize: "18px",
+  fontWeight: 600,
+  lineHeight: 1.25,
+  textTransform: "capitalize",
   fontFamily: theme.typography.body1,
   [theme.breakpoints.up("md")]: {
-    fontSize: "16px",
+    fontSize: "20px",
   },
   [theme.breakpoints.up("lg")]: {
-    fontSize: "18px",
+    fontSize: "22px",
   },
   [theme.breakpoints.up("xl")]: {
-    fontSize: "20px",
+    fontSize: "28px",
   },
 }));
 
-function ParagraphHeading({ children, ...props }) {
+function ExtraParagraphHeading({ children, ...props }) {
   return (
-    <Paragraph variant="body1" {...props}>
+    <Paragraph variant="body2" {...props}>
       {children}
     </Paragraph>
   );
 }
 
-export default ParagraphHeading;
+export default ExtraParagraphHeading;

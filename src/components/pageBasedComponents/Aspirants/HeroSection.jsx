@@ -44,7 +44,7 @@ function HeroSection() {
             {heroSectionData.heading.primary}
           </SuperText>
         </CenteredFlexComponent>
-        <CenteredFlexComponent sx={{ gap: "10px" }}>
+        <CenteredFlexComponent sx={{ gap: "10px", justifyContent: "center" }}>
           <ExtraSuperText component="h1" sx={{ textTransform: "uppercase" }}>
             {heroSectionData.heading.secondary}
           </ExtraSuperText>
@@ -60,7 +60,6 @@ function HeroSection() {
           />
         </CenteredFlexComponent>
         <ParagraphHeading
-          varient="body1"
           align="center"
           sx={{ maxWidth: "400px", color: "primaryPalette.black" }}
         >

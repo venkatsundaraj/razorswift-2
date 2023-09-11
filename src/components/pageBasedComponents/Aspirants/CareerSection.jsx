@@ -23,7 +23,7 @@ function CareerSection() {
             alignItems: "start",
             justifyContent: "space-between",
             flexDirection: "column",
-            padding: theme.spacing(2, 0),
+            margin: theme.spacing(2, 0, 4, 0),
             [theme.breakpoints.up("md")]: {
               flexDirection: "row",
               alignItems: "center",
@@ -36,11 +36,12 @@ function CareerSection() {
             {CareerData.description}
           </ParagraphHeading>
           <Button
-            disableFocusRipple="true"
             nowrap="true"
+            size="large"
             sx={{
               backgroundColor: "transparent",
               color: "primaryPalette.black",
+              textTransform: "capitalize",
               textDecoration: "underline",
               "&:hover": {
                 backgroundColor: "transparent",
@@ -48,7 +49,7 @@ function CareerSection() {
               },
             }}
           >
-            Apply Filter
+            Apply Filters
           </Button>
         </Stack>
         <CareerCards pathways={CareerData.pathways} />
