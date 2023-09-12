@@ -12,6 +12,10 @@ const DropdownBody = ({ contchange }) => {
     width: "500px",
     height: "initial",
   };
+  const imgsvector = {
+    width: "clamp(300px, 30.1vw, 500px)",
+    height: "auto",
+  };
 
   return (
     <Box
@@ -31,7 +35,7 @@ const DropdownBody = ({ contchange }) => {
         pr: { xs: "15px", lg: "64px" },
       }}
     >
-      <Box
+      <Container
         sx={{
           display: "flex",
           flexDirection: "row",
@@ -47,8 +51,8 @@ const DropdownBody = ({ contchange }) => {
               alignItems: { xs: "center", md: "flex-start", lg: "flex-start" },
             }}
           >
-            <Box sx={{ width: { xs: "60vw" } }}>
-              <Image src={homePageImagePaths.aspiratvect} />
+            <Box sx={{ width: { xs: "100vw" } }}>
+              <Image style={imgsvector} src={homePageImagePaths.aspiratvect} />
             </Box>
             <Box sx={{ width: { xs: "100vw" } }}>
               <Typography
@@ -106,7 +110,7 @@ const DropdownBody = ({ contchange }) => {
         <Box sx={{ display: { xs: "none", md: "block", lg: "block" } }}>
           <Image style={imgs} src={homePageImagePaths.internmain} />
         </Box>
-      </Box>
+      </Container>
       {/* second */}
       <Whattoexp contchangeone={contchange} />
     </Box>

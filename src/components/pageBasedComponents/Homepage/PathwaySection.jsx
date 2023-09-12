@@ -94,7 +94,7 @@ export default function PathwaySection() {
     <Box
       sx={{
         backgroundColor: "primary.main",
-        padding: { xs: "15px", lg: "0 50px 20px" },
+        padding: { xs: "15px", lg: "20px 50px 20px" },
       }}
     >
       <Typography
@@ -161,7 +161,7 @@ export default function PathwaySection() {
                       : index === data.length - 1
                       ? "0px 0px 40px 40px"
                       : "0",
-                  width: { xs: "325px", sm: "730px", md: "100%", lg: "100%" },
+                  width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
                 }}
                 expanded={expanded === `panel${index}`} // Use index to identify each accordion
                 onChange={handleChange(`panel${index}`)} // Use index to identify each accordion
@@ -174,6 +174,7 @@ export default function PathwaySection() {
                         : index === data.length - 1
                         ? "0px 0px 40px 40px"
                         : "0",
+                    marginBottom: "10px",
                   }}
                   aria-controls={`panel${index}d-content`} // Use index to identify each accordion
                   id={`panel${index}d-header`} // Use index to identify each accordion
@@ -193,7 +194,17 @@ export default function PathwaySection() {
                     {item.title}
                   </Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{ border: "none", height: "40vh" }}>
+                <AccordionDetails
+                  sx={{
+                    border: "none",
+                    height: {
+                      sm: "clamp(248px, 19.1vw, 256px)",
+                      md: "40vh",
+                      lg: "40vh",
+                      xl: "40vh",
+                    },
+                  }}
+                >
                   <Box
                     sx={{
                       display: "flex",
@@ -255,7 +266,7 @@ export default function PathwaySection() {
                       : index === datatwo.length - 1
                       ? "0px 0px 40px 40px"
                       : "0",
-                  width: { xs: "325px", sm: "730px", md: "100%", lg: "100%" },
+                  width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
                 }}
                 expanded={expandedone === `panelone${index}`} // Use index to identify each accordion
                 onChange={handleChangeone(`panelone${index}`)} // Use index to identify each accordion
@@ -269,6 +280,7 @@ export default function PathwaySection() {
                         ? "0px 0px 40px 40px"
                         : "0",
                     backgroundColor: "primary.accord",
+                    marginBottom: "10px",
                   }}
                   aria-controls={`panelone${index}d-content`} // Use index to identify each accordion
                   id={`panelone${index}d-header`} // Use index to identify each accordion
@@ -287,7 +299,17 @@ export default function PathwaySection() {
                     {item.title}
                   </Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{ border: "none", height: "40vh" }}>
+                <AccordionDetails
+                  sx={{
+                    border: "none",
+                    height: {
+                      sm: "clamp(248px, 19.1vw, 256px)",
+                      md: "40vh",
+                      lg: "40vh",
+                      xl: "40vh",
+                    },
+                  }}
+                >
                   <Box
                     sx={{
                       display: "flex",

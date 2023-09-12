@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
+import { Container } from "@mui/material";
 const Whattoexp = ({ contchangeone }) => {
   const dropdata = contchangeone.secondec;
   const imgsize = {
@@ -11,7 +12,7 @@ const Whattoexp = ({ contchangeone }) => {
   };
   return (
     <>
-      <Box
+      <Container
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row", lg: "row" },
@@ -60,8 +61,8 @@ const Whattoexp = ({ contchangeone }) => {
                 <Typography
                   variant="body1"
                   sx={{
-                    fontSize: "clamp(22px,1.7vw,28px)",
-                    fontWeight: "500",
+                    fontSize: "clamp(19px,1.5vw,20px)",
+                    fontWeight: "600",
                     lineHeight: 1.0,
                     mb: "5%",
                   }}
@@ -81,7 +82,7 @@ const Whattoexp = ({ contchangeone }) => {
             </Box>
           ))}
         </Box>
-      </Box>
+      </Container>
     </>
   );
 };

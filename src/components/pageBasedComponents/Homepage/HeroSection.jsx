@@ -21,10 +21,12 @@ const HeroSection = () => {
   };
   const firstsec = {
     offscreen: {
+      opacity: 0,
       rotate: 0,
       x: -800,
     },
     onscreen: {
+      opacity: 1,
       rotate: [0, 20, -20, 20, 0],
       x: 0,
       transition: {
@@ -77,7 +79,13 @@ const HeroSection = () => {
   return (
     <Stack
       sx={{
-        height: "100vh",
+        height: {
+          xs: "100vh",
+          sm: "41vh",
+          md: "100vh",
+          lg: "100vh",
+          xl: "100vh",
+        },
         justifyContent: "space-between",
         overflowX: "hidden",
         overflowY: "hidden",
@@ -87,12 +95,12 @@ const HeroSection = () => {
         sx={{
           zIndex: "1",
           marginTop: {
-            lg: "150px",
+            lg: "clamp(150px, 11.6vw, 250px)",
             md: "clamp(150px, 11.6vw, 180px)",
             sm: "160px",
             xs: "160px",
           },
-          marginLeft: "30px",
+          marginLeft: "25px",
         }}
       >
         <Stack sx={{ mb: 2 }}>
@@ -110,6 +118,7 @@ const HeroSection = () => {
                   color: "primary.mainone",
                   lineHeight: "1.0",
                   fontSize: {
+                    xl: "clamp(110px, 8.5vw, 133px)",
                     lg: "clamp(70px, 5.4vw, 100px)",
                     md: "clamp(70px, 5.4vw, 100px)",
                     sm: "40px",
@@ -142,6 +151,7 @@ const HeroSection = () => {
                   lineHeight: "1.0",
 
                   fontSize: {
+                    xl: "clamp(110px, 8.5vw, 133px)",
                     lg: "clamp(70px, 5.4vw, 100px)",
                     md: "clamp(70px, 5.4vw, 100px)",
                     sm: "40px",
@@ -175,7 +185,7 @@ const HeroSection = () => {
                 mb: 2,
 
                 fontSize: {
-                  lg: "22px",
+                  lg: "28px",
                   md: "28px",
                   xs: "18px",
                 },
@@ -244,7 +254,20 @@ const HeroSection = () => {
             </Stack>
           </motion.div>
         </motion.div>
-        <Stack sx={{ position: "absolute", bottom: "50px", right: "0" }}>
+        <Stack
+          sx={{
+            position: "absolute",
+            bottom: {
+              xs: "50px",
+              sm: "745px",
+              md: "50px",
+              lg: "50px",
+              xl: "50px",
+            },
+
+            right: "0",
+          }}
+        >
           <Box component="span">
             <Image style={banimg} src={homePageImagePaths.bannerImage} />
           </Box>

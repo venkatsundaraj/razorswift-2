@@ -16,7 +16,7 @@ const DemoSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: "100vh",
+        height: { xs: "100vh", sm: "50vh", md: "100vh" },
         // border: "1px solid",
         justifyContent: "center",
       }}
@@ -87,7 +87,7 @@ const DemoSection = () => {
           </Box>
         </Box>
         <Image
-          style={{ width: "clamp(300px, 23.1vw, 500px)", height: "auto" }}
+          style={{ width: "clamp(300px, 26.1vw, 500px)", height: "auto" }}
           src={homePageImagePaths.fivemen}
         />
       </Box>
