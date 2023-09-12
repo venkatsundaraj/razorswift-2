@@ -169,3 +169,92 @@ export const dropDownBodyData = [
     ],
   },
 ];
+
+export const discoverSectionData = {
+  title: "discover, learn, grow",
+
+  buttonTitle: "View All Blogs",
+  cards: [
+    {
+      id: 1,
+      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+      title: "Resume Design: DO's and DON'T's to getting hired.",
+    },
+    {
+      id: 2,
+      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+      title: "Resume Design: DO's and DON'T's to getting hired.",
+    },
+    {
+      id: 3,
+      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+      title: "Resume Design: DO's and DON'T's to getting hired.",
+    },
+  ],
+};
+
+export const fastrackSectionData = {
+  title: "FASTRACK YOUR CAREER",
+  image: aspirantPageImagePaths.fastrackSection.runnerImage,
+  description:
+    "We connect aspirants with employers, offering guidance, mentorship from industry experts, insights on skill expectations, and access to upskilling opportunities.",
+  cardsRight: [
+    {
+      id: 1,
+      percentage: "93%",
+      bgColor: "#EBC8DD",
+      description:
+        "Millennials find skill development crucial for their career.",
+    },
+    {
+      id: 2,
+      percentage: "93%",
+      bgColor: "#FFE3E3",
+      description:
+        "Millennials find skill development crucial for their career.",
+    },
+    {
+      id: 3,
+      percentage: "93%",
+      bgColor: "#EBC8DD",
+      description:
+        "Millennials find skill development crucial for their career.",
+    },
+  ],
+
+  cardsLeft: [
+    {
+      id: 1,
+      percentage: "93%",
+      bgColor: "#FFCCC9",
+      description:
+        "Millennials find skill development crucial for their career.",
+    },
+    {
+      id: 2,
+      percentage: "93%",
+      bgColor: "#EDD8F2",
+      description:
+        "Millennials find skill development crucial for their career.",
+    },
+    {
+      id: 3,
+      percentage: "93%",
+      bgColor: "#FFE3E3",
+      description:
+        "Millennials find skill development crucial for their career.",
+    },
+  ],
+};
+
+export const readyToStartData = {
+  title: "READY TO GET STARTED?",
+  description: "Its easy. Scan this QR code.",
+  mainImage: aspirantPageImagePaths.getStartedSection.questionTag,
+};
+
+export const aboutUsData = {
+  title: "About Us",
+  description:
+    "We are a machine learning based dynamic ‘digital marketplace’ that provides the aspirant talent pool to stay continually competitive relative to the hiring landscape in India. We do this by harnessing our comprehensive knowledge partner ecosystem, which provides for comprehensive mentorship, learning and career progression advisory. We use a unique ‘affinity algorithm’ which provides for identification, assessment and enablement modules resulting in significant process efficiency in curation and hiring, whilst saving significant time and cost for businesses and aspirants.",
+};

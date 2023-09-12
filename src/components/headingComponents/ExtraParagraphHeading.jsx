@@ -11,12 +11,6 @@ const Paragraph = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     fontSize: "20px",
   },
-  [theme.breakpoints.up("lg")]: {
-    fontSize: "22px",
-  },
-  [theme.breakpoints.up("xl")]: {
-    fontSize: "28px",
-  },
 }));
 
 function ExtraParagraphHeading({ children, ...props }) {

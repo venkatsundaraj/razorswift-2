@@ -3,6 +3,10 @@ import HeroSection from "@/components/pageBasedComponents/Aspirants/HeroSection"
 import { Box } from "@mui/material";
 import CareerSection from "@/components/pageBasedComponents/Aspirants/CareerSection";
 import DropdownSection from "@/components/pageBasedComponents/Aspirants/DropdownSection";
+import DiscoverSection from "@/components/pageBasedComponents/Aspirants/DiscoverSection";
+import FastrackSection from "@/components/pageBasedComponents/Aspirants/FastrackSection";
+import GetStartedSection from "@/components/pageBasedComponents/Aspirants/GetStartedSection";
+import AboutUsSection from "@/components/pageBasedComponents/Aspirants/AboutUsSection";
 
 export const metadata = {
   title: "Aspirants | Razorswift",
@@ -14,6 +18,10 @@ function Aspirants() {
       <HeroSection />
       <CareerSection />
       <DropdownSection />
+      <DiscoverSection />
+      <FastrackSection />
+      <GetStartedSection />
+      <AboutUsSection />
     </Box>
   );
 }

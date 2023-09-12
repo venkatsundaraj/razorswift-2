@@ -22,6 +22,13 @@ const aspirantPageImagePaths = {
       icon4: require("/public/images/Aspirants/dropdown-8.svg").default,
     },
   },
+  fastrackSection: {
+    runnerImage: require("/public/images/Aspirants/runner.svg").default,
+  },
+  getStartedSection: {
+    questionTag: require("/public/images/Aspirants/question-vector.svg")
+      .default,
+  },
 };
 
 export default aspirantPageImagePaths;
