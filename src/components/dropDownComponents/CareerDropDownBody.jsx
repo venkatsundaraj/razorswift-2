@@ -63,6 +63,7 @@ function CareerDropDownBody({ dropDownBodyData }) {
           <Grid item xs={12} md={6} lg={6}>
             <Stack>
               <Image
+                alt={dropDownBodyData.title}
                 src={dropDownBodyData.image}
                 style={{
                   width: "100%",
