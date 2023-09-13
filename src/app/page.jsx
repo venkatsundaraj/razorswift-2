@@ -9,7 +9,7 @@ import DemoSection from "../components/pageBasedComponents/Homepage/DemoSection"
 import Footer from "../components/pageBasedComponents/Homepage/Footer";
 const page = () => {
   return (
-    <div className="Topcontainer">
+    <main className="Topcontainer">
       <Navbar />
       <HeroSection />
       <DropdownSection />
@@ -17,7 +17,7 @@ const page = () => {
       <ExploreSection />
       <DemoSection />
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -24,6 +24,7 @@ function CareerDropDownBody({ dropDownBodyData }) {
           sx={{ padding: (theme) => theme.spacing(0, 2) }}
           container
           spacing={2}
+          alignItems="center"
         >
           <Grid item xs={12} md={6} lg={6}>
             <Stack direction="column" alignItems="start" gap={2}>
@@ -88,7 +89,24 @@ function CareerDropDownBody({ dropDownBodyData }) {
               What to expect ?
             </ExtraParagraphHeading>
           </Grid>
-          <Grid item xs={12} md={9}>
+          <Grid
+            item
+            xs={12}
+            md={9}
+            sx={{
+              position: "relative",
+              "&::before": {
+                content: `""`,
+                position: "absolute",
+                width: "2px",
+                left: "-80px",
+                top: "50%",
+                transform: "translate(0,-50%)",
+                height: { sm: "0%", lg: "50%" },
+                backgroundColor: "violetPalette.dark",
+              },
+            }}
+          >
             <Grid container spacing={2}>
               {dropDownBodyData.whatToExpect.map((item) => (
                 <Grid item xs={12} md={6} key={item.id}>
@@ -96,7 +114,7 @@ function CareerDropDownBody({ dropDownBodyData }) {
                     sx={{
                       borderRadius: 2,
                       display: "flex",
-                      minHeight: "120px",
+                      minHeight: "100%",
                       alignItems: "center",
                       padding: 2,
                       gap: 2,

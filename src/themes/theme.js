@@ -133,6 +133,11 @@ const theme = createTheme({
         },
       },
     },
+    MuiMenuPaper: {
+      styleOverrides: {
+        borderRadius: "24px",
+      },
+    },
   },
   // Breakpoints
   breakpoints: {

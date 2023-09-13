@@ -12,8 +12,9 @@ export const heroSectionData = {
 
 export const TickerBoxData = {
   slidingValue: [
-    "Check out the newly added Python pathway",
-    "Check out the newly added Python pathway",
+    { id: 1, title: "Check out the newly added Python pathway1" },
+    { id: 2, title: "Check out the newly added Python pathway2" },
+    { id: 3, title: "Check out the newly added Python pathway3" },
   ],
 };
 

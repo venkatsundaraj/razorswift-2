@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { Select, MenuItem, FormControl, NativeSelect } from "@mui/material";
+import {
+  Select,
+  MenuItem,
+  FormControl,
+  NativeSelect,
+  InputLabel,
+  Typography,
+} from "@mui/material";
 import SecondaryHeading from "../headingComponents/SecondaryHeading";
 
 function CareerDropDown({ dropDownData, changeHandler }) {
@@ -15,8 +22,8 @@ function CareerDropDown({ dropDownData, changeHandler }) {
     <FormControl sx={{ m: 1, minWidth: 120 }}>
       <Select
         value={profession}
-        labelId=""
-        id="select"
+        labelId="demo-simple-select-filled-label"
+        id="demo-simple-select-filled"
         onChange={handleChange}
         displayEmpty
         sx={{
@@ -24,6 +31,7 @@ function CareerDropDown({ dropDownData, changeHandler }) {
           boxShadow: 2,
           borderRadius: (theme) => theme.spacing(5),
           color: "violetPalette.dark",
+          position: "relative",
         }}
       >
         {dropDownData?.map((item) => (
@@ -31,11 +39,21 @@ function CareerDropDown({ dropDownData, changeHandler }) {
             key={item.id}
             name={item.title}
             disableRipple
+            divider={true}
             value={item.id}
-            sx={{ padding: 1 }}
+            sx={{
+              padding: 2,
+              textAlign: "center",
+              textAlign: "center",
+            }}
           >
             <SecondaryHeading
-              sx={{ color: "primaryPalette.dark", fontWeight: "600" }}
+              style={{ width: "100%" }}
+              sx={{
+                color: "primaryPalette.dark",
+                fontWeight: "600",
+                textAlign: "center",
+              }}
             >
               {item.title}
             </SecondaryHeading>

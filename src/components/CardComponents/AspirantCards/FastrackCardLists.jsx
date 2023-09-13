@@ -9,10 +9,10 @@ function FastrackCardLists({ lists, ...props }) {
     <>
       {lists.map((item) => (
         <Box
-          id={item.id}
+          key={item.id}
           sx={{
             backgroundColor: `${item.bgColor}`,
-            padding: 1,
+            padding: 2,
             borderRadius: 2,
           }}
         >
