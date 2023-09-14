@@ -1,7 +1,7 @@
 const dropDownData = [
   {
     id: "1",
-    title: "Aspiring for a dream carrer ?",
+    title: "Aspiring for a dream career ?",
   },
   {
     id: "2",
