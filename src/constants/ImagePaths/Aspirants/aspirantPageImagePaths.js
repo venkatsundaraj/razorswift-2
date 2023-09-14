@@ -3,6 +3,9 @@ const aspirantPageImagePaths = {
     icon1: require("/public/images/Aspirants/aspirant-home-icon.png").default,
     icon2: require("/public/images/Aspirants/aspirant-home-icon-1.png").default,
   },
+  tickerSection: {
+    arrow: require("/public/images/Aspirants/Arrow.svg").default,
+  },
   dropDownSection: {
     mainImage1: require("/public/images/Aspirants/college-students.png")
       .default,

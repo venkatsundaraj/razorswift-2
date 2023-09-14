@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   List,
   ListItem,
@@ -10,6 +12,7 @@ import {
 import styled from "@emotion/styled";
 import { TickerBoxData } from "@/constants/Aspirants/aspirantPageData";
 import ParagraphHeading from "../headingComponents/ParagraphHeading";
+import ExtraParagraphHeading from "../headingComponents/ExtraParagraphHeading";
 
 const TickerBox = styled(List)(({ theme }) => ({
   width: "100%",
@@ -29,7 +32,7 @@ function TickerComponent() {
       setValue((prev) => {
         return prev >= courses.length - 1 ? 0 : prev + 1;
       });
-    }, 1000);
+    }, 2800);
 
     return () => {
       clearTimeout(timeOut);
@@ -38,48 +41,60 @@ function TickerComponent() {
 
   return (
     <TickerBox>
-      {courses.map((item, itemIndex) => {
-        let position = "slide nextSlide";
-        if (value === itemIndex) {
-          position = "slide activeSlide";
-        }
+      <Box
+        sx={{
+          width: "550px",
+          height: "100%",
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          overflow: "hidden",
+        }}
+      >
+        {courses.map((item, itemIndex) => {
+          let position = "slide nextSlide";
+          if (value === itemIndex) {
+            position = "slide activeSlide";
+          }
 
-        if (
-          itemIndex === value - 1 ||
-          (value === 0 && itemIndex === courses.length - 1)
-        ) {
-          position = "slide lastSlide";
-        }
-        return (
-          <Box
-            sx={{
-              position: "relative",
-              left: "0",
-              top: "0",
-              position: "relative",
-              overflow: "hidden",
-              width: "300px",
-              backgroundCcolor: "blueviolet",
-              height: "100%",
-            }}
-          >
-            <ParagraphHeading
-              key={item.id}
+          if (
+            itemIndex === value - 1 ||
+            (value === 0 && itemIndex === courses.length - 1)
+          ) {
+            position = "slide lastSlide";
+          }
+
+          return (
+            <ExtraParagraphHeading
               className={position}
-              align="center"
+              key={item.id}
               sx={{
-                width: "100%",
-                left: "50%",
                 position: "absolute",
-                transform: "translate(-50%,0)",
+                top: { xs: "0", md: "22.5%" },
+                textAlign: "center",
+                cursor: "pointer",
+                px: "20px",
+                width: "100%",
+                color: "primaryPalette.black",
               }}
+              align="center"
               variant="body1"
             >
-              {item.title}
-            </ParagraphHeading>
-          </Box>
-        );
-      })}
+              <Link
+                style={{ textDecoration: "none", color: "inherit" }}
+                href="/"
+              >
+                {item.title}
+              </Link>
+              <Image
+                style={{ marginLeft: "20px" }}
+                alt={item.title}
+                src={TickerBoxData.tickerArrow}
+              />
+            </ExtraParagraphHeading>
+          );
+        })}
+      </Box>
     </TickerBox>
   );
 }
