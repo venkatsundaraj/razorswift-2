@@ -22,7 +22,7 @@ const ExploreSection = () => {
         display: "flex",
         flexDirection: { xs: "column", md: "row", lg: "row" },
         alignItems: "center",
-        height: { xs: "100vh", sm: "50vh", md: "100vh" },
+        height: { xs: "100vh", sm: "50vh", md: "100vh", xl: "65vh" },
         pl: "15px",
         pr: "15px",
         justifyContent: {
@@ -72,7 +72,7 @@ const ExploreSection = () => {
             mb: "3%",
 
             textAlign: "justify",
-            width: { xs: "300px", sm: "700px", md: "100%", lg: "100%" },
+            width: { xs: "100%", sm: "700px", md: "100%", lg: "100%" },
           }}
         >
           {data[0].description}
@@ -88,7 +88,7 @@ const ExploreSection = () => {
             textAlign: "justify",
             mb: "4%",
 
-            width: { xs: "300px", sm: "700px", md: "100%", lg: "100%" },
+            width: { xs: "100%", sm: "700px", md: "100%", lg: "100%" },
           }}
         >
           {data[0].descriptiontwo}
