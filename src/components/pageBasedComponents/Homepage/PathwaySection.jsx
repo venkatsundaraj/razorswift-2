@@ -7,6 +7,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
+import { Grid } from "@mui/material";
 import data from "../../../constants/Homepage/pathway.js";
 import datatwo from "../../../constants/Homepage/pathwaytwo.js";
 import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
@@ -108,7 +109,7 @@ export default function PathwaySection() {
       >
         RAZORSWIFT PATHWAYS
       </Typography>
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row", lg: "row" },
@@ -116,99 +117,207 @@ export default function PathwaySection() {
           gap: "56px",
           marginTop: "20px",
         }}
-      >
-        {/* first sec*/}
-        <Box sx={{ width: { xs: "100vw", md: "35vw", lg: "35vw" } }}>
-          <Typography
-            variant="body1"
-            style={fontaspi}
-            sx={{ color: "common.white" }}
-          >
-            Aspirants
-          </Typography>
-          <Typography
-            variant="body1"
-            style={fontaspitwo}
-            sx={{ color: "common.white" }}
-          >
-            Be a niche specialist to achieve your potential
-          </Typography>
-          <Typography
-            variant="body1"
-            style={fontaspithree}
-            sx={{
-              color: "common.white",
-              backgroundColor: "primary.purp",
-              width: "fit-content",
-              padding: "5px 15px",
-              borderRadius: "50px",
-              margin: "15px 0 15px 0",
-              cursor: "pointer",
-            }}
-          >
-            Choose your pathway now
-          </Typography>
+      > */}
+      {/* first sec*/}
+      <Grid container spacing={10}>
+        <Grid item sx={12} lg={6}>
+          <Box sx={{}}>
+            <Typography
+              variant="body1"
+              style={fontaspi}
+              sx={{ color: "common.white" }}
+            >
+              Aspirants
+            </Typography>
+            <Typography
+              variant="body1"
+              style={fontaspitwo}
+              sx={{ color: "common.white" }}
+            >
+              Be a niche specialist to achieve your potential
+            </Typography>
+            <Typography
+              variant="body1"
+              style={fontaspithree}
+              sx={{
+                color: "common.white",
+                backgroundColor: "primary.purp",
+                width: "fit-content",
+                padding: "5px 15px",
+                borderRadius: "50px",
+                margin: "15px 0 15px 0",
+                cursor: "pointer",
+              }}
+            >
+              Choose your pathway now
+            </Typography>
 
-          {data.map(
-            (
-              item,
-              index // Add index parameter to map
-            ) => (
-              <Accordion
-                key={index} // Add a unique key for each accordion
-                sx={{
-                  backgroundColor: "primary.dropdown",
-                  borderRadius:
-                    index === 0
-                      ? "40px 40px 0 0"
-                      : index === data.length - 1
-                      ? "0px 0px 40px 40px"
-                      : "0",
-                  width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
-                  // paddingTop: "25px",
-                  // paddingBottom: "25px",
-                }}
-                expanded={expanded === `panel${index}`} // Use index to identify each accordion
-                onChange={handleChange(`panel${index}`)} // Use index to identify each accordion
-              >
-                <Box sx={{ padding: "20px 0" }}>
-                  <AccordionSummary
-                    sx={{
-                      borderRadius:
-                        index === 0
-                          ? "30px 30px 0 0"
-                          : index === data.length - 1
-                          ? "0px 0px 40px 40px"
-                          : "0",
-                      height: "0px",
-                      position: "relative",
-                    }}
-                    aria-controls={`panel${index}d-content`} // Use index to identify each accordion
-                    id={`panel${index}d-header`} // Use index to identify each accordion
-                  >
-                    <Typography
-                      variant="body1"
+            {data.map(
+              (
+                item,
+                index // Add index parameter to map
+              ) => (
+                <Accordion
+                  key={index} // Add a unique key for each accordion
+                  sx={{
+                    backgroundColor: "primary.dropdown",
+                    borderRadius:
+                      index === 0
+                        ? "40px 40px 0 0"
+                        : index === data.length - 1
+                        ? "0px 0px 40px 40px"
+                        : "0",
+                    width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
+                    // paddingTop: "25px",
+                    // paddingBottom: "25px",
+                  }}
+                  expanded={expanded === `panel${index}`} // Use index to identify each accordion
+                  onChange={handleChange(`panel${index}`)} // Use index to identify each accordion
+                >
+                  <Box sx={{ padding: "20px 0" }}>
+                    <AccordionSummary
                       sx={{
-                        fontSize: {
-                          lg: "clamp(25px, 2vw, 36px)",
-                          md: "clamp(22px, 2vw, 36px)",
-                          sm: "20px",
-                          xs: "20px",
-                        },
-                        margin:
+                        borderRadius:
                           index === 0
-                            ? "20px 0"
+                            ? "30px 30px 0 0"
                             : index === data.length - 1
-                            ? "20px 0"
+                            ? "0px 0px 40px 40px"
                             : "0",
+                        height: "0px",
+                        position: "relative",
                       }}
-                      style={fonttitle}
+                      aria-controls={`panel${index}d-content`} // Use index to identify each accordion
+                      id={`panel${index}d-header`} // Use index to identify each accordion
                     >
-                      {item.title}
-                    </Typography>
-                  </AccordionSummary>
-                </Box>
-                <Box>
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          fontSize: {
+                            lg: "clamp(25px, 2vw, 36px)",
+                            md: "clamp(22px, 2vw, 36px)",
+                            sm: "20px",
+                            xs: "20px",
+                          },
+                          margin:
+                            index === 0
+                              ? "20px 0"
+                              : index === data.length - 1
+                              ? "20px 0"
+                              : "0",
+                        }}
+                        style={fonttitle}
+                      >
+                        {item.title}
+                      </Typography>
+                    </AccordionSummary>
+                  </Box>
+                  <Box>
+                    <AccordionDetails
+                      sx={{
+                        border: "none",
+                        padding: "0",
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-end",
+                        }}
+                      >
+                        <Typography
+                          variant="body1"
+                          sx={{ padding: "10px 10px 0 20px" }}
+                          style={fontdes}
+                        >
+                          {item.description}
+                        </Typography>
+                        <Box sx={{ marginTop: { lg: "-30px" } }}>
+                          <Image style={accordimg} src={item.img} />
+                        </Box>
+                      </Box>
+                    </AccordionDetails>
+                  </Box>
+                </Accordion>
+              )
+            )}
+          </Box>
+        </Grid>
+        {/* second sec*/}
+        <Grid item sx={12} lg={6}>
+          <Box sx={{}}>
+            <Typography style={fontaspi} sx={{ color: "common.white" }}>
+              Businesses
+            </Typography>
+            <Typography style={fontaspitwo} sx={{ color: "common.white" }}>
+              Standardise assessments and training.
+            </Typography>
+            <Typography
+              style={fontaspithree}
+              sx={{
+                color: "common.white",
+                backgroundColor: "primary.purp",
+                width: "fit-content",
+                padding: "5px 15px",
+                borderRadius: "50px",
+                margin: "15px 0 15px 0",
+                cursor: "pointer",
+              }}
+            >
+              Craft your pathway now
+            </Typography>
+            {datatwo.map(
+              (
+                item,
+                index // Add index parameter to map
+              ) => (
+                <Accordion
+                  key={index} // Add a unique key for each accordion
+                  sx={{
+                    backgroundColor: "primary.accord",
+                    borderRadius:
+                      index === 0
+                        ? "40px 40px 0 0"
+                        : index === datatwo.length - 1
+                        ? "0px 0px 40px 40px"
+                        : "0",
+                    width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
+                    // paddingTop: "25px",
+                    // paddingBottom: "25px",
+                  }}
+                  expanded={expandedone === `panelone${index}`} // Use index to identify each accordion
+                  onChange={handleChangeone(`panelone${index}`)} // Use index to identify each accordion
+                >
+                  <Box sx={{ padding: "20px 0" }}>
+                    <AccordionSummary
+                      sx={{
+                        borderRadius:
+                          index === 0
+                            ? "30px 30px 0 0"
+                            : index === datatwo.length - 1
+                            ? "0px 0px 40px 40px"
+                            : "0",
+                        backgroundColor: "primary.accord",
+                        height: "0px",
+                      }}
+                      aria-controls={`panelone${index}d-content`} // Use index to identify each accordion
+                      id={`panelone${index}d-header`} // Use index to identify each accordion
+                    >
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            lg: "clamp(25px, 2vw, 36px)",
+                            md: "clamp(22px, 2vw, 36px)",
+                            sm: "20px",
+                            xs: "20px",
+                          },
+                        }}
+                        style={fonttitle}
+                      >
+                        {item.title}
+                      </Typography>
+                    </AccordionSummary>
+                  </Box>
                   <AccordionDetails
                     sx={{
                       border: "none",
@@ -223,7 +332,6 @@ export default function PathwaySection() {
                       }}
                     >
                       <Typography
-                        variant="body1"
                         sx={{ padding: "10px 10px 0 20px" }}
                         style={fontdes}
                       >
@@ -234,114 +342,13 @@ export default function PathwaySection() {
                       </Box>
                     </Box>
                   </AccordionDetails>
-                </Box>
-              </Accordion>
-            )
-          )}
-        </Box>
-        {/* second sec*/}
-        <Box sx={{ width: { xs: "100vw", md: "35vw", lg: "35vw" } }}>
-          <Typography style={fontaspi} sx={{ color: "common.white" }}>
-            Businesses
-          </Typography>
-          <Typography style={fontaspitwo} sx={{ color: "common.white" }}>
-            Standardise assessments and training.
-          </Typography>
-          <Typography
-            style={fontaspithree}
-            sx={{
-              color: "common.white",
-              backgroundColor: "primary.purp",
-              width: "fit-content",
-              padding: "5px 15px",
-              borderRadius: "50px",
-              margin: "15px 0 15px 0",
-              cursor: "pointer",
-            }}
-          >
-            Craft your pathway now
-          </Typography>
-          {datatwo.map(
-            (
-              item,
-              index // Add index parameter to map
-            ) => (
-              <Accordion
-                key={index} // Add a unique key for each accordion
-                sx={{
-                  backgroundColor: "primary.accord",
-                  borderRadius:
-                    index === 0
-                      ? "40px 40px 0 0"
-                      : index === datatwo.length - 1
-                      ? "0px 0px 40px 40px"
-                      : "0",
-                  width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
-                  // paddingTop: "25px",
-                  // paddingBottom: "25px",
-                }}
-                expanded={expandedone === `panelone${index}`} // Use index to identify each accordion
-                onChange={handleChangeone(`panelone${index}`)} // Use index to identify each accordion
-              >
-                <Box sx={{ padding: "20px 0" }}>
-                  <AccordionSummary
-                    sx={{
-                      borderRadius:
-                        index === 0
-                          ? "30px 30px 0 0"
-                          : index === datatwo.length - 1
-                          ? "0px 0px 40px 40px"
-                          : "0",
-                      backgroundColor: "primary.accord",
-                      height: "0px",
-                    }}
-                    aria-controls={`panelone${index}d-content`} // Use index to identify each accordion
-                    id={`panelone${index}d-header`} // Use index to identify each accordion
-                  >
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          lg: "clamp(25px, 2vw, 36px)",
-                          md: "clamp(22px, 2vw, 36px)",
-                          sm: "20px",
-                          xs: "20px",
-                        },
-                      }}
-                      style={fonttitle}
-                    >
-                      {item.title}
-                    </Typography>
-                  </AccordionSummary>
-                </Box>
-                <AccordionDetails
-                  sx={{
-                    border: "none",
-                    padding: "0",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "flex-end",
-                    }}
-                  >
-                    <Typography
-                      sx={{ padding: "10px 10px 0 20px" }}
-                      style={fontdes}
-                    >
-                      {item.description}
-                    </Typography>
-                    <Box sx={{ marginTop: { lg: "-30px" } }}>
-                      <Image style={accordimg} src={item.img} />
-                    </Box>
-                  </Box>
-                </AccordionDetails>
-              </Accordion>
-            )
-          )}
-        </Box>
-      </Box>
+                </Accordion>
+              )
+            )}
+          </Box>
+        </Grid>
+      </Grid>
+      {/* </Box> */}
     </Box>
   );
 }
