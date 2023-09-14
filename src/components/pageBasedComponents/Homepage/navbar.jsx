@@ -34,7 +34,7 @@ export default function Navbar() {
           flexDirection: "row",
           alignItems: "center",
           gap: "12px",
-          marginRight: "40px",
+          marginRight: { md: "40px" },
         }}
       >
         <Box
