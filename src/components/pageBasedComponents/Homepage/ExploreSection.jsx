@@ -27,10 +27,11 @@ const ExploreSection = () => {
         pr: "15px",
         justifyContent: {
           xs: "flex-start",
-          md: "space-around",
-          lg: "space-around",
+          md: "center",
         },
+        gap: { md: "60px" },
         alignItems: { xs: "flex-start", md: "center", lg: "center" },
+        padding: { md: "0 60px" },
       }}
     >
       <Box
@@ -39,7 +40,7 @@ const ExploreSection = () => {
           flexDirection: "column",
 
           alignItems: "flex-start",
-          width: "40vw",
+          width: { md: "800px", lg: "800px", xl: "800px" },
         }}
       >
         <Typography
@@ -52,7 +53,7 @@ const ExploreSection = () => {
               lg: "clamp(50px, 4vw, 64px)",
             },
 
-            textAlign: "center",
+            textAlign: "left",
             margin: "15px 0",
             width: { xs: "300px", sm: "730px", md: "100%", lg: "100%" },
           }}
@@ -71,7 +72,7 @@ const ExploreSection = () => {
             mb: "3%",
 
             textAlign: "justify",
-            width: { xs: "300px", sm: "730px", md: "100%", lg: "100%" },
+            width: { xs: "300px", sm: "700px", md: "100%", lg: "100%" },
           }}
         >
           {data[0].description}
@@ -87,7 +88,7 @@ const ExploreSection = () => {
             textAlign: "justify",
             mb: "4%",
 
-            width: { xs: "300px", sm: "730px", md: "100%", lg: "100%" },
+            width: { xs: "300px", sm: "700px", md: "100%", lg: "100%" },
           }}
         >
           {data[0].descriptiontwo}
@@ -115,7 +116,7 @@ const ExploreSection = () => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
-          width: { xs: "100%", md: "45vw", lg: "45vw" },
+          width: { xs: "100%", md: "45%", lg: "fit-content" },
         }}
       >
         <Box

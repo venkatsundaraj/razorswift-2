@@ -70,7 +70,6 @@ const DropdownBody = ({ contchange }) => {
                 sx={{
                   fontSize: { xs: "30px", lg: "clamp(65px,5vw,77px)" },
                   lineHeight: "1.0",
-
                   fontWeight: "600",
                   mb: "3%",
                 }}
