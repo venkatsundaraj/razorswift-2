@@ -75,9 +75,9 @@ const fontaspithree = {
 };
 
 const accordimg = {
-  width: "clamp(185px, 14.3vw, 300px)",
+  width: "clamp(280px, 21.7vw, 360px)",
   // height: "clamp(180px, 13.3vw, 280px)",
-  height: "clamp(145px, 11.2vw, 255px)",
+  height: "auto",
 };
 
 export default function PathwaySection() {
@@ -94,7 +94,7 @@ export default function PathwaySection() {
     <Box
       sx={{
         backgroundColor: "primary.main",
-        padding: { xs: "15px", lg: "20px 50px 20px" },
+        padding: { xs: "15px", lg: "64px 50px 20px" },
       }}
     >
       <Typography
@@ -112,7 +112,9 @@ export default function PathwaySection() {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row", lg: "row" },
-          justifyContent: "space-around",
+          justifyContent: "center",
+          gap: "56px",
+          marginTop: "20px",
         }}
       >
         {/* first sec*/}
@@ -146,6 +148,7 @@ export default function PathwaySection() {
           >
             Choose your pathway now
           </Typography>
+
           {data.map(
             (
               item,
@@ -162,69 +165,76 @@ export default function PathwaySection() {
                       ? "0px 0px 40px 40px"
                       : "0",
                   width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
+                  // paddingTop: "25px",
+                  // paddingBottom: "25px",
                 }}
                 expanded={expanded === `panel${index}`} // Use index to identify each accordion
                 onChange={handleChange(`panel${index}`)} // Use index to identify each accordion
               >
-                <AccordionSummary
-                  sx={{
-                    borderRadius:
-                      index === 0
-                        ? "30px 30px 0 0"
-                        : index === data.length - 1
-                        ? "0px 0px 40px 40px"
-                        : "0",
-                    marginBottom: "10px",
-                  }}
-                  aria-controls={`panel${index}d-content`} // Use index to identify each accordion
-                  id={`panel${index}d-header`} // Use index to identify each accordion
-                >
-                  <Typography
-                    variant="body1"
+                <Box sx={{ padding: "20px 0" }}>
+                  <AccordionSummary
                     sx={{
-                      fontSize: {
-                        lg: "clamp(25px, 2vw, 36px)",
-                        md: "clamp(22px, 2vw, 36px)",
-                        sm: "20px",
-                        xs: "20px",
-                      },
+                      borderRadius:
+                        index === 0
+                          ? "30px 30px 0 0"
+                          : index === data.length - 1
+                          ? "0px 0px 40px 40px"
+                          : "0",
+                      height: "0px",
+                      position: "relative",
                     }}
-                    style={fonttitle}
-                  >
-                    {item.title}
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails
-                  sx={{
-                    border: "none",
-                    height: {
-                      sm: "clamp(248px, 19.1vw, 256px)",
-                      md: "40vh",
-                      lg: "40vh",
-                      xl: "40vh",
-                    },
-                  }}
-                >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "flex-end",
-                    }}
+                    aria-controls={`panel${index}d-content`} // Use index to identify each accordion
+                    id={`panel${index}d-header`} // Use index to identify each accordion
                   >
                     <Typography
                       variant="body1"
-                      sx={{ marginLeft: "10px" }}
-                      style={fontdes}
+                      sx={{
+                        fontSize: {
+                          lg: "clamp(25px, 2vw, 36px)",
+                          md: "clamp(22px, 2vw, 36px)",
+                          sm: "20px",
+                          xs: "20px",
+                        },
+                        margin:
+                          index === 0
+                            ? "20px 0"
+                            : index === data.length - 1
+                            ? "20px 0"
+                            : "0",
+                      }}
+                      style={fonttitle}
                     >
-                      {item.description}
+                      {item.title}
                     </Typography>
-                    <Image
-                      style={accordimg}
-                      src={homePageImagePaths.pathwayacc}
-                    />
-                  </Box>
-                </AccordionDetails>
+                  </AccordionSummary>
+                </Box>
+                <Box>
+                  <AccordionDetails
+                    sx={{
+                      border: "none",
+                      padding: "0",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-end",
+                      }}
+                    >
+                      <Typography
+                        variant="body1"
+                        sx={{ padding: "10px 10px 0 20px" }}
+                        style={fontdes}
+                      >
+                        {item.description}
+                      </Typography>
+                      <Box sx={{ marginTop: { lg: "-30px" } }}>
+                        <Image style={accordimg} src={item.img} />
+                      </Box>
+                    </Box>
+                  </AccordionDetails>
+                </Box>
               </Accordion>
             )
           )}
@@ -267,47 +277,46 @@ export default function PathwaySection() {
                       ? "0px 0px 40px 40px"
                       : "0",
                   width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
+                  // paddingTop: "25px",
+                  // paddingBottom: "25px",
                 }}
                 expanded={expandedone === `panelone${index}`} // Use index to identify each accordion
                 onChange={handleChangeone(`panelone${index}`)} // Use index to identify each accordion
               >
-                <AccordionSummary
-                  sx={{
-                    borderRadius:
-                      index === 0
-                        ? "30px 30px 0 0"
-                        : index === datatwo.length - 1
-                        ? "0px 0px 40px 40px"
-                        : "0",
-                    backgroundColor: "primary.accord",
-                    marginBottom: "10px",
-                  }}
-                  aria-controls={`panelone${index}d-content`} // Use index to identify each accordion
-                  id={`panelone${index}d-header`} // Use index to identify each accordion
-                >
-                  <Typography
+                <Box sx={{ padding: "20px 0" }}>
+                  <AccordionSummary
                     sx={{
-                      fontSize: {
-                        lg: "clamp(25px, 2vw, 36px)",
-                        md: "clamp(22px, 2vw, 36px)",
-                        sm: "20px",
-                        xs: "20px",
-                      },
+                      borderRadius:
+                        index === 0
+                          ? "30px 30px 0 0"
+                          : index === datatwo.length - 1
+                          ? "0px 0px 40px 40px"
+                          : "0",
+                      backgroundColor: "primary.accord",
+                      height: "0px",
                     }}
-                    style={fonttitle}
+                    aria-controls={`panelone${index}d-content`} // Use index to identify each accordion
+                    id={`panelone${index}d-header`} // Use index to identify each accordion
                   >
-                    {item.title}
-                  </Typography>
-                </AccordionSummary>
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          lg: "clamp(25px, 2vw, 36px)",
+                          md: "clamp(22px, 2vw, 36px)",
+                          sm: "20px",
+                          xs: "20px",
+                        },
+                      }}
+                      style={fonttitle}
+                    >
+                      {item.title}
+                    </Typography>
+                  </AccordionSummary>
+                </Box>
                 <AccordionDetails
                   sx={{
                     border: "none",
-                    height: {
-                      sm: "clamp(248px, 19.1vw, 256px)",
-                      md: "40vh",
-                      lg: "40vh",
-                      xl: "40vh",
-                    },
+                    padding: "0",
                   }}
                 >
                   <Box
@@ -317,13 +326,15 @@ export default function PathwaySection() {
                       alignItems: "flex-end",
                     }}
                   >
-                    <Typography sx={{ marginLeft: "10px" }} style={fontdes}>
+                    <Typography
+                      sx={{ padding: "10px 10px 0 20px" }}
+                      style={fontdes}
+                    >
                       {item.description}
                     </Typography>
-                    <Image
-                      style={accordimg}
-                      src={homePageImagePaths.pathwayacc}
-                    />
+                    <Box sx={{ marginTop: { lg: "-30px" } }}>
+                      <Image style={accordimg} src={item.img} />
+                    </Box>
                   </Box>
                 </AccordionDetails>
               </Accordion>

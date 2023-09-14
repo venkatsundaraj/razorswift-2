@@ -10,6 +10,10 @@ export default function Navbar() {
     width: "clamp(200px, 16.4vw, 250px)",
     height: "auto",
   };
+  const menulogo = {
+    width: "16px",
+    height: "auto",
+  };
   return (
     <Box
       sx={{
@@ -29,7 +33,7 @@ export default function Navbar() {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          gap: 3,
+          gap: "12px",
           marginRight: "40px",
         }}
       >
@@ -38,21 +42,25 @@ export default function Navbar() {
             display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
             alignItems: "center",
             gap: 1,
-            border: "2px solid",
+            border: "1px solid",
             borderColor: "primary.light",
             borderRadius: 50,
-            pt: 0.8,
-            pb: 0.8,
+            pt: "5px",
+            pb: "5px",
             pl: 2,
             pr: 2,
           }}
         >
-          <Image src={homePageImagePaths.navbarlogin} alt="logo" />
+          <Image
+            style={menulogo}
+            src={homePageImagePaths.navbarlogin}
+            alt="logo"
+          />
           <Link
             variant="body1"
             href=""
             sx={{
-              fontSize: 24,
+              fontSize: { lg: 16, xl: 24 },
               color: "common.black",
               textDecoration: "none",
             }}
@@ -65,21 +73,25 @@ export default function Navbar() {
             display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
             alignItems: "center",
             gap: 1,
-            border: "2px solid",
+            border: "1px solid",
             borderColor: "primary.light",
             borderRadius: 50,
-            pt: 0.8,
-            pb: 0.8,
+            pt: "5px",
+            pb: "5px",
             pl: 2,
             pr: 2,
           }}
         >
-          <Image src={homePageImagePaths.navbarlogin} alt="logo" />
+          <Image
+            style={menulogo}
+            src={homePageImagePaths.navbarlogin}
+            alt="logo"
+          />
           <Link
             variant="body1"
             href=""
             sx={{
-              fontSize: 24,
+              fontSize: { lg: 16, xl: 24 },
               color: "common.black",
               textDecoration: "none",
             }}
@@ -92,21 +104,25 @@ export default function Navbar() {
             display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
             alignItems: "center",
             gap: 1,
-            border: "2px solid",
+            border: "1px solid",
             borderColor: "primary.light",
             borderRadius: 50,
-            pt: 0.8,
-            pb: 0.8,
+            pt: "5px",
+            pb: "5px",
             pl: 2,
             pr: 2,
           }}
         >
-          <Image src={homePageImagePaths.navbarlogin} alt="logo" />
+          <Image
+            style={menulogo}
+            src={homePageImagePaths.navbarlogin}
+            alt="logo"
+          />
           <Link
             variant="body1"
             href=""
             sx={{
-              fontSize: 24,
+              fontSize: { lg: 16, xl: 24 },
               color: "common.black",
               textDecoration: "none",
             }}
