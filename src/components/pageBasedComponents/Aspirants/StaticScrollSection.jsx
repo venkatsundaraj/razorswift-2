@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { useScroll, motion } from "framer-motion";
+import { useScroll, motion, useMotionValueEvent } from "framer-motion";
 import { Container, Grid, Stack } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { AppBar } from "@mui/material";
@@ -11,15 +11,19 @@ import SecondaryHeading from "@/components/headingComponents/SecondaryHeading";
 const numberArray = ["one", "two", "three"];
 
 function StaticScrollSection() {
-  const sectionref = React.createRef();
+  const sectionRef = useRef(null);
 
-  window.addEventListener("scroll", (e) => {
-    console.log(sectionref);
+  const { scrollY } = useScroll();
+
+  console.log(scrollY);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log(latest);
   });
+
   return (
-    <CustomSection
-      ref={sectionref}
-      sx={{ height: "300vh", position: "relative", overflowX: "unset" }}
+    <section
+      ref={sectionRef}
+      style={{ height: "300vh", position: "relative", overflowX: "unset" }}
     >
       <AppBar
         component="div"
@@ -46,7 +50,7 @@ function StaticScrollSection() {
           </Container>
         </Toolbar>
       </AppBar>
-    </CustomSection>
+    </section>
   );
 }
 
