@@ -38,6 +38,8 @@ const homePageImagePaths = {
     .default,
   lefpathimgfour: require("/public/images/Homepage/corporate pathways.svg")
     .default,
+  readytostartnew: require("/public/images/Homepage/ready-to-get-started.svg")
+    .default,
 };
 
 export default homePageImagePaths;
