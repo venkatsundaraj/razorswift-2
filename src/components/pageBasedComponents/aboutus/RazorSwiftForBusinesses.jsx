@@ -12,7 +12,7 @@ const RazorSwiftForBusinesses = () => {
     fontSize: "clamp(10px, 1.1vw, 16px)",
   };
   return (
-    <Box sx={{ margin: "20px 30px" }}>
+    <Box sx={{ margin: "30px 60px" }}>
       <Box>
         <Typography
           sx={{ fontSize: "44px", fontWeight: "600", color: "primary.mainone" }}
@@ -20,137 +20,133 @@ const RazorSwiftForBusinesses = () => {
           RazorSwiftForBusinesses
         </Typography>
       </Box>
-
-      <Grid container spacing={1}>
-        <Grid
-          sx={{ display: "flex", alignItems: "flex-end" }}
-          item
-          xs={12}
-          md={6}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              width: { xs: "100%", md: "100%", lg: "fit-content" },
-            }}
-          >
+      <Box sx={{ marginTop: "20px" }}>
+        <Grid container spacing={1}>
+          <Grid item xs={12} md={6}>
             <Box
               sx={{
-                height: "clamp(250px, 19.3vw, 270px)",
                 display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
+                flexDirection: "row",
+                justifyContent: "center",
+                //   width: { xs: "100%", md: "100%", lg: "fit-content" },
               }}
             >
               <Box
                 sx={{
-                  padding: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "primary.pinktwo",
+                  height: "clamp(250px, 19.3vw, 270px)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
                 }}
               >
-                <Typography
-                  variant="body1"
-                  style={numbersec}
-                  sx={{ color: "primary.purp" }}
+                <Box
+                  sx={{
+                    padding: "10px 20px",
+                    borderRadius: "20px",
+                    backgroundColor: "primary.pinktwo",
+                  }}
                 >
-                  70%
-                </Typography>
-                <Typography
-                  variant="body1"
-                  style={numbersecdescription}
-                  sx={{}}
+                  <Typography
+                    variant="body1"
+                    style={numbersec}
+                    sx={{ color: "primary.purp" }}
+                  >
+                    70%
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={numbersecdescription}
+                    sx={{}}
+                  >
+                    <b>Improvement</b> in new hire <b>retention.</b>
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    padding: "10px 20px",
+                    borderRadius: "20px",
+                    backgroundColor: "primary.redpinktwo",
+                    marginTop: "20px",
+                  }}
                 >
-                  <b>Improvement</b> in new hire <b>retention.</b>
-                </Typography>
+                  <Typography
+                    variant="body1"
+                    style={numbersec}
+                    sx={{ color: "primary.purp" }}
+                  >
+                    70%
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={numbersecdescription}
+                    sx={{}}
+                  >
+                    <b>Improvement</b> in new hire <b>retention.</b>
+                  </Typography>
+                </Box>
               </Box>
               <Box
                 sx={{
-                  padding: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "primary.redpinktwo",
-                  marginTop: "20px",
+                  height: "clamp(250px, 19.3vw, 270px)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: { xs: "flex-start", lg: "flex-end" },
+                  marginLeft: { xs: "15px", md: "30px", lg: "30px" },
                 }}
               >
-                <Typography
-                  variant="body1"
-                  style={numbersec}
-                  sx={{ color: "primary.purp" }}
+                <Box
+                  sx={{
+                    padding: "10px 20px",
+                    borderRadius: "20px",
+                    backgroundColor: "primary.redpink",
+                  }}
                 >
-                  70%
-                </Typography>
-                <Typography
-                  variant="body1"
-                  style={numbersecdescription}
-                  sx={{}}
+                  <Typography
+                    variant="body1"
+                    style={numbersec}
+                    sx={{ color: "primary.purp" }}
+                  >
+                    70%
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={numbersecdescription}
+                    sx={{}}
+                  >
+                    <b>Improvement</b> in new hire <b>retention.</b>
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    padding: "10px 20px",
+                    borderRadius: "20px",
+                    backgroundColor: "primary.redpinkthree",
+                    marginTop: "20px",
+                  }}
                 >
-                  <b>Improvement</b> in new hire <b>retention.</b>
-                </Typography>
+                  <Typography
+                    variant="body1"
+                    style={numbersec}
+                    sx={{ color: "primary.purp" }}
+                  >
+                    70%
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={numbersecdescription}
+                    sx={{}}
+                  >
+                    <b>Improvement</b> in new hire <b>retention.</b>
+                  </Typography>
+                </Box>
               </Box>
             </Box>
-            <Box
-              sx={{
-                height: "clamp(250px, 19.3vw, 270px)",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: { xs: "flex-start", lg: "flex-end" },
-                marginLeft: { xs: "15px", md: "30px", lg: "30px" },
-              }}
-            >
-              <Box
-                sx={{
-                  padding: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "primary.redpink",
-                }}
-              >
-                <Typography
-                  variant="body1"
-                  style={numbersec}
-                  sx={{ color: "primary.purp" }}
-                >
-                  70%
-                </Typography>
-                <Typography
-                  variant="body1"
-                  style={numbersecdescription}
-                  sx={{}}
-                >
-                  <b>Improvement</b> in new hire <b>retention.</b>
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  padding: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "primary.redpinkthree",
-                  marginTop: "20px",
-                }}
-              >
-                <Typography
-                  variant="body1"
-                  style={numbersec}
-                  sx={{ color: "primary.purp" }}
-                >
-                  70%
-                </Typography>
-                <Typography
-                  variant="body1"
-                  style={numbersecdescription}
-                  sx={{}}
-                >
-                  <b>Improvement</b> in new hire <b>retention.</b>
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Image src={Aboutusimagepathway.statisticimage} />
+          </Grid>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Image src={Aboutusimagepathway.statisticimage} />
-        </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 };
