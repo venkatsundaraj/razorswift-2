@@ -110,7 +110,7 @@ function StaticScrollSection({ stickySliderData }) {
                   flexDirection="column"
                   alignItems="start"
                   sx={{ height: "100%" }}
-                  justifyContent="space-between"
+                  justifyContent={{ xs: "center", md: "space-between" }}
                 >
                   <SecondaryHeading>GET VERIFIED. GET HIRED.</SecondaryHeading>
                   <Box sx={{ width: "100%" }}>
