@@ -16,7 +16,7 @@ const TypographyOne = styled(Typography)(({ theme }) => ({}));
 
 const HeroSection = () => {
   const banimg = {
-    width: "clamp(370px, 63.5vw, 1300px)",
+    width: "clamp(370px, 63.5vw, 1210px)",
     height: "auto",
   };
   const firstsec = {
@@ -118,7 +118,7 @@ const HeroSection = () => {
                   color: "primary.mainone",
                   lineHeight: "1.0",
                   fontSize: {
-                    xl: "clamp(110px, 8.5vw, 133px)",
+                    xl: "clamp(110px, 8.5vw, 120px)",
                     lg: "clamp(70px, 5.4vw, 100px)",
                     md: "clamp(70px, 5.4vw, 100px)",
                     sm: "40px",
@@ -130,7 +130,7 @@ const HeroSection = () => {
                   component="span"
                   sx={{
                     color: "primary.main",
-                    pr: 3,
+                    pr: "12px",
                   }}
                 >
                   EMPOWERING
@@ -151,7 +151,7 @@ const HeroSection = () => {
                   lineHeight: "1.0",
 
                   fontSize: {
-                    xl: "clamp(110px, 8.5vw, 133px)",
+                    xl: "clamp(110px, 8.5vw, 120px)",
                     lg: "clamp(70px, 5.4vw, 100px)",
                     md: "clamp(70px, 5.4vw, 100px)",
                     sm: "40px",
@@ -159,7 +159,10 @@ const HeroSection = () => {
                   },
                 }}
               >
-                <Box component="span" sx={{ color: "primary.main", pr: 3 }}>
+                <Box
+                  component="span"
+                  sx={{ color: "primary.main", pr: "12px" }}
+                >
                   ENABLINGING
                 </Box>
                 GROWTH.
@@ -191,10 +194,10 @@ const HeroSection = () => {
                 },
               }}
             >
-              <Box component="span" sx={{ lineHeight: 1.0 }}>
+              <Box component="span" sx={{ lineHeight: "32px" }}>
                 {heroSectionData[0].title}
               </Box>
-              <Box component="span" sx={{ lineHeight: 1.0 }}>
+              <Box component="span" sx={{ lineHeight: "32px" }}>
                 {heroSectionData[0].titletwo}
               </Box>
             </Typography>
@@ -214,12 +217,12 @@ const HeroSection = () => {
               sx={{
                 display: "flex",
                 flexDirection: "row",
-                gap: 3,
+                gap: "12px",
+                marginTop: "2px",
               }}
             >
               <Link
                 sx={{
-                  fontSize: { xs: "16px", lg: "20px" },
                   textDecoration: "none",
                   border: "1px solid",
                   borderColor: "primary.light",
@@ -233,11 +236,15 @@ const HeroSection = () => {
                   alignSelf: "center",
                 }}
               >
-                <Typography sx={{}}> Build Your Profile</Typography>
+                <Typography
+                  sx={{ fontSize: { xs: "16px", lg: "16px", xl: "20px" } }}
+                >
+                  {" "}
+                  Build Your Profile
+                </Typography>
               </Link>
               <Link
                 sx={{
-                  fontSize: { xs: "16px", lg: "20px" },
                   textDecoration: "none",
                   border: "1px solid",
                   borderColor: "primary.light",
@@ -249,7 +256,12 @@ const HeroSection = () => {
                   alignSelf: "center",
                 }}
               >
-                <Typography> Get a Demo</Typography>
+                <Typography
+                  sx={{ fontSize: { xs: "16px", lg: "16px", xl: "20px" } }}
+                >
+                  {" "}
+                  Get a Demo
+                </Typography>
               </Link>
             </Stack>
           </motion.div>
@@ -260,9 +272,9 @@ const HeroSection = () => {
             bottom: {
               xs: "50px",
               sm: "745px",
-              md: "50px",
-              lg: "50px",
-              xl: "50px",
+              md: "47px",
+              lg: "47px",
+              xl: "47px",
             },
 
             right: "0",

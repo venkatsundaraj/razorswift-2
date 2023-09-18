@@ -19,6 +19,25 @@ const homePageImagePaths = {
   fb: require("/public/images/Homepage/facebook-logo.svg").default,
   linkedin: require("/public/images/Homepage/linkedin-logo.svg").default,
   insta: require("/public/images/Homepage/instagram-logo.svg").default,
+
+  pathimgone: require("/public/images/Homepage/company-crafted-pathways.svg")
+    .default,
+  pathimgtwo: require("/public/images/Homepage/roi-driven-efficiency.svg")
+    .default,
+  pathimgthree:
+    require("/public/images/Homepage/seamless-ecosystem-integration.svg")
+      .default,
+  pathimgfour: require("/public/images/Homepage/actionable-data-insights.svg")
+    .default,
+
+  lefpathimgone: require("/public/images/Homepage/design-your-future.png")
+    .default,
+  lefpathimgtwo: require("/public/images/Homepage/skill-based-pathway.svg")
+    .default,
+  lefpathimgthree: require("/public/images/Homepage/domain-based-pathway.svg")
+    .default,
+  lefpathimgfour: require("/public/images/Homepage/corporate pathways.svg")
+    .default,
 };
 
 export default homePageImagePaths;
