@@ -14,6 +14,7 @@ function FastrackCardLists({ lists, ...props }) {
             backgroundColor: `${item.bgColor}`,
             padding: 2,
             borderRadius: 2,
+            width: { xs: "100%", md: "unset" },
           }}
         >
           <Typography

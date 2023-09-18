@@ -260,3 +260,56 @@ export const aboutUsData = {
   description:
     "We are a machine learning based dynamic ‘digital marketplace’ that provides the aspirant talent pool to stay continually competitive relative to the hiring landscape in India. We do this by harnessing our comprehensive knowledge partner ecosystem, which provides for comprehensive mentorship, learning and career progression advisory. We use a unique ‘affinity algorithm’ which provides for identification, assessment and enablement modules resulting in significant process efficiency in curation and hiring, whilst saving significant time and cost for businesses and aspirants.",
 };
+
+export const stickySliderData = {
+  title: [
+    { id: 0, name: "ENROLL / SIGN UP" },
+    { id: 1, name: "Enrich Your Profile" },
+    { id: 2, name: "Specialize with pathways" },
+    { id: 3, name: "Career Management" },
+  ],
+  paragraph: [
+    {
+      id: 0,
+      subtitle: "Everything at your fingertips.",
+      paragraph:
+        "We've made it easy! Say 'hi' to us on WhatsApp. Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
+    },
+    {
+      id: 1,
+      subtitle: "Upskill and stay ahead",
+      paragraph:
+        "We've made it easy! Say 'hi' to us on WhatsApp. Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
+    },
+    {
+      id: 2,
+      subtitle: "Become a niche specialist",
+      paragraph:
+        "We've made it easy! Say 'hi' to us on WhatsApp. Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
+    },
+    {
+      id: 3,
+      subtitle: "Take control of your career",
+      paragraph:
+        "We've made it easy! Say 'hi' to us on WhatsApp. Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
+    },
+  ],
+  image: [
+    {
+      id: 0,
+      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+    },
+    {
+      id: 1,
+      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+    },
+    {
+      id: 2,
+      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+    },
+    {
+      id: 3,
+      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+    },
+  ],
+};

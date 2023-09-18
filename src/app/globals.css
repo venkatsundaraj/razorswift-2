@@ -17,7 +17,7 @@ main.Topcontainer {
 }
 
 .slide {
-  transition: transform 1400ms linear;
+  transition: transform 800ms ease;
 }
 .activeSlide {
   opacity: 1;

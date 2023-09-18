@@ -8,6 +8,7 @@ import FastrackSection from "@/components/pageBasedComponents/Aspirants/Fastrack
 import GetStartedSection from "@/components/pageBasedComponents/Aspirants/GetStartedSection";
 import AboutUsSection from "@/components/pageBasedComponents/Aspirants/AboutUsSection";
 import StaticScrollSection from "@/components/pageBasedComponents/Aspirants/StaticScrollSection";
+import { stickySliderData } from "@/constants/Aspirants/aspirantPageData";
 
 export const metadata = {
   title: "Aspirants | Razorswift",
@@ -17,7 +18,7 @@ function Aspirants() {
   return (
     <Box component="main">
       <HeroSection />
-      <StaticScrollSection />
+      <StaticScrollSection stickySliderData={stickySliderData} />
       <CareerSection />
       <DropdownSection />
       <DiscoverSection />
