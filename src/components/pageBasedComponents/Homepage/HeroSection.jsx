@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import heroSectionData from "../../../constants/Homepage/heroSectionData";
 import TickerComponent from "./TickerComponent";
 import styled from "@emotion/styled";
-
+import { TickerBoxData } from "@/constants/Homepage/TickerBoxData";
 const TypographyOne = styled(Typography)(({ theme }) => ({}));
 
 const HeroSection = () => {

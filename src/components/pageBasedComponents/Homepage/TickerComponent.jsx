@@ -14,7 +14,7 @@ import styled from "@emotion/styled";
 import ParagraphHeading from "@/components/headingComponents/ParagraphHeading";
 import ExtraParagraphHeading from "@/components/headingComponents/ExtraParagraphHeading";
 import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
-import TickerBoxData from "@/constants/Homepage/TickerBoxData";
+import { TickerBoxData } from "@/constants/Aspirants/aspirantPageData";
 const TickerBox = styled(List)(({ theme }) => ({
   width: "100%",
   height: "65px",
@@ -52,7 +52,7 @@ function TickerComponent() {
           overflow: "hidden",
         }}
       >
-        {TickerBoxData.map((item, itemIndex) => {
+        {courses.map((item, itemIndex) => {
           let position = "slide nextSlide";
           if (value === itemIndex) {
             position = "slide activeSlide";
