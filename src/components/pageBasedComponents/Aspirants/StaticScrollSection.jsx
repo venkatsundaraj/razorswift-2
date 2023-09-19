@@ -82,6 +82,7 @@ function StaticScrollSection({ stickySliderData }) {
                 >
                   {stickySliderData.image.map((image) => (
                     <Image
+                      key={image.id}
                       alt="image"
                       src={image.image}
                       style={{
@@ -125,6 +126,7 @@ function StaticScrollSection({ stickySliderData }) {
                     >
                       {stickySliderData.title.map((title) => (
                         <SecondaryHeading
+                          key={title.id}
                           style={{ textTransform: "uppercase" }}
                           sx={{
                             color: "primary.white",
@@ -151,6 +153,7 @@ function StaticScrollSection({ stickySliderData }) {
                     >
                       {stickySliderData.paragraph.map((title) => (
                         <Box
+                          key={title.id}
                           sx={{
                             left: "0",
                             top: `${title.id * 100}%`,
