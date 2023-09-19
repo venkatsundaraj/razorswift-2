@@ -120,7 +120,7 @@ export default function PathwaySection() {
       > */}
       {/* first sec*/}
       <Grid container spacing={10}>
-        <Grid item sx={12} lg={6}>
+        <Grid item xs={12} lg={6}>
           <Box sx={{}}>
             <Typography
               variant="body1"
@@ -244,7 +244,7 @@ export default function PathwaySection() {
           </Box>
         </Grid>
         {/* second sec*/}
-        <Grid item sx={12} lg={6}>
+        <Grid item xs={12} lg={6}>
           <Box sx={{}}>
             <Typography style={fontaspi} sx={{ color: "common.white" }}>
               Businesses

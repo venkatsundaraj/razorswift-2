@@ -12,9 +12,10 @@ const DemoSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: { xs: "100vh", sm: "50vh", md: "100vh" },
+        height: { xs: "100vh", sm: "50vh", md: "" },
         // border: "1px solid",
         justifyContent: "center",
+        padding: "40px 0",
       }}
     >
       <Box
@@ -77,6 +78,7 @@ const DemoSection = () => {
               padding: "10px 20px",
               display: "flex",
               alignItems: "center",
+              zIndex: "1",
             }}
           >
             <Link
@@ -92,10 +94,12 @@ const DemoSection = () => {
             </Link>
           </Box>
         </Box>
-        <Image
-          style={{ width: "clamp(350px, 27vw, 650px)", height: "auto" }}
-          src={homePageImagePaths.fivemen}
-        />
+        <Box sx={{ marginTop: "-45px" }}>
+          <Image
+            style={{ width: "clamp(350px, 54vw, 1000px)", height: "auto" }}
+            src={homePageImagePaths.readytostartnew}
+          />
+        </Box>
       </Box>
     </Box>
   );
