@@ -143,7 +143,7 @@ export default function Navbar() {
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
             <svg
-              class="ham-bur-one"
+              className="ham-bur-one"
               id="ham-bur-one"
               xmlns="http://www.w3.org/2000/svg"
               width="23.998"
@@ -159,7 +159,7 @@ export default function Navbar() {
               />
             </svg>
             <svg
-              class="ham-bur-two"
+              className="ham-bur-two"
               id="ham-bur-two"
               xmlns="http://www.w3.org/2000/svg"
               width="23.998"
@@ -175,7 +175,7 @@ export default function Navbar() {
               />
             </svg>
             <svg
-              class="ham-bur-three"
+              className="ham-bur-three"
               id="ham-bur-three"
               xmlns="http://www.w3.org/2000/svg"
               width="23.998"
