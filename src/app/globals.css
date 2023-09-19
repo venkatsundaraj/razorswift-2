@@ -13,6 +13,7 @@ main.Topcontainer {
   max-width: 100%;
   overflow-x: hidden;
 }
+
 .slide {
   transition: transform 1400ms linear;
 }
@@ -27,3 +28,4 @@ main.Topcontainer {
 .lastSlide {
   transform: translate(-100%);
 }
+

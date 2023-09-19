@@ -95,7 +95,7 @@ export default function PathwaySection() {
     <Box
       sx={{
         backgroundColor: "primary.main",
-        padding: { xs: "15px", lg: "64px 50px 20px" },
+        padding: { xs: "15px", lg: "60px 50px " },
       }}
     >
       <Typography
