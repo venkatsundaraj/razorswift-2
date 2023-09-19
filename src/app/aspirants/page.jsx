@@ -17,7 +17,6 @@ export const metadata = {
 function Aspirants() {
   return (
     <Box component="main">
-      {/* hello */}
       <HeroSection />
       <StaticScrollSection stickySliderData={stickySliderData} />
       <CareerSection />
