@@ -5,10 +5,6 @@ import Link from "@mui/material/Link";
 import Image from "next/image";
 import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 const DemoSection = () => {
-  const fontstwo = {
-    fontSize: "clamp(20px, 1.5vw, 28px)",
-  };
-
   return (
     <Box
       sx={{
@@ -32,13 +28,23 @@ const DemoSection = () => {
             fontSize: {
               xs: "25px",
               md: "clamp(40px, 3vw, 100px)",
-              lg: "clamp(40px, 3vw, 100px)",
+              lg: "100px",
             },
           }}
         >
           READY TO GET STARTED?
         </Typography>
-        <Typography variant="body1" style={fontstwo} sx={{ margin: "20px 0" }}>
+        <Typography
+          variant="body1"
+          sx={{
+            margin: "20px 0",
+            fontSize: {
+              xs: "clamp(20px, 1.5vw, 28px)",
+              md: "clamp(20px, 1.5vw, 28px)",
+              lg: "28px",
+            },
+          }}
+        >
           Hire at scale with the click of a button.
         </Typography>
         <Box sx={{ display: "flex", gap: 5 }}>
@@ -87,7 +93,7 @@ const DemoSection = () => {
           </Box>
         </Box>
         <Image
-          style={{ width: "clamp(300px, 26.1vw, 500px)", height: "auto" }}
+          style={{ width: "clamp(350px, 27vw, 650px)", height: "auto" }}
           src={homePageImagePaths.fivemen}
         />
       </Box>
