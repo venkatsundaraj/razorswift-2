@@ -118,6 +118,7 @@ const HeroSection = () => {
                   color: "primary.mainone",
                   lineHeight: "1.0",
                   fontSize: {
+                    // xl: "clamp(110px, 8.5vw, 120px)",new
                     lg: "clamp(70px, 5.4vw, 120px)",
                     md: "clamp(70px, 5.4vw, 100px)",
                     sm: "40px",
