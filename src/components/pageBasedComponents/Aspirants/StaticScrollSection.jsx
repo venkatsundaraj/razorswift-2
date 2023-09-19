@@ -82,6 +82,7 @@ function StaticScrollSection({ stickySliderData }) {
                 >
                   {stickySliderData.image.map((image) => (
                     <Image
+                      key={image.id}
                       alt="image"
                       src={image.image}
                       style={{

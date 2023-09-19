@@ -3,6 +3,7 @@ import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import Head from "next/head";
 import "./globals.css";
+import { CssBaseline } from "@mui/material";
 import { StyledEngineProvider } from "@mui/material/styles";
 
 export const metadata = {
@@ -25,7 +26,10 @@ export default function RootLayout({ children }) {
       </Head>
       <StyledEngineProvider>
         <ThemeProvider theme={theme}>
-          <body>{children}</body>
+          <body>
+            <CssBaseline />
+            {children}
+          </body>
         </ThemeProvider>
       </StyledEngineProvider>
     </html>
