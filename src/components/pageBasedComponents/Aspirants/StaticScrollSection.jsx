@@ -122,7 +122,7 @@ function StaticScrollSection({ stickySliderData }) {
                       sx={{
                         width: "100%",
                         mb: { xs: 2, md: 5 },
-                        height: { xs: "60px", md: "40px" },
+                        height: { xs: "60px", md: "50px", xl: "60px" },
                         position: "relative",
                         overflowY: "hidden",
                       }}
