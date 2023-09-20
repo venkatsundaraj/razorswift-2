@@ -3,12 +3,12 @@
 import React from "react";
 import CustomSection from "@/components/globalComponents/CustomContainer/CustomSection";
 import ExtraSuperText from "@/components/headingComponents/ExtraSuperText";
-import { readyToStartData } from "@/constants/Aspirants/aspirantPageData";
+
 import ParagraphHeading from "@/components/headingComponents/ParagraphHeading";
 import SuperText from "@/components/headingComponents/SuperText";
 import Image from "next/image";
 
-function GetStartedSection() {
+function GetStartedSection({ readyToStartData }) {
   return (
     <CustomSection
       sx={{

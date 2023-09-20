@@ -12,6 +12,7 @@ import { dropDownBodyData } from "@/constants/Aspirants/aspirantPageData";
 
 import ParagraphHeading from "@/components/headingComponents/ParagraphHeading";
 import SubtitleHeading from "@/components/headingComponents/SubtitleHeading";
+import PrimaryHeading from "@/components/headingComponents/PrimaryHeading";
 
 function StaticScrollSection({ stickySliderData }) {
   const [percentage, setpercentage] = useState(0);
@@ -113,7 +114,9 @@ function StaticScrollSection({ stickySliderData }) {
                   sx={{ height: "100%" }}
                   justifyContent={{ xs: "center", md: "space-between" }}
                 >
-                  <SecondaryHeading>GET VERIFIED. GET HIRED.</SecondaryHeading>
+                  <PrimaryHeading variant="h2">
+                    GET VERIFIED. GET HIRED.
+                  </PrimaryHeading>
                   <Box sx={{ width: "100%" }}>
                     <Box
                       sx={{
@@ -125,7 +128,9 @@ function StaticScrollSection({ stickySliderData }) {
                       }}
                     >
                       {stickySliderData.title.map((title) => (
-                        <SecondaryHeading
+                        <PrimaryHeading
+                          variant="h2"
+                          key={title.id}
                           style={{ textTransform: "uppercase" }}
                           sx={{
                             color: "primary.white",
@@ -139,13 +144,13 @@ function StaticScrollSection({ stickySliderData }) {
                           }}
                         >
                           {title.name}
-                        </SecondaryHeading>
+                        </PrimaryHeading>
                       ))}
                     </Box>
                     <Box
                       sx={{
                         width: "100%",
-                        minHeight: { xs: "200px", md: "150px", xl: "200px" },
+                        minHeight: { xs: "240px", md: "180px", xl: "200px" },
                         position: "relative",
                         overflowY: "hidden",
                       }}
@@ -162,7 +167,9 @@ function StaticScrollSection({ stickySliderData }) {
                             position: "absolute",
                           }}
                         >
-                          <ParagraphHeading>{title.subtitle}</ParagraphHeading>
+                          <ParagraphHeading sx={{ mb: 2, fontWeight: "600" }}>
+                            {title.subtitle}
+                          </ParagraphHeading>
                           <SubtitleHeading
                             sx={{
                               color: "primary.white",
