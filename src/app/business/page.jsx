@@ -6,6 +6,7 @@ import { businessDropDownBodyData } from "@/constants/Business/businessPageData"
 import GetStartedSection from "@/components/pageBasedComponents/Aspirants/GetStartedSection";
 import { readyToStartData } from "@/constants/Business/businessPageData";
 import AboutUsSection from "@/components/pageBasedComponents/Aspirants/AboutUsSection";
+import StickyContainerSection from "@/components/pageBasedComponents/Business/StickyContainerSection";
 
 function Business() {
   return (
@@ -13,6 +14,7 @@ function Business() {
       <HeroSection />
       <CareerDropDownBody dropDownBodyData={businessDropDownBodyData} />
       <GetStartedSection readyToStartData={readyToStartData} />
+      <StickyContainerSection />
       <AboutUsSection />
     </Box>
   );
