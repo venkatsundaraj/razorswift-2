@@ -29,7 +29,10 @@ function AboutUsSection({}) {
             </Typography>
           </Grid>
           <Grid item xs={12} lg={8}>
-            <ParagraphHeading sx={{ color: "primaryPalette.white" }}>
+            <ParagraphHeading
+              style={{ fontWeight: "400" }}
+              sx={{ color: "primaryPalette.white" }}
+            >
               {aboutUsData.description}
             </ParagraphHeading>
           </Grid>

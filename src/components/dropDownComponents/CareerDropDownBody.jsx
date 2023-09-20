@@ -1,3 +1,5 @@
+"use client";
+
 import { Grid, Container, Stack, Typography, Box, Paper } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -6,6 +8,7 @@ import ParagraphHeading from "../headingComponents/ParagraphHeading";
 import ExtraParagraphHeading from "../headingComponents/ExtraParagraphHeading";
 import theme from "@/themes/theme";
 import SubtitleHeading from "../headingComponents/SubtitleHeading";
+import PrimaryFillButton from "../buttonComponents/PrimaryFillButton";
 
 function CareerDropDownBody({ dropDownBodyData }) {
   return (
@@ -58,6 +61,24 @@ function CareerDropDownBody({ dropDownBodyData }) {
               >
                 {dropDownBodyData.description}
               </SubtitleHeading>
+              {dropDownBodyData.buttonData && (
+                <PrimaryFillButton
+                  varient="contained"
+                  link="/about"
+                  sx={{
+                    backgroundColor:
+                      dropDownBodyData.buttonData?.backgroundColor,
+                    color: dropDownBodyData.buttonData?.color,
+                    "&:hover": {
+                      backgroundColor:
+                        dropDownBodyData.buttonData?.backgroundColor,
+                      color: dropDownBodyData.buttonData?.color,
+                    },
+                  }}
+                >
+                  {dropDownBodyData.buttonData?.title}
+                </PrimaryFillButton>
+              )}
             </Stack>
           </Grid>
           <Grid item xs={12} md={6} lg={6}>

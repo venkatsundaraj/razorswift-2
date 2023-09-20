@@ -30,8 +30,10 @@ function CareerDropDown({ dropDownData, changeHandler }) {
           PaperProps: {
             sx: {
               borderRadius: 10,
+              padding: (theme) => theme.spacing(2, 2),
               "& .MuiMenuItem-root": {
                 padding: 2,
+                borderRadius: 6,
                 fontSize: "18px",
               },
             },

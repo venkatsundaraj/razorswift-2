@@ -137,7 +137,8 @@ const theme = createTheme({
     },
     MuiMenuPaper: {
       styleOverrides: {
-        borderRadius: "24px",
+        borderRadius: "44px",
+        backgroundColor: "blue",
       },
     },
     MuiMenuList: {
