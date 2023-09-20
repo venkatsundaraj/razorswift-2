@@ -40,7 +40,13 @@ function HeroSection() {
             }}
             alt="Unlock your potential"
           />
-          <SuperText component="h2" sx={{ textTransform: "uppercase" }}>
+          <SuperText
+            component="h2"
+            sx={{
+              textTransform: "uppercase",
+              color: (theme) => theme.palette.pinkPalette.light,
+            }}
+          >
             {heroSectionData.heading.primary}
           </SuperText>
         </CenteredFlexComponent>
@@ -66,7 +72,18 @@ function HeroSection() {
           {heroSectionData.description}
         </ParagraphHeading>
         <Link href="#">
-          <PrimaryFillButton varient="contained" sx={{ marginTop: "18px" }}>
+          <PrimaryFillButton
+            varient="contained"
+            link="/about"
+            sx={{
+              marginTop: "18px",
+              backgroundColor: (theme) => theme.palette.pinkPalette.dark,
+              color: (theme) => theme.palette.primaryPalette.white,
+              "&:hover": {
+                backgroundColor: (theme) => theme.palette.pinkPalette.dark,
+              },
+            }}
+          >
             {heroSectionData.buttonContent}
           </PrimaryFillButton>
         </Link>

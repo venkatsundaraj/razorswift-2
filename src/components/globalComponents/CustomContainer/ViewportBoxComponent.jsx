@@ -3,8 +3,9 @@ import { Box } from "@mui/material";
 import styled from "@emotion/styled";
 
 const ViewPortBox = styled(Box)(({ theme }) => ({
-  height: "100vh",
+  minHeight: "100vh",
   width: "100vw",
+  padding: theme.spacing(4, 0),
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

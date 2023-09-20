@@ -5,7 +5,6 @@ import { Typography } from "@mui/material";
 import styled from "@emotion/styled";
 
 const Heading = styled(Typography)(({ theme }) => ({
-  color: theme.palette.pinkPalette.light,
   lineHeight: 1.05,
   fontSize: "32px",
   width: "fit-content",

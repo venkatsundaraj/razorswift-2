@@ -15,16 +15,16 @@ function CareerDropDownBody({ dropDownBodyData }) {
         width: "100%",
       }}
     >
-      <Container>
+      <Container
+        sx={{
+          padding: (theme) => theme.spacing(5, 0, 0, 0),
+        }}
+      >
         <Grid
-          justifyContent="center"
-          sx={{
-            padding: (theme) => theme.spacing(5, 0, 0, 0),
-          }}
-          alignItems="center"
-          direction={{ xs: "column", md: "row" }}
+          sx={{ padding: (theme) => theme.spacing(0, 2) }}
           container
-          spacing={{ xs: 1, md: 2 }}
+          spacing={2}
+          alignItems="center"
         >
           <Grid item xs={12} md={6} lg={6}>
             <Stack direction="column" alignItems="start" gap={2}>
@@ -78,11 +78,10 @@ function CareerDropDownBody({ dropDownBodyData }) {
           container
           px={2}
           py={5}
+          alignItems="center"
           justifyContent="space-between"
-          alignItems={{ xs: "start", md: "center" }}
-          flexDirection={{ xs: "column", md: "row" }}
         >
-          <Grid xs={12} md={3}>
+          <Grid item xs={12} md={3}>
             <ExtraParagraphHeading
               style={{ fontWeight: 500 }}
               sx={{ flexBasis: "clamp(40px,15vw,250px)", mb: { xs: 2, md: 0 } }}
@@ -90,39 +89,58 @@ function CareerDropDownBody({ dropDownBodyData }) {
               What to expect ?
             </ExtraParagraphHeading>
           </Grid>
-          <Grid container spacing={2} xs={12} md={9}>
-            {dropDownBodyData.whatToExpect.map((item) => (
-              <Grid item xs={12} md={6}>
-                <Paper
-                  sx={{
-                    borderRadius: 2,
-                    display: "flex",
-                    minHeight: "160px",
-                    alignItems: "center",
-                    padding: 2,
-                    gap: 2,
-                    justifyContent: { xs: "start", md: "center" },
-                  }}
-                >
-                  <Image
-                    alt={item.title}
-                    src={item.image}
-                    style={{ width: "clamp(60px, 6vw, 80px)" }}
-                  />
-                  <Stack
-                    flexDirection="column"
-                    alignItems="start"
-                    justifyContent="center"
-                    gap="8px"
+          <Grid
+            item
+            xs={12}
+            md={9}
+            sx={{
+              position: "relative",
+              "&::before": {
+                content: `""`,
+                position: "absolute",
+                width: "2px",
+                left: "-80px",
+                top: "50%",
+                transform: "translate(0,-50%)",
+                height: { sm: "0%", lg: "50%" },
+                backgroundColor: "violetPalette.dark",
+              },
+            }}
+          >
+            <Grid container spacing={2}>
+              {dropDownBodyData.whatToExpect.map((item) => (
+                <Grid item xs={12} md={6} key={item.id}>
+                  <Paper
+                    sx={{
+                      borderRadius: 2,
+                      display: "flex",
+                      minHeight: "100%",
+                      alignItems: "center",
+                      padding: 2,
+                      gap: 2,
+                      justifyContent: { xs: "start", md: "center" },
+                    }}
                   >
-                    <ExtraParagraphHeading sx={{ fontWeight: "600" }}>
-                      {item.title}
-                    </ExtraParagraphHeading>
-                    <SubtitleHeading>{item.description}</SubtitleHeading>
-                  </Stack>
-                </Paper>
-              </Grid>
-            ))}
+                    <Image
+                      alt={item.title}
+                      src={item.image}
+                      style={{ width: "clamp(60px, 6vw, 80px)" }}
+                    />
+                    <Stack
+                      flexDirection="column"
+                      alignItems="start"
+                      justifyContent="center"
+                      gap="8px"
+                    >
+                      <ExtraParagraphHeading sx={{ fontWeight: "600" }}>
+                        {item.title}
+                      </ExtraParagraphHeading>
+                      <SubtitleHeading>{item.description}</SubtitleHeading>
+                    </Stack>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
       </Container>

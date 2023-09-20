@@ -39,9 +39,11 @@ const theme = createTheme({
       litepink: "#F2B8FF",
     },
     pinkPalette: {
+      extraDark: "#7A1450",
       dark: "#A62973",
       light: "#EE5064",
       superLight: "#FCD3D1",
+      extraSuperLight: "#eabad640",
     },
     primaryPalette: {
       white: "#FFFFFF",
@@ -132,6 +134,11 @@ const theme = createTheme({
         root: {
           fontFamily: urbanist.style.fontFamily,
         },
+      },
+    },
+    MuiMenuPaper: {
+      styleOverrides: {
+        borderRadius: "24px",
       },
     },
   },

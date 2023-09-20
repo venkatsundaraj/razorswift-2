@@ -13,7 +13,6 @@ import CareerDropDownBody from "@/components/dropDownComponents/CareerDropDownBo
 function DropdownSection() {
   const [dropDownBody, setDropDownBody] = useState(dropDownBodyData[0]);
   const onChangeHandler = function (value) {
-    console.log(value);
     const selectedBody = dropDownBodyData.find(
       (item) => item.id.toString() === value.toString()
     );
