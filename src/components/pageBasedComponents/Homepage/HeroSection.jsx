@@ -11,6 +11,8 @@ import { motion } from "framer-motion";
 import heroSectionData from "../../../constants/Homepage/heroSectionData";
 import PythonPathway from "./PythonPathway";
 import styled from "@emotion/styled";
+import { TickerBoxData } from "@/constants/Aspirants/aspirantPageData";
+import TickerComponent from "@/components/TickerComponent/TickerComponent";
 
 const TypographyOne = styled(Typography)(({ theme }) => ({}));
 
@@ -301,7 +303,15 @@ const HeroSection = () => {
             delay: 2,
           }}
         >
-          <PythonPathway />
+          <TickerComponent
+            variant="div"
+            data={TickerBoxData}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          />
         </motion.div>
       </motion.div>
     </Stack>
