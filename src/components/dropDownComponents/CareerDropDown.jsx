@@ -26,6 +26,17 @@ function CareerDropDown({ dropDownData, changeHandler }) {
         id="demo-simple-select-filled"
         onChange={handleChange}
         displayEmpty
+        MenuProps={{
+          PaperProps: {
+            sx: {
+              borderRadius: 10,
+              "& .MuiMenuItem-root": {
+                padding: 2,
+                fontSize: "18px",
+              },
+            },
+          },
+        }}
         sx={{
           padding: (theme) => theme.spacing(1, 2),
           boxShadow: 2,
@@ -39,7 +50,6 @@ function CareerDropDown({ dropDownData, changeHandler }) {
             key={item.id}
             name={item.title}
             disableRipple
-            divider={true}
             value={item.id}
             sx={{
               padding: 2,
