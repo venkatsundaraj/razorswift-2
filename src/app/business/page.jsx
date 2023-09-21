@@ -13,8 +13,8 @@ function Business() {
     <Box component="main">
       <HeroSection />
       <CareerDropDownBody dropDownBodyData={businessDropDownBodyData} />
-      <GetStartedSection readyToStartData={readyToStartData} />
       <StickyContainerSection />
+      <GetStartedSection readyToStartData={readyToStartData} />
       <AboutUsSection />
     </Box>
   );
