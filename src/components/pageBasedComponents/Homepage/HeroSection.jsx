@@ -272,9 +272,9 @@ const HeroSection = () => {
             bottom: {
               xs: "50px",
               sm: "745px",
-              md: "62px",
-              lg: "62px",
-              xl: "62px",
+              md: "58px",
+              lg: "58px",
+              xl: "58px",
             },
 
             right: "0",
