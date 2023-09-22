@@ -95,8 +95,9 @@ export default function PathwaySection() {
     setExpandedone(newExpandedone ? panelone : null); // Update to null when collapsed
   };
 
-  // const [clickedId, setClickedId] = useState("1");
+  const [clickedId, setClickedId] = useState();
   const [content, setContent] = useState(datatwo[0]);
+  const [selectedItemId, setSelectedItemId] = useState(1);
   const handleTitleClick = (id) => {
     // Find the item in datatwo with a matching id
     const matchingItem = datatwo.find(
@@ -105,7 +106,9 @@ export default function PathwaySection() {
 
     setContent(matchingItem);
 
-    console.log(matchingItem);
+    setClickedId(matchingItem);
+    console.log(clickedId);
+    setSelectedItemId(id);
   };
 
   return (
@@ -139,37 +142,59 @@ export default function PathwaySection() {
             RAZORSWIFT PATHWAYS
           </Typography>
           <Box>
-            {pathwayheads.map((item) => (
-              <Box key={item.id}>
+            {pathwayheads.map((item, index) => (
+              <Box
+                sx={{
+                  color: selectedItemId === item.id ? "white" : "primary.lite",
+                  borderBottom: index === 0 ? "2px solid white" : "",
+                  paddingBottom: "10px",
+                }}
+                key={item.id}
+              >
                 <Typography
                   style={fontaspi}
-                  sx={{ color: "common.white", cursor: "pointer" }}
+                  sx={{
+                    color:
+                      selectedItemId === item.id ? "white" : "primary.lite",
+                    cursor: "pointer",
+                  }}
                   onClick={() => handleTitleClick(item.id)}
                 >
                   {item.title}
                 </Typography>
                 <Typography
                   style={fontaspitwo}
-                  sx={{ color: "common.white", cursor: "pointer" }}
+                  sx={{
+                    color:
+                      selectedItemId === item.id ? "white" : "primary.lite",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => handleTitleClick(item.id)}
                 >
                   {item.description}
                 </Typography>
-                <Link style={fontaspithree} href={item.link}>
-                  <Typography
-                    style={fontaspithree}
-                    sx={{
-                      color: "common.white",
-                      backgroundColor: "primary.purp",
-                      width: "fit-content",
-                      padding: "5px 15px",
-                      borderRadius: "50px",
-                      margin: "15px 0 15px 0",
-                      cursor: "pointer",
-                    }}
-                  >
-                    {item.button}
-                  </Typography>
-                </Link>
+                <Box
+                  sx={{
+                    display: selectedItemId === item.id ? "block" : "none",
+                  }}
+                >
+                  <Link style={fontaspithree} href={item.link}>
+                    <Typography
+                      style={fontaspithree}
+                      sx={{
+                        color: "common.white",
+                        backgroundColor: "primary.purp",
+                        width: "fit-content",
+                        padding: "5px 15px",
+                        borderRadius: "50px",
+                        margin: "15px 0 15px 0",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {item.button}
+                    </Typography>
+                  </Link>
+                </Box>
               </Box>
             ))}
           </Box>
@@ -223,7 +248,7 @@ export default function PathwaySection() {
                         : index === content.accord.length - 1
                         ? "0px 0px 40px 40px"
                         : "0",
-                    width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
+                    width: { xs: "100%", sm: "", md: "100%", lg: "100%" },
                     // paddingTop: "25px",
                     // paddingBottom: "25px",
                   }}
