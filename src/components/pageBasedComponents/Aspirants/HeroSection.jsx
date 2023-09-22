@@ -19,7 +19,7 @@ import CustomSection from "@/components/globalComponents/CustomContainer/CustomS
 
 function HeroSection() {
   return (
-    <CustomSection style={{ padding: "0px" }}>
+    <CustomSection style={{ padding: "0px", height: "100vh" }}>
       <Container
         sx={{
           display: "flex",
@@ -89,6 +89,7 @@ function HeroSection() {
         </Link>
       </Container>
       <TickerComponent
+        variant="div"
         data={TickerBoxData}
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       />
