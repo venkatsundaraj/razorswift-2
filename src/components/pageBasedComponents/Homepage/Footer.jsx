@@ -16,7 +16,7 @@ const footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "primary.main",
+        backgroundColor: "primary.footer",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
