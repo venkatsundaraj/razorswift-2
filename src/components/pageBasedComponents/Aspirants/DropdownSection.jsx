@@ -14,6 +14,7 @@ function DropdownSection({ dropDownBodyData, dropDownData }) {
       (item) => item.id.toString() === value.toString()
     );
     setDropDownBody(selectedBody);
+    console.log(dropDownBody);
   };
   return (
     <CustomSection
