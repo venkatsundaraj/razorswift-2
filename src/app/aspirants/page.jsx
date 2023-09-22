@@ -34,7 +34,6 @@ function Aspirants() {
       <DiscoverSection />
       <FastrackSection />
       <GetStartedSection readyToStartData={readyToStartData} />
-      <AboutUsSection />
     </Box>
   );
 }
