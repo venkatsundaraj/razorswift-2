@@ -83,7 +83,7 @@ const HeroSection = () => {
       sx={{
         height: {
           xs: "100vh",
-          sm: "41vh",
+          sm: "100vh",
           md: "100vh",
           lg: "100vh",
           xl: "100vh",

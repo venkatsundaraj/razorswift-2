@@ -16,6 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@mui/material";
 import { useState } from "react";
+import { Container } from "@mui/system";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -119,7 +120,7 @@ export default function PathwaySection() {
       }}
     >
       {/* first sec*/}
-      <Grid container spacing={10}>
+      <Grid sx={{ justifyContent: "center" }} container spacing={10}>
         <Grid
           sx={{
             display: "flex",
@@ -129,6 +130,7 @@ export default function PathwaySection() {
           item
           xs={12}
           lg={6}
+          xl={5}
         >
           <Typography
             variant="h1"
@@ -231,7 +233,7 @@ export default function PathwaySection() {
           </Box> */}
         </Grid>
         {/* second sec*/}
-        <Grid item xs={12} lg={5}>
+        <Grid item xs={12} lg={5} xl={5}>
           <Box sx={{}}>
             {content.accord.map(
               (
@@ -248,7 +250,7 @@ export default function PathwaySection() {
                         : index === content.accord.length - 1
                         ? "0px 0px 40px 40px"
                         : "0",
-                    width: { xs: "100%", sm: "", md: "100%", lg: "100%" },
+                    width: { xs: "100%" },
                     // paddingTop: "25px",
                     // paddingBottom: "25px",
                   }}

@@ -24,32 +24,31 @@ function ExploreSection() {
     fontSize: "clamp(10px, 1.1vw, 16px)",
   };
   return (
-    <>
-      {dataa && (
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: { xs: "column", md: "row", lg: "row" },
-            alignItems: "center",
-            height: { xs: "100vh", sm: "50vh", md: "100vh" },
-            pl: "15px",
-            pr: "15px",
-            justifyContent: {
-              xs: "flex-start",
-              md: "center",
-            },
-            gap: { md: "60px" },
-            alignItems: { xs: "flex-start", md: "center", lg: "center" },
-            padding: { md: "0 60px" },
-          }}
-        >
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row", lg: "row" },
+
+        height: { xs: "100vh", sm: "", md: "100vh", xl: "65vh" },
+        pl: "15px",
+        pr: "15px",
+        justifyContent: {
+          xs: "flex-start",
+          md: "center",
+        },
+        gap: { md: "60px" },
+        alignItems: { xs: "flex-start", md: "center", lg: "center" },
+        padding: { md: "0 60px" },
+      }}
+    >
+      <Grid sx={{ alignItems: "center" }} container spacing={10}>
+        <Grid item xs={12} lg={6}>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
 
               alignItems: "flex-start",
-              width: { md: "800px", lg: "800px", xl: "800px" },
             }}
           >
             <Typography
@@ -67,7 +66,7 @@ function ExploreSection() {
                 width: { xs: "300px", sm: "730px", md: "100%", lg: "100%" },
               }}
             >
-              {dataa[0].title}
+              {data[0].title}
             </Typography>
             <Typography
               variant="body1"
@@ -81,10 +80,10 @@ function ExploreSection() {
                 mb: "3%",
 
                 textAlign: "justify",
-                width: { xs: "300px", sm: "700px", md: "100%", lg: "100%" },
+                width: { xs: "100%" },
               }}
             >
-              {dataa[0].description}
+              {data[0].description}
             </Typography>
             <Typography
               variant="body1"
@@ -97,10 +96,10 @@ function ExploreSection() {
                 textAlign: "justify",
                 mb: "4%",
 
-                width: { xs: "300px", sm: "700px", md: "100%", lg: "100%" },
+                width: { xs: "100%" },
               }}
             >
-              {dataa[0].descriptiontwo}
+              {data[0].descriptiontwo}
             </Typography>
             <Link
               variant="body1"
@@ -120,12 +119,14 @@ function ExploreSection() {
               Explore
             </Link>
           </Box>
+        </Grid>
+
+        <Grid item xs={12} lg={6}>
           <Box
             sx={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
-              width: { xs: "100%", md: "45%", lg: "fit-content" },
             }}
           >
             <Box
@@ -178,7 +179,7 @@ function ExploreSection() {
                   style={numbersecdescription}
                   sx={{}}
                 >
-                  <b>Improvement</b> in new hire <b>retention.</b>
+                  <b>Reduction</b> and removing <b>human bias</b>
                 </Typography>
               </Box>
             </Box>
@@ -210,7 +211,7 @@ function ExploreSection() {
                   style={numbersecdescription}
                   sx={{}}
                 >
-                  <b>Improvement</b> in new hire <b>retention.</b>
+                  <b>Improvement</b> in best candidate<b> matches</b>
                 </Typography>
               </Box>
               <Box
@@ -226,21 +227,21 @@ function ExploreSection() {
                   style={numbersec}
                   sx={{ color: "primary.purp" }}
                 >
-                  70%
+                  67%
                 </Typography>
                 <Typography
                   variant="body1"
                   style={numbersecdescription}
                   sx={{}}
                 >
-                  <b>Improvement</b> in new hire <b>retention.</b>
+                  <b>Faster</b> onboarding process
                 </Typography>
               </Box>
             </Box>
           </Box>
-        </Box>
-      )}
-    </>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
 
