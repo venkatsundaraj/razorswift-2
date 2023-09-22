@@ -12,7 +12,7 @@ const DemoSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: { xs: "100vh", sm: "50vh", md: "" },
+        height: { xs: "100%", sm: "", md: "" },
         // border: "1px solid",
         justifyContent: "center",
         padding: "40px 0",
@@ -79,6 +79,7 @@ const DemoSection = () => {
               display: "flex",
               alignItems: "center",
               zIndex: "1",
+              cursor: "pointer",
             }}
           >
             <Link

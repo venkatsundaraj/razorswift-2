@@ -31,8 +31,8 @@ function StickyContainerSection() {
 
       cardsRef.current[i].dataset.value = fractionValue - i * 0.05;
       cardsRef.current[i].style.transform = `scale(calc(1 - ${
-        scaleValue.id === i ? scaleValue.value : ""
-      }))`;
+        fractionValue - i * 0.05
+      })) `;
 
       setScaleValue((prev) => {
         return { id: i, value: fractionValue - i * 0.05 };
@@ -68,7 +68,7 @@ function StickyContainerSection() {
         padding: `40px`,
         overflowX: "unset",
         display: "flex",
-        height: `calc(4 * 100vh + 500px)`,
+        height: { md: `calc(4 * 80vh + 200px)`, xl: "calc(4 * 80vh + 200px)" },
         width: "100%",
         flexDirection: "column",
       }}
@@ -83,15 +83,14 @@ function StickyContainerSection() {
               alignItems: "top",
               justifyContent: "center",
               width: "100%",
-              height: "100vh",
+              height: {
+                md: `${i === 0 ? "100vh" : "90vh"}`,
+                xl: `${i === 0 ? "90vh" : "80vh"}`,
+              },
               borderRadius: 4,
               backgroundColor: `${item}`,
               position: "sticky",
-              top: `${25 + i * 25}px`,
-              padding: 1,
-              // transform: `scale(calc(1 - ${
-              //   scaleValue.id === i ? scaleValue.value : ""
-              // }))`,
+              top: { md: `${i * 25}px`, xl: `${25 + i * 55}px` },
             }}
           >
             <PrimaryHeading sx={{ color: "white" }}>{i}</PrimaryHeading>
