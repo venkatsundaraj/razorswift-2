@@ -80,8 +80,8 @@ const HeroSection = () => {
     <Stack
       sx={{
         height: {
-          xs: "100vh",
-          sm: "100vh",
+          xs: "100%",
+
           md: "100vh",
           lg: "100vh",
           xl: "100vh",
@@ -268,7 +268,7 @@ const HeroSection = () => {
         </motion.div>
         <Stack
           sx={{
-            position: "absolute",
+            position: { xs: "", md: "absolute" },
             bottom: {
               xs: "50px",
               sm: "745px",
@@ -278,6 +278,8 @@ const HeroSection = () => {
             },
 
             right: "0",
+            display: { sm: "flex", md: "" },
+            alignItems: { sm: "flex-end", md: "" },
           }}
         >
           <Box component="span">
