@@ -9,15 +9,11 @@ import Image from "next/image";
 import theme from "../../../themes/theme";
 import { motion } from "framer-motion";
 import heroSectionData from "../../../constants/Homepage/heroSectionData";
-import TickerComponent from "./TickerComponent";
+
 import styled from "@emotion/styled";
-<<<<<<< HEAD
 import { TickerBoxData } from "@/constants/Aspirants/aspirantPageData";
 import TickerComponent from "@/components/TickerComponent/TickerComponent";
 
-=======
-import { TickerBoxData } from "@/constants/Homepage/TickerBoxData";
->>>>>>> upstream/main
 const TypographyOne = styled(Typography)(({ theme }) => ({}));
 
 const HeroSection = () => {
