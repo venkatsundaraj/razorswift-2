@@ -4,11 +4,15 @@ import { Grid } from "@mui/material";
 import Image from "next/image";
 import Aboutusimagepathway from "@/constants/ImagePaths/Aboutus/Aboutusimagepathway";
 const RazorswiftForYou = () => {
+  const imgprop = {
+    width: "clamp(600px, 46.2vw, 720px)",
+    height: "auto",
+  };
   return (
     <Box sx={{ margin: "20px 30px" }}>
       <Grid container spacing={1}>
         <Grid item xs={12} md={6}>
-          <Image src={Aboutusimagepathway.puzzle} />
+          <Image style={imgprop} src={Aboutusimagepathway.puzzle} />
         </Grid>
         <Grid
           sx={{ display: "flex", alignItems: "center" }}

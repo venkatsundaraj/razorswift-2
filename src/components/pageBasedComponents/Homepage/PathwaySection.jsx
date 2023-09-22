@@ -11,7 +11,11 @@ import { Grid } from "@mui/material";
 import data from "../../../constants/Homepage/pathway.js";
 import datatwo from "../../../constants/Homepage/pathwaytwo.js";
 import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
+import pathwayheads from "@/constants/Homepage/pathwayheads.js";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@mui/material";
+import { useState } from "react";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -71,7 +75,7 @@ const fontaspitwo = {
 
 const fontaspithree = {
   fontSize: "clamp(15px, 1.2vw, 20px)",
-
+  textDecoration: "none",
   fontWeight: "500",
 };
 
@@ -91,6 +95,19 @@ export default function PathwaySection() {
     setExpandedone(newExpandedone ? panelone : null); // Update to null when collapsed
   };
 
+  // const [clickedId, setClickedId] = useState("1");
+  const [content, setContent] = useState(datatwo[0]);
+  const handleTitleClick = (id) => {
+    // Find the item in datatwo with a matching id
+    const matchingItem = datatwo.find(
+      (item) => item.id.toString() === id.toString()
+    );
+
+    setContent(matchingItem);
+
+    console.log(matchingItem);
+  };
+
   return (
     <Box
       sx={{
@@ -98,30 +115,65 @@ export default function PathwaySection() {
         padding: { xs: "15px", lg: "60px 50px " },
       }}
     >
-      <Typography
-        variant="h1"
-        sx={{
-          color: "common.white",
-
-          fontSize: { xs: "35px", lg: "clamp(45px, 3.5vw, 64px)" },
-          textAlign: { xs: "center", lg: "left" },
-        }}
-      >
-        RAZORSWIFT PATHWAYS
-      </Typography>
-      {/* <Box
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row", lg: "row" },
-          justifyContent: "center",
-          gap: "56px",
-          marginTop: "20px",
-        }}
-      > */}
       {/* first sec*/}
       <Grid container spacing={10}>
-        <Grid item xs={12} lg={6}>
-          <Box sx={{}}>
+        <Grid
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+          item
+          xs={12}
+          lg={6}
+        >
+          <Typography
+            variant="h1"
+            sx={{
+              color: "common.white",
+              marginBottom: "50px",
+              fontSize: { xs: "35px", lg: "clamp(45px, 3.5vw, 64px)" },
+              textAlign: { xs: "center", lg: "left" },
+            }}
+          >
+            RAZORSWIFT PATHWAYS
+          </Typography>
+          <Box>
+            {pathwayheads.map((item) => (
+              <Box key={item.id}>
+                <Typography
+                  style={fontaspi}
+                  sx={{ color: "common.white", cursor: "pointer" }}
+                  onClick={() => handleTitleClick(item.id)}
+                >
+                  {item.title}
+                </Typography>
+                <Typography
+                  style={fontaspitwo}
+                  sx={{ color: "common.white", cursor: "pointer" }}
+                >
+                  {item.description}
+                </Typography>
+                <Link style={fontaspithree} href={item.link}>
+                  <Typography
+                    style={fontaspithree}
+                    sx={{
+                      color: "common.white",
+                      backgroundColor: "primary.purp",
+                      width: "fit-content",
+                      padding: "5px 15px",
+                      borderRadius: "50px",
+                      margin: "15px 0 15px 0",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {item.button}
+                  </Typography>
+                </Link>
+              </Box>
+            ))}
+          </Box>
+          {/* <Box value={2} sx={{}}>
             <Typography
               variant="body1"
               style={fontaspi}
@@ -151,122 +203,12 @@ export default function PathwaySection() {
             >
               Choose your pathway now
             </Typography>
-
-            {data.map(
-              (
-                item,
-                index // Add index parameter to map
-              ) => (
-                <Accordion
-                  key={index} // Add a unique key for each accordion
-                  sx={{
-                    backgroundColor: "primary.dropdown",
-                    borderRadius:
-                      index === 0
-                        ? "40px 40px 0 0"
-                        : index === data.length - 1
-                        ? "0px 0px 40px 40px"
-                        : "0",
-                    width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
-                    // paddingTop: "25px",
-                    // paddingBottom: "25px",
-                  }}
-                  expanded={expanded === `panel${index}`} // Use index to identify each accordion
-                  onChange={handleChange(`panel${index}`)} // Use index to identify each accordion
-                >
-                  <Box sx={{ padding: "20px 0" }}>
-                    <AccordionSummary
-                      sx={{
-                        borderRadius:
-                          index === 0
-                            ? "30px 30px 0 0"
-                            : index === data.length - 1
-                            ? "0px 0px 40px 40px"
-                            : "0",
-                        height: "0px",
-                        position: "relative",
-                      }}
-                      aria-controls={`panel${index}d-content`} // Use index to identify each accordion
-                      id={`panel${index}d-header`} // Use index to identify each accordion
-                    >
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          fontSize: {
-                            lg: "clamp(25px, 2vw, 36px)",
-                            md: "clamp(22px, 2vw, 36px)",
-                            sm: "20px",
-                            xs: "20px",
-                          },
-                          margin:
-                            index === 0
-                              ? "20px 0"
-                              : index === data.length - 1
-                              ? "20px 0"
-                              : "0",
-                        }}
-                        style={fonttitle}
-                      >
-                        {item.title}
-                      </Typography>
-                    </AccordionSummary>
-                  </Box>
-                  <Box>
-                    <AccordionDetails
-                      sx={{
-                        border: "none",
-                        padding: "0",
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "flex-end",
-                        }}
-                      >
-                        <Typography
-                          variant="body1"
-                          sx={{ padding: "10px 10px 0 20px" }}
-                          style={fontdes}
-                        >
-                          {item.description}
-                        </Typography>
-                        <Box sx={{ marginTop: { lg: "-30px" } }}>
-                          <Image style={accordimg} src={item.img} />
-                        </Box>
-                      </Box>
-                    </AccordionDetails>
-                  </Box>
-                </Accordion>
-              )
-            )}
-          </Box>
+          </Box> */}
         </Grid>
         {/* second sec*/}
         <Grid item xs={12} lg={6}>
           <Box sx={{}}>
-            <Typography style={fontaspi} sx={{ color: "common.white" }}>
-              Businesses
-            </Typography>
-            <Typography style={fontaspitwo} sx={{ color: "common.white" }}>
-              Standardise assessments and training.
-            </Typography>
-            <Typography
-              style={fontaspithree}
-              sx={{
-                color: "common.white",
-                backgroundColor: "primary.purp",
-                width: "fit-content",
-                padding: "5px 15px",
-                borderRadius: "50px",
-                margin: "15px 0 15px 0",
-                cursor: "pointer",
-              }}
-            >
-              Craft your pathway now
-            </Typography>
-            {datatwo.map(
+            {content.accord.map(
               (
                 item,
                 index // Add index parameter to map
@@ -278,7 +220,7 @@ export default function PathwaySection() {
                     borderRadius:
                       index === 0
                         ? "40px 40px 0 0"
-                        : index === datatwo.length - 1
+                        : index === content.accord.length - 1
                         ? "0px 0px 40px 40px"
                         : "0",
                     width: { xs: "325px", sm: "790px", md: "100%", lg: "100%" },
@@ -294,7 +236,7 @@ export default function PathwaySection() {
                         borderRadius:
                           index === 0
                             ? "30px 30px 0 0"
-                            : index === datatwo.length - 1
+                            : index === content.accord.length - 1
                             ? "0px 0px 40px 40px"
                             : "0",
                         backgroundColor: "primary.accord",
