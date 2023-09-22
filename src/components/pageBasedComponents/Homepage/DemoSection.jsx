@@ -12,7 +12,7 @@ const DemoSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: { xs: "", sm: "", md: "100vh" },
+        height: { xs: "100%", sm: "", md: "" },
         // border: "1px solid",
         justifyContent: "center",
         padding: "40px 0",
