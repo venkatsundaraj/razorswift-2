@@ -29,7 +29,7 @@ function ExploreSection() {
         display: "flex",
         flexDirection: { xs: "column", md: "row", lg: "row" },
 
-        height: { xs: "100vh", sm: "", md: "100vh", xl: "65vh" },
+        height: { xs: "100vh", sm: "", md: "100vh", xl: "" },
         pl: "15px",
         pr: "15px",
         justifyContent: {
@@ -38,7 +38,7 @@ function ExploreSection() {
         },
         gap: { md: "60px" },
         alignItems: { xs: "flex-start", md: "center", lg: "center" },
-        padding: { md: "0 60px" },
+        padding: { md: "60px 50px" },
       }}
     >
       <Grid sx={{ alignItems: "center" }} container spacing={10}>

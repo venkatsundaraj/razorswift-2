@@ -79,6 +79,7 @@ const DemoSection = () => {
               display: "flex",
               alignItems: "center",
               zIndex: "1",
+              cursor: "pointer",
             }}
           >
             <Link
