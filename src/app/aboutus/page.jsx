@@ -5,6 +5,7 @@ import RazorswiftForYou from "@/components/pageBasedComponents/aboutus/Razorswif
 import RazorSwiftForBusinesses from "@/components/pageBasedComponents/aboutus/RazorSwiftForBusinesses";
 import ForBussiness from "@/components/pageBasedComponents/aboutus/ForBussiness";
 import OurCommitment from "@/components/pageBasedComponents/aboutus/OurCommitment";
+import LookingtoWork from "@/components/pageBasedComponents/aboutus/LookingtoWork";
 const About = () => {
   return (
     <Box>
@@ -13,6 +14,7 @@ const About = () => {
       <RazorSwiftForBusinesses />
       <ForBussiness />
       <OurCommitment />
+      <LookingtoWork />
     </Box>
   );
 };

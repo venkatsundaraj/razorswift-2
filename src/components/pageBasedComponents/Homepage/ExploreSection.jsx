@@ -161,7 +161,7 @@ const ExploreSection = () => {
               70%
             </Typography>
             <Typography variant="body1" style={numbersecdescription} sx={{}}>
-              <b>Improvement</b> in new hire <b>retention.</b>
+              <b>Reduction</b> and removing <b>human bias</b>
             </Typography>
           </Box>
         </Box>
@@ -189,7 +189,7 @@ const ExploreSection = () => {
               70%
             </Typography>
             <Typography variant="body1" style={numbersecdescription} sx={{}}>
-              <b>Improvement</b> in new hire <b>retention.</b>
+              <b>Improvement</b>in best candidate<b>matches</b>
             </Typography>
           </Box>
           <Box
@@ -205,10 +205,10 @@ const ExploreSection = () => {
               style={numbersec}
               sx={{ color: "primary.purp" }}
             >
-              70%
+              67%
             </Typography>
             <Typography variant="body1" style={numbersecdescription} sx={{}}>
-              <b>Improvement</b> in new hire <b>retention.</b>
+              <b>Faster</b> onboarding process
             </Typography>
           </Box>
         </Box>

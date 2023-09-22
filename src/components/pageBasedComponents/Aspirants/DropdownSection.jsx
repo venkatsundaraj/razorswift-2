@@ -4,15 +4,20 @@ import React, { useState } from "react";
 import { Box } from "@mui/material";
 import CustomSection from "@/components/globalComponents/CustomContainer/CustomSection";
 import CareerDropDown from "@/components/dropDownComponents/CareerDropDown";
+
+
 import CareerDropDownBody from "@/components/dropDownComponents/CareerDropDownBody";
 
-function DropdownSection({ dropDownData, dropDownBodyData }) {
+function DropdownSection({ dropDownBodyData, dropDownData }) {
+
+
   const [dropDownBody, setDropDownBody] = useState(dropDownBodyData[0]);
   const onChangeHandler = function (value) {
     const selectedBody = dropDownBodyData.find(
       (item) => item.id.toString() === value.toString()
     );
     setDropDownBody(selectedBody);
+    console.log(dropDownBody);
   };
   return (
     <CustomSection

@@ -297,19 +297,19 @@ export const stickySliderData = {
   image: [
     {
       id: 0,
-      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+      image: aspirantPageImagePaths.styickScrollSection.image1,
     },
     {
       id: 1,
-      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+      image: aspirantPageImagePaths.styickScrollSection.image2,
     },
     {
       id: 2,
-      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+      image: aspirantPageImagePaths.styickScrollSection.image3,
     },
     {
       id: 3,
-      image: aspirantPageImagePaths.dropDownSection.mainImage1,
+      image: aspirantPageImagePaths.styickScrollSection.image4,
     },
   ],
 };
