@@ -9,9 +9,9 @@ import Image from "next/image";
 import theme from "../../../themes/theme";
 import { motion } from "framer-motion";
 import heroSectionData from "../../../constants/Homepage/heroSectionData";
-import PythonPathway from "./PythonPathway";
+import TickerComponent from "./TickerComponent";
 import styled from "@emotion/styled";
-
+import { TickerBoxData } from "@/constants/Homepage/TickerBoxData";
 const TypographyOne = styled(Typography)(({ theme }) => ({}));
 
 const HeroSection = () => {
@@ -272,9 +272,9 @@ const HeroSection = () => {
             bottom: {
               xs: "50px",
               sm: "745px",
-              md: "47px",
-              lg: "47px",
-              xl: "47px",
+              md: "62px",
+              lg: "62px",
+              xl: "62px",
             },
 
             right: "0",
@@ -301,7 +301,15 @@ const HeroSection = () => {
             delay: 2,
           }}
         >
-          <PythonPathway />
+          <TickerComponent
+            variant="div"
+            data={TickerBoxData}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          />
         </motion.div>
       </motion.div>
     </Stack>

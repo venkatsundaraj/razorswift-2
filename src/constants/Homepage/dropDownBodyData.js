@@ -2,31 +2,35 @@ import homePageImagePaths from "../ImagePaths/Homepage/homePageImagePaths";
 
 const dropDownBodyData = [
   {
-    id: "1",
-    firstsec: {
-      toptitleone: "Internships, Interviews,",
-      toptitletwo: "Jobs.",
-      toppara: `"Whether you're a student or an experienced professional,
-        everything possible through our corporate cohorts."`,
-      button: "Explore",
-    },
-    secondec: [
+    id: 1,
+    title: "Internships, Interviews,",
+    highLightedTitle: "Jobs.",
+    backgroundColor: "#DAB0E3",
+    trophyImage: homePageImagePaths.trophyone,
+    description: `"Whether you're a student or an experienced professional,
+    everything possible through our corporate cohorts."`,
+    image: homePageImagePaths.mainImage1,
+    whatToExpect: [
       {
+        id: 1,
         image: homePageImagePaths.internone,
         title: "College to career roadmap.",
         description: "Bridge the gap between education and employability.",
       },
       {
+        id: 2,
         image: homePageImagePaths.internbulb,
         title: "Gain insights on skill expectation.",
         description: "Leverage mentors, corporate cohorts and communities.",
       },
       {
+        id: 3,
         image: homePageImagePaths.internplay,
         title: "Stay ahead of the heap.",
         description: "Job recommendations based on latest trends.",
       },
       {
+        id: 4,
         image: homePageImagePaths.internhand,
         title: "Attract best salaries.",
         description: "Negotiate better with corporate bench mark reports.",
@@ -34,34 +38,39 @@ const dropDownBodyData = [
     ],
   },
   {
-    id: "2",
-    firstsec: {
-      toptitleone: "Experience Swift",
-      toptitletwo: "Hiring.",
-      toppara: "AI driven automation for Large scale ",
-      button: "Ask for Demo",
-    },
-    secondec: [
+    id: 2,
+    title: "Experience Swift",
+    highLightedTitle: "Hiring.",
+    backgroundColor: "#ECADD2",
+    trophyImage: homePageImagePaths.trophytwo,
+    description:
+      "AI driven automation for Large scale hiring with efficient cost and time",
+    image: homePageImagePaths.mainImage1,
+    whatToExpect: [
       {
-        image: homePageImagePaths.internone,
+        id: 1,
+        image: homePageImagePaths.hiringone,
         title: "Job ready talent on Day 1",
         description:
           "Manage skill gap and talent shortage with customized pathways.",
       },
       {
-        image: homePageImagePaths.internbulb,
-        title: "Unifried",
+        id: 2,
+        image: homePageImagePaths.hiringtwo,
+        title: "Unified talent ecosystem",
         description:
           "Seamless collaboration with talent partners with pathways.",
       },
       {
-        image: homePageImagePaths.internplay,
+        id: 3,
+        image: homePageImagePaths.hiringthree,
         title: "Standardized profiles",
         description:
           "Standardized assessments and AI enriched profiles with defined pathways",
       },
       {
-        image: homePageImagePaths.internhand,
+        id: 4,
+        image: homePageImagePaths.hiringfour,
         title: "Be a Marquee employer",
         description:
           "Enhanced exposure and increased recognition among aspirants with corporate pathways",
@@ -69,34 +78,39 @@ const dropDownBodyData = [
     ],
   },
   {
-    id: "3",
-    firstsec: {
-      toptitleone: "Aggregating the Talent ",
-      toptitletwo: "Partner landscape.",
-      toppara: "Collaborate with us to create a robust AI talent marketplace.",
-      button: "Partner with Us",
-    },
-    secondec: [
+    id: 3,
+    title: "Aggregating the Talent ",
+    highLightedTitle: "Partner landscape.",
+    backgroundColor: "#F3C3C9",
+    trophyImage: homePageImagePaths.trophythree,
+    description:
+      "Collaborate with us to create a robust AI talent marketplace.",
+    image: homePageImagePaths.mainImage1,
+    whatToExpect: [
       {
-        image: homePageImagePaths.internone,
+        id: 1,
+        image: homePageImagePaths.landscapeone,
         title: "Collaborate for standardization",
         description:
           "L&D Partners, assessment partners and recruiters collaboration.",
       },
       {
-        image: homePageImagePaths.internbulb,
+        id: 2,
+        image: homePageImagePaths.landscapetwo,
         title: "Plug into skill, domain and corporate pathways",
         description:
           "Seamless collaboration and streamlined process within pathways.",
       },
       {
-        image: homePageImagePaths.internplay,
+        id: 3,
+        image: homePageImagePaths.landscapethree,
         title: "Reduce cost to market",
         description:
           "Enhanced exposure and brand recognition among aspirants through AI based recommendations",
       },
       {
-        image: homePageImagePaths.internhand,
+        id: 4,
+        image: homePageImagePaths.landscapefour,
         title: "Grow exponentially with our ever growing user base",
         description: "AI based recommendation of your services to aspirants.",
       },
