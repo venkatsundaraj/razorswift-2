@@ -23,10 +23,10 @@ const HeroSection = () => {
     offscreen: {
       opacity: 0,
       rotate: 0,
-      x: -800,
+      x: -20,
     },
     onscreen: {
-      opacity: 1,
+      opacity: [0.5, 0.6, 0.7, 0.8, 0.9, 1],
       rotate: [0, 20, -20, 20, 0],
       x: 0,
       transition: {
@@ -279,7 +279,8 @@ const HeroSection = () => {
 
             right: "0",
             display: { sm: "flex", md: "" },
-            alignItems: { sm: "flex-end", md: "" },
+            alignItems: { xs: "flex-end", md: "" },
+            transform: { xs: "translate(0px, 7px)", sm: "translate(0px, 0px)" },
           }}
         >
           <Box component="span">
