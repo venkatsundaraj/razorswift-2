@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const fetchData = function (api) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(null);
   const [data, setData] = useState();
   const [error, setError] = useState(false);
 
@@ -16,8 +16,6 @@ const fetchData = function (api) {
         };
         setIsLoading(true);
         const response = await axios.post(api, config);
-
-        console.log(response);
 
         if (!response.data) {
           setIsLoading(false);
