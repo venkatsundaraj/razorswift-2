@@ -11,10 +11,14 @@ import { motion } from "framer-motion";
 import heroSectionData from "../../../constants/Homepage/heroSectionData";
 import PythonPathway from "./PythonPathway";
 import styled from "@emotion/styled";
+import { HERO_SECTION_API } from "@/utils/apis/Homepage/homePageApis";
+import fetchData from "@/utils/helpers/fetchData";
 
 const TypographyOne = styled(Typography)(({ theme }) => ({}));
 
 const HeroSection = () => {
+  const { isLoading, data, error } = fetchData(HERO_SECTION_API);
+
   const banimg = {
     width: "clamp(370px, 63.5vw, 1210px)",
     height: "auto",
