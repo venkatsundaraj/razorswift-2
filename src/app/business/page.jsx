@@ -15,7 +15,6 @@ function Business() {
       <CareerDropDownBody dropDownBodyData={businessDropDownBodyData} />
       <StickyContainerSection />
       <GetStartedSection readyToStartData={readyToStartData} />
-      <AboutUsSection />
     </Box>
   );
 }

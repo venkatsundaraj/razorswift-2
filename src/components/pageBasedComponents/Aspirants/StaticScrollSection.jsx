@@ -61,7 +61,7 @@ function StaticScrollSection({ stickySliderData }) {
             <Grid
               container
               spacing={{ xs: 1, md: 4 }}
-              alignItems={{ xs: "end" }}
+              alignItems={{ xs: "end", xl: "center" }}
               justifyContent="center"
               sx={{ height: "100vh", overfow: "hidden" }}
             >
@@ -69,7 +69,7 @@ function StaticScrollSection({ stickySliderData }) {
                 item
                 xs={12}
                 md={6}
-                sx={{ height: { xs: "50%", md: "90%" } }}
+                sx={{ height: { xs: "50%", md: "90%", xl: "70%" } }}
               >
                 {/* <Stack> */}
                 <Box
@@ -106,7 +106,7 @@ function StaticScrollSection({ stickySliderData }) {
                 item
                 xs={12}
                 md={6}
-                sx={{ height: { xs: "50%", md: "90%" } }}
+                sx={{ height: { xs: "50%", md: "90%", xl: "70%" } }}
               >
                 <Stack
                   flexDirection="column"
