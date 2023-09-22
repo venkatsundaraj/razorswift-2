@@ -206,7 +206,7 @@ export default function PathwaySection() {
           </Box> */}
         </Grid>
         {/* second sec*/}
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} lg={5}>
           <Box sx={{}}>
             {content.accord.map(
               (
@@ -270,7 +270,6 @@ export default function PathwaySection() {
                       sx={{
                         display: "flex",
                         flexDirection: "column",
-                        alignItems: "flex-end",
                       }}
                     >
                       <Typography
@@ -279,7 +278,14 @@ export default function PathwaySection() {
                       >
                         {item.description}
                       </Typography>
-                      <Box sx={{ marginTop: { lg: "-30px" } }}>
+                      <Box
+                        sx={{
+                          marginTop: { lg: "-30px" },
+                          display: "flex",
+
+                          justifyContent: "flex-end",
+                        }}
+                      >
                         <Image style={accordimg} src={item.img} />
                       </Box>
                     </Box>
