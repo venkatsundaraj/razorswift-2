@@ -8,8 +8,16 @@ import PathwaySection from "../components/pageBasedComponents/Homepage/PathwaySe
 import ExploreSection from "../components/pageBasedComponents/Homepage/ExploreSection";
 import DemoSection from "../components/pageBasedComponents/Homepage/DemoSection";
 import Footer from "../components/pageBasedComponents/Homepage/Footer";
+
 import dropDownBodyData from "@/constants/Homepage/dropDownBodyData";
 import dropDownData from "@/constants/Homepage/dropDownData";
+
+
+export const metadata = {
+  title: "Home | Razorswift",
+};
+
+
 const page = () => {
   return (
     <main className="Topcontainer">

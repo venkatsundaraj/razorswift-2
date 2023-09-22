@@ -23,9 +23,9 @@ const TickerBox = styled(List)(({ theme }) => ({
   justifyContent: "center",
   overflow: "hidden",
 }));
-function TickerComponent() {
+function TickerComponent({ data }) {
   const [value, setValue] = useState(0);
-  const [courses, setCourses] = useState(TickerBoxData.slidingValue);
+  const [courses, setCourses] = useState(data.slidingValue);
 
   useEffect(() => {
     const timeOut = setInterval(() => {

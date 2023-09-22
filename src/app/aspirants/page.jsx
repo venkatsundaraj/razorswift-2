@@ -9,6 +9,9 @@ import GetStartedSection from "@/components/pageBasedComponents/Aspirants/GetSta
 import AboutUsSection from "@/components/pageBasedComponents/Aspirants/AboutUsSection";
 import StaticScrollSection from "@/components/pageBasedComponents/Aspirants/StaticScrollSection";
 import { stickySliderData } from "@/constants/Aspirants/aspirantPageData";
+
+import { readyToStartData } from "@/constants/Aspirants/aspirantPageData";
+
 import {
   dropDownData,
   dropDownBodyData,
@@ -30,7 +33,7 @@ function Aspirants() {
       />
       <DiscoverSection />
       <FastrackSection />
-      <GetStartedSection />
+      <GetStartedSection readyToStartData={readyToStartData} />
       <AboutUsSection />
     </Box>
   );
