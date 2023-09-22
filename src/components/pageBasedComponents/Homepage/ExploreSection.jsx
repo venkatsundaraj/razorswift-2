@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 import data from "@/constants/Homepage/whyrazor.js";
