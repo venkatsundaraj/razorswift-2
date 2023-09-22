@@ -10,6 +10,7 @@ import AboutUsSection from "@/components/pageBasedComponents/Aspirants/AboutUsSe
 import StaticScrollSection from "@/components/pageBasedComponents/Aspirants/StaticScrollSection";
 import { stickySliderData } from "@/constants/Aspirants/aspirantPageData";
 import { readyToStartData } from "@/constants/Aspirants/aspirantPageData";
+import BannerSection from "@/components/pageBasedComponents/Aspirants/BannerSection";
 import {
   dropDownData,
   dropDownBodyData,
@@ -22,7 +23,7 @@ export const metadata = {
 function Aspirants() {
   return (
     <Box component="main">
-      <HeroSection />
+      <BannerSection />
       <StaticScrollSection stickySliderData={stickySliderData} />
       <CareerSection />
       <DropdownSection
