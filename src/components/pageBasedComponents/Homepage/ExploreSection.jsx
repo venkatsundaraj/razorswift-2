@@ -9,7 +9,6 @@ import { EXPLORE_SECTION_API } from "@/utils/apis/Homepage/homePageApis";
 
 function ExploreSection() {
   const { isLoading, data: dataa, error } = fetchData(EXPLORE_SECTION_API);
-  console.log(data, dataa);
 
   const headfont = {
     fontSize: "clamp(50px, 4vw, 64px)",
