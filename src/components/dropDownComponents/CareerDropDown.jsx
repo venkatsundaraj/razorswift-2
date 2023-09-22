@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import SecondaryHeading from "../headingComponents/SecondaryHeading";
+import SubtitleHeading from "../headingComponents/SubtitleHeading";
 
 function CareerDropDown({ dropDownData, changeHandler }) {
   const [profession, setProfession] = useState("1");
