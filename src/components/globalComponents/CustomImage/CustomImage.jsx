@@ -1,16 +1,20 @@
-import React from "react";
-import Image from "next/image";
-import { Box } from "@mui/material";
+import React from 'react'
+import Image from 'next/image'
+import { Box } from '@mui/material'
 
-function CustomImage({ ...props }) {
+function CustomImage({ width, height, top, left, right, bottom, ...props }) {
   return (
     <Box
-      sx={{ position: "relative", width: `100px`, height: "100px" }}
+      sx={{
+        position: 'relative',
+        width: width,
+        height: `${height ? height : 'auto'}`,
+      }}
       component="div"
     >
-      <Image fill={true} {...props} />
+      <Image layout="fill" {...props} />
     </Box>
-  );
+  )
 }
 
-export default CustomImage;
+export default CustomImage
