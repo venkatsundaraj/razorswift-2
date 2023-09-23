@@ -5,9 +5,10 @@ import { Box, Grid, Typography, Container } from "@mui/material";
 import { aboutUsData } from "@/constants/Aspirants/aspirantPageData";
 import ParagraphHeading from "@/components/headingComponents/ParagraphHeading";
 
-function AboutUsSection({}) {
+function AboutUsSection({ ...props }) {
   return (
     <Box
+      {...props}
       component="section"
       sx={{
         backgroundColor: "pinkPalette.extraDark",
