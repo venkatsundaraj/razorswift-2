@@ -54,6 +54,10 @@ const homePageImagePaths = {
   landscapetwo: require("/public/images/Homepage/Path 1404.svg").default,
   landscapethree: require("/public/images/Homepage/Path 1406.svg").default,
   landscapefour: require("/public/images/Homepage/Path 1406.svg").default,
+
+  aspirants: require("/public/images/Homepage/aspirants.webp").default,
+  business: require("/public/images/Homepage/business.webp").default,
+  partners: require("/public/images/Homepage/partners.webp").default,
 };
 
 export default homePageImagePaths;

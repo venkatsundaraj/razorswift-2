@@ -1,11 +1,11 @@
 const dropDownData = [
   {
     id: "1",
-    title: "Aspiring for a dream career ?",
+    title: "Looking to hire top talent ?",
   },
   {
     id: "2",
-    title: "Looking to hire top talent ?",
+    title: "Aspiring for a dream career ?",
   },
   {
     id: "3",
