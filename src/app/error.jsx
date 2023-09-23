@@ -28,6 +28,7 @@ function error({ error, reset }) {
         gap={5}
       >
         <PrimaryFillButton
+          onClick={reset}
           sx={{
             backgroundColor: 'pinkPalette.dark',
             color: 'primaryPalette.white',
