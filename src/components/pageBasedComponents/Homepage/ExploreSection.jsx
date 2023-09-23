@@ -6,7 +6,7 @@ import Link from '@mui/material/Link'
 import data from '../../../constants/Homepage/whyrazor.js'
 import { Grid } from '@mui/material'
 import exploreSection from '@/constants/Homepage/exploresection.js'
-import exploreSectiontwo from '@/constants/Homepage/exploreSectiontwo.js'
+import exploreSectiontwo from '@/constants/Homepage/exploresectiontwo.js'
 import { motion } from 'framer-motion'
 const ExploreSection = () => {
   const headfont = {
