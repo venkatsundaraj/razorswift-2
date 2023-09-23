@@ -9,10 +9,10 @@ import Image from "next/image";
 import theme from "../../../themes/theme";
 import { motion } from "framer-motion";
 import heroSectionData from "../../../constants/Homepage/heroSectionData";
-import TickerComponent from "./TickerComponent";
+
 import styled from "@emotion/styled";
 import { TickerBoxData } from "@/constants/Homepage/TickerBoxData";
-
+import TickerComponent from "@/components/TickerComponent/TickerComponent";
 import fetchData from "@/utils/helpers/fetchData";
 
 const TypographyOne = styled(Typography)(({ theme }) => ({}));
