@@ -1,26 +1,33 @@
-import React from "react";
-import { Box } from "@mui/material";
-import HeroSection from "@/components/pageBasedComponents/Aspirants/HeroSection";
-import CareerDropDownBody from "@/components/dropDownComponents/CareerDropDownBody";
-import { businessDropDownBodyData } from "@/constants/Business/businessPageData";
-import GetStartedSection from "@/components/pageBasedComponents/Aspirants/GetStartedSection";
-import { readyToStartData } from "@/constants/Business/businessPageData";
-import AboutUsSection from "@/components/pageBasedComponents/Aspirants/AboutUsSection";
-import StickyContainerSection from "@/components/pageBasedComponents/Business/StickyContainerSection";
+import CareerDropDownBody from '@/components/dropDownComponents/CareerDropDownBody'
+import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection'
+import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
+import StickyContainerSection from '@/components/pageBasedComponents/Business/StickyContainerSection'
+import {
+  businessDropDownBodyData,
+  readyToStartData,
+} from '@/constants/Business/businessPageData'
+import { Box } from '@mui/material'
+import {
+  TickerBoxData,
+  heroSectionData,
+} from '@/constants/Aspirants/aspirantPageData'
 
 export const metadata = {
-  title: "Business | Razorswift",
-};
+  title: 'Business | Razorswift',
+}
 
 function Business() {
   return (
     <Box component="main">
-      <HeroSection />
+      <BannerSection
+        TickerBoxData={TickerBoxData}
+        heroSectionData={heroSectionData}
+      />
       <CareerDropDownBody dropDownBodyData={businessDropDownBodyData} />
       <StickyContainerSection />
       <GetStartedSection readyToStartData={readyToStartData} />
     </Box>
-  );
+  )
 }
 
-export default Business;
+export default Business

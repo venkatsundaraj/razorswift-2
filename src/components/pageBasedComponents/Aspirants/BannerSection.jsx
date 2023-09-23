@@ -6,15 +6,11 @@ import CustomSection from '@/components/globalComponents/CustomContainer/CustomS
 import ExtraSuperText from '@/components/headingComponents/ExtraSuperText'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import SuperText from '@/components/headingComponents/SuperText'
-import {
-  TickerBoxData,
-  heroSectionData,
-} from '@/constants/Aspirants/aspirantPageData'
-import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
+
 import { Box, Grid, Stack } from '@mui/material'
 import Image from 'next/image'
 
-function BannerSection() {
+function BannerSection({ heroSectionData, TickerBoxData }) {
   return (
     <CustomSection style={{ padding: '0px', height: '100vh' }}>
       <Box
@@ -81,6 +77,7 @@ function BannerSection() {
         </Grid>
 
         <Image
+          priority={false}
           style={{
             width: 'clamp(370px, 63.5vw, 1210px)',
             height: 'auto',
