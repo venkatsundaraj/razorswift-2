@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import exploreSection from "@/constants/Homepage/exploresection.js";
-import exploreSectiontwo from "@/constants/Homepage/exploreSectiontwo.js";
-import { Box, Grid, Typography } from "@mui/material";
-import Link from "@mui/material/Link";
-import { motion } from "framer-motion";
-import React from "react";
-import data from "../../../constants/Homepage/whyrazor.js";
-=======
 'use client'
 import React from 'react'
 import { Box } from '@mui/material'
@@ -18,7 +8,6 @@ import { Grid } from '@mui/material'
 import exploreSection from '@/constants/Homepage/exploresection.js'
 import exploreSectiontwo from '@/constants/Homepage/exploreSectiontwo.js'
 import { motion } from 'framer-motion'
->>>>>>> upstream/main
 const ExploreSection = () => {
   const headfont = {
     fontSize: 'clamp(50px, 4vw, 64px)',
@@ -283,13 +272,6 @@ const ExploreSection = () => {
         </Grid>
       </Grid>
     </Box>
-<<<<<<< HEAD
-  );
-};
-
-export default ExploreSection;
-=======
   )
 }
 export default ExploreSection
->>>>>>> upstream/main
