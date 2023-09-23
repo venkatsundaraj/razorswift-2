@@ -12,11 +12,9 @@ import Footer from "../components/pageBasedComponents/Homepage/Footer";
 import dropDownBodyData from "@/constants/Homepage/dropDownBodyData";
 import dropDownData from "@/constants/Homepage/dropDownData";
 
-
 export const metadata = {
   title: "Home | Razorswift",
 };
-
 
 const page = () => {
   return (
@@ -27,7 +25,7 @@ const page = () => {
         dropDownData={dropDownData}
         dropDownBodyData={dropDownBodyData}
       />
-      {/* <DropdownSection /> */}
+
       <PathwaySection />
       <ExploreSection />
       <DemoSection />
