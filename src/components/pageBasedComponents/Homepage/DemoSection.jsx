@@ -5,10 +5,6 @@ import Link from "@mui/material/Link";
 import Image from "next/image";
 import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 const DemoSection = () => {
-  const fontstwo = {
-    fontSize: "clamp(20px, 1.5vw, 28px)",
-  };
-
   return (
     <Box
       sx={{
@@ -16,9 +12,10 @@ const DemoSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: { xs: "100vh", sm: "50vh", md: "100vh" },
+        height: { xs: "100%", sm: "", md: "" },
         // border: "1px solid",
         justifyContent: "center",
+        padding: "40px 0",
       }}
     >
       <Box
@@ -32,13 +29,23 @@ const DemoSection = () => {
             fontSize: {
               xs: "25px",
               md: "clamp(40px, 3vw, 100px)",
-              lg: "clamp(40px, 3vw, 100px)",
+              lg: "100px",
             },
           }}
         >
           READY TO GET STARTED?
         </Typography>
-        <Typography variant="body1" style={fontstwo} sx={{ margin: "20px 0" }}>
+        <Typography
+          variant="body1"
+          sx={{
+            margin: "20px 0",
+            fontSize: {
+              xs: "clamp(20px, 1.5vw, 28px)",
+              md: "clamp(20px, 1.5vw, 28px)",
+              lg: "28px",
+            },
+          }}
+        >
           Hire at scale with the click of a button.
         </Typography>
         <Box sx={{ display: "flex", gap: 5 }}>
@@ -71,6 +78,8 @@ const DemoSection = () => {
               padding: "10px 20px",
               display: "flex",
               alignItems: "center",
+              zIndex: "1",
+              cursor: "pointer",
             }}
           >
             <Link
@@ -86,10 +95,12 @@ const DemoSection = () => {
             </Link>
           </Box>
         </Box>
-        <Image
-          style={{ width: "clamp(300px, 26.1vw, 500px)", height: "auto" }}
-          src={homePageImagePaths.fivemen}
-        />
+        <Box sx={{ marginTop: "-45px" }}>
+          <Image
+            style={{ width: "clamp(350px, 54vw, 1000px)", height: "auto" }}
+            src={homePageImagePaths.readytostartnew}
+          />
+        </Box>
       </Box>
     </Box>
   );

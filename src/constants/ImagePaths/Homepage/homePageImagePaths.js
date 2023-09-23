@@ -38,6 +38,26 @@ const homePageImagePaths = {
     .default,
   lefpathimgfour: require("/public/images/Homepage/corporate pathways.svg")
     .default,
+  readytostartnew: require("/public/images/Homepage/ready-to-get-started.svg")
+    .default,
+  trophyone: require("/public/images/Homepage/Path 485.svg").default,
+  trophytwo: require("/public/images/Homepage/Group 108.svg").default,
+  trophythree: require("/public/images/Homepage/Group 108.svg").default,
+  mainImage1: require("/public/images/Homepage/Mask Group 7.png").default,
+
+  hiringone: require("/public/images/Homepage/Path 291.svg").default,
+  hiringtwo: require("/public/images/Homepage/Group 385.svg").default,
+  hiringthree: require("/public/images/Homepage/Path 295.svg").default,
+  hiringfour: require("/public/images/Homepage/Path 1040.svg").default,
+
+  landscapeone: require("/public/images/Homepage/Path 1403.svg").default,
+  landscapetwo: require("/public/images/Homepage/Path 1404.svg").default,
+  landscapethree: require("/public/images/Homepage/Path 1406.svg").default,
+  landscapefour: require("/public/images/Homepage/Path 1406.svg").default,
+
+  aspirants: require("/public/images/Homepage/aspirants.webp").default,
+  business: require("/public/images/Homepage/business.webp").default,
+  partners: require("/public/images/Homepage/partners.webp").default,
 };
 
 export default homePageImagePaths;

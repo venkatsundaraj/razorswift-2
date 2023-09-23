@@ -9,9 +9,10 @@ import Image from "next/image";
 import theme from "../../../themes/theme";
 import { motion } from "framer-motion";
 import heroSectionData from "../../../constants/Homepage/heroSectionData";
-import PythonPathway from "./PythonPathway";
-import styled from "@emotion/styled";
 
+import styled from "@emotion/styled";
+import { TickerBoxData } from "@/constants/Homepage/TickerBoxData";
+import TickerComponent from "@/components/TickerComponent/TickerComponent";
 import fetchData from "@/utils/helpers/fetchData";
 
 const TypographyOne = styled(Typography)(({ theme }) => ({}));
@@ -25,10 +26,10 @@ const HeroSection = () => {
     offscreen: {
       opacity: 0,
       rotate: 0,
-      x: -800,
+      x: -20,
     },
     onscreen: {
-      opacity: 1,
+      opacity: [0.5, 0.6, 0.7, 0.8, 0.9, 1],
       rotate: [0, 20, -20, 20, 0],
       x: 0,
       transition: {
@@ -82,8 +83,8 @@ const HeroSection = () => {
     <Stack
       sx={{
         height: {
-          xs: "100vh",
-          sm: "41vh",
+          xs: "100%",
+
           md: "100vh",
           lg: "100vh",
           xl: "100vh",
@@ -120,8 +121,8 @@ const HeroSection = () => {
                   color: "primary.mainone",
                   lineHeight: "1.0",
                   fontSize: {
-                    xl: "clamp(110px, 8.5vw, 120px)",
-                    lg: "clamp(70px, 5.4vw, 100px)",
+                    // xl: "clamp(110px, 8.5vw, 120px)",new
+                    lg: "clamp(70px, 5.4vw, 120px)",
                     md: "clamp(70px, 5.4vw, 100px)",
                     sm: "40px",
                     xs: "40px",
@@ -153,8 +154,8 @@ const HeroSection = () => {
                   lineHeight: "1.0",
 
                   fontSize: {
-                    xl: "clamp(110px, 8.5vw, 120px)",
-                    lg: "clamp(70px, 5.4vw, 100px)",
+                    // xl: "clamp(110px, 8.5vw, 120px)",
+                    lg: "clamp(70px, 5.4vw, 120px)",
                     md: "clamp(70px, 5.4vw, 100px)",
                     sm: "40px",
                     xs: "40px",
@@ -270,16 +271,19 @@ const HeroSection = () => {
         </motion.div>
         <Stack
           sx={{
-            position: "absolute",
+            position: { xs: "", md: "absolute" },
             bottom: {
               xs: "50px",
               sm: "745px",
-              md: "47px",
-              lg: "47px",
-              xl: "47px",
+              md: "58px",
+              lg: "58px",
+              xl: "58px",
             },
 
             right: "0",
+            display: { sm: "flex", md: "" },
+            alignItems: { xs: "flex-end", md: "" },
+            transform: { xs: "translate(0px, 7px)", sm: "translate(0px, 0px)" },
           }}
         >
           <Box component="span">
@@ -303,7 +307,15 @@ const HeroSection = () => {
             delay: 2,
           }}
         >
-          <PythonPathway />
+          <TickerComponent
+            variant="div"
+            data={TickerBoxData}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          />
         </motion.div>
       </motion.div>
     </Stack>

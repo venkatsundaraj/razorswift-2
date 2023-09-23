@@ -8,6 +8,10 @@ import { readyToStartData } from "@/constants/Business/businessPageData";
 import AboutUsSection from "@/components/pageBasedComponents/Aspirants/AboutUsSection";
 import StickyContainerSection from "@/components/pageBasedComponents/Business/StickyContainerSection";
 
+export const metadata = {
+  title: "Business | Razorswift",
+};
+
 function Business() {
   return (
     <Box component="main">

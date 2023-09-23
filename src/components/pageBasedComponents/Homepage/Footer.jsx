@@ -16,12 +16,12 @@ const footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "primary.main",
+        backgroundColor: "primary.footer",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        pt: 10,
-        pb: 5,
+        pt: "40px",
+        pb: "40px",
         pl: { xs: "15px", lg: "15%" },
         pr: { xs: "15px", lg: "15%" },
       }}
@@ -42,11 +42,11 @@ const footer = () => {
             fontWeight: "600",
             textAlign: "center",
             lineHeight: "1.2",
-            mb: 5,
+            mb: "30px",
             fontSize: {
               xs: "25px",
               md: "clamp(40px,3.1vw,64px)",
-              lg: "clamp(40px,3.1vw,64px)",
+              lg: "64px",
             },
           }}
         >
@@ -58,7 +58,7 @@ const footer = () => {
           sx={{
             color: "common.white",
 
-            mb: 5,
+            mb: "30px",
             fontSize: { xs: "17px", lg: "28px" },
           }}
         >
@@ -71,7 +71,7 @@ const footer = () => {
           flexDirection: { xs: "column-reverse", md: "row", lg: "row" },
           alignItems: { xs: "center", lg: "flex-start" },
           gap: { xs: "50px", lg: "150px" },
-          mb: 8,
+          mb: "50px",
         }}
       >
         <Box
@@ -205,14 +205,23 @@ const footer = () => {
           pt: "3%",
         }}
       >
-        <Typography variant="body1" sx={{ color: "common.white" }}>
+        <Typography
+          variant="body1"
+          sx={{ color: "common.white", fontSize: { xs: "16px", lg: "20px" } }}
+        >
           2023 Razorswift. All rights reserved.
         </Typography>
         <Box sx={{ display: "flex", gap: "50px" }}>
-          <Typography variant="body1" sx={{ color: "common.white" }}>
+          <Typography
+            variant="body1"
+            sx={{ color: "common.white", fontSize: { xs: "16px", lg: "20px" } }}
+          >
             Terms of Services
           </Typography>
-          <Typography variant="body1" sx={{ color: "common.white" }}>
+          <Typography
+            variant="body1"
+            sx={{ color: "common.white", fontSize: { xs: "16px", lg: "20px" } }}
+          >
             Privacy Policy
           </Typography>
         </Box>

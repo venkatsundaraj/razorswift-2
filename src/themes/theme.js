@@ -34,6 +34,11 @@ const theme = createTheme({
       redpink: "#FFCCC9",
       redpinktwo: "#FFE3E3",
       redpinkthree: "#EDD8F2",
+      paragrey: "#545454",
+      headaboutus: "#380943",
+      litepink: "#F2B8FF",
+      lite: "#ffffff7a",
+      footer: "#3B0647",
     },
     pinkPalette: {
       extraDark: "#7A1450",

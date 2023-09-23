@@ -67,9 +67,9 @@ export default function DropdownSection() {
             transform="translate(-1844.923 60.03)"
             fill="none"
             stroke="#000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="4"
           />
           <rect
             id="Rectangle_60"

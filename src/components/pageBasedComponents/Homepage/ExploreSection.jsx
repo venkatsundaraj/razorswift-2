@@ -1,11 +1,13 @@
 'use client'
-import exploreSection from '@/constants/Homepage/exploresection.js'
-import exploreSectiontwo from '@/constants/Homepage/exploreSectiontwo.js'
-import { Box, Grid, Typography } from '@mui/material'
-import Link from '@mui/material/Link'
-import { motion } from 'framer-motion'
 import React from 'react'
+import { Box } from '@mui/material'
+import { Typography } from '@mui/material'
+import Link from '@mui/material/Link'
 import data from '../../../constants/Homepage/whyrazor.js'
+import { Grid } from '@mui/material'
+import exploreSection from '@/constants/Homepage/exploresection.js'
+import exploreSectiontwo from '@/constants/Homepage/exploresectiontwo.js'
+import { motion } from 'framer-motion'
 const ExploreSection = () => {
   const headfont = {
     fontSize: 'clamp(50px, 4vw, 64px)',
