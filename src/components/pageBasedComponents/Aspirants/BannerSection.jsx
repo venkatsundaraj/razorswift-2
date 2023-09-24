@@ -31,7 +31,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
           spacing={1}
           sx={{ justifyContent: { xs: 'center', md: 'left' } }}
         >
-          <Grid item xs={6} md={4}>
+          <Grid item xs={8} md={6}>
             <Stack
               flexDirection="column"
               justifyContent="space-between"
@@ -39,20 +39,20 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
             >
               <SuperText
                 sx={{
-                  color: 'pinkPalette.light',
+                  color: heroSectionData.heading.secondaryColor,
                 }}
               >
                 {heroSectionData.heading.primary}
               </SuperText>
               <ExtraSuperText
                 sx={{
-                  color: 'pinkPalette.dark',
+                  color: heroSectionData.heading.primaryColor,
                 }}
               >
                 {heroSectionData.heading.secondary}
               </ExtraSuperText>
               <ParagraphHeading
-                sx={{ textAlign: { xs: 'center', md: 'left' } }}
+                sx={{ textAlign: { xs: 'center', md: 'left', width: '75%' } }}
               >
                 {heroSectionData.description}
               </ParagraphHeading>

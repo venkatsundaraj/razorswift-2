@@ -3,7 +3,9 @@ import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePat
 export const heroSectionData = {
   heading: {
     primary: 'unlock your',
+    primaryColor: '#A62973',
     secondary: 'potential',
+    secondaryColor: '#EE5064',
   },
   description:
     'Be a specialist in your niche with AI enabled Pathways, Skill Assessments and so much more.',

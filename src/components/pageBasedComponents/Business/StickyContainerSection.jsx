@@ -1,9 +1,14 @@
 'use client'
 
+import ExtraParagraphHeading from '@/components/headingComponents/ExtraParagraphHeading'
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
-import { Box } from '@mui/material'
+import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
+import { quickTalentDiscoveryData } from '@/constants/Business/businessPageData'
+import { Box, Grid, Stack, Container } from '@mui/material'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 
 const backgroundColor = ['teal', 'tomato', 'orange', 'violet']
 
@@ -65,37 +70,86 @@ function StickyContainerSection() {
         padding: `clamp(10px,3vw,40px)`,
         overflowX: 'unset',
         display: 'flex',
+        gap: '40px',
         height: `calc(4 * 80vh + 350px)`,
         width: '100%',
         flexDirection: 'column',
       }}
     >
-      <Box>
-        {backgroundColor.map((item, i) => {
-          return (
-            <Box
-              ref={(element) => (cardsRef.current[i] = element)}
-              key={i}
+      {quickTalentDiscoveryData.pathways.map((item, i) => {
+        return (
+          <Box
+            ref={(element) => (cardsRef.current[i] = element)}
+            key={i}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'start',
+              flexDirection: 'column',
+              width: '100%',
+              height: {
+                xs: `${i === 0 ? '100vh' : '90vh'}`,
+                xl: `${i === 0 ? '90vh' : '80vh'}`,
+              },
+              borderRadius: 4,
+              backgroundColor: `${item.backgroundColor}`,
+              position: 'sticky',
+              top: { xs: `${i * 5}px`, xl: `${25 + i * 55}px` },
+              p: 4,
+            }}
+          >
+            <PrimaryHeading
+              variant="h2"
+              sx={{ color: 'violetPalette.dark', textAlign: 'center' }}
+            >
+              {item.mainTitle ? item.mainTitle : ''}
+            </PrimaryHeading>
+            <ParagraphHeading
               sx={{
-                display: 'flex',
-                alignItems: 'top',
-                justifyContent: 'center',
-                width: '100%',
-                height: {
-                  xs: `${i === 0 ? '100vh' : '90vh'}`,
-                  xl: `${i === 0 ? '90vh' : '80vh'}`,
-                },
-                borderRadius: 4,
-                backgroundColor: `${item}`,
-                position: 'sticky',
-                top: { xs: `${i * 5}px`, xl: `${25 + i * 55}px` },
+                color: 'primaryPalette.black',
+                width: 'clamp(300px,60vw,900px)',
+                textAlign: 'center',
+                mb: 4,
               }}
             >
-              <PrimaryHeading sx={{ color: 'white' }}>{i}</PrimaryHeading>
-            </Box>
-          )
-        })}
-      </Box>
+              {item.mainDescription ? item.mainDescription : ''}
+            </ParagraphHeading>
+
+            <Grid
+              container
+              spaing={2}
+              alignItems="center"
+              justifyContent="center"
+              sx={{ width: '100%', height: '100%' }}
+            >
+              <Grid item xs={12} md={6}>
+                <Stack
+                  flexDirection="column"
+                  alignItems="left"
+                  justifyContent="space-between"
+                >
+                  <Image src={item.image} alt={item.title} />
+                  <ExtraParagraphHeading>{item.title}</ExtraParagraphHeading>
+                  <SubtitleHeading>{item.description}</SubtitleHeading>
+                </Stack>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Stack alignItems="center" justifyContent="center">
+                  <Image
+                    alt={item.title}
+                    src={item.mainImage}
+                    style={{
+                      width: 'clamp(200px, 30vw,500px)',
+                      objectFit: 'cover',
+                      height: 'auto',
+                    }}
+                  />
+                </Stack>
+              </Grid>
+            </Grid>
+          </Box>
+        )
+      })}
     </section>
   )
 }
