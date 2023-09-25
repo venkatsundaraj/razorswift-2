@@ -82,7 +82,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
           priority={false}
           width={900}
           style={{
-            position: 'intrinsic',
+            position: 'absolute',
             right: '0',
             bottom: '0',
           }}
