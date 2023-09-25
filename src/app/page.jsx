@@ -19,7 +19,6 @@ export const metadata = {
 const page = () => {
   return (
     <main className="Topcontainer">
-      <Navbar />
       <HeroSection />
       <DropdownSection
         dropDownData={dropDownData}
@@ -29,7 +28,6 @@ const page = () => {
       <PathwaySection />
       <ExploreSection />
       <DemoSection />
-      <Footer />
     </main>
   )
 }

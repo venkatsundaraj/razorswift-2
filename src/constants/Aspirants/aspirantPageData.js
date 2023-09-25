@@ -1,5 +1,20 @@
 import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths'
 
+export const headerdData = {
+  navItems: [
+    { id: 1, name: 'Partners', link: '/partners' },
+    { id: 2, name: 'Aspirants', link: '/aspirants' },
+    { id: 3, name: 'Business', link: '/business' },
+  ],
+  forMenu: [
+    { id: 1, text: 'M' },
+    { id: 0, name: aspirantPageImagePaths.homePage.e },
+    { id: -1, text: 'N' },
+    { id: -2, text: 'U' },
+  ],
+  logo: aspirantPageImagePaths.homePage.rsLogo,
+}
+
 export const heroSectionData = {
   heading: {
     primary: 'unlock your',

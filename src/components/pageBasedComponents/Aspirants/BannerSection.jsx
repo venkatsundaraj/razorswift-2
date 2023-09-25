@@ -6,6 +6,7 @@ import CustomSection from '@/components/globalComponents/CustomContainer/CustomS
 import ExtraSuperText from '@/components/headingComponents/ExtraSuperText'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import SuperText from '@/components/headingComponents/SuperText'
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 
 import { Box, Grid, Stack } from '@mui/material'
 import Image from 'next/image'
@@ -22,7 +23,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
           width: '100%',
           alignItems: 'center',
           justifyContent: { xs: 'center', md: 'start' },
-          pt: { xs: 0, md: 8, xl: 12 },
+          pt: { xs: 0, md: 10, xl: 12 },
           pl: { xs: 0, md: 8, xl: 12 },
         }}
       >
@@ -77,19 +78,23 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
             </Stack>
           </Grid>
         </Grid>
-
-        <Image
-          priority={false}
-          width={900}
-          style={{
+        <Stack
+          sx={{
+            width: { xs: '400px', sm: '750px', md: '800px', xl: '1200px' },
+            aspectRatio: '1245/504',
             position: 'absolute',
-            right: '0',
+            right: { xs: '50%', md: '0' },
             bottom: '0',
+            transform: { xs: 'translateX(50%)', md: 'translateX(0)' },
           }}
-          layout="intrinsic"
-          alt={heroSectionData.heading.primary}
-          src={heroSectionData.bannerImage}
-        />
+        >
+          <CustomImage
+            width="100%"
+            height="100%"
+            alt={heroSectionData.heading.primary}
+            src={heroSectionData.bannerImage}
+          />
+        </Stack>
       </Box>
       <TickerComponent
         variant="div"

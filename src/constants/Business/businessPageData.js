@@ -10,7 +10,7 @@ export const heroSectionData = {
   },
   description: 'A dynamic ecosystem where talent and opportunities converge',
   buttonContent: 'Ask for Demo',
-  bannerImage: aspirantPageImagePaths.homePage.banner,
+  bannerImage: businessPageImagePaths.heroSection.banner,
 }
 
 export const businessDropDownBodyData = {
@@ -75,7 +75,7 @@ export const quickTalentDiscoveryData = {
       description:
         'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
       backgroundColor: '#FFE1E1',
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon1,
+      image: businessPageImagePaths.pathwayIcons.icon1,
       mainImage: businessPageImagePaths.dropDownSection.mainImage,
     },
     {
@@ -84,7 +84,7 @@ export const quickTalentDiscoveryData = {
       description:
         'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
       backgroundColor: '#EDD8F2',
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon2,
+      image: businessPageImagePaths.pathwayIcons.icon2,
       mainImage: businessPageImagePaths.dropDownSection.mainImage,
     },
     {
@@ -93,7 +93,7 @@ export const quickTalentDiscoveryData = {
       description:
         'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
       backgroundColor: '#FFE1E1',
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon3,
+      image: businessPageImagePaths.pathwayIcons.icon3,
       mainImage: businessPageImagePaths.dropDownSection.mainImage,
     },
     {
@@ -102,7 +102,7 @@ export const quickTalentDiscoveryData = {
       description:
         'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
       backgroundColor: '#EDD8F2',
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon4,
+      image: businessPageImagePaths.pathwayIcons.icon4,
       mainImage: businessPageImagePaths.dropDownSection.mainImage,
     },
   ],

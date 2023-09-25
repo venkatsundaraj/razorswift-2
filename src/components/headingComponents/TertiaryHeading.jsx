@@ -14,16 +14,16 @@ const Heading = styled(Typography)(({ theme }) => ({
     fontSize: '24px',
   },
   [theme.breakpoints.up('lg')]: {
-    fontSize: '42px',
+    fontSize: '34px',
   },
   [theme.breakpoints.up('xl')]: {
-    fontSize: '46px',
+    fontSize: '40px',
   },
 }))
 
 function SecondaryHeading({ children, ...props }) {
   return (
-    <Heading variant="h3" {...props}>
+    <Heading variant="p" {...props}>
       {children}
     </Heading>
   )

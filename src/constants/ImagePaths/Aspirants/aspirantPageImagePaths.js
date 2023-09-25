@@ -3,6 +3,11 @@ const aspirantPageImagePaths = {
     icon1: require('/public/images/Aspirants/aspirant-home-icon.png').default,
     icon2: require('/public/images/Aspirants/aspirant-home-icon-1.png').default,
     banner: require('/public/images/Aspirants/banupdate.svg').default,
+    rsLogo: require('/public/images/Aspirants/secondary-logo.png').default,
+    m: require('/public/images/Aspirants/m.svg').default,
+    e: require('/public/images/Aspirants/e.svg').default,
+    n: require('/public/images/Aspirants/n.svg').default,
+    u: require('/public/images/Aspirants/u.svg').default,
   },
   tickerSection: {
     arrow: require('/public/images/Aspirants/Arrow.svg').default,

@@ -5,10 +5,12 @@ import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
 import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
 import { quickTalentDiscoveryData } from '@/constants/Business/businessPageData'
-import { Box, Grid, Stack, Container } from '@mui/material'
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
+import { Container, Grid, Stack, Box } from '@mui/material'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
+import TertiaryHeading from '@/components/headingComponents/TertiaryHeading'
 
 const backgroundColor = ['teal', 'tomato', 'orange', 'violet']
 
@@ -67,7 +69,6 @@ function StickyContainerSection() {
     <section
       ref={sectionRef}
       style={{
-        padding: `clamp(10px,3vw,40px)`,
         overflowX: 'unset',
         display: 'flex',
         gap: '40px',
@@ -78,7 +79,7 @@ function StickyContainerSection() {
     >
       {quickTalentDiscoveryData.pathways.map((item, i) => {
         return (
-          <Box
+          <Container
             ref={(element) => (cardsRef.current[i] = element)}
             key={i}
             sx={{
@@ -126,32 +127,40 @@ function StickyContainerSection() {
               justifyContent="center"
               sx={{ width: '100%', height: '100%' }}
             >
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={5}>
                 <Stack
                   flexDirection="column"
                   alignItems="left"
                   justifyContent="space-between"
                 >
-                  <Image src={item.image} alt={item.title} />
-                  <ExtraParagraphHeading>{item.title}</ExtraParagraphHeading>
+                  <Box sx={{ alignSelf: 'center' }}>
+                    <CustomImage
+                      sx={{ alignSelf: 'center' }}
+                      src={item.image}
+                      alt={item.title}
+                      width="clamp(150px, 17vw, 235px)"
+                      aspectRatio="1/1"
+                    />
+                  </Box>
+                  <TertiaryHeading sx={{ mb: 4, color: 'primary.black' }}>
+                    {item.title}
+                  </TertiaryHeading>
                   <SubtitleHeading>{item.description}</SubtitleHeading>
                 </Stack>
               </Grid>
-              <Grid item xs={12} md={6}>
+
+              <Grid item xs={12} md={7}>
                 <Stack alignItems="center" justifyContent="center">
-                  <Image
+                  <CustomImage
                     alt={item.title}
                     src={item.mainImage}
-                    style={{
-                      width: 'clamp(200px, 30vw,500px)',
-                      objectFit: 'cover',
-                      height: 'auto',
-                    }}
+                    width="clamp(200px, 30vw,500px)"
+                    aspectRatio="1/1"
                   />
                 </Stack>
               </Grid>
             </Grid>
-          </Box>
+          </Container>
         )
       })}
     </section>
