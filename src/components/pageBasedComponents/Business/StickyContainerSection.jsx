@@ -94,7 +94,11 @@ function StickyContainerSection() {
               borderRadius: 4,
               backgroundColor: `${item.backgroundColor}`,
               position: 'sticky',
-              top: { xs: `${i * 5}px`, xl: `${25 + i * 55}px` },
+              top: {
+                xs: `${i * 5}px`,
+                md: `${i * 25}px`,
+                xl: `${25 + i * 55}px`,
+              },
               p: 4,
             }}
           >

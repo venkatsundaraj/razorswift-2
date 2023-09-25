@@ -2,14 +2,20 @@ import { Box } from '@mui/material'
 import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection'
 import { TickerBoxData } from '@/constants/Aspirants/aspirantPageData'
 import { heroSectionData } from '@/constants/Partners/partnersPageData'
+import { partnersDropDownBodyData } from '@/constants/Partners/partnersPageData'
+import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
+import CareerDropDownBody from '@/components/dropDownComponents/CareerDropDownBody'
+import { readyToStartData } from '@/constants/Partners/partnersPageData'
 
 function Partners() {
   return (
-    <Box variant="main">
+    <Box component="main">
       <BannerSection
         TickerBoxData={TickerBoxData}
         heroSectionData={heroSectionData}
       />
+      <CareerDropDownBody dropDownBodyData={partnersDropDownBodyData} />
+      <GetStartedSection readyToStartData={readyToStartData} />
     </Box>
   )
 }

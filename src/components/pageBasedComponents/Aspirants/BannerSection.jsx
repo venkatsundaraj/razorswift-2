@@ -39,6 +39,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
             >
               <SuperText
                 sx={{
+                  textAlign: 'center',
                   color: heroSectionData.heading.secondaryColor,
                 }}
               >
@@ -46,6 +47,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
               </SuperText>
               <ExtraSuperText
                 sx={{
+                  textAlign: 'center',
                   color: heroSectionData.heading.primaryColor,
                 }}
               >
@@ -78,13 +80,13 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
 
         <Image
           priority={false}
+          width={900}
           style={{
-            width: 'clamp(370px, 63.5vw, 1210px)',
-            height: 'auto',
-            position: 'absolute',
+            position: 'intrinsic',
             right: '0',
             bottom: '0',
           }}
+          layout="intrinsic"
           alt={heroSectionData.heading.primary}
           src={heroSectionData.bannerImage}
         />
