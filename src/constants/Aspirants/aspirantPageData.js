@@ -13,6 +13,30 @@ export const headerdData = {
     { id: -2, text: 'U' },
   ],
   logo: aspirantPageImagePaths.homePage.rsLogo,
+  navInItems: [
+    {
+      id: 1,
+      name: 'Solutions',
+      subItems: [
+        { id: 1, name: 'Partners', link: '/partners' },
+        { id: 2, name: 'Aspirants', link: '/aspirants' },
+        { id: 3, name: 'Business', link: '/business' },
+      ],
+    },
+    {
+      id: 2,
+      name: 'Courses',
+    },
+    {
+      id: 3,
+      name: 'About',
+    },
+    ,
+    {
+      id: 4,
+      name: 'Contact Us',
+    },
+  ],
 }
 
 export const heroSectionData = {

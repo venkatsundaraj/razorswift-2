@@ -11,10 +11,9 @@ function MenuItems({ handleCloseItems, open }) {
       anchorEl={open}
       open={open}
       onClose={handleClose}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
+      getContentAnchorEl={null}
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      transformOrigin={{ vertical: 'top', horizontal: 'center' }}
       MenuListProps={{
         'aria-labelledby': 'basic-button',
       }}

@@ -18,14 +18,6 @@ import MenuItems from './MenuItems'
 import CustomImage from '../globalComponents/CustomImage/CustomImage'
 
 function Header() {
-  const [anchorEl, setAnchorEl] = useState(null)
-  const menuBtnClickHandler = function (entry) {
-    setAnchorEl(entry)
-  }
-
-  const closeHandler = function () {
-    setAnchorEl(null)
-  }
   return (
     <Box component="header">
       <AppBar
@@ -72,16 +64,7 @@ function Header() {
                   ))}
                 </List>
 
-                <MenuButton
-                  open={Boolean(anchorEl)}
-                  handleClickEvent={menuBtnClickHandler}
-                  headerdData={headerdData}
-                />
-                <MenuItems
-                  anchorEl={anchorEl}
-                  open={Boolean(anchorEl)}
-                  handleCloseItems={closeHandler}
-                />
+                <MenuButton headerdData={headerdData} />
               </Stack>
             </Stack>
           </Container>
