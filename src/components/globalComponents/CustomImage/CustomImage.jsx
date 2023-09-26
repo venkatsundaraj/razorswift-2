@@ -2,7 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import { Box } from '@mui/material'
 
-function CustomImage({ width, height, aspectRatio, ...props }) {
+function CustomImage({ width, height, aspectRatio, alt, ...props }) {
+  const altTag = alt || 'Razorswift'
   return (
     <Box
       sx={{
@@ -13,7 +14,14 @@ function CustomImage({ width, height, aspectRatio, ...props }) {
       }}
       component="div"
     >
-      <Image layout="fill" {...props} />
+      <Image
+        priority={true}
+        alt={altTag}
+        objectFit="cover"
+        layout="fill"
+        sizes="auto"
+        {...props}
+      />
     </Box>
   )
 }

@@ -3,13 +3,12 @@
 import TickerComponent from '@/components/TickerComponent/TickerComponent'
 import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton'
 import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection'
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 import ExtraSuperText from '@/components/headingComponents/ExtraSuperText'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import SuperText from '@/components/headingComponents/SuperText'
-import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 
 import { Box, Grid, Stack } from '@mui/material'
-import Image from 'next/image'
 
 function BannerSection({ heroSectionData, TickerBoxData }) {
   return (

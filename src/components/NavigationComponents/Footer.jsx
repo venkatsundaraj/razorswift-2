@@ -82,7 +82,7 @@ const footer = () => {
           }}
         >
           <Box>
-            <Image src={homePageImagePaths.footerlogo} />
+            <Image alt="razorswift" src={homePageImagePaths.footerlogo} />
           </Box>
           <Box
             sx={{
@@ -91,10 +91,26 @@ const footer = () => {
               justifyContent: 'space-between',
             }}
           >
-            <Image style={footerimg} src={homePageImagePaths.twitt} />
-            <Image style={footerimg} src={homePageImagePaths.fb} />
-            <Image style={footerimg} src={homePageImagePaths.linkedin} />
-            <Image style={footerimg} src={homePageImagePaths.insta} />
+            <Image
+              alt="razorswift"
+              style={footerimg}
+              src={homePageImagePaths.twitt}
+            />
+            <Image
+              alt="razorswift"
+              style={footerimg}
+              src={homePageImagePaths.fb}
+            />
+            <Image
+              alt="razorswift"
+              style={footerimg}
+              src={homePageImagePaths.linkedin}
+            />
+            <Image
+              alt="razorswift"
+              style={footerimg}
+              src={homePageImagePaths.insta}
+            />
           </Box>
         </Box>
         <Box

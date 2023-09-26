@@ -26,15 +26,18 @@ export const headerdData = {
     {
       id: 2,
       name: 'Courses',
+      link: '/courses',
     },
     {
       id: 3,
       name: 'About',
+      link: '/aboutus',
     },
     ,
     {
       id: 4,
       name: 'Contact Us',
+      link: '/contact-us',
     },
   ],
 }

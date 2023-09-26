@@ -11,10 +11,8 @@ import {
   Toolbar,
 } from '@mui/material'
 import Link from 'next/link'
-import { useState } from 'react'
 import MenuButton from '../buttonComponents/MenuButton'
 import NavButton from '../buttonComponents/NavButton'
-import MenuItems from './MenuItems'
 import CustomImage from '../globalComponents/CustomImage/CustomImage'
 
 function Header() {
@@ -54,7 +52,7 @@ function Header() {
                   }}
                 >
                   {headerdData.navItems.map((item) => (
-                    <ListItem>
+                    <ListItem key={item.id}>
                       <Link href={`${item.link}`}>
                         <NavButton sx={{ color: 'primaryPalette.black' }}>
                           {item.name}
