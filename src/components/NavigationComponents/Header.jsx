@@ -14,7 +14,7 @@ import Link from 'next/link'
 import MenuButton from '../buttonComponents/MenuButton'
 import NavButton from '../buttonComponents/NavButton'
 import CustomImage from '../globalComponents/CustomImage/CustomImage'
-
+import Navigation from './Navigation'
 function Header() {
   return (
     <Box component="header">
@@ -39,31 +39,7 @@ function Header() {
                 width="clamp(160px,10vw,244px)"
                 aspectRatio="2/1"
               />
-              <Stack
-                alignItems="center"
-                justifyContent="center"
-                flexDirection="row"
-              >
-                <List
-                  sx={{
-                    display: { xs: 'none', md: 'flex' },
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  {headerdData.navItems.map((item) => (
-                    <ListItem key={item.id}>
-                      <Link href={`${item.link}`}>
-                        <NavButton sx={{ color: 'primaryPalette.black' }}>
-                          {item.name}
-                        </NavButton>
-                      </Link>
-                    </ListItem>
-                  ))}
-                </List>
-
-                <MenuButton headerdData={headerdData} />
-              </Stack>
+              <Navigation headerdData={headerdData} />
             </Stack>
           </Container>
         </Toolbar>

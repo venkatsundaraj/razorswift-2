@@ -46,6 +46,7 @@ const theme = createTheme({
       light: '#EE5064',
       superLight: '#FCD3D1',
       extraSuperLight: '#eabad640',
+      navLight: '#EFD8E6',
     },
     primaryPalette: {
       white: '#FFFFFF',
@@ -113,7 +114,7 @@ const theme = createTheme({
       styleOverrides: {
         list: {
           '&[role="menu"]': {
-            backgroundColor: '#FCD3D1',
+            backgroundColor: '#EFD8E6',
             minWidth: '240px',
             color: '#3A3A3A',
             padding: '16px',
@@ -153,17 +154,17 @@ const theme = createTheme({
     MuiMenuPaper: {
       styleOverrides: {
         borderRadius: '44px',
-        backgroundColor: 'blue',
+        // backgroundColor: 'blue',
       },
     },
     MuiMenuList: {
       styleOverrides: {
-        backgroundColor: 'blue',
+        // backgroundColor: 'blue',
       },
     },
     MuiMenuItem: {
       styleOverrides: {
-        backgroundColor: 'blue',
+        // backgroundColor: 'blue',
       },
     },
   },

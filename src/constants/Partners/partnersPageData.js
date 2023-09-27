@@ -1,5 +1,6 @@
 import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths'
 import businessPageImagePaths from '../ImagePaths/Business/businessPageImagePaths'
+import partnersPageImagePaths from '../ImagePaths/Partners/partnersPageImagePaths'
 
 export const heroSectionData = {
   heading: {
@@ -10,14 +11,14 @@ export const heroSectionData = {
   },
   description: 'A dynamic ecosystem where talent and opportunities converge',
   buttonContent: 'Partner with us',
-  bannerImage: aspirantPageImagePaths.homePage.banner,
+  bannerImage: partnersPageImagePaths.heroSection.banner,
 }
 
 export const partnersDropDownBodyData = {
   id: 1,
   title: 'Aggregating the Talent',
   highLightedTitle: 'Partner landscape.',
-  backgroundColor: '#FCD3D1',
+  backgroundColor: '#F3C3C9',
   buttonData: {
     title: 'Ask for Demo',
     backgroundColor: '#FFFFFF',

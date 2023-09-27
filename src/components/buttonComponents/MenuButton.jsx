@@ -1,10 +1,12 @@
-import { Box, Button, Typography, Stack } from '@mui/material'
+import { Box, Button, Typography, Stack, SwipeableDrawer } from '@mui/material'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import * as React from 'react'
 import CustomImage from '../globalComponents/CustomImage/CustomImage'
 import Link from 'next/link'
 import ParagraphHeading from '../headingComponents/ParagraphHeading'
+import MenuItems from '../NavigationComponents/MenuItems'
+import SwipeAbleDrawer from '../NavigationComponents/SwipeableDrawer'
 
 export default function MenuButton({ headerdData }) {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -87,63 +89,8 @@ export default function MenuButton({ headerdData }) {
           horizontal: 'center',
         }}
       >
-        {headerdData.navInItems.map((title, i) => (
-          <>
-            <MenuItem
-              key={title.id}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'pinkPalette.dark',
-                borderBottom: `${
-                  i === headerdData.navInItems.length - 1 || i === 0
-                    ? ''
-                    : '1px solid #A62973'
-                }`,
-                '&:hover': {
-                  backgroundColor: 'unset',
-                },
-              }}
-            >
-              <ParagraphHeading
-                style={{ fontWeight: '600' }}
-                sx={{ color: 'pinkPalette.dark' }}
-              >
-                <Link
-                  style={{ textDecoration: 'none', color: 'inherit' }}
-                  href={`${title.link || ''}`}
-                >
-                  {title.name}
-                </Link>
-              </ParagraphHeading>
-            </MenuItem>
-            {title.subItems && (
-              <Stack
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-                gap={1.2}
-                sx={{ py: 1.2, borderBottom: '1px solid #A62973' }}
-              >
-                {title.subItems.map((item) => (
-                  <ParagraphHeading
-                    key={item.id}
-                    sx={{ color: 'pinkPalette.dark' }}
-                  >
-                    <Link
-                      style={{ textDecoration: 'none', color: 'inherit' }}
-                      href={`${item.link || ''}`}
-                    >
-                      {item.name}
-                    </Link>
-                  </ParagraphHeading>
-                ))}
-              </Stack>
-            )}
-          </>
-        ))}
+        <MenuItems headerdData={headerdData} />
+        <SwipeAbleDrawer open={open} />
       </Menu>
     </>
   )

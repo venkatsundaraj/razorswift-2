@@ -1,6 +1,6 @@
 const businessPageImagePaths = {
   heroSection: {
-    banner: require('/public/images/Business/banner.png').default,
+    banner: require('/public/images/Business/business-mockup.svg').default,
   },
   dropDownSection: {
     clock: require('/public/images/Business/business-dropdown-icon.png')
