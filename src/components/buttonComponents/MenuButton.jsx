@@ -6,7 +6,6 @@ import CustomImage from '../globalComponents/CustomImage/CustomImage'
 import Link from 'next/link'
 import ParagraphHeading from '../headingComponents/ParagraphHeading'
 import MenuItems from '../NavigationComponents/MenuItems'
-import SwipeAbleDrawer from '../NavigationComponents/SwipeableDrawer'
 
 export default function MenuButton({ headerdData }) {
   const [anchorEl, setAnchorEl] = React.useState(null)
