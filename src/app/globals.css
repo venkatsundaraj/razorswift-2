@@ -60,6 +60,7 @@ main.Topcontainer {
 .poppage.display {
   visibility: visible;
   opacity: 1;
+  z-index: 1400;
 }
 .poppage[class*='--end'].display .midpage {
   transform: translateY(0);
