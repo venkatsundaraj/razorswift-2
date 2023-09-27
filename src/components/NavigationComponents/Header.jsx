@@ -21,7 +21,7 @@ function Header() {
       <AppBar
         component="nav"
         sx={{
-          backgroundColor: 'transparent',
+          backgroundColor: 'primaryPalette.white',
           boxShadow: 'unset',
           zIndex: '1200',
         }}

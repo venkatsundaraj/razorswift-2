@@ -7,7 +7,7 @@ function MenuItems({ headerdData }) {
   return (
     <>
       {headerdData.navInItems.map((title, i) => (
-        <Box key={title.id}>
+        <Box>
           <MenuItem
             key={title.id}
             sx={{

@@ -90,7 +90,7 @@ export default function MenuButton({ headerdData }) {
         }}
       >
         <MenuItems headerdData={headerdData} />
-        <SwipeAbleDrawer open={open} />
+        {/* <SwipeAbleDrawer open={open} /> */}
       </Menu>
     </>
   )
