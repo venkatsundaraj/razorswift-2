@@ -17,8 +17,8 @@ function CustomImage({ width, height, aspectRatio, alt, ...props }) {
       <Image
         priority={true}
         alt={altTag}
-        objectFit="cover"
-        layout="fill"
+        style={{ objectFit: 'cover' }}
+        fill={true}
         sizes="auto"
         {...props}
       />
