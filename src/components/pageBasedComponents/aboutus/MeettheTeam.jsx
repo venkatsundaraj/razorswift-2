@@ -78,7 +78,8 @@ const MeettheTeam = () => {
           <Grid
             sx={{
               marginBottom: '40px',
-              borderLeft: item.id % 2 == 0 ? '1px solid #707070' : '',
+              borderLeft:
+                item.id % 2 == 0 ? { xs: 'none', lg: '1px solid #707070' } : '',
             }}
             item
             xs={12}
@@ -89,6 +90,10 @@ const MeettheTeam = () => {
               href={`/aboutus/${item.slug}`}
               style={secstyle}
               onClick={(e) => {
+                if (e.ctrlKey) {
+                  // If Ctrl (or Cmd) key is held, open the link in a new tab
+                  return
+                }
                 e.preventDefault()
                 handleLinkClick(item.id)
               }}
@@ -135,7 +140,7 @@ const MeettheTeam = () => {
       >
         <Box ref={popUpContentRef} className="midpage">
           <Box className="finalpage">
-            <Container>
+            <Container sx={{ paddingTop: '30px' }}>
               <Grid sx={{ width: '100%' }} container alignItems="center">
                 <Grid item xs={12} lg={2}>
                   <Image
@@ -149,13 +154,25 @@ const MeettheTeam = () => {
                   />
                 </Grid>
                 <Grid justifyContent="center" item xs={12} lg={8}>
-                  <Typography sx={{ fontSize: '44px', textAlign: 'center' }}>
+                  <Typography
+                    sx={{
+                      fontSize: '44px',
+                      textAlign: 'center',
+                      fontWeight: '600',
+                    }}
+                  >
                     {content.person[0].title}
                   </Typography>
                   <Typography sx={{ fontSize: '36px', textAlign: 'center' }}>
                     {content.person[0].designation}
                   </Typography>
-                  <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                    }}
+                  >
                     <Image src={Aboutusimagepathway.linkedin} />
                   </Box>
                 </Grid>

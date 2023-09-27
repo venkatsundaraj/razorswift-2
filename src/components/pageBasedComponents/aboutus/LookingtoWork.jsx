@@ -18,7 +18,7 @@ const LookingtoWork = () => {
       }}
     >
       <Grid sx={{ alignItems: 'center' }} container spacing={1}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={7} md={6}>
           <Box
             sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
           >
@@ -28,8 +28,8 @@ const LookingtoWork = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={3}></Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={1} md={3}></Grid>
+        <Grid item xs={4} md={3}>
           <Link
             sx={{
               textDecoration: 'none',

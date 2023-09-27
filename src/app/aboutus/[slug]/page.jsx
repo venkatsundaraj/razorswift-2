@@ -24,14 +24,6 @@ const person = () => {
   const popup = useRef()
   const pagecontainer = useRef()
 
-  //   const [content, setContent] = useState(teamperson[0])
-  //   useEffect(() => {
-  //     const matchingItem = teamperson.find((item) => item.slug === slug)
-  //     setContent(matchingItem)
-  //     if (!matchingItem) {
-  //       return null
-  //     }
-  //   }, [])
   const content = teamperson.find((item) => item.slug === slug)
   console.log(content)
   if (!content) {
