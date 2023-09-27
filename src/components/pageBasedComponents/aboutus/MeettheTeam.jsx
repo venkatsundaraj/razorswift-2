@@ -65,7 +65,7 @@ const MeettheTeam = () => {
       <Typography
         sx={{ textAlign: 'center', fontSize: '44px', fontWeight: 'bold' }}
       >
-        Meet the team
+        Meet the teame
       </Typography>
 
       <Grid
@@ -86,9 +86,12 @@ const MeettheTeam = () => {
           >
             <Link
               ref={leftclickRef}
-              href=""
+              href={`/aboutus/${item.slug}`}
               style={secstyle}
-              onClick={() => handleLinkClick(item.id)}
+              onClick={(e) => {
+                e.preventDefault()
+                handleLinkClick(item.id)
+              }}
             >
               <Stack flexDirection="column" gap={1} sx={{ width: '100%' }}>
                 <Image

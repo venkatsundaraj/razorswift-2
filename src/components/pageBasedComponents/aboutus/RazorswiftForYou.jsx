@@ -31,6 +31,7 @@ const RazorswiftForYou = () => {
                 fontSize: '35px',
                 fontWeight: '600',
                 color: 'primary.thirdsec',
+                lineHeight: '1',
               }}
             >
               {razorswiftforyou[0].description}
