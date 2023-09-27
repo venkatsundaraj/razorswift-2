@@ -14,7 +14,7 @@ function FastrackCardLists({ lists, ...props }) {
             backgroundColor: `${item.bgColor}`,
             padding: (theme) => theme.spacing(1.2, 2),
             borderRadius: 2,
-            width: { xs: '100%', lg: 'unset' },
+            width: { xs: '100%' },
           }}
         >
           <Typography

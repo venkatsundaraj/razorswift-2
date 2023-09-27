@@ -1,16 +1,16 @@
 const exploreSectiontwo = [
   {
-    id: "1",
-    title: "70%",
-    description: "Reduction and removing human bias",
-    bg: "primary.redpink",
+    id: '1',
+    percentage: '70%',
+    description: 'Reduction and removing human bias',
+    bgColor: 'primary.redpink',
   },
   {
-    id: "2",
-    title: "67%",
-    description: "Faster onboarding process",
-    bg: "primary.redpinkthree",
+    id: '2',
+    percentage: '67%',
+    description: 'Faster onboarding process',
+    bgColor: 'primary.redpinkthree',
   },
-];
+]
 
-export default exploreSectiontwo;
+export default exploreSectiontwo

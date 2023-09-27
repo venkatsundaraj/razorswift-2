@@ -13,6 +13,7 @@ const LookingtoWork = () => {
       sx={{
         backgroundColor: 'primary.main',
         marginTop: '100px',
+        marginBottom: '100px',
         borderRadius: '20px',
       }}
     >

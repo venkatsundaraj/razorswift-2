@@ -8,6 +8,9 @@ import { Grid } from '@mui/material'
 import exploreSection from '@/constants/Homepage/exploresection.js'
 import exploreSectiontwo from '@/constants/Homepage/exploresectiontwo.js'
 import { motion } from 'framer-motion'
+import { Stack } from '@mui/material'
+import FastrackCardLists from '@/components/CardComponents/AspirantCards/FastrackCardLists'
+
 const ExploreSection = () => {
   const headfont = {
     fontSize: 'clamp(50px, 4vw, 64px)',
@@ -79,7 +82,7 @@ const ExploreSection = () => {
       <Grid
         sx={{ alignItems: 'center', justifyContent: 'center' }}
         container
-        spacing={10}
+        spacing={3}
       >
         <Grid item xs={12} lg={6}>
           <Box
@@ -154,121 +157,78 @@ const ExploreSection = () => {
                 </Typography>
               </motion.div>
             </motion.div>
-            <Link
-              variant="body1"
-              underline="none"
-              sx={{
-                backgroundColor: 'primary.purp',
-                color: 'common.white',
-                pt: '10px',
-                pb: '10px',
-                pl: '30px',
-                pr: '30px',
-                borderRadius: '200px',
-                margin: '15px 0',
-                cursor: 'pointer',
-              }}
-            >
-              Explore
-            </Link>
+            <motion.div transition={{ staggerChildren: 1.9 }}>
+              <motion.div
+                variants={singlesec}
+                initial={'offscreen'}
+                whileInView={'onscreen'}
+                viewport={{ once: true }}
+              >
+                <Link
+                  variant="body1"
+                  underline="none"
+                  sx={{
+                    backgroundColor: 'primary.purp',
+                    color: 'common.white',
+                    pt: '10px',
+                    pb: '10px',
+                    pl: '30px',
+                    pr: '30px',
+                    borderRadius: '200px',
+                    margin: '15px 0',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {data[0].button}
+                </Link>
+              </motion.div>
+            </motion.div>
           </Box>
         </Grid>
-        <Grid item xs={12} lg={6} xl={5}>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-            }}
-          >
-            <Box
-              sx={{
-                height: 'clamp(250px, 19.3vw, 270px)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'flex-start',
-                gap: 2,
-              }}
+
+        <Grid sx={{ height: { lg: '400px' } }} item xs={12} md={6} lg={3}>
+          <motion.div transition={{ staggerChildren: 1.9 }}>
+            <motion.div
+              variants={singlesec}
+              initial={'offscreen'}
+              whileInView={'onscreen'}
+              viewport={{ once: true }}
             >
-              {exploreSection.map((item) => (
-                <motion.div transition={{ staggerChildren: 1.9 }}>
-                  <motion.div
-                    variants={singlesec}
-                    initial={'offscreen'}
-                    whileInView={'onscreen'}
-                    viewport={{ once: true }}
-                  >
-                    <Box
-                      sx={{
-                        padding: '10px 20px',
-                        borderRadius: '10px',
-                        backgroundColor: `${item.bg}`,
-                      }}
-                    >
-                      <Typography
-                        variant="body1"
-                        style={numbersec}
-                        sx={{ color: 'primary.purp' }}
-                      >
-                        {item.title}
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        style={numbersecdescription}
-                        sx={{}}
-                      >
-                        {item.description}
-                      </Typography>
-                    </Box>
-                  </motion.div>
-                </motion.div>
-              ))}
-            </Box>
-            <Box
-              sx={{
-                height: 'clamp(250px, 19.3vw, 270px)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: { xs: 'flex-start', lg: 'flex-end' },
-                marginLeft: { xs: '15px', md: '30px', lg: '30px' },
-                gap: 2,
-              }}
+              <Stack
+                sx={{ height: '100%', gap: 2 }}
+                alignItems={{ xs: 'center', md: 'end' }}
+                justifyContent="start"
+                flexDirection="column"
+              >
+                <FastrackCardLists
+                  sx={{ alignSelf: 'start', width: '50%' }}
+                  lists={exploreSection}
+                />
+              </Stack>
+            </motion.div>
+          </motion.div>
+        </Grid>
+        <Grid item xs={12} md={6} lg={3}>
+          <motion.div transition={{ staggerChildren: 1.9 }}>
+            <motion.div
+              variants={singlesec}
+              initial={'offscreen'}
+              whileInView={'onscreen'}
+              viewport={{ once: true }}
             >
-              {exploreSectiontwo.map((item) => (
-                <motion.div transition={{ staggerChildren: 1.9 }}>
-                  <motion.div
-                    variants={singlesec}
-                    initial={'offscreen'}
-                    whileInView={'onscreen'}
-                    viewport={{ once: true }}
-                  >
-                    <Box
-                      sx={{
-                        padding: '10px 20px',
-                        borderRadius: '10px',
-                        backgroundColor: `${item.bg}`,
-                      }}
-                    >
-                      <Typography
-                        variant="body1"
-                        style={numbersec}
-                        sx={{ color: 'primary.purp' }}
-                      >
-                        {item.title}
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        style={numbersecdescription}
-                        sx={{}}
-                      >
-                        {item.description}
-                      </Typography>
-                    </Box>
-                  </motion.div>
-                </motion.div>
-              ))}
-            </Box>
-          </Box>
+              <Stack
+                sx={{ height: '100%', gap: 2 }}
+                alignItems={{ xs: 'center', md: 'start' }}
+                justifyContent="end"
+                flexDirection="column"
+              >
+                <FastrackCardLists
+                  sx={{ alignSelf: 'start', width: '50%' }}
+                  lists={exploreSectiontwo}
+                />
+              </Stack>
+            </motion.div>
+          </motion.div>
         </Grid>
       </Grid>
     </Box>
