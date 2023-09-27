@@ -3,13 +3,13 @@
 import { headerdData } from '@/constants/Aspirants/aspirantPageData'
 import {
   AppBar,
-  useScrollTrigger,
   Box,
-  Container,
   Slide,
   Stack,
   Toolbar,
+  useScrollTrigger,
 } from '@mui/material'
+import Link from 'next/link'
 import CustomImage from '../globalComponents/CustomImage/CustomImage'
 import Navigation from './Navigation'
 const HideOnScroll = function ({ window, children }) {
@@ -42,12 +42,14 @@ function Header(props) {
               flexDirection="row"
               sx={{ width: '100vw' }}
             >
-              <CustomImage
-                src={headerdData.logo}
-                alt="Razorswift-logo"
-                width="clamp(160px,10vw,244px)"
-                aspectRatio="2/1"
-              />
+              <Link href="/">
+                <CustomImage
+                  src={headerdData.logo}
+                  alt="Razorswift-logo"
+                  width="clamp(160px,10vw,244px)"
+                  aspectRatio="2/1"
+                />
+              </Link>
               <Navigation headerdData={headerdData} />
             </Stack>
           </Toolbar>

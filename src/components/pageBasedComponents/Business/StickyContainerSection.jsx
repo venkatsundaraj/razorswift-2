@@ -87,6 +87,8 @@ function StickyContainerSection() {
               alignItems: 'center',
               justifyContent: 'start',
               flexDirection: 'column',
+              transformOrigin: 'center',
+              // transition: 'transform 0.015ms ease',
               width: '100%',
               height: {
                 xs: `${i === 0 ? '100vh' : '90vh'}`,
