@@ -16,7 +16,7 @@ const HideOnScroll = function ({ window, children }) {
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
   })
-  console.log(trigger)
+
   return (
     <Slide appear={false} direction="down" in={!trigger}>
       {children}
@@ -36,21 +36,20 @@ function Header(props) {
           }}
         >
           <Toolbar>
-            <Container>
-              <Stack
-                alignItems="center"
-                justifyContent="space-between"
-                flexDirection="row"
-              >
-                <CustomImage
-                  src={headerdData.logo}
-                  alt="Razorswift-logo"
-                  width="clamp(160px,10vw,244px)"
-                  aspectRatio="2/1"
-                />
-                <Navigation headerdData={headerdData} />
-              </Stack>
-            </Container>
+            <Stack
+              alignItems="center"
+              justifyContent="space-between"
+              flexDirection="row"
+              sx={{ width: '100vw' }}
+            >
+              <CustomImage
+                src={headerdData.logo}
+                alt="Razorswift-logo"
+                width="clamp(160px,10vw,244px)"
+                aspectRatio="2/1"
+              />
+              <Navigation headerdData={headerdData} />
+            </Stack>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

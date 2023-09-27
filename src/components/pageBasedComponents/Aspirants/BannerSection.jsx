@@ -22,7 +22,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
           width: '100%',
           alignItems: 'center',
           justifyContent: { xs: 'center', md: 'start' },
-          pt: { xs: 0, md: 10, xl: 12 },
+          pt: { xs: 0, md: 16, xl: 20 },
           pl: { xs: 0, md: 8, xl: 12 },
         }}
       >
