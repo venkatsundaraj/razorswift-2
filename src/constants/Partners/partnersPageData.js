@@ -20,14 +20,14 @@ export const partnersDropDownBodyData = {
   highLightedTitle: 'Partner landscape.',
   backgroundColor: '#F3C3C9',
   buttonData: {
-    title: 'Ask for Demo',
+    title: 'Partner with Us',
     backgroundColor: '#FFFFFF',
-    color: '#A62973',
+    color: '#EE5064',
   },
   trophyImage: businessPageImagePaths.dropDownSection.clock,
   description:
     'AI driven automation for Large scale hiring with efficient cost and time',
-  image: businessPageImagePaths.dropDownSection.mainImage,
+  image: partnersPageImagePaths.dropDownSection.mainImage,
   whatToExpect: [
     {
       id: 1,
@@ -60,7 +60,10 @@ export const partnersDropDownBodyData = {
 }
 
 export const readyToStartData = {
-  title: 'READY TO GET STARTED?',
+  title: 'WHY PARTNER WITH US',
   description: 'Hire at scale with the click of a button',
-  mainImage: aspirantPageImagePaths.getStartedSection.questionTag,
+  mainImage: partnersPageImagePaths.getStartedSection.questionTag,
+  buttonText: 'Partner with us',
+  longDescription: `Razorswift Innovations' commitment to innovation and strategic partnerships creates a harmonious ecosystem where businesses and candidates can thrive. By integrating with key players in the talent marketplace, we ensure that the hiring process is efficient, credible, and beneficial for all involved. 
+`,
 }

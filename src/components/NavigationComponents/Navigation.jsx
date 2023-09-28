@@ -2,6 +2,7 @@ import React from 'react'
 import { Stack, List, ListItem } from '@mui/material'
 import NavButton from '../buttonComponents/NavButton'
 import Link from 'next/link'
+import ExitToAppIcon from '@mui/icons-material/ExitToApp'
 import MenuButton from '../buttonComponents/MenuButton'
 
 function Navigation({ headerdData }) {
@@ -17,7 +18,10 @@ function Navigation({ headerdData }) {
         {headerdData.navItems.map((item) => (
           <ListItem key={item.id}>
             <Link href={`${item.link}`}>
-              <NavButton sx={{ color: 'primaryPalette.black' }}>
+              <NavButton
+                sx={{ color: 'primaryPalette.black' }}
+                startIcon={<ExitToAppIcon />}
+              >
                 {item.name}
               </NavButton>
             </Link>

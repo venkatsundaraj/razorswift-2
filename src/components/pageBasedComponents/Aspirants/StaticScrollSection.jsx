@@ -9,7 +9,7 @@ import Image from 'next/image'
 import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection'
 import SecondaryHeading from '@/components/headingComponents/SecondaryHeading'
 import { dropDownBodyData } from '@/constants/Aspirants/aspirantPageData'
-
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
 import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
@@ -69,13 +69,21 @@ function StaticScrollSection({ stickySliderData }) {
                 item
                 xs={12}
                 md={6}
-                sx={{ height: { xs: '50%', md: '90%', xl: '70%' } }}
+                sx={{
+                  height: {
+                    xs: '50%',
+                    md: '90%',
+                    xl: '70%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  },
+                }}
               >
-                {/* <Stack> */}
                 <Box
                   sx={{
-                    width: '100%',
-                    height: '100%',
+                    width: { sm: '100%', md: '100%', lg: '100%', xl: '100%' },
+                    height: { sm: '100%', md: '70%', lg: '100%', xl: '100%' },
                     mb: { xs: 2, md: 5 },
                     position: 'relative',
                     overflowY: 'hidden',
@@ -100,7 +108,6 @@ function StaticScrollSection({ stickySliderData }) {
                     />
                   ))}
                 </Box>
-                {/* </Stack> */}
               </Grid>
               <Grid
                 item

@@ -7,6 +7,10 @@ import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetSta
 import CareerDropDownBody from '@/components/dropDownComponents/CareerDropDownBody'
 import { readyToStartData } from '@/constants/Partners/partnersPageData'
 
+export const metadata = {
+  title: 'Partners | Razorswift',
+}
+
 function Partners() {
   return (
     <Box component="main">

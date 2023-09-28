@@ -3,6 +3,7 @@ import contactUsImagePaths from '../ImagePaths/ContactUs/contactUsImagePaths'
 export const joinUsData = {
   title: 'Looking to work with us?',
   buttonText: 'Join Us',
+  joinUsIcon: contactUsImagePaths.aboutIcon,
 }
 
 export const contactData = {

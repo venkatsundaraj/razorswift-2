@@ -7,6 +7,7 @@ import React from 'react'
 
 import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton'
 import TertiaryHeading from '@/components/headingComponents/TertiaryHeading'
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 
 function JoinUsBox({ joinUsData }) {
   return (
@@ -16,7 +17,7 @@ function JoinUsBox({ joinUsData }) {
           sx={{
             backgroundColor: 'pinkPalette.dark',
             borderRadius: 6,
-            padding: 4,
+            padding: { xs: '16px', md: '0 16px' },
           }}
         >
           <Grid
@@ -25,8 +26,18 @@ function JoinUsBox({ joinUsData }) {
             alignItems="center"
             justifyContent="space-between"
           >
-            <Grid item xs={12} sm={6}>
-              <Stack>
+            <Grid item xs={12} sm={8}>
+              <Stack
+                flexDirection={{ xs: 'column', sm: 'row' }}
+                alignItems="center"
+                gap={2}
+              >
+                <CustomImage
+                  src={joinUsData.joinUsIcon}
+                  alt={joinUsData.title}
+                  width="250px"
+                  aspectRatio="4/3"
+                />
                 <TertiaryHeading
                   sx={{
                     color: 'primaryPalette.white',
@@ -37,7 +48,7 @@ function JoinUsBox({ joinUsData }) {
                 </TertiaryHeading>
               </Stack>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={4}>
               <Stack
                 justifyContent={{ xs: 'center', md: 'end' }}
                 flexDirection="row"

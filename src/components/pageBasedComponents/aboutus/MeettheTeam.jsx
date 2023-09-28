@@ -63,7 +63,7 @@ const MeettheTeam = () => {
       <Typography
         sx={{ textAlign: 'center', fontSize: '44px', fontWeight: 'bold' }}
       >
-        Meet the teame
+        Meet the team
       </Typography>
 
       <Grid

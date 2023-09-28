@@ -1,8 +1,5 @@
-import React from 'react'
-import { Stack, Box, Typography } from '@mui/material'
-import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
-import ExtraParagraphHeading from '@/components/headingComponents/ExtraParagraphHeading'
-import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
+import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
+import { Box, Typography } from '@mui/material'
 
 function FastrackCardLists({ lists, ...props }) {
   return (
@@ -12,8 +9,9 @@ function FastrackCardLists({ lists, ...props }) {
           key={item.id}
           sx={{
             backgroundColor: `${item.bgColor}`,
-            padding: (theme) => theme.spacing(1.2, 2),
+            padding: (theme) => theme.spacing(2, 2),
             borderRadius: 2,
+            minHeight: { xs: '120px', sm: '86px', md: '120px' },
             width: { xs: '100%' },
           }}
         >
@@ -27,7 +25,7 @@ function FastrackCardLists({ lists, ...props }) {
           >
             {item.percentage}
           </Typography>
-          <ParagraphHeading>{item.description}</ParagraphHeading>
+          <SubtitleHeading>{item.description}</SubtitleHeading>
         </Box>
       ))}
     </>

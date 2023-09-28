@@ -26,31 +26,31 @@ export const businessDropDownBodyData = {
   trophyImage: businessPageImagePaths.dropDownSection.clock,
   description:
     'AI driven automation for Large scale hiring with efficient cost and time',
-  image: businessPageImagePaths.dropDownSection.mainImage,
+  image: businessPageImagePaths.dropDownSection.business,
   whatToExpect: [
     {
       id: 1,
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon1,
+      image: businessPageImagePaths.dropDownSectionOne.forStudents.icon1,
       title: 'Job ready talent on Day 1',
       description:
         'Manage skill gap and talent shortage with customized pathways.',
     },
     {
       id: 2,
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon2,
+      image: businessPageImagePaths.dropDownSectionOne.forStudents.icon2,
       title: 'Unified talent ecosystem',
       description: 'Seamless collaboration with talent partners with pathways.',
     },
     {
       id: 3,
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon3,
+      image: businessPageImagePaths.dropDownSectionOne.forStudents.icon3,
       title: 'Standardized profiles',
       description:
         'Standardized assessments and AI enriched profiles with defined pathways',
     },
     {
       id: 4,
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon4,
+      image: businessPageImagePaths.dropDownSectionOne.forStudents.icon4,
       title: 'Be a Marquee employer',
       description:
         'Enhanced exposure and increased recognition among aspirants with corporate pathways',
@@ -76,34 +76,34 @@ export const quickTalentDiscoveryData = {
         'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
       backgroundColor: '#FFE1E1',
       image: businessPageImagePaths.pathwayIcons.icon1,
-      mainImage: businessPageImagePaths.dropDownSection.mainImage,
+      mainImage: businessPageImagePaths.dropDownSection.mainImage1,
     },
     {
       id: 2,
-      title: 'Company crafted pathways',
+      title: 'ROI driven efficiency',
       description:
-        'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
-      backgroundColor: '#EDD8F2',
+        'Leverage AI and data insights along with their party integrations for unparalleled cost and time efficiency.',
+      backgroundColor: '#E5BED5',
       image: businessPageImagePaths.pathwayIcons.icon2,
-      mainImage: businessPageImagePaths.dropDownSection.mainImage,
+      mainImage: businessPageImagePaths.dropDownSection.mainImage2,
     },
     {
       id: 3,
-      title: 'Company crafted pathways',
+      title: 'Seamless eco-sysem integration',
       description:
-        'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
-      backgroundColor: '#FFE1E1',
+        'Connect with tools and platforms of choice and Custom create an integrated solution on RazorSwift.',
+      backgroundColor: '#DCBDE3',
       image: businessPageImagePaths.pathwayIcons.icon3,
-      mainImage: businessPageImagePaths.dropDownSection.mainImage,
+      mainImage: businessPageImagePaths.dropDownSection.mainImage3,
     },
     {
       id: 4,
-      title: 'Company crafted pathways',
+      title: 'Actionable data insights',
       description:
-        'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
-      backgroundColor: '#EDD8F2',
+        'Gain a wealth of data on aspirants leading to informed decisions to re-configure the pathway as needed.',
+      backgroundColor: '#FCC9CF',
       image: businessPageImagePaths.pathwayIcons.icon4,
-      mainImage: businessPageImagePaths.dropDownSection.mainImage,
+      mainImage: businessPageImagePaths.dropDownSection.mainImage4,
     },
   ],
 }
