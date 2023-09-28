@@ -231,7 +231,7 @@ export default function PathwaySection() {
           </motion.div>
           <Box>
             {pathwayheads.map((item, index) => (
-              <motion.div transition={{ staggerChildren: 1.9 }}>
+              <motion.div key={index} transition={{ staggerChildren: 1.9 }}>
                 <motion.div
                   variants={secondsec}
                   initial={'offscreen'}
@@ -393,7 +393,11 @@ export default function PathwaySection() {
                             justifyContent: 'flex-end',
                           }}
                         >
-                          <Image style={accordimg} src={item.img} />
+                          <Image
+                            alt="pathwayaccordianimage"
+                            style={accordimg}
+                            src={item.img}
+                          />
                         </Box>
                       </Box>
                     </AccordionDetails>

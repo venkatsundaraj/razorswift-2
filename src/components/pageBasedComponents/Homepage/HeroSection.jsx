@@ -299,7 +299,11 @@ const HeroSection = () => {
           }}
         >
           <Box component="span">
-            <Image style={banimg} src={homePageImagePaths.bannerImage} />
+            <Image
+              alt="bannerImage"
+              style={banimg}
+              src={homePageImagePaths.bannerImage}
+            />
           </Box>
         </Stack>
       </Stack>

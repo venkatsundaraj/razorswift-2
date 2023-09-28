@@ -7,7 +7,6 @@ import DropdownSection from '@/components/pageBasedComponents/Aspirants/Dropdown
 import PathwaySection from '../components/pageBasedComponents/Homepage/PathwaySection'
 import ExploreSection from '../components/pageBasedComponents/Homepage/ExploreSection'
 import DemoSection from '../components/pageBasedComponents/Homepage/DemoSection'
-import Footer from '../components/pageBasedComponents/Homepage/Footer'
 
 import dropDownBodyData from '@/constants/Homepage/dropDownBodyData'
 import dropDownData from '@/constants/Homepage/dropDownData'

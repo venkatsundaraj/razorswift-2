@@ -18,18 +18,15 @@ const LookingtoWork = () => {
       }}
     >
       <Grid sx={{ alignItems: 'center' }} container spacing={1}>
-        <Grid item xs={7} md={6}>
-          <Box
-            sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
-          >
-            <Image src={Aboutusimagepathway.lookingto} />
-            <Typography sx={{ fontSize: '36px', color: 'common.white' }}>
-              {lookingtowork[0].title}
-            </Typography>
-          </Box>
+        <Grid item xs={12} md={3}>
+          <Image alt="lookingtoimg" src={Aboutusimagepathway.lookingto} />
         </Grid>
-        <Grid item xs={1} md={3}></Grid>
-        <Grid item xs={4} md={3}>
+        <Grid item xs={12} md={5}>
+          <Typography sx={{ fontSize: '36px', color: 'common.white' }}>
+            {lookingtowork[0].title}
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={4}>
           <Link
             sx={{
               textDecoration: 'none',

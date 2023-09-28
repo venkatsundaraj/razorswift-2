@@ -14,7 +14,11 @@ const RazorswiftForYou = () => {
     <Container sx={{ marginTop: '100px' }}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <Image style={imgprop} src={Aboutusimagepathway.puzzle} />
+          <Image
+            alt="puzzle"
+            style={imgprop}
+            src={Aboutusimagepathway.puzzle}
+          />
         </Grid>
         <Grid
           sx={{ display: 'flex', alignItems: 'center' }}

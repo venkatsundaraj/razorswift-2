@@ -27,6 +27,7 @@ const ForBussiness = () => {
         <Grid alignItems="center" container spacing={6}>
           <Grid item xs={12} md={6}>
             <Image
+              alt="statisticimage"
               style={{ width: '100%' }}
               src={Aboutusimagepathway.statisticimage}
             />

@@ -9,7 +9,7 @@ import LookingtoWork from '@/components/pageBasedComponents/aboutus/LookingtoWor
 import MeettheTeam from '@/components/pageBasedComponents/aboutus/MeettheTeam'
 const About = () => {
   return (
-    <Box component="main">
+    <Box sx={{ overflowX: 'hidden' }} component="main">
       <HeroSec />
       <RazorswiftForYou />
       <RazorSwiftForBusinesses />
