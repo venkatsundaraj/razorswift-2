@@ -34,10 +34,10 @@ function CareerDropDownBody({ dropDownBodyData }) {
               <CustomImage
                 src={dropDownBodyData.trophyImage}
                 alt={dropDownBodyData.title}
-                width={{ xs: '65%', md: '100%' }}
-                aspectRatio="429/140"
-                sx={{
-                  objectFit: 'cover',
+                width={{ xs: '70%', md: '90%' }}
+                aspectRatio="6/2"
+                style={{
+                  objectFit: 'unset',
                 }}
               />
               <SecondaryHeading sx={{ color: 'primaryPalette.primaryBlack' }}>
@@ -89,8 +89,9 @@ function CareerDropDownBody({ dropDownBodyData }) {
                 src={dropDownBodyData.image}
                 width="100%"
                 aspectRatio="1/1"
-                sx={{
+                style={{
                   objectFit: 'cover',
+                  borderRadius: '24px',
                 }}
               />
             </Stack>

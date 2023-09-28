@@ -2,9 +2,9 @@ import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePat
 
 export const headerdData = {
   navItems: [
-    { id: 1, name: 'Partners', link: '/partners' },
-    { id: 2, name: 'Aspirants', link: '/aspirants' },
-    { id: 3, name: 'Business', link: '/business' },
+    { id: 1, name: 'Partners', link: '/' },
+    { id: 2, name: 'Aspirants', link: '/' },
+    { id: 3, name: 'Business', link: '/' },
   ],
   forMenu: [
     { id: 1, text: 'M' },
@@ -13,6 +13,7 @@ export const headerdData = {
     { id: -2, text: 'U' },
   ],
   logo: aspirantPageImagePaths.homePage.rsLogo,
+  signUp: aspirantPageImagePaths.homePage.signUp,
   navInItems: [
     {
       id: 1,
@@ -167,6 +168,11 @@ export const dropDownBodyData = [
     title: 'Internships, Interviews',
     highLightedTitle: 'Jobs.',
     backgroundColor: '#DAB0E3',
+    buttonData: {
+      title: 'Explore',
+      backgroundColor: '#FFFFFF',
+      color: '#A62973',
+    },
     trophyImage: aspirantPageImagePaths.dropDownSection.trophy,
     description:
       'Empower yourself to achieve your dream career; everything is possible through our AI-powered Pathways.',
@@ -203,7 +209,12 @@ export const dropDownBodyData = [
     title: 'Design your Dream,',
     highLightedTitle: 'Career.',
     backgroundColor: '#ECADD2',
-    trophyImage: aspirantPageImagePaths.dropDownSection.trophy,
+    buttonData: {
+      title: 'Explore',
+      backgroundColor: '#FFFFFF',
+      color: '#A62973',
+    },
+    trophyImage: aspirantPageImagePaths.dropDownSection.spring,
     description:
       'Be a niche specialist and get verified for skills that are in demand.',
     image: aspirantPageImagePaths.dropDownSection.mainImage2,

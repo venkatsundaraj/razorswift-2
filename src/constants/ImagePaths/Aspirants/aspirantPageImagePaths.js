@@ -8,6 +8,7 @@ const aspirantPageImagePaths = {
     e: require('/public/images/Aspirants/e.svg').default,
     n: require('/public/images/Aspirants/n.svg').default,
     u: require('/public/images/Aspirants/u.svg').default,
+    signUp: require('/public/images/Aspirants/sign-in-bold.svg').default,
   },
   tickerSection: {
     arrow: require('/public/images/Aspirants/Arrow.svg').default,
@@ -18,6 +19,7 @@ const aspirantPageImagePaths = {
     mainImage2:
       require('/public/images/Aspirants/experienced-professionals.png').default,
     trophy: require('/public/images/Aspirants/aspirants-vector.svg').default,
+    spring: require('/public/images/Aspirants/arrow-1.svg').default,
     forStudents: {
       icon1: require('/public/images/Aspirants/college-to-career-roadmap.svg')
         .default,

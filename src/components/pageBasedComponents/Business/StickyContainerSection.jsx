@@ -156,8 +156,9 @@ function StickyContainerSection() {
                   <CustomImage
                     alt={item.title}
                     src={item.mainImage}
-                    width="clamp(200px, 30vw,500px)"
-                    aspectRatio="1/1"
+                    width="clamp(300px, 40vw,600px)"
+                    aspectRatio="3/2"
+                    style={{ borderRadius: '16px' }}
                   />
                 </Stack>
               </Grid>
