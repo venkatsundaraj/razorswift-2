@@ -77,7 +77,7 @@ const MeettheTeam = () => {
             sx={{
               marginBottom: '40px',
               borderLeft:
-                item.id % 2 == 0 ? { xs: 'none', lg: '1px solid #707070' } : '',
+                item.id % 2 == 0 ? { xs: 'none', md: '1px solid #707070' } : '',
             }}
             item
             xs={12}
@@ -113,7 +113,15 @@ const MeettheTeam = () => {
                   src={item.img}
                 />
 
-                <Box sx={{ margin: '-120px 45px 0' }}>
+                <Box
+                  sx={{
+                    margin: {
+                      xs: '-120px 0px 0',
+                      sm: '-120px 150px 0',
+                      md: '-120px 45px 0',
+                    },
+                  }}
+                >
                   <Typography
                     sx={{
                       fontSize: '36px',
