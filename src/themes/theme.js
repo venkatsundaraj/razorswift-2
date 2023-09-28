@@ -154,18 +154,13 @@ const theme = createTheme({
     MuiMenuPaper: {
       styleOverrides: {
         borderRadius: '44px',
-        // backgroundColor: 'blue',
       },
     },
     MuiMenuList: {
-      styleOverrides: {
-        // backgroundColor: 'blue',
-      },
+      styleOverrides: {},
     },
     MuiMenuItem: {
-      styleOverrides: {
-        // backgroundColor: 'blue',
-      },
+      styleOverrides: {},
     },
   },
   // Breakpoints
@@ -175,7 +170,7 @@ const theme = createTheme({
       sm: 600,
       md: 900,
       lg: 1200,
-      xl: 1536,
+      xl: 1600,
     },
   },
 })

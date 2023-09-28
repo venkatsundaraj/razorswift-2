@@ -39,7 +39,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
             >
               <SuperText
                 sx={{
-                  textAlign: 'center',
+                  textAlign: { xs: 'center', md: 'left' },
                   color: heroSectionData.heading.secondaryColor,
                 }}
               >
@@ -47,7 +47,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
               </SuperText>
               <ExtraSuperText
                 sx={{
-                  textAlign: 'center',
+                  textAlign: { xs: 'center', md: 'left' },
                   color: heroSectionData.heading.primaryColor,
                 }}
               >

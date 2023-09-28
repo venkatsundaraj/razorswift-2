@@ -10,7 +10,7 @@ import { Box, Container, Grid, Stack } from '@mui/material'
 
 function BannerSection() {
   return (
-    <CustomSection>
+    <CustomSection style={{ padding: '82px 0' }}>
       <Container>
         <Box>
           <Grid container spacing={1} alignItems="center">
@@ -27,11 +27,12 @@ function BannerSection() {
               <Form />
             </Grid>
             <Grid item xs={12} md={6}>
-              <Stack>
+              <Stack alignItems="center" justifyContent="center">
                 <CustomImage
                   alt={heroSection.title}
                   src={heroSection.banner}
-                  aspectRatio="133/129"
+                  width="clamp(250px,40vw,500px)"
+                  aspectRatio="203/198"
                 />
               </Stack>
             </Grid>
