@@ -9,9 +9,9 @@ import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton'
 import TertiaryHeading from '@/components/headingComponents/TertiaryHeading'
 import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 
-function JoinUsBox({ joinUsData }) {
+function JoinUsBox({ joinUsData, ...props }) {
   return (
-    <CustomSection style={{ padding: '40px 0 0' }}>
+    <CustomSection {...props} style={{ padding: '40px 0 0' }}>
       <Container>
         <Box
           sx={{

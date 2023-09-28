@@ -81,7 +81,7 @@ const MeettheTeam = () => {
             }}
             item
             xs={12}
-            lg={6}
+            md={6}
             key={i}
           >
             <Link
