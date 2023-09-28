@@ -12,7 +12,7 @@ const footer = () => {
     fontSize: '24px',
   }
   const footerimg = {
-    width: '20%',
+    width: '80%',
   }
   const d = new Date()
   let year = d.getFullYear()
@@ -109,28 +109,37 @@ const footer = () => {
               display: 'flex',
               flexDireaction: 'row',
               justifyContent: 'space-between',
+              gap: '15px',
             }}
           >
-            <Image
-              alt="razorswift"
-              style={footerimg}
-              src={homePageImagePaths.twitt}
-            />
-            <Image
-              alt="razorswift"
-              style={footerimg}
-              src={homePageImagePaths.fb}
-            />
-            <Image
-              alt="razorswift"
-              style={footerimg}
-              src={homePageImagePaths.linkedin}
-            />
-            <Image
-              alt="razorswift"
-              style={footerimg}
-              src={homePageImagePaths.insta}
-            />
+            <Link sx={{ cursor: 'pointer' }}>
+              <Image
+                alt="razorswift"
+                style={footerimg}
+                src={homePageImagePaths.twitt}
+              />
+            </Link>
+            <Link sx={{ cursor: 'pointer' }}>
+              <Image
+                alt="razorswift"
+                style={footerimg}
+                src={homePageImagePaths.fb}
+              />
+            </Link>
+            <Link sx={{ cursor: 'pointer' }}>
+              <Image
+                alt="razorswift"
+                style={footerimg}
+                src={homePageImagePaths.linkedin}
+              />
+            </Link>
+            <Link sx={{ cursor: 'pointer' }}>
+              <Image
+                alt="razorswift"
+                style={footerimg}
+                src={homePageImagePaths.insta}
+              />
+            </Link>
           </Box>
         </Box>
         <Box
