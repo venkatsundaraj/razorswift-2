@@ -4,7 +4,7 @@ import { Typography } from '@mui/material'
 import herosec from '@/constants/Aboutus/herosec'
 const HeroSec = () => {
   return (
-    <Box sx={{ textAlign: 'center' }}>
+    <Box sx={{ textAlign: 'center', marginTop: '250px' }}>
       <Box sx={{ marginTop: '50px' }}>
         <Typography sx={{ fontSize: '24px' }}>{herosec[0].title}</Typography>
         <Typography

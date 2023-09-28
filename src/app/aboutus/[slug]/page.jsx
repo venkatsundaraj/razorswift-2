@@ -1,19 +1,11 @@
 'use client'
-import React from 'react'
-import { Box } from '@mui/material'
-import { Typography } from '@mui/material'
-import Image from 'next/image'
-import meettheteam from '@/constants/Aboutus/meettheteam'
-import { Grid } from '@mui/material'
-import { Container } from '@mui/material'
-import { Stack } from '@mui/system'
-import Link from 'next/link'
-import { useRef, useEffect } from 'react'
-import Aboutusimagepathway from '@/constants/ImagePaths/Aboutus/Aboutusimagepathway'
 import teamperson from '@/constants/Aboutus/teamperson'
-import { useState } from 'react'
+import Aboutusimagepathway from '@/constants/ImagePaths/Aboutus/Aboutusimagepathway'
+import { Box, Container, Grid, Typography } from '@mui/material'
+import { Stack } from '@mui/system'
+import Image from 'next/image'
 import { useParams } from 'next/navigation'
-import { useRouter } from 'next/navigation'
+import React, { useRef } from 'react'
 const person = () => {
   const { slug } = useParams()
   console.log(slug)
@@ -24,14 +16,6 @@ const person = () => {
   const popup = useRef()
   const pagecontainer = useRef()
 
-  //   const [content, setContent] = useState(teamperson[0])
-  //   useEffect(() => {
-  //     const matchingItem = teamperson.find((item) => item.slug === slug)
-  //     setContent(matchingItem)
-  //     if (!matchingItem) {
-  //       return null
-  //     }
-  //   }, [])
   const content = teamperson.find((item) => item.slug === slug)
   console.log(content)
   if (!content) {
@@ -63,9 +47,9 @@ const person = () => {
             <Typography sx={{ fontSize: '36px', textAlign: 'center' }}>
               {content.person[0].designation}
             </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            {/* <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               <Image src={Aboutusimagepathway.linkedin} />
-            </Box>
+            </Box> */}
           </Grid>
           <Grid item xs={12} lg={2}></Grid>
         </Grid>
@@ -92,7 +76,7 @@ const person = () => {
                   height: 'auto',
                   width: '90%',
                 }}
-                src={Aboutusimagepathway.teamdemo}
+                src={content.person[0].img}
               />
             </Stack>
           </Grid>

@@ -12,8 +12,10 @@ import { useRef, useEffect } from 'react'
 import Aboutusimagepathway from '@/constants/ImagePaths/Aboutus/Aboutusimagepathway'
 import teamperson from '@/constants/Aboutus/teamperson'
 import { useState } from 'react'
-
+import { useParams } from 'next/navigation'
 const MeettheTeam = () => {
+  const { sluge } = useParams()
+
   const secstyle = {
     textDecoration: 'none',
   }
@@ -22,11 +24,7 @@ const MeettheTeam = () => {
   const scrollPosition = useRef(0)
   const popUpContentRef = useRef()
   const leftclickRef = useRef()
-  // leftclickRef.current.classList.add('leftclick')
-  // console.log(leftclickRef.current.className)
-  //   leftclickRef.current.className.addEventListener("click", function () {
-  //   console.log("The button has been clicked!");
-  // })
+
   function handleLinkClose(e) {
     if (
       popUpContentRef.current &&
@@ -65,7 +63,7 @@ const MeettheTeam = () => {
       <Typography
         sx={{ textAlign: 'center', fontSize: '44px', fontWeight: 'bold' }}
       >
-        Meet the team
+        Meet the teame
       </Typography>
 
       <Grid
@@ -78,29 +76,41 @@ const MeettheTeam = () => {
           <Grid
             sx={{
               marginBottom: '40px',
-              borderLeft: item.id % 2 == 0 ? '1px solid #707070' : '',
+              borderLeft:
+                item.id % 2 == 0 ? { xs: 'none', lg: '1px solid #707070' } : '',
             }}
             item
             xs={12}
             lg={6}
+            key={i}
           >
             <Link
               ref={leftclickRef}
-              href=""
+              href={`/aboutus/${item.slug}`}
               style={secstyle}
-              onClick={() => handleLinkClick(item.id)}
+              onClick={(e) => {
+                console.log(e)
+                if (e.ctrlKey) {
+                  // If Ctrl (or Cmd) key is held, open the link in a new tab
+                  return
+                }
+                e.preventDefault()
+                handleLinkClick(item.id)
+              }}
             >
               <Stack flexDirection="column" gap={1} sx={{ width: '100%' }}>
                 <Image
+                  alt="personimage"
                   style={{
-                    width: '90%',
+                    width: '500px',
                     height: 'auto',
                     alignSelf: 'center',
                     paddingBottom: '20px',
                     borderBottom: '1px solid #707070',
+                    aspectRatio: '1/1',
+                    objectFit: 'cover',
                   }}
                   src={item.img}
-                  alt="new"
                 />
 
                 <Box sx={{ margin: '-120px 45px 0' }}>
@@ -132,10 +142,11 @@ const MeettheTeam = () => {
       >
         <Box ref={popUpContentRef} className="midpage">
           <Box className="finalpage">
-            <Container>
+            <Container sx={{ paddingTop: '30px' }}>
               <Grid sx={{ width: '100%' }} container alignItems="center">
                 <Grid item xs={12} lg={2}>
                   <Image
+                    alt="closesvg"
                     onClick={handleClosebutton}
                     style={{
                       cursor: 'pointer',
@@ -146,15 +157,18 @@ const MeettheTeam = () => {
                   />
                 </Grid>
                 <Grid justifyContent="center" item xs={12} lg={8}>
-                  <Typography sx={{ fontSize: '44px', textAlign: 'center' }}>
+                  <Typography
+                    sx={{
+                      fontSize: '44px',
+                      textAlign: 'center',
+                      fontWeight: '600',
+                    }}
+                  >
                     {content.person[0].title}
                   </Typography>
                   <Typography sx={{ fontSize: '36px', textAlign: 'center' }}>
                     {content.person[0].designation}
                   </Typography>
-                  <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Image src={Aboutusimagepathway.linkedin} />
-                  </Box>
                 </Grid>
                 <Grid item xs={12} lg={2}></Grid>
               </Grid>
@@ -182,11 +196,14 @@ const MeettheTeam = () => {
                     sx={{ width: '100%' }}
                   >
                     <Image
+                      alt="teamdemo"
                       style={{
                         height: 'auto',
-                        width: '90%',
+                        width: '500px',
+                        aspectRatio: '1/1',
+                        objectFit: 'cover',
                       }}
-                      src={Aboutusimagepathway.teamdemo}
+                      src={content.person[0].img}
                     />
                   </Stack>
                 </Grid>
