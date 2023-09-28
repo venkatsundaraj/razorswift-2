@@ -1,10 +1,6 @@
-import React from 'react'
-import { Box } from '@mui/material'
-import { Grid } from '@mui/material'
-import { Typography } from '@mui/material'
-import { Container } from '@mui/material'
 import forbusinesses from '@/constants/Aboutus/Forbusinesses'
 import Aboutusimagepathway from '@/constants/ImagePaths/Aboutus/Aboutusimagepathway'
+import { Box, Container, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 const ForBussiness = () => {
   return (
@@ -26,11 +22,17 @@ const ForBussiness = () => {
       <Box sx={{ marginTop: '20px' }}>
         <Grid alignItems="center" container spacing={6}>
           <Grid item xs={12} md={6}>
-            <Image
-              alt="statisticimage"
-              style={{ width: '100%' }}
-              src={Aboutusimagepathway.statisticimage}
-            />
+            <Stack
+              alignItems="center"
+              justifyContent="center"
+              sx={{ display: { xs: 'none', md: 'flex' } }}
+            >
+              <Image
+                alt="statisticimage"
+                style={{ width: '100%' }}
+                src={Aboutusimagepathway.statisticimage}
+              />
+            </Stack>
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography
