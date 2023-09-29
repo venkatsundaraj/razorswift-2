@@ -1,44 +1,44 @@
-'use client'
+'use client';
 
-import React, { useEffect, useRef, useState } from 'react'
-import { useScroll, motion, useMotionValueEvent } from 'framer-motion'
-import { Container, Grid, Stack, Box } from '@mui/material'
-import { Toolbar } from '@mui/material'
-import { AppBar } from '@mui/material'
-import Image from 'next/image'
-import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection'
-import SecondaryHeading from '@/components/headingComponents/SecondaryHeading'
-import { dropDownBodyData } from '@/constants/Aspirants/aspirantPageData'
-import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
-import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
-import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
-import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
+import React, { useEffect, useRef, useState } from 'react';
+import { useScroll, motion, useMotionValueEvent } from 'framer-motion';
+import { Container, Grid, Stack, Box } from '@mui/material';
+import { Toolbar } from '@mui/material';
+import { AppBar } from '@mui/material';
+import Image from 'next/image';
+import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection';
+import SecondaryHeading from '@/components/headingComponents/SecondaryHeading';
+import { dropDownBodyData } from '@/constants/Aspirants/aspirantPageData';
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage';
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
+import SubtitleHeading from '@/components/headingComponents/SubtitleHeading';
+import PrimaryHeading from '@/components/headingComponents/PrimaryHeading';
 
 function StaticScrollSection({ stickySliderData }) {
-  const [percentage, setpercentage] = useState(0)
-  const sectionRef = useRef(null)
+  const [percentage, setpercentage] = useState(0);
+  const sectionRef = useRef(null);
 
-  const { scrollY } = useScroll()
+  const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
-    const primaryCondition = latest > sectionRef.current.offsetTop
+    const primaryCondition = latest > sectionRef.current.offsetTop;
     if (primaryCondition) {
       const value =
         (latest - sectionRef.current.offsetTop) /
         (sectionRef.current.clientHeight -
-          document.documentElement.clientHeight)
-      const filteredValue = Math.min(100, value * 100)
+          document.documentElement.clientHeight);
+      const filteredValue = Math.min(100, value * 100);
       if (filteredValue < 25) {
-        setpercentage(0)
+        setpercentage(0);
       } else if (25 < filteredValue && filteredValue < 50) {
-        setpercentage(1)
+        setpercentage(1);
       } else if (50 < filteredValue && filteredValue < 75) {
-        setpercentage(2)
+        setpercentage(2);
       } else if (75 < filteredValue && filteredValue < 100) {
-        setpercentage(3)
+        setpercentage(3);
       }
     }
-  })
+  });
 
   return (
     <section
@@ -70,20 +70,21 @@ function StaticScrollSection({ stickySliderData }) {
                 xs={12}
                 md={6}
                 sx={{
+                  width: '100%',
                   height: {
                     xs: '50%',
                     md: '90%',
                     xl: '70%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
                   },
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
               >
                 <Box
                   sx={{
-                    width: { sm: '100%', md: '100%', lg: '100%', xl: '100%' },
-                    height: { sm: '100%', md: '70%', lg: '100%', xl: '100%' },
+                    width: { xs: '100%', md: '100%', lg: '100%', xl: '100%' },
+                    height: { xs: '100%', md: '70%', lg: '100%', xl: '100%' },
                     mb: { xs: 2, md: 5 },
                     position: 'relative',
                     overflowY: 'hidden',
@@ -199,7 +200,7 @@ function StaticScrollSection({ stickySliderData }) {
         </Toolbar>
       </AppBar>
     </section>
-  )
+  );
 }
 
-export default StaticScrollSection
+export default StaticScrollSection;
