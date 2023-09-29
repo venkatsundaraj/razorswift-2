@@ -76,7 +76,7 @@ const ExploreSection = () => {
         },
         gap: { md: '60px' },
         alignItems: { xs: 'flex-start', md: 'center', lg: 'center' },
-        padding: { md: '60px 50px' },
+        padding: { md: '60px 25px' },
       }}
     >
       <Grid
