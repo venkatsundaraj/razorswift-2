@@ -1,6 +1,6 @@
 'use client'
 
-import Form from '@/components/FormComponents/Form'
+import FormSection from '@/components/FormComponents/FormSection'
 import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection'
 import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
@@ -17,14 +17,16 @@ function BannerSection() {
             <Grid item xs={12} md={6}>
               <PrimaryHeading
                 component="h1"
-                sx={{ color: 'violetPalette.dark' }}
+                sx={{
+                  color: 'violetPalette.dark',
+                }}
               >
                 {heroSection.title}
               </PrimaryHeading>
               <ParagraphHeading style={{ color: '#B14384' }}>
                 {heroSection.description}
               </ParagraphHeading>
-              <Form />
+              <FormSection />
             </Grid>
             <Grid item xs={12} md={6}>
               <Stack alignItems="center" justifyContent="center">

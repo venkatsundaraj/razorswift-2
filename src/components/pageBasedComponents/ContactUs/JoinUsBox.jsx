@@ -1,7 +1,7 @@
 'use client'
 
 import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection'
-import ExtraParagraphHeading from '@/components/headingComponents/ExtraParagraphHeading'
+
 import { Container, Grid, Stack, Box } from '@mui/material'
 import React from 'react'
 
@@ -11,7 +11,7 @@ import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 
 function JoinUsBox({ joinUsData }) {
   return (
-    <CustomSection style={{ padding: '40px 0 0' }}>
+    <CustomSection style={{ padding: '40px 0 ' }}>
       <Container>
         <Box
           sx={{
