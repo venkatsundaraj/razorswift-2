@@ -61,7 +61,7 @@ const fontdes = {
 }
 
 const fontaspi = {
-  fontSize: 'clamp(34px, 2.5vw, 44px)',
+  fontSize: 'clamp(34px, 2.5vw, 40px)',
 
   fontWeight: '500',
 }
@@ -97,6 +97,7 @@ export default function PathwaySection() {
   const [clickedId, setClickedId] = useState()
   const [content, setContent] = useState(datatwo[0])
   const [selectedItemId, setSelectedItemId] = useState(1)
+  const [selectedAccordId, setSelectedAccordId] = useState(datatwo[0])
   const handleTitleClick = (id) => {
     // Find the item in datatwo with a matching id
     const matchingItem = datatwo.find(
@@ -109,6 +110,11 @@ export default function PathwaySection() {
     console.log(clickedId)
     setSelectedItemId(id)
   }
+
+  const handleTitleAccord = (id) => {
+    setSelectedAccordId(id)
+  }
+
   const containerVariants = {
     open: {
       opacity: 1,
@@ -192,8 +198,9 @@ export default function PathwaySection() {
       sx={{
         backgroundColor: 'primary.main',
         padding: { xs: '15px', lg: '30px 0' },
-        margin: '30px',
-        borderRadius: '20px',
+        height: { xl: '100vh' },
+        display: 'flex',
+        alignItems: 'center',
       }}
     >
       {/* first sec*/}
@@ -253,7 +260,13 @@ export default function PathwaySection() {
                       initial="closed"
                       animate={selectedItemId === item.id ? 'open' : 'closed'}
                     >
-                      <Box>
+                      <Box
+                        sx={{
+                          '&:hover > p': {
+                            color: selectedItemId === item.id ? '' : 'white',
+                          },
+                        }}
+                      >
                         <Typography
                           style={fontaspi}
                           sx={{
@@ -360,8 +373,15 @@ export default function PathwaySection() {
                               sm: '20px',
                               xs: '20px',
                             },
+                            '&:hover': {
+                              color:
+                                selectedAccordId === item.length
+                                  ? ''
+                                  : '#EE5064',
+                            },
                           }}
                           style={fonttitle}
+                          onClick={() => handleTitleAccord(item.length)}
                         >
                           {item.title}
                         </Typography>
