@@ -3,12 +3,12 @@ const partnersPageImagePaths = {
     banner: require('/public/images/Partners/partners-banner.svg').default,
   },
   getStartedSection: {
-    questionTag: require('/public/images/partners/partners-get-started.svg')
+    questionTag: require('/public/images/Partners/partners-get-started.svg')
       .default,
   },
   dropDownSection: {
-    mainImage: require('/public/images/partners/partners.webp').default,
+    mainImage: require('/public/images/Partners/partners.webp').default,
   },
-}
+};
 
-export default partnersPageImagePaths
+export default partnersPageImagePaths;
