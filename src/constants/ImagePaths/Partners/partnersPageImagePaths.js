@@ -9,6 +9,6 @@ const partnersPageImagePaths = {
   dropDownSection: {
     mainImage: require('/public/images/Partners/partners.webp').default,
   },
-}
+};
 
-export default partnersPageImagePaths
+export default partnersPageImagePaths;

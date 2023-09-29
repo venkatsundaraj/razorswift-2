@@ -1,21 +1,18 @@
-import { Box, Button, Typography, Stack, SwipeableDrawer } from '@mui/material'
-import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
-import * as React from 'react'
-import CustomImage from '../globalComponents/CustomImage/CustomImage'
-import Link from 'next/link'
-import ParagraphHeading from '../headingComponents/ParagraphHeading'
-import MenuItems from '../NavigationComponents/MenuItems'
+import { Box, Button, Typography } from '@mui/material';
+import Menu from '@mui/material/Menu';
+import * as React from 'react';
+import MenuItems from '../NavigationComponents/MenuItems';
+import CustomImage from '../globalComponents/CustomImage/CustomImage';
 
 export default function MenuButton({ headerdData }) {
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const open = Boolean(anchorEl)
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
   const handleClose = () => {
-    setAnchorEl(null)
-  }
+    setAnchorEl(null);
+  };
 
   return (
     <>
@@ -92,5 +89,5 @@ export default function MenuButton({ headerdData }) {
         {/* <SwipeAbleDrawer open={open} /> */}
       </Menu>
     </>
-  )
+  );
 }
