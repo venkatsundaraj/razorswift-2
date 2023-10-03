@@ -1,6 +1,7 @@
 import CareerDropDownBody from '@/components/dropDownComponents/CareerDropDownBody'
 import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection'
 import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
+import BusinessDropDownBody from '@/components/pageBasedComponents/Business/BusinessDropDownBody'
 import StickyContainerSection from '@/components/pageBasedComponents/Business/StickyContainerSection'
 import { TickerBoxData } from '@/constants/Aspirants/aspirantPageData'
 import { heroSectionData } from '@/constants/Business/businessPageData'
@@ -21,7 +22,7 @@ function Business() {
         TickerBoxData={TickerBoxData}
         heroSectionData={heroSectionData}
       />
-      <CareerDropDownBody dropDownBodyData={businessDropDownBodyData} />
+      <BusinessDropDownBody dropDownBodyData={businessDropDownBodyData} />
       <StickyContainerSection />
       <GetStartedSection readyToStartData={readyToStartData} />
     </Box>

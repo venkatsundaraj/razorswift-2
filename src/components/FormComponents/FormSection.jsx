@@ -1,23 +1,27 @@
-'use client';
+'use client'
 
-import React from 'react';
-import InputField from './FormUI/InputField/InputField';
-import SubmitButton from './FormUI/SubmitButton/SubmitButton';
-import { Stack, Box } from '@mui/material';
-import { Form, Formik } from 'formik';
-import { alphabetsValidationSchema } from '@/utils/helpers/validationSchemas';
-import * as Yup from 'yup';
+import React from 'react'
+import InputField from './FormUI/InputField/InputField'
+import SubmitButton from './FormUI/SubmitButton/SubmitButton'
+import { Stack, Box } from '@mui/material'
+import { Form, Formik } from 'formik'
+import {
+  alphabetsValidationSchema,
+  emailValidation,
+} from '@/utils/helpers/validationSchemas'
+import * as Yup from 'yup'
 
 const initialValues = {
   fullName: '',
-  emailId: '',
+  email: '',
   mobileNumber: '',
   message: '',
-};
+}
 
 const validationSchema = Yup.object().shape({
   fullName: alphabetsValidationSchema('fullName', true),
-});
+  email: emailValidation('Email', true),
+})
 
 function FormSection() {
   return (
@@ -26,8 +30,8 @@ function FormSection() {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
-          setSubmitting(false);
+          console.log(values)
+          setSubmitting(false)
         }}
       >
         {({
@@ -52,6 +56,28 @@ function FormSection() {
                 error={errors.fullName}
               />
 
+              <InputField
+                name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                type="email"
+                value={values.email}
+                label="Email ID"
+                variant="standard"
+                error={errors.email}
+              />
+
+              <InputField
+                name="mobileNumber"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                type="number"
+                value={values.mobileNumber}
+                label="Mobile Number"
+                variant="standard"
+                error={errors.mobileNumber}
+              />
+
               <SubmitButton
                 loading={isSubmitting}
                 disabled={isSubmitting}
@@ -64,7 +90,7 @@ function FormSection() {
         )}
       </Formik>
     </Box>
-  );
+  )
 }
 
-export default FormSection;
+export default FormSection

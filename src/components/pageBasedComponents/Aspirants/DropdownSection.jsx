@@ -15,22 +15,35 @@ function DropdownSection({ dropDownData, dropDownBodyData }) {
     setDropDownBody(selectedBody)
   }
   return (
-    <CustomSection
+    <Box
+      component="section"
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 5,
-        minHeight: '100vh',
-        justifyContent: 'start',
+        width: '100vw',
+        backgroundColor: 'primaryPalette.white',
+        padding: { xs: '16px 16px', sm: '24px 24px', lg: '64px 24px' },
       }}
     >
-      <CareerDropDown
-        changeHandler={onChangeHandler}
-        dropDownData={dropDownData}
-      />
-      <CareerDropDownBody dropDownBodyData={dropDownBody} />
-    </CustomSection>
+      <Box
+        sx={{
+          backgroundColor: `${dropDownBody.backgroundColor}`,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 4,
+          minHeight: '100vh',
+          width: '100%',
+          borderRadius: 6,
+          padding: (theme) => theme.spacing(4, 0),
+          justifyContent: 'start',
+        }}
+      >
+        <CareerDropDown
+          changeHandler={onChangeHandler}
+          dropDownData={dropDownData}
+        />
+        <CareerDropDownBody dropDownBodyData={dropDownBody} />
+      </Box>
+    </Box>
   )
 }
 

@@ -4,6 +4,7 @@ import { FormControl, MenuItem, Select } from '@mui/material'
 import { useState } from 'react'
 import SecondaryHeading from '../headingComponents/SecondaryHeading'
 import CustomDropDownIcon from '../globalComponents/CustomDropDown/CustomDropDownIcon'
+import TertiaryHeading from '../headingComponents/TertiaryHeading'
 
 function CareerDropDown({ dropDownData, changeHandler }) {
   const [profession, setProfession] = useState('1')
@@ -17,7 +18,6 @@ function CareerDropDown({ dropDownData, changeHandler }) {
       <Select
         value={profession}
         IconComponent={CustomDropDownIcon}
-        // IconComponent={(props) => <CustomDropDownIcon {...props} />}
         labelId="demo-simple-select-filled-label"
         id="demo-simple-select-filled"
         onChange={handleChange}
@@ -36,13 +36,15 @@ function CareerDropDown({ dropDownData, changeHandler }) {
           },
         }}
         sx={{
-          padding: (theme) => theme.spacing(1, 2),
-          boxShadow: 2,
+          padding: (theme) => theme.spacing(1, 4),
+          boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
+          backgroundColor: 'primaryPalette.white',
           borderRadius: (theme) => theme.spacing(5),
           color: 'violetPalette.dark',
           position: 'relative',
           '& .MuiSelect-icon': {
             top: 'calc(50% - 16px)',
+            right: '24px',
             transition: 'all 0.265s ease',
           },
         }}
@@ -59,7 +61,7 @@ function CareerDropDown({ dropDownData, changeHandler }) {
               textAlign: 'center',
             }}
           >
-            <SecondaryHeading
+            <TertiaryHeading
               style={{ width: '100%' }}
               sx={{
                 color: 'primaryPalette.dark',
@@ -68,7 +70,7 @@ function CareerDropDown({ dropDownData, changeHandler }) {
               }}
             >
               {item.title}
-            </SecondaryHeading>
+            </TertiaryHeading>
           </MenuItem>
         ))}
       </Select>
