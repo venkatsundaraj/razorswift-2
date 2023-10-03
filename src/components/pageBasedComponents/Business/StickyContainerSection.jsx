@@ -1,16 +1,14 @@
 'use client'
 
-import ExtraParagraphHeading from '@/components/headingComponents/ExtraParagraphHeading'
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
 import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
-import { quickTalentDiscoveryData } from '@/constants/Business/businessPageData'
-import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
-import { Container, Grid, Stack, Box } from '@mui/material'
-import { useMotionValueEvent, useScroll } from 'framer-motion'
-import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
 import TertiaryHeading from '@/components/headingComponents/TertiaryHeading'
+import { quickTalentDiscoveryData } from '@/constants/Business/businessPageData'
+import { Box, Grid, Stack } from '@mui/material'
+import { useMotionValueEvent, useScroll } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 
 const backgroundColor = ['teal', 'tomato', 'orange', 'violet']
 
@@ -73,7 +71,11 @@ function StickyContainerSection() {
         overflowX: 'unset',
         display: 'flex',
         gap: '40px',
-        height: `calc(4 * 80vh + 350px)`,
+        height: {
+          xs: `calc(4 * 80vh + 350px)`,
+          md: `calc(4 * 80vh + 550px)`,
+          xl: `calc(4 * 80vh + 350px)`,
+        },
         width: '100%',
         backgroundColor: 'primaryPalette.white',
         padding: { xs: '16px 16px', sm: '24px 24px', lg: '64px 24px' },
