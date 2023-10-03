@@ -25,6 +25,7 @@ export default function MenuButton({ headerdData }) {
         sx={{
           transition: 'transform 0.3s ease, opacity 0.1s ease',
           opacity: '1',
+          marginTop: '4px',
           '&:hover': {
             backgroundColor: 'transparent',
           },
@@ -52,7 +53,6 @@ export default function MenuButton({ headerdData }) {
                 sx={{
                   fontSize: '36px',
                   color: 'violetPalette.dark',
-                  height: '40px',
                   transition: 'transform 0.3s ease',
                 }}
               >

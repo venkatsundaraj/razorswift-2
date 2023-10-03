@@ -95,6 +95,7 @@ function StickyContainerSection() {
               width: '100%',
               height: {
                 xs: `${i === 0 ? '100vh' : '90vh'}`,
+                // lg: `${i === 0 ? '100vh' : '80vh'}`,
                 xl: `${i === 0 ? '90vh' : '80vh'}`,
               },
               borderRadius: 4,
