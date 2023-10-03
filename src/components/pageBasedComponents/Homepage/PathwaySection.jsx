@@ -236,90 +236,107 @@ export default function PathwaySection() {
               </Typography>
             </motion.div>
           </motion.div>
-          <Box>
+          <Box
+            sx={{
+              display: { xs: 'flex' },
+              flexDirection: { xs: 'column', sm: 'row', lg: 'column' },
+              justifyContent: {
+                xs: 'space-between',
+                sm: 'space-around',
+                lg: '',
+              },
+            }}
+          >
             {pathwayheads.map((item, index) => (
-              <motion.div key={index} transition={{ staggerChildren: 1.9 }}>
-                <motion.div
-                  variants={secondsec}
-                  initial={'offscreen'}
-                  whileInView={'onscreen'}
-                  viewport={{ once: true }}
-                >
-                  <Box
-                    sx={{
-                      color:
-                        selectedItemId === item.id ? 'white' : 'primary.lite',
-                      borderBottom: index === 0 ? '2px solid white' : '',
-                      paddingBottom: selectedItemId === item.id ? '' : '10px',
-                      paddingTop: item.id == 2 ? '10px' : '',
-                    }}
-                    key={item.id}
+              <Box sx={{ width: { sm: '50%', md: '100%' } }}>
+                <motion.div key={index} transition={{ staggerChildren: 1.9 }}>
+                  <motion.div
+                    variants={secondsec}
+                    initial={'offscreen'}
+                    whileInView={'onscreen'}
+                    viewport={{ once: true }}
                   >
-                    <motion.div
-                      variants={containerVariants}
-                      initial="closed"
-                      animate={selectedItemId === item.id ? 'open' : 'closed'}
-                    >
-                      <Box
-                        sx={{
-                          '&:hover > p': {
-                            color: selectedItemId === item.id ? '' : 'white',
-                          },
-                        }}
-                      >
-                        <Typography
-                          style={fontaspi}
-                          sx={{
-                            color:
-                              selectedItemId === item.id
-                                ? 'white'
-                                : 'primary.lite',
-                            cursor: 'pointer',
-                          }}
-                          onClick={() => handleTitleClick(item.id)}
-                        >
-                          {item.title}
-                        </Typography>
-                        <Typography
-                          style={fontaspitwo}
-                          sx={{
-                            color:
-                              selectedItemId === item.id
-                                ? 'white'
-                                : 'primary.lite',
-                            cursor: 'pointer',
-                          }}
-                          onClick={() => handleTitleClick(item.id)}
-                        >
-                          {item.description}
-                        </Typography>
-                      </Box>
-                    </motion.div>
                     <Box
                       sx={{
-                        display: selectedItemId === item.id ? 'block' : 'none',
+                        color:
+                          selectedItemId === item.id ? 'white' : 'primary.lite',
+                        borderBottom: {
+                          xs: index === 0 ? '2px solid white' : '',
+                          sm: 'initial',
+                          lg: index === 0 ? '2px solid white' : '',
+                        },
+                        paddingBottom: selectedItemId === item.id ? '' : '10px',
+                        paddingTop: item.id == 2 ? '10px' : '',
                       }}
+                      key={item.id}
                     >
-                      <Link style={fontaspithree} href={item.link}>
-                        <Typography
-                          style={fontaspithree}
+                      <motion.div
+                        variants={containerVariants}
+                        initial="closed"
+                        animate={selectedItemId === item.id ? 'open' : 'closed'}
+                      >
+                        <Box
                           sx={{
-                            color: 'common.white',
-                            backgroundColor: 'primary.purp',
-                            width: 'fit-content',
-                            padding: '5px 15px',
-                            borderRadius: '50px',
-                            margin: '15px 0 15px 0',
-                            cursor: 'pointer',
+                            '&:hover > p': {
+                              color: selectedItemId === item.id ? '' : 'white',
+                            },
                           }}
                         >
-                          {item.button}
-                        </Typography>
-                      </Link>
+                          <Typography
+                            style={fontaspi}
+                            sx={{
+                              color:
+                                selectedItemId === item.id
+                                  ? 'white'
+                                  : 'primary.lite',
+                              cursor: 'pointer',
+                            }}
+                            onClick={() => handleTitleClick(item.id)}
+                          >
+                            {item.title}
+                          </Typography>
+                          <Typography
+                            style={fontaspitwo}
+                            sx={{
+                              color:
+                                selectedItemId === item.id
+                                  ? 'white'
+                                  : 'primary.lite',
+                              cursor: 'pointer',
+                            }}
+                            onClick={() => handleTitleClick(item.id)}
+                          >
+                            {item.description}
+                          </Typography>
+                        </Box>
+                      </motion.div>
+                      <Box
+                        sx={{
+                          display:
+                            selectedItemId === item.id ? 'block' : 'none',
+                        }}
+                      >
+                        <Link style={fontaspithree} href={item.link}>
+                          <Typography
+                            style={fontaspithree}
+                            sx={{
+                              color: 'common.white',
+                              backgroundColor: 'primary.purp',
+                              width: 'fit-content',
+                              padding: '5px 15px',
+                              borderRadius: '50px',
+                              margin: '15px 0 15px 0',
+                              cursor: 'pointer',
+                            }}
+                          >
+                            {item.button}
+                          </Typography>
+                        </Link>
+                      </Box>
                     </Box>
-                  </Box>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
+              </Box>
             ))}
           </Box>
         </Grid>

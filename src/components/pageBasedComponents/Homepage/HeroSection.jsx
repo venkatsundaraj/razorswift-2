@@ -103,7 +103,7 @@ const HeroSection = () => {
             sm: '160px',
             xs: '160px',
           },
-          marginLeft: '25px',
+          marginLeft: '24px',
         }}
       >
         <Stack sx={{ mb: 2 }}>
@@ -121,7 +121,7 @@ const HeroSection = () => {
                   color: 'primary.mainone',
                   lineHeight: '1.0',
                   fontSize: {
-                    // xl: "clamp(110px, 8.5vw, 120px)",new
+                    xl: 'clamp(110px, 6.2vw, 120px)',
                     lg: 'clamp(70px, 5.4vw, 120px)',
                     md: 'clamp(70px, 5.4vw, 100px)',
                     sm: '40px',
@@ -154,7 +154,7 @@ const HeroSection = () => {
                   lineHeight: '1.0',
 
                   fontSize: {
-                    // xl: "clamp(110px, 8.5vw, 120px)",
+                    xl: 'clamp(110px, 6.2vw, 120px)',
                     lg: 'clamp(70px, 5.4vw, 120px)',
                     md: 'clamp(70px, 5.4vw, 100px)',
                     sm: '40px',
@@ -197,24 +197,24 @@ const HeroSection = () => {
                 },
               }}
             >
-              <Box
+              <Typography
                 component="span"
                 sx={{
-                  lineHeight: '32px',
+                  lineHeight: 1.2,
                   fontSize: { md: '16px', lg: '18px', xl: '20px' },
                 }}
               >
                 {heroSectionData[0].title}
-              </Box>
-              <Box
+              </Typography>
+              <Typography
                 component="span"
                 sx={{
-                  lineHeight: '32px',
+                  lineHeight: 1.2,
                   fontSize: { md: '16px', lg: '18px', xl: '20px' },
                 }}
               >
                 {heroSectionData[0].titletwo}
-              </Box>
+              </Typography>
             </Typography>
           </motion.div>
         </motion.div>

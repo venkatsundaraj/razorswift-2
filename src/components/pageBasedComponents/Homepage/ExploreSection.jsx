@@ -76,7 +76,7 @@ const ExploreSection = () => {
         },
         gap: { md: '60px' },
         alignItems: { xs: 'flex-start', md: 'center', lg: 'center' },
-        padding: { md: '60px 25px' },
+        padding: { md: '60px 24px' },
       }}
     >
       <Grid
@@ -84,7 +84,7 @@ const ExploreSection = () => {
         container
         spacing={3}
       >
-        <Grid item xs={12} lg={6}>
+        <Grid sx={{ mb: { md: '30px' } }} item xs={12} lg={6}>
           <Box
             sx={{
               display: 'flex',
@@ -133,7 +133,7 @@ const ExploreSection = () => {
                       lg: 'clamp(15px, 1.4vw, 20px)',
                     },
                     textAlign: 'center',
-                    mb: '3%',
+                    mb: { md: '10px', lg: '30px' },
                     textAlign: 'justify',
                     width: { xs: '100%' },
                   }}
@@ -149,7 +149,7 @@ const ExploreSection = () => {
                       lg: 'clamp(15px, 1.4vw, 20px)',
                     },
                     textAlign: 'justify',
-                    mb: '4%',
+                    mb: '30px',
                     width: { xs: '100%' },
                   }}
                 >
@@ -175,7 +175,7 @@ const ExploreSection = () => {
                     pl: '30px',
                     pr: '30px',
                     borderRadius: '200px',
-                    margin: '15px 0',
+                    marginTop: '10px',
                     cursor: 'pointer',
                   }}
                 >
