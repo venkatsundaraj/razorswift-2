@@ -66,20 +66,23 @@ function StickyContainerSection() {
   })
 
   return (
-    <section
+    <Box
+      component="section"
       ref={sectionRef}
-      style={{
+      sx={{
         overflowX: 'unset',
         display: 'flex',
         gap: '40px',
         height: `calc(4 * 80vh + 350px)`,
         width: '100%',
+        backgroundColor: 'primaryPalette.white',
+        padding: { xs: '16px 16px', sm: '24px 24px', lg: '64px 24px' },
         flexDirection: 'column',
       }}
     >
       {quickTalentDiscoveryData.pathways.map((item, i) => {
         return (
-          <Container
+          <Box
             ref={(element) => (cardsRef.current[i] = element)}
             key={i}
             sx={{
@@ -163,10 +166,10 @@ function StickyContainerSection() {
                 </Stack>
               </Grid>
             </Grid>
-          </Container>
+          </Box>
         )
       })}
-    </section>
+    </Box>
   )
 }
 

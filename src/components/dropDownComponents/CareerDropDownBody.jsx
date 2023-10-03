@@ -8,19 +8,22 @@ import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading'
 import SecondaryHeading from '../headingComponents/SecondaryHeading'
 import SubtitleHeading from '../headingComponents/SubtitleHeading'
 
-function CareerDropDownBody({ dropDownBodyData }) {
+function CareerDropDownBody({ dropDownBodyData, ...props }) {
   return (
     <Box
+      {...props}
       sx={{
         width: '100%',
-        py: 4,
+        borderRadius: 6,
+        backgroundColor: `${dropDownBodyData.backgroundColor}`,
+        py: 2,
       }}
     >
       <Container
         sx={{
-          backgroundColor: `${dropDownBodyData.backgroundColor}`,
           padding: (theme) => theme.spacing(5, 0, 0, 0),
           borderRadius: 8,
+          padding: '0',
         }}
       >
         <Grid
@@ -107,7 +110,10 @@ function CareerDropDownBody({ dropDownBodyData }) {
           <Grid item xs={12} md={3}>
             <ExtraParagraphHeading
               style={{ fontWeight: 500 }}
-              sx={{ flexBasis: 'clamp(40px,15vw,250px)', mb: { xs: 2, md: 0 } }}
+              sx={{
+                flexBasis: 'clamp(40px,15vw,250px)',
+                mb: { xs: 2, md: 0 },
+              }}
             >
               What to expect ?
             </ExtraParagraphHeading>

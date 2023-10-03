@@ -6,6 +6,7 @@ import { partnersDropDownBodyData } from '@/constants/Partners/partnersPageData'
 import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
 import CareerDropDownBody from '@/components/dropDownComponents/CareerDropDownBody'
 import { readyToStartData } from '@/constants/Partners/partnersPageData'
+import BusinessDropDownBody from '@/components/pageBasedComponents/Business/BusinessDropDownBody'
 
 export const metadata = {
   title: 'Partners | Razorswift',
@@ -18,7 +19,7 @@ function Partners() {
         TickerBoxData={TickerBoxData}
         heroSectionData={heroSectionData}
       />
-      <CareerDropDownBody dropDownBodyData={partnersDropDownBodyData} />
+      <BusinessDropDownBody dropDownBodyData={partnersDropDownBodyData} />
       <GetStartedSection readyToStartData={readyToStartData} />
     </Box>
   )
