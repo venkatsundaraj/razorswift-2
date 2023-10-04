@@ -1,52 +1,52 @@
-import { Typography } from "@mui/material";
-import Box from "@mui/material/Box";
-import Image from "next/image";
-import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
-import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
+import { Typography } from '@mui/material'
+import Box from '@mui/material/Box'
+import Image from 'next/image'
+import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths'
+import Button from '@mui/material/Button'
+import Link from '@mui/material/Link'
 
 export default function Navbar() {
   const weblogo = {
-    width: "clamp(200px, 16.4vw, 250px)",
-    height: "auto",
-  };
+    width: 'clamp(200px, 16.4vw, 250px)',
+    height: 'auto',
+  }
   const menulogo = {
-    width: "16px",
-    height: "auto",
-  };
+    width: '16px',
+    height: 'auto',
+  }
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        position: "fixed",
-        width: "100vw",
-        zIndex: "20",
-        backgroundColor: "white",
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        position: 'fixed',
+        width: '100vw',
+        zIndex: '20',
+        backgroundColor: 'white',
       }}
     >
-      <Image style={weblogo} src={homePageImagePaths.navbar} alt="logo" />
+      <Image alt="navbar" style={weblogo} src={homePageImagePaths.navbar} />
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          gap: "12px",
-          marginRight: { md: "40px" },
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: '12px',
+          marginRight: { md: '40px' },
         }}
       >
         <Box
           sx={{
-            display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
-            alignItems: "center",
+            display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+            alignItems: 'center',
             gap: 1,
-            border: "1px solid",
-            borderColor: "primary.light",
+            border: '1px solid',
+            borderColor: 'primary.light',
             borderRadius: 50,
-            pt: "5px",
-            pb: "5px",
+            pt: '5px',
+            pb: '5px',
             pl: 2,
             pr: 2,
           }}
@@ -61,8 +61,8 @@ export default function Navbar() {
             href=""
             sx={{
               fontSize: { lg: 16, xl: 24 },
-              color: "common.black",
-              textDecoration: "none",
+              color: 'common.black',
+              textDecoration: 'none',
             }}
           >
             Partners
@@ -70,30 +70,30 @@ export default function Navbar() {
         </Box>
         <Box
           sx={{
-            display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
-            alignItems: "center",
+            display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+            alignItems: 'center',
             gap: 1,
-            border: "1px solid",
-            borderColor: "primary.light",
+            border: '1px solid',
+            borderColor: 'primary.light',
             borderRadius: 50,
-            pt: "5px",
-            pb: "5px",
+            pt: '5px',
+            pb: '5px',
             pl: 2,
             pr: 2,
           }}
         >
           <Image
+            alt="navbarlogin"
             style={menulogo}
             src={homePageImagePaths.navbarlogin}
-            alt="logo"
           />
           <Link
             variant="body1"
             href=""
             sx={{
               fontSize: { lg: 16, xl: 24 },
-              color: "common.black",
-              textDecoration: "none",
+              color: 'common.black',
+              textDecoration: 'none',
             }}
           >
             Aspirants
@@ -101,14 +101,14 @@ export default function Navbar() {
         </Box>
         <Box
           sx={{
-            display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
-            alignItems: "center",
+            display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+            alignItems: 'center',
             gap: 1,
-            border: "1px solid",
-            borderColor: "primary.light",
+            border: '1px solid',
+            borderColor: 'primary.light',
             borderRadius: 50,
-            pt: "5px",
-            pb: "5px",
+            pt: '5px',
+            pb: '5px',
             pl: 2,
             pr: 2,
           }}
@@ -123,25 +123,25 @@ export default function Navbar() {
             href=""
             sx={{
               fontSize: { lg: 16, xl: 24 },
-              color: "common.black",
-              textDecoration: "none",
+              color: 'common.black',
+              textDecoration: 'none',
             }}
           >
             Business
           </Link>
         </Box>
-        <Button sx={{ display: "flex", flexDirection: "row", gap: 0.5 }}>
+        <Button sx={{ display: 'flex', flexDirection: 'row', gap: 0.5 }}>
           <Box
             sx={{
-              display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
-              color: "#672376",
+              display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+              color: '#672376',
               fontSize: 24,
               fontWeight: 600,
             }}
           >
             M
           </Box>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
             <svg
               className="ham-bur-one"
               id="ham-bur-one"
@@ -193,8 +193,8 @@ export default function Navbar() {
           </Box>
           <Box
             sx={{
-              display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
-              color: "#672376",
+              display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+              color: '#672376',
               fontSize: 24,
               fontWeight: 600,
             }}
@@ -203,8 +203,8 @@ export default function Navbar() {
           </Box>
           <Box
             sx={{
-              display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
-              color: "#672376",
+              display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+              color: '#672376',
               fontSize: 24,
               fontWeight: 600,
             }}
@@ -214,5 +214,5 @@ export default function Navbar() {
         </Button>
       </Box>
     </Box>
-  );
+  )
 }

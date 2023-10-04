@@ -1,121 +1,127 @@
-"use client";
-import pathwayheads from "@/constants/Homepage/pathwayheads.js";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import { Grid } from "@mui/material";
-import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
-import { Box } from "@mui/system";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import * as React from "react";
-import { useState } from "react";
-import datatwo from "../../../constants/Homepage/pathwaytwo.js";
+'use client'
+import pathwayheads from '@/constants/Homepage/pathwayheads.js'
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
+import { Grid } from '@mui/material'
+import MuiAccordion from '@mui/material/Accordion'
+import MuiAccordionDetails from '@mui/material/AccordionDetails'
+import MuiAccordionSummary from '@mui/material/AccordionSummary'
+import { styled } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import { Box } from '@mui/system'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
+import * as React from 'react'
+import { useState } from 'react'
+import datatwo from '../../../constants/Homepage/pathwaytwo.js'
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `none`,
-  "&:not(:last-child)": {
-    borderBottom: "1px solid",
+  '&:not(:last-child)': {
+    borderBottom: '1px solid',
   },
-  "&:before": {
-    display: "none",
+  '&:before': {
+    display: 'none',
   },
-}));
+}))
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ display: "none" }} />}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ display: 'none' }} />}
     {...props}
   />
 ))(({ theme }) => ({
   backgroundColor:
-    theme.palette.mode === "dark" ? "rgba(255, 255, 255, .05)" : "#DCBDE3",
-  flexDirection: "row-reverse",
-  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
+    theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, .05)' : '#DCBDE3',
+  flexDirection: 'row-reverse',
+  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+    transform: 'rotate(90deg)',
   },
-  "& .MuiAccordionSummary-content": {
+  '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
   },
-}));
+}))
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: "1px solid rgba(0, 0, 0, .125)",
-}));
+  borderTop: '1px solid rgba(0, 0, 0, .125)',
+}))
 
 const fonttitle = {
-  fontWeight: "bold",
-};
+  fontWeight: 'bold',
+}
 
 const fontdes = {
-  fontSize: "clamp(15px, 1.2vw, 20px)",
+  fontSize: 'clamp(15px, 1.2vw, 20px)',
 
-  fontWeight: "500",
-  height: "clamp(75px, 5.5vw, 110px)",
-};
+  fontWeight: '500',
+  height: 'clamp(75px, 5.5vw, 110px)',
+}
 
 const fontaspi = {
-  fontSize: "clamp(34px, 2.5vw, 44px)",
+  fontSize: 'clamp(34px, 2.5vw, 40px)',
 
-  fontWeight: "500",
-};
+  fontWeight: '500',
+}
 
 const fontaspitwo = {
-  fontSize: "clamp(20px, 1.5vw, 28px)",
+  fontSize: 'clamp(20px, 1.5vw, 28px)',
 
-  fontWeight: "500",
-};
+  fontWeight: '500',
+}
 
 const fontaspithree = {
-  fontSize: "clamp(15px, 1.2vw, 20px)",
-  textDecoration: "none",
-  fontWeight: "500",
-};
+  fontSize: 'clamp(15px, 1.2vw, 20px)',
+  textDecoration: 'none',
+  fontWeight: '500',
+}
 
 const accordimg = {
-  width: "clamp(280px, 21.7vw, 360px)",
+  width: 'clamp(280px, 21.7vw, 360px)',
 
-  height: "auto",
-};
+  height: 'auto',
+}
 
 export default function PathwaySection() {
-  const [expanded, setExpanded] = React.useState("panel0");
-  const [expandedone, setExpandedone] = React.useState("panelone0");
+  const [expanded, setExpanded] = React.useState('panel0')
+  const [expandedone, setExpandedone] = React.useState('panelone0')
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : null);
-  };
+    setExpanded(newExpanded ? panel : null)
+  }
   const handleChangeone = (panelone) => (eventone, newExpandedone) => {
-    setExpandedone(newExpandedone ? panelone : null);
-  };
+    setExpandedone(newExpandedone ? panelone : null)
+  }
 
-  const [clickedId, setClickedId] = useState();
-  const [content, setContent] = useState(datatwo[0]);
-  const [selectedItemId, setSelectedItemId] = useState(1);
+  const [clickedId, setClickedId] = useState()
+  const [content, setContent] = useState(datatwo[0])
+  const [selectedItemId, setSelectedItemId] = useState(1)
+  const [selectedAccordId, setSelectedAccordId] = useState(datatwo[0])
   const handleTitleClick = (id) => {
     // Find the item in datatwo with a matching id
     const matchingItem = datatwo.find(
       (item) => item.id.toString() === id.toString()
-    );
+    )
 
-    setContent(matchingItem);
+    setContent(matchingItem)
 
-    setClickedId(matchingItem);
-    console.log(clickedId);
-    setSelectedItemId(id);
-  };
+    setClickedId(matchingItem)
+    console.log(clickedId)
+    setSelectedItemId(id)
+  }
+
+  const handleTitleAccord = (id) => {
+    setSelectedAccordId(id)
+  }
+
   const containerVariants = {
     open: {
       opacity: 1,
-      height: "auto",
+      height: 'auto',
       transition: {
         opacity: { duration: 0.3 },
-        height: { type: "spring", stiffness: 100, damping: 10 },
+        height: { type: 'spring', stiffness: 100, damping: 10 },
       },
     },
     closed: {
@@ -123,10 +129,10 @@ export default function PathwaySection() {
       height: 100,
       transition: {
         opacity: { duration: 0.3 },
-        height: { type: "spring", stiffness: 100, damping: 10 },
+        height: { type: 'spring', stiffness: 100, damping: 10 },
       },
     },
-  };
+  }
 
   const firstsec = {
     offscreen: {
@@ -139,14 +145,14 @@ export default function PathwaySection() {
       rotate: [0, 20, -20, 20, 0],
       x: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         duration: 2,
-        ease: "easeInOut",
+        ease: 'easeInOut',
         damping: 9.8,
         stiffness: 100,
       },
     },
-  };
+  }
 
   const secondsec = {
     offscreen: {
@@ -159,14 +165,14 @@ export default function PathwaySection() {
       rotate: [0, 20, -20, 20, 0],
       x: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         duration: 2,
-        ease: "easeInOut",
+        ease: 'easeInOut',
         damping: 9.8,
         stiffness: 100,
       },
     },
-  };
+  }
 
   const thirdsec = {
     offscreen: {
@@ -179,30 +185,31 @@ export default function PathwaySection() {
       rotate: [0, 20, -20, 20, 0],
       x: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         duration: 2,
-        ease: "easeInOut",
+        ease: 'easeInOut',
         damping: 9.8,
         stiffness: 100,
       },
     },
-  };
+  }
   return (
     <Box
       sx={{
-        backgroundColor: "primary.main",
-        padding: { xs: "15px", lg: "30px 0" },
-        margin: "30px",
-        borderRadius: "20px",
+        backgroundColor: 'primary.main',
+        padding: { xs: '15px', lg: '30px 0' },
+        height: { xl: '100vh' },
+        display: 'flex',
+        alignItems: 'center',
       }}
     >
       {/* first sec*/}
-      <Grid sx={{ justifyContent: "center" }} container spacing={10}>
+      <Grid sx={{ justifyContent: 'center' }} container spacing={10}>
         <Grid
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
           }}
           item
           xs={12}
@@ -212,142 +219,165 @@ export default function PathwaySection() {
           <motion.div transition={{ staggerChildren: 1.9 }}>
             <motion.div
               variants={firstsec}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
+              initial={'offscreen'}
+              whileInView={'onscreen'}
               viewport={{ once: true }}
             >
               <Typography
                 variant="h1"
                 sx={{
-                  color: "common.white",
-                  marginBottom: "50px",
-                  fontSize: { xs: "35px", lg: "clamp(45px, 3.5vw, 64px)" },
-                  textAlign: { xs: "center", lg: "left" },
+                  color: 'common.white',
+                  marginBottom: '50px',
+                  fontSize: { xs: '35px', lg: 'clamp(45px, 3.5vw, 64px)' },
+                  textAlign: { xs: 'center', lg: 'left' },
                 }}
               >
                 RAZORSWIFT PATHWAYS
               </Typography>
             </motion.div>
           </motion.div>
-          <Box>
+          <Box
+            sx={{
+              display: { xs: 'flex' },
+              flexDirection: { xs: 'column', sm: 'row', lg: 'column' },
+              justifyContent: {
+                xs: 'space-between',
+                sm: 'space-around',
+                lg: '',
+              },
+            }}
+          >
             {pathwayheads.map((item, index) => (
-              <motion.div transition={{ staggerChildren: 1.9 }}>
-                <motion.div
-                  variants={secondsec}
-                  initial={"offscreen"}
-                  whileInView={"onscreen"}
-                  viewport={{ once: true }}
-                >
-                  <Box
-                    sx={{
-                      color:
-                        selectedItemId === item.id ? "white" : "primary.lite",
-                      borderBottom: index === 0 ? "2px solid white" : "",
-                      paddingBottom: selectedItemId === item.id ? "" : "10px",
-                      paddingTop: item.id == 2 ? "10px" : "",
-                    }}
-                    key={item.id}
+              <Box sx={{ width: { sm: '50%', md: '100%' } }}>
+                <motion.div key={index} transition={{ staggerChildren: 1.9 }}>
+                  <motion.div
+                    variants={secondsec}
+                    initial={'offscreen'}
+                    whileInView={'onscreen'}
+                    viewport={{ once: true }}
                   >
-                    <motion.div
-                      variants={containerVariants}
-                      initial="closed"
-                      animate={selectedItemId === item.id ? "open" : "closed"}
-                    >
-                      <Box>
-                        <Typography
-                          style={fontaspi}
-                          sx={{
-                            color:
-                              selectedItemId === item.id
-                                ? "white"
-                                : "primary.lite",
-                            cursor: "pointer",
-                          }}
-                          onClick={() => handleTitleClick(item.id)}
-                        >
-                          {item.title}
-                        </Typography>
-                        <Typography
-                          style={fontaspitwo}
-                          sx={{
-                            color:
-                              selectedItemId === item.id
-                                ? "white"
-                                : "primary.lite",
-                            cursor: "pointer",
-                          }}
-                          onClick={() => handleTitleClick(item.id)}
-                        >
-                          {item.description}
-                        </Typography>
-                      </Box>
-                    </motion.div>
                     <Box
                       sx={{
-                        display: selectedItemId === item.id ? "block" : "none",
+                        color:
+                          selectedItemId === item.id ? 'white' : 'primary.lite',
+                        borderBottom: {
+                          xs: index === 0 ? '2px solid white' : '',
+                          sm: 'initial',
+                          lg: index === 0 ? '2px solid white' : '',
+                        },
+                        paddingBottom: selectedItemId === item.id ? '' : '10px',
+                        paddingTop: item.id == 2 ? '10px' : '',
                       }}
+                      key={item.id}
                     >
-                      <Link style={fontaspithree} href={item.link}>
-                        <Typography
-                          style={fontaspithree}
+                      <motion.div
+                        variants={containerVariants}
+                        initial="closed"
+                        animate={selectedItemId === item.id ? 'open' : 'closed'}
+                      >
+                        <Box
                           sx={{
-                            color: "common.white",
-                            backgroundColor: "primary.purp",
-                            width: "fit-content",
-                            padding: "5px 15px",
-                            borderRadius: "50px",
-                            margin: "15px 0 15px 0",
-                            cursor: "pointer",
+                            '&:hover > p': {
+                              color: selectedItemId === item.id ? '' : 'white',
+                            },
                           }}
                         >
-                          {item.button}
-                        </Typography>
-                      </Link>
+                          <Typography
+                            style={fontaspi}
+                            sx={{
+                              color:
+                                selectedItemId === item.id
+                                  ? 'white'
+                                  : 'primary.lite',
+                              cursor: 'pointer',
+                            }}
+                            onClick={() => handleTitleClick(item.id)}
+                          >
+                            {item.title}
+                          </Typography>
+                          <Typography
+                            style={fontaspitwo}
+                            sx={{
+                              color:
+                                selectedItemId === item.id
+                                  ? 'white'
+                                  : 'primary.lite',
+                              cursor: 'pointer',
+                            }}
+                            onClick={() => handleTitleClick(item.id)}
+                          >
+                            {item.description}
+                          </Typography>
+                        </Box>
+                      </motion.div>
+                      <Box
+                        sx={{
+                          display:
+                            selectedItemId === item.id ? 'block' : 'none',
+                        }}
+                      >
+                        <Link style={fontaspithree} href={item.link}>
+                          <Typography
+                            style={fontaspithree}
+                            sx={{
+                              color: 'common.white',
+                              backgroundColor: 'primary.purp',
+                              width: 'fit-content',
+                              padding: '5px 15px',
+                              borderRadius: '50px',
+                              margin: '15px 0 15px 0',
+                              cursor: 'pointer',
+                            }}
+                          >
+                            {item.button}
+                          </Typography>
+                        </Link>
+                      </Box>
                     </Box>
-                  </Box>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
+              </Box>
             ))}
           </Box>
         </Grid>
         {/* second sec*/}
         <Grid item xs={12} lg={5} xl={5}>
           <Box sx={{}}>
-            {content.accord.map((item, index) => (
-              <motion.div transition={{ staggerChildren: 1.9 }}>
-                <motion.div
-                  variants={thirdsec}
-                  initial={"offscreen"}
-                  whileInView={"onscreen"}
-                  viewport={{ once: true }}
-                >
+            <motion.div transition={{ staggerChildren: 1.9 }}>
+              <motion.div
+                variants={thirdsec}
+                initial={'offscreen'}
+                whileInView={'onscreen'}
+                viewport={{ once: true }}
+              >
+                {content.accord.map((item, index) => (
                   <Accordion
                     key={index}
                     sx={{
-                      backgroundColor: "primary.accord",
+                      backgroundColor: 'primary.accord',
                       borderRadius:
                         index === 0
-                          ? "40px 40px 0 0"
+                          ? '40px 40px 0 0'
                           : index === content.accord.length - 1
-                          ? "0px 0px 40px 40px"
-                          : "0",
-                      width: { xs: "100%" },
-                      borderBottom: "1px solid black",
+                          ? '0px 0px 40px 40px'
+                          : '0',
+                      width: { xs: '100%' },
+                      borderBottom: '1px solid black',
                     }}
                     expanded={expandedone === `panelone${index}`}
                     onChange={handleChangeone(`panelone${index}`)}
                   >
-                    <Box sx={{ padding: "20px 0" }}>
+                    <Box sx={{ padding: '20px 0' }}>
                       <AccordionSummary
                         sx={{
                           borderRadius:
                             index === 0
-                              ? "30px 30px 0 0"
+                              ? '30px 30px 0 0'
                               : index === content.accord.length - 1
-                              ? "0px 0px 40px 40px"
-                              : "0",
-                          backgroundColor: "primary.accord",
-                          height: "0px",
+                              ? '0px 0px 40px 40px'
+                              : '0',
+                          backgroundColor: 'primary.accord',
+                          height: '0px',
                         }}
                         aria-controls={`panelone${index}d-content`}
                         id={`panelone${index}d-header`}
@@ -355,13 +385,20 @@ export default function PathwaySection() {
                         <Typography
                           sx={{
                             fontSize: {
-                              lg: "clamp(25px, 2vw, 36px)",
-                              md: "clamp(22px, 2vw, 36px)",
-                              sm: "20px",
-                              xs: "20px",
+                              lg: 'clamp(25px, 2vw, 36px)',
+                              md: 'clamp(22px, 2vw, 36px)',
+                              sm: '20px',
+                              xs: '20px',
+                            },
+                            '&:hover': {
+                              color:
+                                selectedAccordId === item.length
+                                  ? ''
+                                  : '#EE5064',
                             },
                           }}
                           style={fonttitle}
+                          onClick={() => handleTitleAccord(item.length)}
                         >
                           {item.title}
                         </Typography>
@@ -369,41 +406,45 @@ export default function PathwaySection() {
                     </Box>
                     <AccordionDetails
                       sx={{
-                        border: "none",
-                        padding: "0",
+                        border: 'none',
+                        padding: '0',
                       }}
                     >
                       <Box
                         sx={{
-                          display: "flex",
-                          flexDirection: "column",
+                          display: 'flex',
+                          flexDirection: 'column',
                         }}
                       >
                         <Typography
-                          sx={{ padding: "10px 10px 0 20px" }}
+                          sx={{ padding: '10px 10px 0 20px' }}
                           style={fontdes}
                         >
                           {item.description}
                         </Typography>
                         <Box
                           sx={{
-                            marginTop: { lg: "-30px" },
-                            display: "flex",
+                            marginTop: { lg: '-30px' },
+                            display: 'flex',
 
-                            justifyContent: "flex-end",
+                            justifyContent: 'flex-end',
                           }}
                         >
-                          <Image style={accordimg} src={item.img} />
+                          <Image
+                            alt="pathwayaccordianimage"
+                            style={accordimg}
+                            src={item.img}
+                          />
                         </Box>
                       </Box>
                     </AccordionDetails>
                   </Accordion>
-                </motion.div>
+                ))}
               </motion.div>
-            ))}
+            </motion.div>
           </Box>
         </Grid>
       </Grid>
     </Box>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-const exploreSection = [
+const razorswiftforbusiness = [
   {
     id: '1',
     percentage: '70%',
-    description: 'Improvement in new hire retention.',
+    description: 'Improvement in new hire retention',
     bgColor: 'primary.pinktwo',
   },
   {
@@ -13,4 +13,4 @@ const exploreSection = [
   },
 ]
 
-export default exploreSection
+export default razorswiftforbusiness

@@ -1,15 +1,15 @@
-'use client'
+'use client';
 
-import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection'
+import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection';
 
-import { Container, Grid, Stack, Box } from '@mui/material'
-import React from 'react'
+import { Container, Grid, Stack, Box } from '@mui/material';
+import React from 'react';
 
-import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton'
-import TertiaryHeading from '@/components/headingComponents/TertiaryHeading'
-import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
+import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton';
+import TertiaryHeading from '@/components/headingComponents/TertiaryHeading';
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage';
 
-function JoinUsBox({ joinUsData }) {
+function JoinUsBox({ joinUsData, ...props }) {
   return (
     <CustomSection style={{ padding: '40px 0 ' }}>
       <Container>
@@ -73,7 +73,7 @@ function JoinUsBox({ joinUsData }) {
         </Box>
       </Container>
     </CustomSection>
-  )
+  );
 }
 
-export default JoinUsBox
+export default JoinUsBox;

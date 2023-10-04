@@ -7,6 +7,7 @@ const FillButton = styled(Button)(({ theme }) => ({
   borderRadius: theme.spacing(3),
   padding: theme.spacing(0.4, 1.6),
   border: '1px solid #A62973',
+  textDecoration: 'none',
   background: 'transparent',
   textTransform: 'inherit',
   [theme.breakpoints.up('md')]: {

@@ -1,4 +1,4 @@
-const exploreSectiontwo = [
+const razorswiftforbusiness = [
   {
     id: '1',
     percentage: '70%',
@@ -13,4 +13,4 @@ const exploreSectiontwo = [
   },
 ]
 
-export default exploreSectiontwo
+export default razorswiftforbusiness

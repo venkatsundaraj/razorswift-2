@@ -1,9 +1,10 @@
+'use client'
 import React from 'react'
 import { Box } from '@mui/system'
 import { Typography } from '@mui/material'
 import { Link } from '@mui/material'
 import Image from 'next/image'
-
+import footerdata from '@/constants/Homepage/footerdata'
 import homePageImagePaths from '@/constants/ImagePaths/Homepage/homePageImagePaths'
 const footer = () => {
   const fontstyle = {
@@ -11,8 +12,11 @@ const footer = () => {
     fontSize: '24px',
   }
   const footerimg = {
-    width: '20%',
+    width: '80%',
   }
+  const d = new Date()
+  let year = d.getFullYear()
+
   return (
     <Box
       sx={{
@@ -37,11 +41,28 @@ const footer = () => {
           variant="body1"
           sx={{
             color: 'common.white',
-            fontSize: '64px',
 
             fontWeight: '600',
             textAlign: 'center',
             lineHeight: '1.2',
+
+            fontSize: {
+              xs: '25px',
+              md: 'clamp(40px,3.1vw,64px)',
+              lg: '64px',
+            },
+          }}
+        >
+          {footerdata[0].accord[0].title}
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            color: 'common.white',
+
+            fontWeight: '600',
+            textAlign: 'center',
+            lineHeight: '1',
             mb: '30px',
             fontSize: {
               xs: '25px',
@@ -50,8 +71,7 @@ const footer = () => {
             },
           }}
         >
-          New Age Marketplace for
-          <br /> Talent Acquisition
+          {footerdata[0].accord[0].titleone}
         </Typography>
         <Typography
           variant="body1"
@@ -62,7 +82,7 @@ const footer = () => {
             fontSize: { xs: '17px', lg: '28px' },
           }}
         >
-          Grow your expertise and business with us!
+          {footerdata[0].accord[0].description}
         </Typography>
       </Box>
       <Box
@@ -70,8 +90,8 @@ const footer = () => {
           display: 'flex',
           flexDirection: { xs: 'column-reverse', md: 'row', lg: 'row' },
           alignItems: { xs: 'center', lg: 'flex-start' },
-          gap: { xs: '50px', lg: '150px' },
-          mb: '50px',
+          gap: { xs: '50px', lg: '100px' },
+          mb: '30px',
         }}
       >
         <Box
@@ -89,124 +109,79 @@ const footer = () => {
               display: 'flex',
               flexDireaction: 'row',
               justifyContent: 'space-between',
+              gap: '15px',
             }}
           >
-            <Image
-              alt="razorswift"
-              style={footerimg}
-              src={homePageImagePaths.twitt}
-            />
-            <Image
-              alt="razorswift"
-              style={footerimg}
-              src={homePageImagePaths.fb}
-            />
-            <Image
-              alt="razorswift"
-              style={footerimg}
-              src={homePageImagePaths.linkedin}
-            />
-            <Image
-              alt="razorswift"
-              style={footerimg}
-              src={homePageImagePaths.insta}
-            />
+            <Link sx={{ cursor: 'pointer' }}>
+              <Image
+                alt="razorswift"
+                style={footerimg}
+                src={homePageImagePaths.twitt}
+              />
+            </Link>
+            <Link sx={{ cursor: 'pointer' }}>
+              <Image
+                alt="razorswift"
+                style={footerimg}
+                src={homePageImagePaths.fb}
+              />
+            </Link>
+            <Link sx={{ cursor: 'pointer' }}>
+              <Image
+                alt="razorswift"
+                style={footerimg}
+                src={homePageImagePaths.linkedin}
+              />
+            </Link>
+            <Link sx={{ cursor: 'pointer' }}>
+              <Image
+                alt="razorswift"
+                style={footerimg}
+                src={homePageImagePaths.insta}
+              />
+            </Link>
           </Box>
         </Box>
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'row',
-            gap: { xs: '50px', lg: '150px' },
+            gap: { xs: '50px', lg: '100px' },
           }}
         >
           <Box sx={{ display: 'flex', flexDirection: 'column', mt: '3%' }}>
-            <Link
-              variant="body1"
-              underline="none"
-              style={fontstyle}
-              sx={{
-                cursor: 'pointer',
-                fontWeight: '600',
-                lineHeight: 2,
-              }}
-            >
-              Solutions
-            </Link>
-            <Link
-              variant="body1"
-              underline="none"
-              style={fontstyle}
-              sx={{
-                cursor: 'pointer',
-                fontWeight: '300',
-                lineHeight: 2,
-              }}
-            >
-              Aspirants
-            </Link>
-            <Link
-              variant="body1"
-              underline="none"
-              style={fontstyle}
-              sx={{
-                cursor: 'pointer',
-                fontWeight: '300',
-                lineHeight: 2,
-              }}
-            >
-              Businesses
-            </Link>
-            <Link
-              variant="body1"
-              underline="none"
-              style={fontstyle}
-              sx={{
-                cursor: 'pointer',
-                fontWeight: '300',
-                lineHeight: 2,
-              }}
-            >
-              Partners
-            </Link>
+            {footerdata[1].accord.map((item, index) => (
+              <Link
+                key={index}
+                variant="body1"
+                underline="none"
+                style={fontstyle}
+                sx={{
+                  cursor: 'pointer',
+                  fontWeight: index == 0 ? '600' : '',
+                  lineHeight: 2,
+                }}
+              >
+                {item.title}
+              </Link>
+            ))}
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', mt: '3%' }}>
-            <Link
-              variant="body1"
-              underline="none"
-              style={fontstyle}
-              sx={{
-                cursor: 'pointer',
-                fontWeight: '600',
-                lineHeight: 2,
-              }}
-            >
-              Courses
-            </Link>
-            <Link
-              variant="body1"
-              underline="none"
-              style={fontstyle}
-              sx={{
-                cursor: 'pointer',
-                fontWeight: '600',
-                lineHeight: 2,
-              }}
-            >
-              About
-            </Link>
-            <Link
-              variant="body1"
-              underline="none"
-              style={fontstyle}
-              sx={{
-                cursor: 'pointer',
-                fontWeight: '600',
-                lineHeight: 2,
-              }}
-            >
-              Contact Us
-            </Link>
+            {footerdata[2].accord.map((item, index) => (
+              <Link
+                key={index}
+                variant="body1"
+                underline="none"
+                style={fontstyle}
+                sx={{
+                  cursor: 'pointer',
+                  fontWeight: '500',
+                  lineHeight: 2,
+                }}
+              >
+                {item.title}
+              </Link>
+            ))}
           </Box>
         </Box>
       </Box>
@@ -221,25 +196,40 @@ const footer = () => {
           pt: '3%',
         }}
       >
-        <Typography
+        <Link
           variant="body1"
-          sx={{ color: 'common.white', fontSize: { xs: '16px', lg: '20px' } }}
+          sx={{
+            color: 'common.white',
+            fontSize: { xs: '16px', lg: '20px' },
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
         >
-          2023 Razorswift. All rights reserved.
-        </Typography>
+          {year} Razorswift. All rights reserved.
+        </Link>
         <Box sx={{ display: 'flex', gap: '50px' }}>
-          <Typography
+          <Link
             variant="body1"
-            sx={{ color: 'common.white', fontSize: { xs: '16px', lg: '20px' } }}
+            sx={{
+              color: 'common.white',
+              fontSize: { xs: '16px', lg: '20px' },
+              textDecoration: 'none',
+              cursor: 'pointer',
+            }}
           >
             Terms of Services
-          </Typography>
-          <Typography
+          </Link>
+          <Link
             variant="body1"
-            sx={{ color: 'common.white', fontSize: { xs: '16px', lg: '20px' } }}
+            sx={{
+              color: 'common.white',
+              fontSize: { xs: '16px', lg: '20px' },
+              textDecoration: 'none',
+              cursor: 'pointer',
+            }}
           >
             Privacy Policy
-          </Typography>
+          </Link>
         </Box>
       </Box>
     </Box>
