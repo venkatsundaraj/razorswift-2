@@ -14,6 +14,18 @@ export const headerdData = {
   ],
   logo: aspirantPageImagePaths.homePage.rsLogo,
   signUp: aspirantPageImagePaths.homePage.signUp,
+  actionButtons: [
+    {
+      id: 1,
+      name: 'Login',
+      link: '/login',
+    },
+    {
+      id: 2,
+      name: 'Sign up',
+      link: '/signup',
+    },
+  ],
   navInItems: [
     {
       id: 1,
@@ -32,7 +44,7 @@ export const headerdData = {
     {
       id: 3,
       name: 'About',
-      link: '/aboutus',
+      link: '/',
     },
     ,
     {

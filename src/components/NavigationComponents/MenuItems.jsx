@@ -2,13 +2,15 @@ import React from 'react'
 import { Menu, MenuItem, Stack, Box } from '@mui/material'
 import ParagraphHeading from '../headingComponents/ParagraphHeading'
 import Link from 'next/link'
+import PrimaryFillButton from '../buttonComponents/PrimaryFillButton'
 
-function MenuItems({ headerdData }) {
+function MenuItems({ headerdData, handleClose }) {
   return (
     <>
       {headerdData.navInItems.map((title, i) => (
         <Box key={title.id}>
           <MenuItem
+            onClick={handleClose}
             sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -27,14 +29,27 @@ function MenuItems({ headerdData }) {
           >
             <ParagraphHeading
               style={{ fontWeight: '600' }}
-              sx={{ color: 'pinkPalette.dark' }}
+              sx={{
+                color: 'pinkPalette.dark',
+                '&:hover': {
+                  opacity: `${title.name === 'Solutions' ? '1' : '0.785'}`,
+                },
+              }}
             >
-              <Link
-                style={{ textDecoration: 'none', color: 'inherit' }}
-                href={`${title.link || ''}`}
-              >
-                {title.name}
-              </Link>
+              {
+                <Link
+                  style={{
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    cursor: `${
+                      title.name === 'Solutions' ? 'default' : 'pointer'
+                    }`,
+                  }}
+                  href={`${title.link || ''}`}
+                >
+                  {title.name}
+                </Link>
+              }
             </ParagraphHeading>
           </MenuItem>
           {title.subItems && (
@@ -48,7 +63,13 @@ function MenuItems({ headerdData }) {
               {title.subItems.map((item) => (
                 <ParagraphHeading
                   key={item.id}
-                  sx={{ color: 'pinkPalette.dark' }}
+                  sx={{
+                    color: 'pinkPalette.dark',
+                    '&:hover': {
+                      opacity: `0.785`,
+                    },
+                  }}
+                  onClick={handleClose}
                 >
                   <Link
                     style={{ textDecoration: 'none', color: 'inherit' }}
@@ -62,6 +83,36 @@ function MenuItems({ headerdData }) {
           )}
         </Box>
       ))}
+      <Stack
+        flexDirection="row"
+        justifyContent="space-between"
+        sx={{ marginTop: 1 }}
+      >
+        {headerdData.actionButtons.map((item) => (
+          <PrimaryFillButton
+            style={{ padding: '4px 20px', borderRadius: '16px' }}
+            sx={{
+              backgroundColor: 'pinkPalette.dark',
+              color: 'primaryPalette.white',
+              '&:hover': {
+                backgroundColor: 'pinkPalette.dark',
+              },
+            }}
+            key={item.id}
+          >
+            <Link
+              style={{
+                textDecoration: 'none',
+                color: 'inherit',
+                fontSize: '16px',
+              }}
+              href={item.link}
+            >
+              {item.name}
+            </Link>
+          </PrimaryFillButton>
+        ))}
+      </Stack>
     </>
   )
 }

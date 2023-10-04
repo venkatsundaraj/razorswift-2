@@ -86,7 +86,7 @@ export default function MenuButton({ headerdData }) {
           horizontal: 'center',
         }}
       >
-        <MenuItems headerdData={headerdData} />
+        <MenuItems handleClose={handleClose} headerdData={headerdData} />
         {/* <SwipeAbleDrawer open={open} /> */}
       </Menu>
     </>
