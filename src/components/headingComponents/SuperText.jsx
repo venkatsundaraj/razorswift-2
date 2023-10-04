@@ -6,19 +6,6 @@ import styled from '@emotion/styled'
 
 const Heading = styled(Typography)(({ theme }) => ({
   lineHeight: 1.05,
-<<<<<<< HEAD
-  fontSize: '32px',
-  width: 'fit-content',
-  [theme.breakpoints.up('md')]: {
-    fontSize: '56px',
-  },
-  [theme.breakpoints.up('lg')]: {
-    fontSize: '74px',
-  },
-  [theme.breakpoints.up('xl')]: {
-    fontSize: '112px',
-  },
-=======
   fontSize: '46px',
   width: 'fit-content',
   [theme.breakpoints.up('md')]: {
@@ -33,7 +20,6 @@ const Heading = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up('xl')]: {
     fontSize: '112px',
   },
->>>>>>> business-page
 }))
 
 function SuperText({ children, ...props }) {
