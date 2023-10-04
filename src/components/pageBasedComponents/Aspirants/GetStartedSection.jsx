@@ -13,41 +13,46 @@ function GetStartedSection({ readyToStartData }) {
   return (
     <CustomSection
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 2,
-        minHeight: '100vh',
-        justifyContent: 'center',
+        minHeight: { xs: '82.5vh', md: '100vh' },
       }}
     >
-      <SuperText
+      <Container
         sx={{
-          color: 'violetPalette.dark',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 2,
+          justifyContent: 'center',
         }}
       >
-        {readyToStartData.title}
-      </SuperText>
-      <ParagraphHeading>{readyToStartData.description}</ParagraphHeading>
-      {readyToStartData.buttonText && (
-        <NavButton>{readyToStartData.buttonText}</NavButton>
-      )}
-      <Image
-        alt={readyToStartData.title}
-        style={{ width: 'clamp(350px,38vw,650px)', height: 'auto' }}
-        src={readyToStartData.mainImage}
-      />
-      {readyToStartData.longDescription && (
-        <Grid container>
-          <Grid item xs={12} sm={3}></Grid>
-          <Grid item xs={12} sm={6}>
-            <ParagraphHeading sx={{ textAlign: 'center' }}>
-              {readyToStartData.longDescription}
-            </ParagraphHeading>
+        <SuperText
+          sx={{
+            color: 'violetPalette.dark',
+          }}
+        >
+          {readyToStartData.title}
+        </SuperText>
+        <ParagraphHeading>{readyToStartData.description}</ParagraphHeading>
+        {readyToStartData.buttonText && (
+          <NavButton>{readyToStartData.buttonText}</NavButton>
+        )}
+        <Image
+          alt={readyToStartData.title}
+          style={{ width: 'clamp(350px,38vw,650px)', height: 'auto' }}
+          src={readyToStartData.mainImage}
+        />
+        {readyToStartData.longDescription && (
+          <Grid container>
+            <Grid item xs={12} sm={3}></Grid>
+            <Grid item xs={12} sm={6}>
+              <ParagraphHeading sx={{ textAlign: 'center' }}>
+                {readyToStartData.longDescription}
+              </ParagraphHeading>
+            </Grid>
+            <Grid item xs={12} sm={3}></Grid>
           </Grid>
-          <Grid item xs={12} sm={3}></Grid>
-        </Grid>
-      )}
+        )}
+      </Container>
     </CustomSection>
   )
 }

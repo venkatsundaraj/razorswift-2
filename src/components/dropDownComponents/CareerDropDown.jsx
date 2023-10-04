@@ -36,7 +36,10 @@ function CareerDropDown({ dropDownData, changeHandler }) {
           },
         }}
         sx={{
-          padding: (theme) => theme.spacing(1, 4),
+          padding: (theme) => ({
+            xs: theme.spacing(1, 2),
+            md: theme.spacing(1, 4),
+          }),
           boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
           backgroundColor: 'primaryPalette.white',
           borderRadius: (theme) => theme.spacing(5),
@@ -44,7 +47,7 @@ function CareerDropDown({ dropDownData, changeHandler }) {
           position: 'relative',
           '& .MuiSelect-icon': {
             top: 'calc(50% - 16px)',
-            right: '24px',
+            right: { xs: '12px', sm: '24px' },
             transition: 'all 0.265s ease',
           },
         }}

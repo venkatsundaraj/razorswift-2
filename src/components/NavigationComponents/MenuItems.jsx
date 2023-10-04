@@ -7,9 +7,8 @@ function MenuItems({ headerdData }) {
   return (
     <>
       {headerdData.navInItems.map((title, i) => (
-        <Box>
+        <Box key={title.id}>
           <MenuItem
-            key={title.id}
             sx={{
               display: 'flex',
               flexDirection: 'column',

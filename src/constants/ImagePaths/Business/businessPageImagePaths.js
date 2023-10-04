@@ -35,6 +35,10 @@ const businessPageImagePaths = {
       icon4: require('/public/images/Business/marquee-employer.svg').default,
     },
   },
+  readyToGetStarted: {
+    mainImage: require('/public/images/Homepage/ready-to-get-started.svg')
+      .default,
+  },
 }
 
 export default businessPageImagePaths

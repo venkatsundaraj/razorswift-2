@@ -27,7 +27,12 @@ function CareerDropDownBody({ dropDownBodyData, ...props }) {
         }}
       >
         <Grid
-          sx={{ padding: (theme) => theme.spacing(0, 2) }}
+          sx={{
+            padding: (theme) => ({
+              xs: theme.spacing(0, 2),
+              sm: theme.spacing(0, 0),
+            }),
+          }}
           container
           spacing={2}
           alignItems="center"
