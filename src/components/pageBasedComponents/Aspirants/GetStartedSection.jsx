@@ -13,7 +13,14 @@ function GetStartedSection({ readyToStartData }) {
   return (
     <CustomSection
       sx={{
-        minHeight: { xs: '82.5vh', md: '100vh' },
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: {
+          xs: '82.5vh',
+          md: '100vh',
+        },
       }}
     >
       <Container
@@ -38,7 +45,7 @@ function GetStartedSection({ readyToStartData }) {
         )}
         <Image
           alt={readyToStartData.title}
-          style={{ width: 'clamp(350px,38vw,650px)', height: 'auto' }}
+          style={{ width: 'clamp(350px,60vw,650px)', height: 'auto' }}
           src={readyToStartData.mainImage}
         />
         {readyToStartData.longDescription && (
