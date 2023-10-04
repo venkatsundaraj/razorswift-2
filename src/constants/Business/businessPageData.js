@@ -61,7 +61,7 @@ export const businessDropDownBodyData = {
 export const readyToStartData = {
   title: 'READY TO GET STARTED?',
   description: 'Hire at scale with the click of a button',
-  mainImage: aspirantPageImagePaths.getStartedSection.questionTag,
+  mainImage: businessPageImagePaths.readyToGetStarted.mainImage,
 }
 
 export const quickTalentDiscoveryData = {

@@ -6,10 +6,13 @@ import styled from '@emotion/styled'
 
 const Heading = styled(Typography)(({ theme }) => ({
   lineHeight: 1.05,
-  fontSize: '24px',
+  fontSize: '18px',
   textTransform: 'capitalize',
   width: 'fit-content',
   fontWeight: 600,
+  [theme.breakpoints.up('sm')]: {
+    fontSize: '24px',
+  },
   [theme.breakpoints.up('md')]: {
     fontSize: '24px',
   },

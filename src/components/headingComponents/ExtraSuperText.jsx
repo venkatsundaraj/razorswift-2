@@ -5,9 +5,12 @@ import { Typography } from '@mui/material'
 import styled from '@emotion/styled'
 
 const Heading = styled(Typography)(({ theme }) => ({
-  fontSize: '42px',
+  fontSize: '52px',
   lineHeight: 1.05,
   width: 'fit-content',
+  [theme.breakpoints.up('sm')]: {
+    fontSize: '58px',
+  },
   [theme.breakpoints.up('md')]: {
     fontSize: '68px',
   },
