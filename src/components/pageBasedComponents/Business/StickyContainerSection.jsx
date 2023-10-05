@@ -72,7 +72,7 @@ function StickyContainerSection() {
         display: 'flex',
         gap: '40px',
         height: {
-          xs: `calc(4 * 80vh + 350px)`,
+          xs: `calc(4 * 90vh + 350px)`,
           md: `calc(4 * 80vh + 550px)`,
           xl: `calc(4 * 80vh + 350px)`,
         },
@@ -105,6 +105,7 @@ function StickyContainerSection() {
               position: 'sticky',
               top: {
                 xs: `${i * 5}px`,
+                md: `${i * 5}px`,
                 md: `${i * 25}px`,
                 xl: `${25 + i * 55}px`,
               },
