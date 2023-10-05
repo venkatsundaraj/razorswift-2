@@ -66,7 +66,7 @@ const DemoSection = () => {
                   fontSize: {
                     xs: '25px',
                     md: 'clamp(50px, 4vw, 64px)',
-                    lg: 'clamp(50px, 4vw, 64px)',
+                    lg: '94px',
                   },
                 }}
               >
