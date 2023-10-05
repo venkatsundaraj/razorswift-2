@@ -111,22 +111,26 @@ function StickyContainerSection() {
               p: 4,
             }}
           >
-            <PrimaryHeading
-              variant="h2"
-              sx={{ color: 'violetPalette.dark', textAlign: 'center' }}
-            >
-              {item.mainTitle ? item.mainTitle : ''}
-            </PrimaryHeading>
-            <ParagraphHeading
-              sx={{
-                color: 'primaryPalette.black',
-                width: 'clamp(300px,60vw,900px)',
-                textAlign: 'center',
-                mb: 4,
-              }}
-            >
-              {item.mainDescription ? item.mainDescription : ''}
-            </ParagraphHeading>
+            {item.mainTitle && item.mainDescription && (
+              <>
+                <PrimaryHeading
+                  variant="h2"
+                  sx={{ color: 'violetPalette.dark', textAlign: 'center' }}
+                >
+                  {item.mainTitle ? item.mainTitle : ''}
+                </PrimaryHeading>
+                <ParagraphHeading
+                  sx={{
+                    color: 'primaryPalette.black',
+                    width: 'clamp(300px,60vw,900px)',
+                    textAlign: 'center',
+                    mb: 4,
+                  }}
+                >
+                  {item.mainDescription ? item.mainDescription : ''}
+                </ParagraphHeading>
+              </>
+            )}
 
             <Grid
               container
@@ -141,12 +145,12 @@ function StickyContainerSection() {
                   alignItems="left"
                   justifyContent="space-between"
                 >
-                  <Box sx={{ alignSelf: 'center' }}>
+                  <Box sx={{ alignSelf: { xs: 'flex-start', md: 'center' } }}>
                     <CustomImage
                       sx={{ alignSelf: 'center' }}
                       src={item.image}
                       alt={item.title}
-                      width="clamp(150px, 17vw, 235px)"
+                      width={{ xs: '150px', sm: '300px', lg: '300px' }}
                       aspectRatio="1/1"
                     />
                   </Box>
@@ -162,7 +166,12 @@ function StickyContainerSection() {
                   <CustomImage
                     alt={item.title}
                     src={item.mainImage}
-                    width="clamp(300px, 40vw,600px)"
+                    width={{
+                      xs: '280px',
+                      sm: '600px',
+                      lg: '525px',
+                      lg: '625px',
+                    }}
                     aspectRatio="3/2"
                     style={{ borderRadius: '16px' }}
                   />
