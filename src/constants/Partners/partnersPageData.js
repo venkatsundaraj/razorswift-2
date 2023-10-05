@@ -4,10 +4,10 @@ import partnersPageImagePaths from '../ImagePaths/Partners/partnersPageImagePath
 
 export const heroSectionData = {
   heading: {
-    primary: 'Aggregating the human',
+    primary: 'Aggregating human',
     secondary: 'Talent Landscape',
     primaryColor: '#A62973',
-    secondaryColor: '#A62973',
+    secondaryColor: '#FB847D',
   },
   description: 'A dynamic ecosystem where talent and opportunities converge',
   buttonContent: 'Partner with us',
@@ -31,39 +31,39 @@ export const partnersDropDownBodyData = {
   whatToExpect: [
     {
       id: 1,
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon1,
-      title: 'Job ready talent on Day 1',
+      image: partnersPageImagePaths.dropDownSection.icon1,
+      title: 'Collaborate For Standardization',
       description:
-        'Manage skill gap and talent shortage with customized pathways.',
+        'L&D Partners, assessment partners and recruiters collaboration.',
     },
     {
       id: 2,
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon2,
-      title: 'Unified talent ecosystem',
-      description: 'Seamless collaboration with talent partners with pathways.',
+      image: partnersPageImagePaths.dropDownSection.icon2,
+      title: 'Plug Into Skill, Domain And Corporate Pathways',
+      description:
+        'Seamless collaboration and streamlined process within pathways.',
     },
     {
       id: 3,
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon3,
-      title: 'Standardized profiles',
+      image: partnersPageImagePaths.dropDownSection.icon3,
+      title: 'Reduce Cost To Market',
       description:
-        'Standardized assessments and AI enriched profiles with defined pathways',
+        'Enhanced exposure and brand recognition among aspirants through AI based recommendations',
     },
     {
       id: 4,
-      image: aspirantPageImagePaths.dropDownSection.forStudents.icon4,
-      title: 'Be a Marquee employer',
-      description:
-        'Enhanced exposure and increased recognition among aspirants with corporate pathways',
+      image: partnersPageImagePaths.dropDownSection.icon4,
+      title: 'Grow Exponentially With Our Ever Growing User Base',
+      description: 'AI based recommendation of your services to aspirants',
     },
   ],
 }
 
 export const readyToStartData = {
-  title: 'WHY PARTNER WITH US',
+  title: 'WHY PARTNER WITH US?',
   description: 'Hire at scale with the click of a button',
   mainImage: partnersPageImagePaths.getStartedSection.questionTag,
   buttonText: 'Partner with us',
-  longDescription: `Razorswift Innovations' commitment to innovation and strategic partnerships creates a harmonious ecosystem where businesses and candidates can thrive. By integrating with key players in the talent marketplace, we ensure that the hiring process is efficient, credible, and beneficial for all involved. 
-`,
+  longDescription: `Razorswift Innovations' commitment to innovation and strategic partnerships creates a harmonious ecosystem where businesses and candidates can thrive. By integrating with key players in the talent marketplace, we ensure that the hiring process is efficient, credible, and beneficial for all involved.
+  `,
 }

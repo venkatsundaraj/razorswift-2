@@ -21,25 +21,21 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
           height: 'calc(100vh - 65px)',
           width: '100%',
           alignItems: 'center',
-          justifyContent: { xs: 'center', md: 'start' },
-          pt: { xs: 0, md: 16, xl: 20 },
-          pl: { xs: 0, md: 4 },
+          justifyContent: { xs: 'start' },
+          pt: { xs: 16, xl: 20 },
+          pl: { xs: 4 },
         }}
       >
-        <Grid
-          container
-          spacing={1}
-          sx={{ justifyContent: { xs: 'center', md: 'left' } }}
-        >
-          <Grid item xs={8} md={6}>
+        <Grid container spacing={1} sx={{ justifyContent: { xs: 'start' } }}>
+          <Grid item xs={12}>
             <Stack
               flexDirection="column"
               justifyContent="space-between"
-              alignItems={{ xs: 'center', md: 'start' }}
+              alignItems={{ xs: 'start' }}
             >
               <SuperText
                 sx={{
-                  textAlign: { xs: 'center', md: 'left' },
+                  textAlign: { xs: 'left' },
                   color: heroSectionData.heading.secondaryColor,
                 }}
               >
@@ -47,14 +43,14 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
               </SuperText>
               <ExtraSuperText
                 sx={{
-                  textAlign: { xs: 'center', md: 'left' },
+                  textAlign: { xs: 'left' },
                   color: heroSectionData.heading.primaryColor,
                 }}
               >
                 {heroSectionData.heading.secondary}
               </ExtraSuperText>
               <ParagraphHeading
-                sx={{ textAlign: { xs: 'center', md: 'left', width: '75%' } }}
+                sx={{ textAlign: { xs: 'left', width: '75%' } }}
               >
                 {heroSectionData.description}
               </ParagraphHeading>
@@ -79,7 +75,13 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
         </Grid>
         <Stack
           sx={{
-            width: { xs: '400px', sm: '750px', md: '800px', xl: '1200px' },
+            width: {
+              xs: '400px',
+              sm: '750px',
+              md: '800px',
+              lg: '667px',
+              xl: '900px',
+            },
             aspectRatio: '667/386',
             position: 'absolute',
             right: { xs: '50%', md: '0' },

@@ -8,6 +8,7 @@ import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import SuperText from '@/components/headingComponents/SuperText'
 import Image from 'next/image'
 import { Container, Grid } from '@mui/material'
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
 
 function GetStartedSection({ readyToStartData }) {
   return (
@@ -43,20 +44,21 @@ function GetStartedSection({ readyToStartData }) {
         {readyToStartData.buttonText && (
           <NavButton>{readyToStartData.buttonText}</NavButton>
         )}
-        <Image
+        <CustomImage
           alt={readyToStartData.title}
-          style={{ width: 'clamp(350px,60vw,650px)', height: 'auto' }}
+          width={{ sm: '300px', md: '500px', lg: '560px', xl: '700px' }}
+          aspectRatio="1/0.85"
           src={readyToStartData.mainImage}
         />
         {readyToStartData.longDescription && (
           <Grid container>
-            <Grid item xs={12} sm={3}></Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={1}></Grid>
+            <Grid item xs={12} sm={10}>
               <ParagraphHeading sx={{ textAlign: 'center' }}>
                 {readyToStartData.longDescription}
               </ParagraphHeading>
             </Grid>
-            <Grid item xs={12} sm={3}></Grid>
+            <Grid item xs={12} sm={1}></Grid>
           </Grid>
         )}
       </Container>

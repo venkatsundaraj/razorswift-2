@@ -15,7 +15,7 @@ const Heading = styled(Typography)(({ theme }) => ({
     fontSize: '56px',
   },
   [theme.breakpoints.up('lg')]: {
-    fontSize: '72px',
+    fontSize: '94px',
   },
   [theme.breakpoints.up('xl')]: {
     fontSize: '112px',
