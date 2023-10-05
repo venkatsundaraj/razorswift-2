@@ -37,7 +37,7 @@ function CareerDropDownBody({ dropDownBodyData, ...props }) {
           spacing={2}
           alignItems="center"
         >
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6}>
             <Stack direction="column" alignItems="start" gap={2}>
               <CustomImage
                 src={dropDownBodyData.trophyImage}
@@ -90,7 +90,7 @@ function CareerDropDownBody({ dropDownBodyData, ...props }) {
             </Stack>
           </Grid>
           <Grid item xs={12} md={1}></Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={5}>
             <Stack>
               <CustomImage
                 alt={dropDownBodyData.title}

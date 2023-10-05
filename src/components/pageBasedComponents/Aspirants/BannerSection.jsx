@@ -80,7 +80,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
         <Stack
           sx={{
             width: { xs: '400px', sm: '750px', md: '800px', xl: '1200px' },
-            aspectRatio: '1245/504',
+            aspectRatio: '667/386',
             position: 'absolute',
             right: { xs: '50%', md: '0' },
             bottom: '0',

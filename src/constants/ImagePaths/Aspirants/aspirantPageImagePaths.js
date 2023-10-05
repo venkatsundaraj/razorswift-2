@@ -2,7 +2,7 @@ const aspirantPageImagePaths = {
   homePage: {
     icon1: require('/public/images/Aspirants/aspirant-home-icon.png').default,
     icon2: require('/public/images/Aspirants/aspirant-home-icon-1.png').default,
-    banner: require('/public/images/Aspirants/aspirants-banner.svg').default,
+    banner: require('/public/images/Aspirants/aspirants banner.svg').default,
     rsLogo: require('/public/images/Aspirants/secondary-logo-1.svg').default,
     m: require('/public/images/Aspirants/m.svg').default,
     e: require('/public/images/Aspirants/e.svg').default,

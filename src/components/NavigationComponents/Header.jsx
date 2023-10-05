@@ -48,7 +48,7 @@ function Header(props) {
                   src={headerdData.logo}
                   alt="Razorswift-logo"
                   width="clamp(160px,10vw,244px)"
-                  aspectRatio="2/1"
+                  aspectRatio="2/0.8"
                 />
               </Link>
               <Navigation headerdData={headerdData} />

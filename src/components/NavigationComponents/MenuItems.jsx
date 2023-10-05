@@ -32,7 +32,9 @@ function MenuItems({ headerdData, handleClose }) {
               sx={{
                 color: 'pinkPalette.dark',
                 '&:hover': {
-                  opacity: `${title.name === 'Solutions' ? '1' : '0.785'}`,
+                  textDecoration: `${
+                    title.name === 'Solutions' ? 'none' : 'underline'
+                  }`,
                 },
               }}
             >
@@ -66,7 +68,7 @@ function MenuItems({ headerdData, handleClose }) {
                   sx={{
                     color: 'pinkPalette.dark',
                     '&:hover': {
-                      opacity: `0.785`,
+                      textDecoration: 'underline',
                     },
                   }}
                   onClick={handleClose}
