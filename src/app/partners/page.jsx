@@ -1,12 +1,16 @@
-import { Box } from '@mui/material'
+'use client'
+
 import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection'
-import { TickerBoxData } from '@/constants/Aspirants/aspirantPageData'
-import { heroSectionData } from '@/constants/Partners/partnersPageData'
-import { partnersDropDownBodyData } from '@/constants/Partners/partnersPageData'
 import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
-import CareerDropDownBody from '@/components/dropDownComponents/CareerDropDownBody'
-import { readyToStartData } from '@/constants/Partners/partnersPageData'
 import BusinessDropDownBody from '@/components/pageBasedComponents/Business/BusinessDropDownBody'
+import { TickerBoxData } from '@/constants/Aspirants/aspirantPageData'
+import {
+  heroSectionData,
+  partnersDropDownBodyData,
+  readyToStartData,
+} from '@/constants/Partners/partnersPageData'
+import { Box } from '@mui/material'
+import Duplicate from '@/components/dropDownComponents/Duplicate'
 
 export const metadata = {
   title: 'Partners | Razorswift',

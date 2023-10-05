@@ -42,6 +42,8 @@ const aspirantPageImagePaths = {
   getStartedSection: {
     questionTag: require('/public/images/Aspirants/question-vector.svg')
       .default,
+    qrCode: require('/public/images/Aspirants/QR Code for RS Whatsapp.jpg')
+      .default,
   },
   styickScrollSection: {
     image1: require('/public/images/Aspirants/get-verified-get-hired-1.webp')

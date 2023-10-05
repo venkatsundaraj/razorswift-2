@@ -338,6 +338,7 @@ export const readyToStartData = {
   title: 'READY TO GET STARTED?',
   description: 'Its easy. Scan this QR code.',
   mainImage: aspirantPageImagePaths.getStartedSection.questionTag,
+  qrImage: aspirantPageImagePaths.getStartedSection.qrCode,
 }
 
 export const aboutUsData = {
