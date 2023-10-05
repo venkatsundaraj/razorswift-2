@@ -9,6 +9,7 @@ import blog from '@/constants/ImagePaths/blog/blog'
 import { Stack } from '@mui/system'
 import { Typography } from '@mui/material'
 import Link from 'next/link'
+import blogscarddata from '@/constants/Blogs/blogscarddata'
 const BlogCard = () => {
   const banimg = {
     width: '100%',
@@ -16,33 +17,41 @@ const BlogCard = () => {
   }
   return (
     <DropDownWrapper style={{ width: '100%' }}>
-      <Link style={{ textDecoration: 'none' }} href="">
+      <Box>
         <Grid container spacing={5}>
-          <Grid sx={{}} item lg={4}>
-            <Stack
-              sx={{
-                backgroundColor: '#FFCCC9',
-                paddingTop: '40px',
-                borderRadius: '20px',
-              }}
-            >
-              <Image alt="bannerImage" style={banimg} src={blog.blogplace2} />
-              <Stack sx={{ padding: '10px' }}>
-                <Link style={{ textDecoration: 'none', color: '' }} href="">
-                  <Typography sx={{ color: 'black', fontSize: '24px' }}>
-                    Tips to write a great resume
+          {blogscarddata.map((item, index) => (
+            <Grid sx={{}} item lg={4} xl={3}>
+              <Stack
+                sx={{
+                  backgroundColor: '#FFCCC9',
+                  paddingTop: '40px',
+                  borderRadius: '20px',
+                }}
+              >
+                <Image alt="bannerImage" style={banimg} src={item.img} />
+                <Stack sx={{ padding: '10px' }}>
+                  <Typography sx={{ fontSize: '24px', paddingBottom: '20px' }}>
+                    <Link
+                      style={{ textDecoration: 'none', color: 'black' }}
+                      href=""
+                    >
+                      {item.title}
+                    </Link>
                   </Typography>
-                </Link>
-                <Link style={{ textDecoration: 'none', color: '' }} href="">
-                  <Typography sx={{ color: 'black', fontSize: '16px' }}>
-                    Read the article
+                  <Typography sx={{ fontSize: '16px' }}>
+                    <Link
+                      style={{ textDecoration: 'none', color: 'black' }}
+                      href=""
+                    >
+                      {item.article}
+                    </Link>
                   </Typography>
-                </Link>
+                </Stack>
               </Stack>
-            </Stack>
-          </Grid>
+            </Grid>
+          ))}
         </Grid>
-      </Link>
+      </Box>
     </DropDownWrapper>
   )
 }
