@@ -5,11 +5,13 @@ const homePageImagePaths = {
   secsecpyth: require('/public/images/Homepage/Arrow.png').default,
   aspiratvect: require('/public/images/Homepage/aspirants-vector.svg').default,
   internmain: require('/public/images/Homepage/placeholder-image.png').default,
-  internone: require('/public/images/Homepage/icon-1.svg').default,
+  internone: require('/public/images/Homepage/college-to-career-roadmap.svg')
+    .default,
 
-  internbulb: require('/public/images/Homepage/inter-bulb.svg').default,
-  internplay: require('/public/images/Homepage/intern-play.svg').default,
-  internhand: require('/public/images/Homepage/intern-hand.svg').default,
+  internbulb: require('/public/images/Homepage/gain-insights.svg').default,
+  internplay: require('/public/images/Homepage/stay-ahead.svg').default,
+  internhand: require('/public/images/Homepage/attract-best-salaries.svg')
+    .default,
 
   pathwayacc: require('/public/images/Homepage/pathway-img.svg').default,
   fivemen: require('/public/images/Homepage/ready-to.svg').default,
@@ -45,15 +47,19 @@ const homePageImagePaths = {
   trophythree: require('/public/images/Homepage/Group 108.svg').default,
   mainImage1: require('/public/images/Homepage/Mask Group 7.png').default,
 
-  hiringone: require('/public/images/Homepage/Path 291.svg').default,
-  hiringtwo: require('/public/images/Homepage/Group 385.svg').default,
-  hiringthree: require('/public/images/Homepage/Path 295.svg').default,
-  hiringfour: require('/public/images/Homepage/Path 1040.svg').default,
+  hiringone: require('/public/images/Homepage/job-ready-talent.svg').default,
+  hiringtwo: require('/public/images/Homepage/unified-talent-ecosystem.svg')
+    .default,
+  hiringthree: require('/public/images/Homepage/standardised-profiles.svg')
+    .default,
+  hiringfour: require('/public/images/Homepage/marquee-employer.svg').default,
 
-  landscapeone: require('/public/images/Homepage/Path 1403.svg').default,
-  landscapetwo: require('/public/images/Homepage/Path 1404.svg').default,
-  landscapethree: require('/public/images/Homepage/Path 1406.svg').default,
-  landscapefour: require('/public/images/Homepage/Path 1406.svg').default,
+  landscapeone:
+    require('/public/images/Homepage/collaborate-better-standards.svg').default,
+  landscapetwo: require('/public/images/Homepage/pathways.svg').default,
+  landscapethree: require('/public/images/Homepage/reduced-cost.svg').default,
+  landscapefour: require('/public/images/Homepage/grow-exponentiallly.svg')
+    .default,
 
   aspirants: require('/public/images/Homepage/aspirants.webp').default,
   business: require('/public/images/Homepage/business.webp').default,

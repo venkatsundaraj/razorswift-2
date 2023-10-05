@@ -2,9 +2,8 @@ const whyrazor = [
   {
     title: 'WHY RAZORSWIFT',
     description:
-      "We are a machine learning based dynamic 'digital marketplace' that provides the aspirant talent pool to stay continually competitive relative to the hiring landscape in India. We do this by harnessing our comprehensive knowledge partner ecosystem, which provides for comprehensive mentorship, learning and career progression advisory.",
-    descriptiontwo:
-      "We use a unique 'affinity algorithm' which provides for identification, assessment and enablement modules resulting in significant process efficiency in curation and hiring, whilst saving significant time and cost for businesses and aspirants.",
+      "We are an innovative digital marketplace that leverages AI and a comprehensive knowledge partner ecosystem to empower aspiring individuals and streamline talent acquisition for businesses in India. Through our unique 'Pathways' approach, we offer tailored journeys for individuals to excel within the evolving hiring landscape, while also providing businesses with structured processes for aligning competencies and efficient curation. Our pioneering 'affinity algorithm' enhances identification, assessment, and enablement, leading to substantial time and cost savings. Our commitment extends beyond hiring, fostering continuous engagement and redefining talent progression for sustained success.",
+
     button: 'Explore',
   },
 ]
