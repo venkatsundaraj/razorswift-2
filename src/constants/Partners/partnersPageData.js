@@ -61,7 +61,7 @@ export const partnersDropDownBodyData = {
 
 export const readyToStartData = {
   title: 'WHY PARTNER WITH US?',
-  description: 'Hire at scale with the click of a button',
+  description: 'Collaborate with us and redefine the talent landscape',
   mainImage: partnersPageImagePaths.getStartedSection.questionTag,
   buttonText: 'Partner with us',
   longDescription: `Razorswift Innovations' commitment to innovation and strategic partnerships creates a harmonious ecosystem where businesses and candidates can thrive. By integrating with key players in the talent marketplace, we ensure that the hiring process is efficient, credible, and beneficial for all involved.

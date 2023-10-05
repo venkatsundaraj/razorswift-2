@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 import { Stack } from '@mui/material'
 import FastrackCardLists from '@/components/CardComponents/AspirantCards/FastrackCardLists'
 
-const ExploreSection = () => {
+const ExploreSection = ({ ...props }) => {
   const headfont = {
     fontSize: 'clamp(50px, 4vw, 64px)',
   }
@@ -78,6 +78,7 @@ const ExploreSection = () => {
         alignItems: { xs: 'flex-start', md: 'center', lg: 'center' },
         padding: { md: '60px 24px' },
       }}
+      {...props}
     >
       <Grid
         sx={{ alignItems: 'center', justifyContent: 'center' }}

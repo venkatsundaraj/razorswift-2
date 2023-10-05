@@ -36,8 +36,9 @@ const businessPageImagePaths = {
     },
   },
   readyToGetStarted: {
-    mainImage: require('/public/images/Homepage/ready-to-get-started.svg')
-      .default,
+    mainImage:
+      require('/public/images/Business/businesses-ready-get-started-illustration.svg')
+        .default,
   },
 }
 
