@@ -140,7 +140,7 @@ const ExploreSection = () => {
                 >
                   {data[0].description}
                 </Typography>
-                <Typography
+                {/* <Typography
                   variant="body1"
                   sx={{
                     fontSize: {
@@ -154,7 +154,7 @@ const ExploreSection = () => {
                   }}
                 >
                   {data[0].descriptiontwo}
-                </Typography>
+                </Typography> */}
               </motion.div>
             </motion.div>
             <motion.div transition={{ staggerChildren: 1.9 }}>

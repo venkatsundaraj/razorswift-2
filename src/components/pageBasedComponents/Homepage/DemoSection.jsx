@@ -115,7 +115,7 @@ const DemoSection = () => {
             </Link>
           </Box>
         </Box>
-        <Box sx={{ marginTop: '-45px' }}>
+        <Box sx={{ marginTop: '-42px' }}>
           <Image
             alt="readytostartnew"
             style={{ width: 'clamp(350px, 54vw, 1000px)', height: 'auto' }}

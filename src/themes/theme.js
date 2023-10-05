@@ -39,6 +39,7 @@ const theme = createTheme({
       litepink: '#F2B8FF',
       lite: '#ffffff7a',
       footer: '#3B0647',
+      future: '#EFBEBE',
     },
     pinkPalette: {
       extraDark: '#7A1450',
