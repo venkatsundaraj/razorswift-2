@@ -72,7 +72,8 @@ function StickyContainerSection() {
         display: 'flex',
         gap: '40px',
         height: {
-          xs: `calc(4 * 90vh + 350px)`,
+          xs: `calc(4 * 90vh + 550px)`,
+          sm: `calc(4 * 90vh + 350px)`,
           md: `calc(4 * 80vh + 550px)`,
           xl: `calc(4 * 80vh + 350px)`,
         },
