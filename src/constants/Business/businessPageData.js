@@ -62,6 +62,7 @@ export const readyToStartData = {
   title: 'READY TO GET STARTED?',
   description: 'Hire at scale with the click of a button',
   mainImage: businessPageImagePaths.readyToGetStarted.mainImage,
+  buttonText: 'Get a Demo',
 }
 
 export const quickTalentDiscoveryData = {

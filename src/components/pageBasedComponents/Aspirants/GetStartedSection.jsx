@@ -44,6 +44,14 @@ function GetStartedSection({ readyToStartData }) {
         {readyToStartData.buttonText && (
           <NavButton>{readyToStartData.buttonText}</NavButton>
         )}
+        {readyToStartData.qrImage && (
+          <CustomImage
+            alt={readyToStartData.title}
+            width={{ xs: '100px' }}
+            aspectRatio="1/1"
+            src={readyToStartData.qrImage}
+          />
+        )}
         <CustomImage
           alt={readyToStartData.title}
           width={{ xs: '300px', md: '500px', lg: '560px', xl: '700px' }}

@@ -50,7 +50,10 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
                 {heroSectionData.heading.secondary}
               </ExtraSuperText>
               <ParagraphHeading
-                sx={{ textAlign: { xs: 'left', width: '75%' } }}
+                sx={{
+                  textAlign: { xs: 'left' },
+                  width: { xs: '60%', sm: '40%', md: '30%' },
+                }}
               >
                 {heroSectionData.description}
               </ParagraphHeading>
