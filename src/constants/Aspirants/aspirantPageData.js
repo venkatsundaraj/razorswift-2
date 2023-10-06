@@ -200,7 +200,7 @@ export const dropDownBodyData = [
         id: 2,
         image: aspirantPageImagePaths.dropDownSection.forStudents.icon2,
         title: 'Gain insights on skill expectation.',
-        description: 'Negotiate better with corporate bench mark reports.',
+        description: 'Leverage mentors, corporate cohorts and communities.',
       },
       {
         id: 3,
@@ -218,7 +218,7 @@ export const dropDownBodyData = [
   },
   {
     id: 2,
-    title: 'Design your Dream,',
+    title: 'Design your Dream',
     highLightedTitle: 'Career.',
     backgroundColor: '#ECADD2',
     buttonData: {
@@ -359,25 +359,25 @@ export const stickySliderData = {
       id: 0,
       subtitle: 'Everything at your fingertips.',
       paragraph:
-        "We've made it easy! Say 'hi' to us on WhatsApp. Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
+        "Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
     },
     {
       id: 1,
       subtitle: 'Upskill and stay ahead',
       paragraph:
-        "We've made it easy! Say 'hi' to us on WhatsApp. Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
+        'Explore numerous free training options and assessments tailored to various skill levels – beginner, intermediate, and advanced. If your knowledge aligns with industry standards, consider taking assessments. Enhance your expertise with AI-recommended courses and earn a verified professional tag.',
     },
     {
       id: 2,
       subtitle: 'Become a niche specialist',
       paragraph:
-        "We've made it easy! Say 'hi' to us on WhatsApp. Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
+        'Embark on an enriching pathway encompassing training courses, assessments, mentoring, and mock interviews. Attain verification for high-demand skills. Select from skill-based, domain-based, or corporate pathways and secure verification for highly sought-after skills.',
     },
     {
       id: 3,
       subtitle: 'Take control of your career',
       paragraph:
-        "We've made it easy! Say 'hi' to us on WhatsApp. Scan the QR code displayed here with your smartphone to get started. Upload a PDF of your resume when prompted and wait for the profile page link, which will be shared on WhatsApp. Click the link to review if your profile has been created accurately. It's that simple.",
+        'Become a specialist in your chosen domain and enhance your profile through mentoring, insights from industry experts, and career guidance. Upskill to stay ahead in the ever-evolving tech world, opening doors to interview opportunities and high-paying jobs.',
     },
   ],
   image: [
