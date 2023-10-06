@@ -9,6 +9,7 @@ import {
   readyToStartData,
 } from '@/constants/Business/businessPageData'
 import { Box } from '@mui/material'
+import WhyRazorswiftSection from '@/components/pageBasedComponents/Business/WhyRazorswiftSection'
 
 export const metadata = {
   title: 'Business | Razorswift',
@@ -23,6 +24,7 @@ function Business() {
       />
       <BusinessDropDownBody dropDownBodyData={businessDropDownBodyData} />
       <StickyContainerSection />
+      <WhyRazorswiftSection />
       <GetStartedSection readyToStartData={readyToStartData} />
     </Box>
   )

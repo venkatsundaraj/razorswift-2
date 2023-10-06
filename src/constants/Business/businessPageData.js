@@ -58,6 +58,45 @@ export const businessDropDownBodyData = {
   ],
 }
 
+export const whyRazorswiftSection = {
+  title: 'WHY RAZORSWIFT',
+  description:
+    "We are an innovative digital marketplace that leverages AI and a comprehensive knowledge partner ecosystem to empower aspiring individuals and streamline talent acquisition for businesses in India. Through our unique 'Pathways' approach, we offer tailored journeys for individuals to excel within the evolving hiring landscape, while also providing businesses with structured processes for aligning competencies and efficient curation. Our pioneering 'affinity algorithm' enhances identification, assessment, and enablement, leading to substantial time and cost savings. Our commitment extends beyond hiring, fostering continuous engagement and redefining talent progression for sustained success.",
+
+  button: { title: 'Explore', link: '/' },
+  cardsRight: [
+    {
+      id: 1,
+      percentage: '93%',
+      bgColor: '#EBC8DD',
+      description:
+        'Of millennials find skill development crucial for their career',
+    },
+    {
+      id: 2,
+      percentage: '53%',
+      bgColor: '#FFE3E3',
+      description: 'Disappointed by lack of training when starting new job',
+    },
+  ],
+
+  cardsLeft: [
+    {
+      id: 1,
+      percentage: '79%',
+      bgColor: '#FFCCC9',
+      description: 'Millennials see mentoring as crucial for success',
+    },
+    {
+      id: 2,
+      percentage: '87%',
+      bgColor: '#EDD8F2',
+      description:
+        'Millennials with mentors felt empowered and had greater confidence at work',
+    },
+  ],
+}
+
 export const readyToStartData = {
   title: 'READY TO GET STARTED?',
   description: 'Hire at scale with the click of a button',
