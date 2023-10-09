@@ -1,27 +1,31 @@
-'use client'
+'use client';
 
-import React from 'react'
-import InputField from './FormUI/InputField/InputField'
-import SubmitButton from './FormUI/SubmitButton/SubmitButton'
-import { Stack, Box } from '@mui/material'
-import { Form, Formik } from 'formik'
+import React from 'react';
+import InputField from './FormUI/InputField/InputField';
+import SubmitButton from './FormUI/SubmitButton/SubmitButton';
+import { Stack, Box } from '@mui/material';
+import { Form, Formik } from 'formik';
 import {
   alphabetsValidationSchema,
+  validateContactNumber,
   emailValidation,
-} from '@/utils/helpers/validationSchemas'
-import * as Yup from 'yup'
+  messageValidation,
+} from '@/utils/helpers/validationSchemas';
+import * as Yup from 'yup';
 
 const initialValues = {
   fullName: '',
   email: '',
   mobileNumber: '',
   message: '',
-}
+};
 
 const validationSchema = Yup.object().shape({
   fullName: alphabetsValidationSchema('fullName', true),
   email: emailValidation('Email', true),
-})
+  mobileNumber: validateContactNumber('Mobile Number', true),
+  message: messageValidation('Message', true),
+});
 
 function FormSection() {
   return (
@@ -30,8 +34,8 @@ function FormSection() {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting }) => {
-          console.log(values)
-          setSubmitting(false)
+          console.log(values);
+          setSubmitting(false);
         }}
       >
         {({
@@ -71,18 +75,27 @@ function FormSection() {
                 name="mobileNumber"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                type="number"
+                type="mobile"
                 value={values.mobileNumber}
                 label="Mobile Number"
                 variant="standard"
                 error={errors.mobileNumber}
               />
 
-              <SubmitButton
-                loading={isSubmitting}
-                disabled={isSubmitting}
-                type="submit"
-              >
+              <InputField
+                name="message"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                type="text"
+                multiline
+                rows={4}
+                value={values.message}
+                label="Your Message"
+                variant="standard"
+                error={errors.message}
+              />
+
+              <SubmitButton disabled={isSubmitting} type="submit">
                 Submit
               </SubmitButton>
             </Stack>
@@ -90,7 +103,7 @@ function FormSection() {
         )}
       </Formik>
     </Box>
-  )
+  );
 }
 
-export default FormSection
+export default FormSection;
