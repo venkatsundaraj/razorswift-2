@@ -1,67 +1,67 @@
-'use client'
+'use client';
 
-import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
-import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
-import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
-import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
-import TertiaryHeading from '@/components/headingComponents/TertiaryHeading'
-import { quickTalentDiscoveryData } from '@/constants/Business/businessPageData'
-import { Box, Grid, Stack } from '@mui/material'
-import { useMotionValueEvent, useScroll } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage';
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
+import PrimaryHeading from '@/components/headingComponents/PrimaryHeading';
+import SubtitleHeading from '@/components/headingComponents/SubtitleHeading';
+import TertiaryHeading from '@/components/headingComponents/TertiaryHeading';
+import { quickTalentDiscoveryData } from '@/constants/Business/businessPageData';
+import { Box, Grid, Stack } from '@mui/material';
+import { useMotionValueEvent, useScroll } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
-const backgroundColor = ['teal', 'tomato', 'orange', 'violet']
+const backgroundColor = ['teal', 'tomato', 'orange', 'violet'];
 
 const initialState = {
   id: 0,
   value: 0,
-}
+};
 
 function StickyContainerSection() {
-  const [childItems, setChildItems] = useState([])
-  const [percentage, setpercentage] = useState(0)
-  const [scrolledValue, setScrolledValue] = useState(0)
-  const [scaleValue, setScaleValue] = useState(initialState)
+  const [childItems, setChildItems] = useState([]);
+  const [percentage, setpercentage] = useState(0);
+  const [scrolledValue, setScrolledValue] = useState(0);
+  const [scaleValue, setScaleValue] = useState(initialState);
 
-  const cardsRef = useRef(new Array())
-  const sectionRef = useRef(null)
-  const { scrollY } = useScroll()
+  const cardsRef = useRef(new Array());
+  const sectionRef = useRef(null);
+  const { scrollY } = useScroll();
 
   useEffect(() => {
     for (let i = 0; i <= percentage; i++) {
-      const fractionValue = (scrolledValue / 25) * 0.05
+      const fractionValue = (scrolledValue / 25) * 0.05;
 
-      cardsRef.current[i].dataset.value = fractionValue - i * 0.05
+      cardsRef.current[i].dataset.value = fractionValue - i * 0.05;
       cardsRef.current[i].style.transform = `scale(calc(1 - ${
         fractionValue - i * 0.05
-      })) `
+      })) `;
 
       setScaleValue((prev) => {
-        return { id: i, value: fractionValue - i * 0.05 }
-      })
+        return { id: i, value: fractionValue - i * 0.05 };
+      });
     }
-  }, [scrolledValue, percentage])
+  }, [scrolledValue, percentage]);
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
-    const primaryCondition = latest > sectionRef.current.offsetTop
+    const primaryCondition = latest > sectionRef.current.offsetTop;
     if (primaryCondition) {
       const value =
         (latest - sectionRef.current.offsetTop) /
         (sectionRef.current.clientHeight -
-          document.documentElement.clientHeight)
-      const filteredValue = Math.min(100, value * 100)
-      setScrolledValue(+filteredValue.toFixed(2))
+          document.documentElement.clientHeight);
+      const filteredValue = Math.min(100, value * 100);
+      setScrolledValue(+filteredValue.toFixed(2));
       if (filteredValue < 25) {
-        setpercentage(0)
+        setpercentage(0);
       } else if (25 < filteredValue && filteredValue < 50) {
-        setpercentage(1)
+        setpercentage(1);
       } else if (50 < filteredValue && filteredValue < 75) {
-        setpercentage(2)
+        setpercentage(2);
       } else if (75 < filteredValue && filteredValue < 100) {
-        setpercentage(3)
+        setpercentage(3);
       }
     }
-  })
+  });
 
   return (
     <Box
@@ -110,7 +110,8 @@ function StickyContainerSection() {
                 md: `${i * 25}px`,
                 xl: `${25 + i * 55}px`,
               },
-              p: 4,
+              py: { xs: '32px' },
+              px: { xs: '16px', md: '24px' },
             }}
           >
             {item.mainTitle && item.mainDescription && (
@@ -181,10 +182,10 @@ function StickyContainerSection() {
               </Grid>
             </Grid>
           </Box>
-        )
+        );
       })}
     </Box>
-  )
+  );
 }
 
-export default StickyContainerSection
+export default StickyContainerSection;

@@ -5,7 +5,7 @@ const businessPageImagePaths = {
   dropDownSection: {
     clock: require('/public/images/Business/business-dropdown-icon.png')
       .default,
-    business: require('/public/images/Business/business-ppl.png').default,
+    business: require('/public/images/Business/business.webp').default,
     mainImage1: require('/public/images/Business/company-crafted-pathways.webp')
       .default,
     mainImage2: require('/public/images/Business/roi-driven-efficiency.webp')
@@ -40,6 +40,6 @@ const businessPageImagePaths = {
       require('/public/images/Business/businesses-ready-get-started-illustration.svg')
         .default,
   },
-}
+};
 
-export default businessPageImagePaths
+export default businessPageImagePaths;

@@ -1,14 +1,14 @@
-'use client'
+'use client';
 
-import TickerComponent from '@/components/TickerComponent/TickerComponent'
-import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton'
-import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection'
-import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
-import ExtraSuperText from '@/components/headingComponents/ExtraSuperText'
-import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
-import SuperText from '@/components/headingComponents/SuperText'
+import TickerComponent from '@/components/TickerComponent/TickerComponent';
+import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton';
+import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection';
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage';
+import ExtraSuperText from '@/components/headingComponents/ExtraSuperText';
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
+import SuperText from '@/components/headingComponents/SuperText';
 
-import { Box, Grid, Stack } from '@mui/material'
+import { Box, Grid, Stack } from '@mui/material';
 
 function BannerSection({ heroSectionData, TickerBoxData }) {
   return (
@@ -60,7 +60,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
 
               <PrimaryFillButton
                 varient="contained"
-                link="/about"
+                href="/login"
                 sx={{
                   width: 'max-content',
                   marginTop: '18px',
@@ -110,7 +110,7 @@ function BannerSection({ heroSectionData, TickerBoxData }) {
         }}
       />
     </CustomSection>
-  )
+  );
 }
 
-export default BannerSection
+export default BannerSection;

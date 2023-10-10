@@ -75,7 +75,21 @@ function FormSection() {
                 name="mobileNumber"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                type="mobile"
+                type="number"
+                sx={{
+                  '& input[type=number]': {
+                    '-moz-appearance': 'textfield',
+                  },
+                  '& input[type=number]::-webkit-outer-spin-button': {
+                    '-webkit-appearance': 'none',
+                    margin: 0,
+                  },
+                  '& input[type=number]::-webkit-inner-spin-button': {
+                    '-webkit-appearance': 'none',
+                    margin: 0,
+                  },
+                }}
+                max={10}
                 value={values.mobileNumber}
                 label="Mobile Number"
                 variant="standard"
