@@ -1,20 +1,20 @@
-'use client'
+'use client';
 
-import { createTheme } from '@mui/material/styles'
+import { createTheme } from '@mui/material/styles';
 
-import { Urbanist, Bebas_Neue } from 'next/font/google'
+import { Urbanist, Bebas_Neue } from 'next/font/google';
 
 const urbanist = Urbanist({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
-})
+});
 
 const bebasNeue = Bebas_Neue({
   weight: ['400'],
   subsets: ['latin'],
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
-})
+});
 //hello
 const theme = createTheme({
   // You can also customize other palette colors here if needed
@@ -174,6 +174,6 @@ const theme = createTheme({
       xl: 1900,
     },
   },
-})
+});
 
-export default theme
+export default theme;

@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material'
-import React from 'react'
-import styled from '@emotion/styled'
+import { Typography } from '@mui/material';
+import React from 'react';
+import styled from '@emotion/styled';
 
 const Paragraph = styled(Typography)(({ theme }) => ({
   fontSize: '14px',
@@ -14,16 +14,16 @@ const Paragraph = styled(Typography)(({ theme }) => ({
     fontSize: '16px',
   },
   [theme.breakpoints.up('xl')]: {
-    fontSize: '16px',
+    fontSize: '17px',
   },
-}))
+}));
 
 function SubtitleHeading({ children, ...props }) {
   return (
     <Paragraph variant="subtitle1" {...props}>
       {children}
     </Paragraph>
-  )
+  );
 }
 
-export default SubtitleHeading
+export default SubtitleHeading;

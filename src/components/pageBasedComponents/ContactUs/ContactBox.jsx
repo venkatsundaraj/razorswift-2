@@ -48,6 +48,7 @@ function ContactBox() {
                   >
                     EMAIL
                   </SubtitleHeading>
+
                   <Link
                     style={{ textDecoration: 'none', color: 'black' }}
                     href={`mailto:${contactData.emailId}`}

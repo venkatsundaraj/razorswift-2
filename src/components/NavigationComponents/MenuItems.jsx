@@ -1,10 +1,13 @@
-import React from 'react'
-import { Menu, MenuItem, Stack, Box } from '@mui/material'
-import ParagraphHeading from '../headingComponents/ParagraphHeading'
-import Link from 'next/link'
-import PrimaryFillButton from '../buttonComponents/PrimaryFillButton'
+import { Box, MenuItem, Stack, Typography } from '@mui/material';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
+import PrimaryFillButton from '../buttonComponents/PrimaryFillButton';
+import ParagraphHeading from '../headingComponents/ParagraphHeading';
 
 function MenuItems({ headerdData, handleClose }) {
+  const router = useRouter();
+
   return (
     <>
       {headerdData.navInItems.map((title, i) => (
@@ -17,6 +20,13 @@ function MenuItems({ headerdData, handleClose }) {
               alignItems: 'center',
               justifyContent: 'center',
               color: 'pinkPalette.dark',
+              cursor: `${title.name === 'Solutions' ? 'default' : 'inherit'}`,
+              pointerEvents: `${
+                title.name === 'Solutions' ? 'none' : 'inherit'
+              }`,
+              '&.Mui-selected': {
+                backgroundColor: 'blue',
+              },
               borderBottom: `${
                 i === headerdData.navInItems.length - 1 || i === 0
                   ? ''
@@ -31,27 +41,51 @@ function MenuItems({ headerdData, handleClose }) {
               style={{ fontWeight: '600' }}
               sx={{
                 color: 'pinkPalette.dark',
-                '&:hover': {
-                  textDecoration: `${
-                    title.name === 'Solutions' ? 'none' : 'underline'
-                  }`,
+                position: 'relative',
+                '&:before': {
+                  content: '""',
+                  width: '0%',
+                  height: '2px',
+                  bottom: '3px',
+                  position: 'absolute',
+                  backgroundColor: 'pinkPalette.dark',
+                  transition: 'width 200ms ease',
+                },
+                '&:hover:before': {
+                  width: `${title.name === 'Solutions' ? '0' : '100%'}`,
+                  transition: 'width 200ms ease',
                 },
               }}
             >
-              {
+              {title.name === 'Solutions' ? (
+                <Typography
+                  component="span"
+                  style={{ fontWeight: 600 }}
+                  sx={{
+                    fontSize: '14px',
+
+                    fontFamily: (theme) => theme.typography.body1,
+                    fontSize: {
+                      xs: '14px',
+                      md: '16px',
+                      lg: '18px',
+                      xl: '20px',
+                    },
+                  }}
+                >
+                  {title.name}
+                </Typography>
+              ) : (
                 <Link
                   style={{
                     textDecoration: 'none',
                     color: 'inherit',
-                    cursor: `${
-                      title.name === 'Solutions' ? 'default' : 'pointer'
-                    }`,
                   }}
                   href={`${title.link || ''}`}
                 >
                   {title.name}
                 </Link>
-              }
+              )}
             </ParagraphHeading>
           </MenuItem>
           {title.subItems && (
@@ -60,15 +94,26 @@ function MenuItems({ headerdData, handleClose }) {
               alignItems="center"
               justifyContent="center"
               gap={1.2}
-              sx={{ py: 1.2, borderBottom: '1px solid #A62973' }}
+              sx={{ pb: 1.2, borderBottom: '1px solid #A62973' }}
             >
               {title.subItems.map((item) => (
                 <ParagraphHeading
                   key={item.id}
                   sx={{
                     color: 'pinkPalette.dark',
-                    '&:hover': {
-                      textDecoration: 'underline',
+                    position: 'relative',
+                    '&:before': {
+                      content: '""',
+                      width: '0%',
+                      height: '2px',
+                      bottom: '2.5px',
+                      position: 'absolute',
+                      backgroundColor: 'pinkPalette.dark',
+                      transition: 'width 200ms ease',
+                    },
+                    '&:hover:before': {
+                      width: '100%',
+                      transition: 'width 200ms ease',
                     },
                   }}
                   onClick={handleClose}
@@ -88,7 +133,7 @@ function MenuItems({ headerdData, handleClose }) {
       <Stack
         flexDirection="row"
         justifyContent="space-between"
-        sx={{ marginTop: 1 }}
+        sx={{ marginTop: 1, display: { xs: 'flex', md: 'none' } }}
       >
         {headerdData.actionButtons.map((item) => (
           <PrimaryFillButton
@@ -116,7 +161,7 @@ function MenuItems({ headerdData, handleClose }) {
         ))}
       </Stack>
     </>
-  )
+  );
 }
 
-export default MenuItems
+export default MenuItems;

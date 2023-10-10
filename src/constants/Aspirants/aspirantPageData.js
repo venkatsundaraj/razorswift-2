@@ -1,9 +1,9 @@
-import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths'
+import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths';
 
 export const headerdData = {
   navItems: [
-    { id: 1, name: 'Partners', link: '/' },
     { id: 2, name: 'Aspirants', link: '/' },
+    { id: 1, name: 'Partners', link: '/' },
     { id: 3, name: 'Business', link: '/' },
   ],
   forMenu: [
@@ -31,8 +31,8 @@ export const headerdData = {
       id: 1,
       name: 'Solutions',
       subItems: [
-        { id: 1, name: 'Partners', link: '/partners' },
         { id: 2, name: 'Aspirants', link: '/aspirants' },
+        { id: 1, name: 'Partners', link: '/partners' },
         { id: 3, name: 'Business', link: '/business' },
       ],
     },
@@ -53,7 +53,7 @@ export const headerdData = {
       link: '/contact-us',
     },
   ],
-}
+};
 
 export const heroSectionData = {
   heading: {
@@ -66,7 +66,7 @@ export const heroSectionData = {
     'Be a specialist in your niche with AI enabled Pathways, Skill Assessments and so much more.',
   buttonContent: 'Build Your Profile',
   bannerImage: aspirantPageImagePaths.homePage.banner,
-}
+};
 
 export const TickerBoxData = {
   tickerArrow: aspirantPageImagePaths.tickerSection.arrow,
@@ -75,7 +75,7 @@ export const TickerBoxData = {
     { id: 2, title: 'Check out the newly added Python pathway2' },
     { id: 3, title: 'Check out the newly added Python pathway3' },
   ],
-}
+};
 
 export const CareerData = {
   heading: 'power your career',
@@ -167,12 +167,12 @@ export const CareerData = {
       typeOfPathway: 'Skill pathway',
     },
   ],
-}
+};
 
 export const dropDownData = [
-  { id: 1, title: 'College Student' },
+  { id: 1, title: 'College Students' },
   { id: 2, title: 'Experienced Professionals' },
-]
+];
 
 export const dropDownBodyData = [
   {
@@ -199,7 +199,7 @@ export const dropDownBodyData = [
       {
         id: 2,
         image: aspirantPageImagePaths.dropDownSection.forStudents.icon2,
-        title: 'Gain insights on skill expectation.',
+        title: 'Gain insights on skill expectations.',
         description: 'Leverage mentors, corporate cohorts and communities.',
       },
       {
@@ -258,7 +258,7 @@ export const dropDownBodyData = [
       },
     ],
   },
-]
+];
 
 export const discoverSectionData = {
   title: 'discover, learn, grow',
@@ -281,7 +281,7 @@ export const discoverSectionData = {
       title: "Resume Design: DO's and DON'T's to getting hired.",
     },
   ],
-}
+};
 
 export const fastrackSectionData = {
   title: 'FASTRACK YOUR CAREER',
@@ -332,20 +332,20 @@ export const fastrackSectionData = {
       description: 'Millenials with mentors are satisfied with their jobs',
     },
   ],
-}
+};
 
 export const readyToStartData = {
   title: 'READY TO GET STARTED?',
   description: 'Its easy. Scan this QR code.',
   mainImage: aspirantPageImagePaths.getStartedSection.questionTag,
   qrImage: aspirantPageImagePaths.getStartedSection.qrCode,
-}
+};
 
 export const aboutUsData = {
   title: 'About Us',
   description:
     'We are a machine learning based dynamic ‘digital marketplace’ that provides the aspirant talent pool to stay continually competitive relative to the hiring landscape in India. We do this by harnessing our comprehensive knowledge partner ecosystem, which provides for comprehensive mentorship, learning and career progression advisory. We use a unique ‘affinity algorithm’ which provides for identification, assessment and enablement modules resulting in significant process efficiency in curation and hiring, whilst saving significant time and cost for businesses and aspirants.',
-}
+};
 
 export const stickySliderData = {
   title: [
@@ -398,4 +398,4 @@ export const stickySliderData = {
       image: aspirantPageImagePaths.styickScrollSection.image4,
     },
   ],
-}
+};
