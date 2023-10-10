@@ -1,23 +1,21 @@
-import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection'
-import CareerSection from '@/components/pageBasedComponents/Aspirants/CareerSection'
-import DropdownSection from '@/components/pageBasedComponents/Aspirants/DropdownSection'
-import FastrackSection from '@/components/pageBasedComponents/Aspirants/FastrackSection'
-import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
-import StaticScrollSection from '@/components/pageBasedComponents/Aspirants/StaticScrollSection'
-import {
-  dropDownBodyData,
-  dropDownData,
-  readyToStartData,
-  stickySliderData,
-} from '@/constants/Aspirants/aspirantPageData'
-import { Box } from '@mui/material'
+import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection';
+import CareerSection from '@/components/pageBasedComponents/Aspirants/CareerSection';
+import DropdownSection from '@/components/pageBasedComponents/Aspirants/DropdownSection';
+import FastrackSection from '@/components/pageBasedComponents/Aspirants/FastrackSection';
+import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection';
+import StaticScrollSection from '@/components/pageBasedComponents/Aspirants/StaticScrollSection';
 import {
   TickerBoxData,
+  dropDownBodyData,
+  dropDownData,
   heroSectionData,
-} from '@/constants/Aspirants/aspirantPageData'
+  readyToStartData,
+  stickySliderData,
+} from '@/constants/Aspirants/aspirantPageData';
+import { Box } from '@mui/material';
 export const metadata = {
   title: 'Aspirants | Razorswift',
-}
+};
 
 function Aspirants() {
   return (
@@ -32,11 +30,11 @@ function Aspirants() {
         dropDownData={dropDownData}
         dropDownBodyData={dropDownBodyData}
       />
-      {/* <DiscoverSection /> */}
+
       <FastrackSection />
       <GetStartedSection readyToStartData={readyToStartData} />
     </Box>
-  )
+  );
 }
 
-export default Aspirants
+export default Aspirants;
