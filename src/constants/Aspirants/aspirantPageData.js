@@ -1,5 +1,10 @@
 import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths';
 
+export const solutionsData = [
+  { id: 2, name: 'Aspirants', link: '/' },
+  { id: 1, name: 'Partners', link: '/' },
+  { id: 3, name: 'Business', link: '/' },
+];
 export const headerdData = {
   navItems: [
     { id: 2, name: 'Aspirants', link: '/' },

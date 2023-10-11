@@ -11,7 +11,7 @@ function InputField({ error, ...props }) {
   const [field, meta] = useField(props.name);
 
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth error={Boolean(meta.touched && meta.error)}>
       <Stack flexDirection="column" gap={1}>
         <Input
           {...field}
