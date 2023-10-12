@@ -54,7 +54,7 @@ const pathwaytwo = [
         img: homePageImagePaths.lefpathimgfour,
         title: 'Corporate pathways',
         description:
-          'Dedicated corporate pathways that give enhanced exposure to their work culture and ethos must before you join them.',
+          'Dedicated corporate pathways that give enhanced exposure to their work culture and ethos much before you join them.',
       },
     ],
   },

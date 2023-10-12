@@ -12,11 +12,16 @@ const HeroSection = () => {
       }}
     >
       <Typography
-        sx={{ fontSize: '80px', fontWeight: '500', color: '#A62973' }}
+        sx={{
+          fontSize: { xs: '40px', md: '80px' },
+          fontWeight: '500',
+          color: '#A62973',
+          textAlign: 'center',
+        }}
       >
         A treasure trove of knowledge
       </Typography>
-      <Typography sx={{ fontSize: '24px' }}>
+      <Typography sx={{ fontSize: '24px', textAlign: 'center' }}>
         Knowledge hub, written for igniting growth and fueling ambitions.
       </Typography>
     </Box>
