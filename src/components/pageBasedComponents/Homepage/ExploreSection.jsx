@@ -133,28 +133,14 @@ const ExploreSection = () => {
                       lg: 'clamp(15px, 1.4vw, 20px)',
                     },
                     textAlign: 'center',
-                    mb: { md: '10px', lg: '30px' },
+
                     textAlign: 'justify',
                     width: { xs: '100%' },
+                    marginBottom: { xs: '20px', sm: '', md: '30px' },
                   }}
                 >
                   {data[0].description}
                 </Typography>
-                {/* <Typography
-                  variant="body1"
-                  sx={{
-                    fontSize: {
-                      xs: '15px',
-                      md: 'clamp(15px, 1.4vw, 20px)',
-                      lg: 'clamp(15px, 1.4vw, 20px)',
-                    },
-                    textAlign: 'justify',
-                    mb: '30px',
-                    width: { xs: '100%' },
-                  }}
-                >
-                  {data[0].descriptiontwo}
-                </Typography> */}
               </motion.div>
             </motion.div>
             <motion.div transition={{ staggerChildren: 1.9 }}>

@@ -10,6 +10,7 @@ import { Stack } from '@mui/system'
 import { Typography } from '@mui/material'
 import Link from 'next/link'
 import blogscarddata from '@/constants/Blogs/blogscarddata'
+import { Container } from '@mui/material'
 const BlogCard = () => {
   const banimg = {
     width: '100%',
@@ -17,15 +18,16 @@ const BlogCard = () => {
   }
   return (
     <DropDownWrapper style={{ width: '100%' }}>
-      <Box>
+      <Container>
         <Grid container spacing={5}>
           {blogscarddata.map((item, index) => (
-            <Grid sx={{}} item lg={4} xl={3}>
+            <Grid sx={{}} item xs={12} lg={4}>
               <Stack
                 sx={{
                   backgroundColor: '#FFCCC9',
                   paddingTop: '40px',
                   borderRadius: '20px',
+                  height: '100%',
                 }}
               >
                 <Image alt="bannerImage" style={banimg} src={item.img} />
@@ -51,7 +53,7 @@ const BlogCard = () => {
             </Grid>
           ))}
         </Grid>
-      </Box>
+      </Container>
     </DropDownWrapper>
   )
 }

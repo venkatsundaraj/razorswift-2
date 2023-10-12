@@ -60,22 +60,16 @@ const fontdes = {
   height: 'clamp(75px, 5.5vw, 110px)',
 }
 
-const fontaspi = {
-  fontSize: 'clamp(34px, 2.5vw, 40px)',
-
-  fontWeight: '500',
-}
-
-const fontaspitwo = {
-  fontSize: 'clamp(20px, 1.5vw, 28px)',
-
-  fontWeight: '500',
-}
-
 const fontaspithree = {
-  fontSize: 'clamp(15px, 1.2vw, 20px)',
   textDecoration: 'none',
   fontWeight: '500',
+}
+
+const fontaspithreemob = {
+  textDecoration: 'none',
+  fontWeight: '500',
+  display: 'flex',
+  justifyContent: 'center',
 }
 
 const accordimg = {
@@ -87,10 +81,13 @@ const accordimg = {
 export default function PathwaySection() {
   const [expanded, setExpanded] = React.useState('panel0')
   const [expandedone, setExpandedone] = React.useState('panelone0')
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : null)
-  }
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : null)
+  // }
+  const [lastaccord, setLastaccord] = React.useState('panelone0')
   const handleChangeone = (panelone) => (eventone, newExpandedone) => {
+    setLastaccord(panelone)
+    if (expandedone === panelone) return
     setExpandedone(newExpandedone ? panelone : null)
   }
 
@@ -98,6 +95,7 @@ export default function PathwaySection() {
   const [content, setContent] = useState(datatwo[0])
   const [selectedItemId, setSelectedItemId] = useState(1)
   const [selectedAccordId, setSelectedAccordId] = useState(datatwo[0])
+  const [mobileDescription, setMobileDescription] = useState(pathwayheads[0])
   const handleTitleClick = (id) => {
     // Find the item in datatwo with a matching id
     const matchingItem = datatwo.find(
@@ -111,10 +109,22 @@ export default function PathwaySection() {
     setSelectedItemId(id)
   }
 
+  const handleMobileClick = (id) => {
+    const matchingcont = pathwayheads.find(
+      (item) => item.id.toString() === id.toString()
+    )
+    setMobileDescription(matchingcont)
+    const matchingItem = datatwo.find(
+      (item) => item.id.toString() === id.toString()
+    )
+
+    setContent(matchingItem)
+    setSelectedItemId(id)
+  }
   const handleTitleAccord = (id) => {
     setSelectedAccordId(id)
   }
-
+  console.log(mobileDescription?.description)
   const containerVariants = {
     open: {
       opacity: 1,
@@ -197,14 +207,18 @@ export default function PathwaySection() {
     <Box
       sx={{
         backgroundColor: 'primary.main',
-        padding: { xs: '15px', lg: '30px 0' },
+        padding: { xs: '40px 15px', lg: '30px 0' },
         height: { xl: '100vh' },
         display: 'flex',
         alignItems: 'center',
       }}
     >
       {/* first sec*/}
-      <Grid sx={{ justifyContent: 'center' }} container spacing={10}>
+      <Grid
+        sx={{ justifyContent: 'center' }}
+        container
+        spacing={{ xs: 5, md: 10 }}
+      >
         <Grid
           sx={{
             display: 'flex',
@@ -239,7 +253,7 @@ export default function PathwaySection() {
           <Box
             sx={{
               display: { xs: 'flex' },
-              flexDirection: { xs: 'column', sm: 'row', lg: 'column' },
+              flexDirection: { xs: 'row', sm: 'row', lg: 'column' },
               justifyContent: {
                 xs: 'space-between',
                 sm: 'space-around',
@@ -248,7 +262,11 @@ export default function PathwaySection() {
             }}
           >
             {pathwayheads.map((item, index) => (
-              <Box sx={{ width: { sm: '50%', md: '100%' } }}>
+              <Box
+                sx={{
+                  display: { xs: 'none', md: 'block' },
+                }}
+              >
                 <motion.div key={index} transition={{ staggerChildren: 1.9 }}>
                   <motion.div
                     variants={secondsec}
@@ -261,7 +279,7 @@ export default function PathwaySection() {
                         color:
                           selectedItemId === item.id ? 'white' : 'primary.lite',
                         borderBottom: {
-                          xs: index === 0 ? '2px solid white' : '',
+                          xs: index === 0 ? '' : '',
                           sm: 'initial',
                           lg: index === 0 ? '2px solid white' : '',
                         },
@@ -283,26 +301,35 @@ export default function PathwaySection() {
                           }}
                         >
                           <Typography
-                            style={fontaspi}
                             sx={{
                               color:
                                 selectedItemId === item.id
                                   ? 'white'
                                   : 'primary.lite',
                               cursor: 'pointer',
+                              fontSize: {
+                                xs: '20px',
+                                md: 'clamp(34px, 2.5vw, 40px)',
+                              },
+                              fontWeight: '500',
                             }}
                             onClick={() => handleTitleClick(item.id)}
                           >
                             {item.title}
                           </Typography>
                           <Typography
-                            style={fontaspitwo}
                             sx={{
                               color:
                                 selectedItemId === item.id
                                   ? 'white'
                                   : 'primary.lite',
                               cursor: 'pointer',
+                              fontSize: {
+                                xs: '16px',
+                                md: 'clamp(20px, 1.5vw, 28px)',
+                              },
+
+                              fontWeight: '500',
                             }}
                             onClick={() => handleTitleClick(item.id)}
                           >
@@ -318,7 +345,6 @@ export default function PathwaySection() {
                       >
                         <Link style={fontaspithree} href={item.link}>
                           <Typography
-                            style={fontaspithree}
                             sx={{
                               color: 'common.white',
                               backgroundColor: 'primary.purp',
@@ -327,6 +353,12 @@ export default function PathwaySection() {
                               borderRadius: '50px',
                               margin: '15px 0 15px 0',
                               cursor: 'pointer',
+                              fontSize: {
+                                xs: '12px',
+                                md: 'clamp(15px, 1.2vw, 20px)',
+                              },
+                              textDecoration: 'none',
+                              fontWeight: '500',
                             }}
                           >
                             {item.button}
@@ -338,6 +370,60 @@ export default function PathwaySection() {
                 </motion.div>
               </Box>
             ))}
+          </Box>
+          <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                borderBottom: '1px solid white',
+                padding: '0 20px 10px 20px',
+                margin: '0 10px',
+              }}
+            >
+              {pathwayheads.map((item, index) => (
+                <>
+                  <Typography
+                    sx={{
+                      color:
+                        selectedItemId === item.id ? 'white' : 'primary.lite',
+                      fontSize: '25px',
+                    }}
+                    onClick={() => handleMobileClick(item.id)}
+                  >
+                    {item.title}
+                  </Typography>
+                </>
+              ))}
+            </Box>
+
+            <Typography
+              sx={{
+                textAlign: 'center',
+                color: 'white',
+                fontSize: '20px',
+                paddingTop: '20px',
+                paddingBottom: '10px',
+              }}
+            >
+              {mobileDescription?.description}
+            </Typography>
+
+            <Link style={fontaspithreemob} href="">
+              <Typography
+                sx={{
+                  textAlign: 'center',
+                  color: 'white',
+                  backgroundColor: 'primary.purp',
+                  fontSize: '16px',
+                  padding: '10px',
+                  borderRadius: '50px',
+                }}
+              >
+                {mobileDescription?.button}
+              </Typography>
+            </Link>
           </Box>
         </Grid>
         {/* second sec*/}
@@ -391,10 +477,7 @@ export default function PathwaySection() {
                               xs: '20px',
                             },
                             '&:hover': {
-                              color:
-                                selectedAccordId === item.length
-                                  ? ''
-                                  : '#EE5064',
+                              color: '#EE5064',
                             },
                           }}
                           style={fonttitle}

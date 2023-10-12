@@ -16,7 +16,7 @@ const homePageImagePaths = {
   pathwayacc: require('/public/images/Homepage/pathway-img.svg').default,
   fivemen: require('/public/images/Homepage/ready-to.svg').default,
 
-  footerlogo: require('/public/images/Homepage/footer-logo-white.png').default,
+  footerlogo: require('/public/images/Homepage/footer-logo-white.svg').default,
   twitt: require('/public/images/Homepage/twitter-logo.svg').default,
   fb: require('/public/images/Homepage/facebook-logo.svg').default,
   linkedin: require('/public/images/Homepage/linkedin-logo.svg').default,

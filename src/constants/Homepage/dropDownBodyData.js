@@ -11,7 +11,7 @@ const dropDownBodyData = [
       'AI driven automation for Large scale hiring with efficient cost and time',
     image: homePageImagePaths.business,
     buttonData: {
-      title: 'Create your Profile',
+      title: 'Ask for Demo',
       backgroundColor: '#FFFFFF',
       color: '#A62973',
     },
@@ -56,7 +56,7 @@ const dropDownBodyData = [
     everything possible through our corporate cohorts."`,
     image: homePageImagePaths.aspirants,
     buttonData: {
-      title: 'Ask for Demo',
+      title: 'Create your Profile',
       backgroundColor: '#FFFFFF',
       color: '#A62973',
     },
