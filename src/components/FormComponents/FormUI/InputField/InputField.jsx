@@ -3,7 +3,7 @@ import { Stack, TextField } from '@mui/material';
 import { FormControl } from '@mui/material';
 import React from 'react';
 import SubtitleHeading from '@/components/headingComponents/SubtitleHeading';
-import { useField } from 'formik';
+import { ErrorMessage, useField } from 'formik';
 
 const Input = styled(TextField)(({ theme }) => ({}));
 
@@ -11,7 +11,7 @@ function InputField({ error, ...props }) {
   const [field, meta] = useField(props.name);
 
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth error={Boolean(meta.touched && meta.error)}>
       <Stack flexDirection="column" gap={1}>
         <Input
           {...field}
@@ -23,9 +23,17 @@ function InputField({ error, ...props }) {
           }}
         />
         {meta && meta.error && meta.touched && (
-          <SubtitleHeading sx={{ color: 'pinkPalette.light' }}>
-            {meta.error}
-          </SubtitleHeading>
+          // <SubtitleHeading sx={{ color: 'pinkPalette.light' }}>
+          //   {meta.error}
+          // </SubtitleHeading>
+          <ErrorMessage
+            name={props.name}
+            render={(msg) => (
+              <SubtitleHeading sx={{ color: 'pinkPalette.light' }}>
+                {msg}
+              </SubtitleHeading>
+            )}
+          />
         )}
       </Stack>
     </FormControl>

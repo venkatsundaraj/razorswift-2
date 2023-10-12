@@ -5,7 +5,7 @@ export const alphabetsValidationSchema = (fieldName, required) => {
   let validation = Yup.string()
     .nullable()
     .trim()
-    .min(10, `${fieldName} must be at least 1 character`)
+    .min(3, `${fieldName} must be at least 1 character`)
     .max(100, `${fieldName} cannot be more than 100 characters`)
     .matches(
       alphabetsRegExp,

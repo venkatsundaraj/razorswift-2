@@ -11,13 +11,19 @@ import {
   emailValidation,
   messageValidation,
 } from '@/utils/helpers/validationSchemas';
+import { reverseCheckAndSet } from '@/utils/helpers/CommonFunctions/Functions';
 import * as Yup from 'yup';
+import { callApi } from '@/utils/helpers/apiRequest';
+import { AxiosError } from 'axios';
+import SelectWrapper from './FormUI/Select/SelectWrapper';
+import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading';
 
 const initialValues = {
   fullName: '',
   email: '',
   mobileNumber: '',
   message: '',
+  reason: '',
 };
 
 const validationSchema = Yup.object().shape({
@@ -33,9 +39,22 @@ function FormSection() {
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
-          setSubmitting(false);
+        onSubmit={async (values, { resetForm, setSubmitting }) => {
+          try {
+            // const response = await callApi(
+            //   'contactRequest',
+            //   reverseCheckAndSet(values)
+            // );
+
+            console.log(values);
+          } catch (err) {
+            if (err instanceof AxiosError) {
+              console.log(err);
+            }
+          } finally {
+            setSubmitting(false);
+            // resetForm();
+          }
         }}
       >
         {({
@@ -48,6 +67,24 @@ function FormSection() {
           isSubmitting,
         }) => (
           <Form onSubmit={handleSubmit}>
+            <Stack
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="start"
+              gap={2}
+            >
+              <ExtraParagraphHeading sx={{ color: 'violetPalette.dark' }}>
+                I am an/a
+              </ExtraParagraphHeading>
+              <SelectWrapper
+                placeholder="Looking for"
+                name="reason"
+                label="Reason"
+                textLabel="Reason"
+                noTextLabel
+                required
+              />
+            </Stack>
             <Stack flexDirection="column" gap={3} alignItems="start">
               <InputField
                 name="fullName"
@@ -77,15 +114,12 @@ function FormSection() {
                 onBlur={handleBlur}
                 type="number"
                 sx={{
-                  '& input[type=number]': {
-                    '-moz-appearance': 'textfield',
-                  },
                   '& input[type=number]::-webkit-outer-spin-button': {
-                    '-webkit-appearance': 'none',
+                    WebkitAppearance: 'none',
                     margin: 0,
                   },
                   '& input[type=number]::-webkit-inner-spin-button': {
-                    '-webkit-appearance': 'none',
+                    WebkitAppearance: 'none',
                     margin: 0,
                   },
                 }}
