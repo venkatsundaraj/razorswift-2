@@ -1,5 +1,5 @@
-import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths'
-import businessPageImagePaths from '../ImagePaths/Business/businessPageImagePaths'
+import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths';
+import businessPageImagePaths from '../ImagePaths/Business/businessPageImagePaths';
 
 export const heroSectionData = {
   heading: {
@@ -11,7 +11,7 @@ export const heroSectionData = {
   description: 'A dynamic ecosystem where talent and opportunities converge',
   buttonContent: 'Ask for Demo',
   bannerImage: businessPageImagePaths.heroSection.banner,
-}
+};
 
 export const businessDropDownBodyData = {
   id: 1,
@@ -56,7 +56,7 @@ export const businessDropDownBodyData = {
         'Enhanced exposure and increased recognition among aspirants with corporate pathways',
     },
   ],
-}
+};
 
 export const whyRazorswiftSection = {
   title: 'WHY RAZORSWIFT',
@@ -95,22 +95,22 @@ export const whyRazorswiftSection = {
         'Millennials with mentors felt empowered and had greater confidence at work',
     },
   ],
-}
+};
 
 export const readyToStartData = {
   title: 'READY TO GET STARTED?',
   description: 'Hire at scale with the click of a button',
   mainImage: businessPageImagePaths.readyToGetStarted.mainImage,
   buttonText: 'Get a Demo',
-}
+};
 
 export const quickTalentDiscoveryData = {
+  mainTitle: 'Razorswift PATHWAYS - QUICK TALENT DISCOVERY',
+  mainDescription:
+    'Pathways allow you to standardize assessments and training, to gain access to a large pool of verified profiles that match your unique requirement.',
   pathways: [
     {
       id: 1,
-      mainTitle: 'Razorswift PATHWAYS - QUICK TALENT DISCOVERY',
-      mainDescription:
-        'Pathways allow you to standardize assessments and training, to gain access to a large pool of verified profiles that match your unique requirement.',
       title: 'Company crafted pathways',
       description:
         'Tailor make your pathway to get interested aspirants to self curate their competencies to align with your skill requirements and cultural fit.',
@@ -146,4 +146,4 @@ export const quickTalentDiscoveryData = {
       mainImage: businessPageImagePaths.dropDownSection.mainImage4,
     },
   ],
-}
+};

@@ -9,10 +9,10 @@ import { CustomDropDownIconWhite } from '@/components/globalComponents/CustomDro
 
 function SelectWrapper({ name, placeholder, nameValue, ...props }) {
   const [value, setValue] = useState('2');
-  const { setFieldValue, values } = useFormikContext('');
+  const { setFieldValue, values } = useFormikContext();
 
   useEffect(() => {
-    setFieldValue(name, 'Aspirants');
+    setFieldValue(name, 'Aspirant');
   }, []);
 
   const handleChange = function (event) {
@@ -29,6 +29,7 @@ function SelectWrapper({ name, placeholder, nameValue, ...props }) {
     <FormControl>
       <Stack>
         <Select
+          {...props}
           labelId="demo-simple-select-label"
           IconComponent={CustomDropDownIconWhite}
           id="demo-simple-select"

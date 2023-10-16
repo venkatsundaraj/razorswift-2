@@ -76,15 +76,17 @@ function StaticScrollSection({ stickySliderData }) {
                     md: '90%',
                     xl: '70%',
                   },
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  // display: 'flex',
+                  // alignItems: {xs:'center', lg:"flex-end"},
+                  // justifyContent: 'center',
+                  alignSelf: { xs: 'center' },
+                  justifSelf: 'center',
                 }}
               >
                 <Box
                   sx={{
                     width: { xs: '100%', md: '100%', lg: '100%', xl: '100%' },
-                    height: { xs: '100%', md: '70%', lg: '100%', xl: '100%' },
+                    height: { xs: '100%', md: '100%', lg: '100%', xl: '100%' },
                     mb: { xs: 2, md: 5 },
                     position: 'relative',
                     overflowY: 'hidden',
@@ -103,7 +105,7 @@ function StaticScrollSection({ stickySliderData }) {
                         transform: `translateY(-${percentage * 100}%)`,
                         borderRadius: '40px',
                         transition: 'transform 450ms ease-out',
-                        objectFit: 'cover',
+                        objectFit: 'contain',
                         height: '100%',
                       }}
                     />

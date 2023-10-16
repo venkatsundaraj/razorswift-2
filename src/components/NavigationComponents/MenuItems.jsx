@@ -1,12 +1,12 @@
-import { Box, MenuItem, Stack, Typography } from '@mui/material';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { Box, MenuItem, Stack, Typography } from '@mui/material'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
-import PrimaryFillButton from '../buttonComponents/PrimaryFillButton';
-import ParagraphHeading from '../headingComponents/ParagraphHeading';
+import PrimaryFillButton from '../buttonComponents/PrimaryFillButton'
+import ParagraphHeading from '../headingComponents/ParagraphHeading'
 
 function MenuItems({ headerdData, handleClose }) {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <>
@@ -137,6 +137,7 @@ function MenuItems({ headerdData, handleClose }) {
       >
         {headerdData.actionButtons.map((item) => (
           <PrimaryFillButton
+            href={item.link}
             style={{ padding: '4px 20px', borderRadius: '16px' }}
             sx={{
               backgroundColor: 'pinkPalette.dark',
@@ -147,21 +148,12 @@ function MenuItems({ headerdData, handleClose }) {
             }}
             key={item.id}
           >
-            <Link
-              style={{
-                textDecoration: 'none',
-                color: 'inherit',
-                fontSize: '16px',
-              }}
-              href={item.link}
-            >
-              {item.name}
-            </Link>
+            {item.name}
           </PrimaryFillButton>
         ))}
       </Stack>
     </>
-  );
+  )
 }
 
-export default MenuItems;
+export default MenuItems

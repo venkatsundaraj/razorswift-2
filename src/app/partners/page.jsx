@@ -1,3 +1,5 @@
+'use client'
+
 import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection'
 import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
 import BusinessDropDownBody from '@/components/pageBasedComponents/Business/BusinessDropDownBody'
@@ -9,6 +11,7 @@ import {
 } from '@/constants/Partners/partnersPageData'
 import { Box } from '@mui/material'
 import Duplicate from '@/components/dropDownComponents/Duplicate'
+import HeroSection from '@/components/pageBasedComponents/Aspirants/HeroSection'
 
 export const metadata = {
   title: 'Partners | Razorswift',
@@ -17,7 +20,11 @@ export const metadata = {
 function Partners() {
   return (
     <Box component="main">
-      <BannerSection
+      {/* <BannerSection
+        TickerBoxData={TickerBoxData}
+        heroSectionData={heroSectionData}
+      /> */}
+      <HeroSection
         TickerBoxData={TickerBoxData}
         heroSectionData={heroSectionData}
       />

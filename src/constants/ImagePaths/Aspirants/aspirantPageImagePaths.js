@@ -46,15 +46,13 @@ const aspirantPageImagePaths = {
       .default,
   },
   styickScrollSection: {
-    image1: require('/public/images/Aspirants/get-verified-get-hired-1.webp')
+    image1: require('/public/images/Aspirants/scan-and-sign-in.svg').default,
+    image2: require('/public/images/Aspirants/get-verified-get-hired.svg')
       .default,
-    image2: require('/public/images/Aspirants/get-verified-get-hired-3_1.webp')
+    image3: require('/public/images/Aspirants/specialise-with-pathways.svg')
       .default,
-    image3: require('/public/images/Aspirants/get-verified-get-hired-3.webp')
-      .default,
-    image4: require('/public/images/Aspirants/get-verified-get-hired-4.webp')
-      .default,
+    image4: require('/public/images/Aspirants/career-management.svg').default,
   },
-}
+};
 
-export default aspirantPageImagePaths
+export default aspirantPageImagePaths;
