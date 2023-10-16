@@ -1,21 +1,19 @@
-'use client';
-
-import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection';
-import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection';
-import BusinessDropDownBody from '@/components/pageBasedComponents/Business/BusinessDropDownBody';
-import { TickerBoxData } from '@/constants/Aspirants/aspirantPageData';
+import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection'
+import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
+import BusinessDropDownBody from '@/components/pageBasedComponents/Business/BusinessDropDownBody'
+import { TickerBoxData } from '@/constants/Aspirants/aspirantPageData'
 import {
   heroSectionData,
   partnersDropDownBodyData,
   readyToStartData,
-} from '@/constants/Partners/partnersPageData';
-import { Box } from '@mui/material';
-import Duplicate from '@/components/dropDownComponents/Duplicate';
-import HeroSection from '@/components/pageBasedComponents/Aspirants/HeroSection';
+} from '@/constants/Partners/partnersPageData'
+import { Box } from '@mui/material'
+import Duplicate from '@/components/dropDownComponents/Duplicate'
+import HeroSection from '@/components/pageBasedComponents/Aspirants/HeroSection'
 
 export const metadata = {
   title: 'Partners | Razorswift',
-};
+}
 
 function Partners() {
   return (
@@ -31,7 +29,7 @@ function Partners() {
       <BusinessDropDownBody dropDownBodyData={partnersDropDownBodyData} />
       <GetStartedSection readyToStartData={readyToStartData} />
     </Box>
-  );
+  )
 }
 
-export default Partners;
+export default Partners
