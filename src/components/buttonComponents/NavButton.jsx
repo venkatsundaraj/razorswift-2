@@ -22,12 +22,7 @@ const FillButton = styled(Link)(({ theme }) => ({
   },
 }))
 
-const NavButton = function ({
-  children,
-  href,
-
-  ...props
-}) {
+const NavButton = function ({ children, href, ...props }) {
   return (
     <FillButton {...props} href={href} component={NextLink}>
       {children}
