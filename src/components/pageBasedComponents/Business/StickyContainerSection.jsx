@@ -64,127 +64,134 @@ function StickyContainerSection() {
   });
 
   return (
-    <Box
-      component="section"
-      ref={sectionRef}
-      sx={{
-        overflowX: 'unset',
-        display: 'flex',
-        gap: '40px',
-        height: {
-          xs: `calc(4 * 90vh + 550px)`,
-          sm: `calc(4 * 90vh + 350px)`,
-          md: `calc(4 * 80vh + 550px)`,
-          xl: `calc(4 * 80vh + 350px)`,
-        },
-        width: '100%',
-        backgroundColor: 'primaryPalette.white',
-        padding: { xs: '16px 16px', sm: '24px 24px', lg: '64px 24px' },
-        flexDirection: 'column',
-      }}
-    >
-      {quickTalentDiscoveryData.pathways.map((item, i) => {
-        return (
-          <Box
-            ref={(element) => (cardsRef.current[i] = element)}
-            key={i}
+    <>
+      <Box
+        component="section"
+        ref={sectionRef}
+        sx={{
+          overflowX: 'unset',
+          display: 'flex',
+          gap: '40px',
+          height: {
+            xs: `calc(4 * 90vh + 550px)`,
+            sm: `calc(4 * 90vh + 350px)`,
+            md: `calc(4 * 80vh + 550px)`,
+            xl: `calc(4 * 80vh + 350px)`,
+          },
+          width: '100%',
+          backgroundColor: 'primaryPalette.white',
+          padding: { xs: '16px 16px', sm: '24px 24px', lg: '64px 24px' },
+          flexDirection: 'column',
+        }}
+      >
+        <Stack alignItems="center" justifyContent="center">
+          <PrimaryHeading
+            variant="h2"
+            sx={{ color: 'violetPalette.dark', textAlign: 'center' }}
+          >
+            {quickTalentDiscoveryData.mainTitle}
+          </PrimaryHeading>
+          <ParagraphHeading
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'start',
-              flexDirection: 'column',
-              transformOrigin: 'center',
-              // transition: 'transform 0.015ms ease',
-              width: '100%',
-              height: {
-                xs: `${i === 0 ? '100vh' : '90vh'}`,
-                // lg: `${i === 0 ? '100vh' : '80vh'}`,
-                xl: `${i === 0 ? '90vh' : '80vh'}`,
-              },
-              borderRadius: 4,
-              backgroundColor: `${item.backgroundColor}`,
-              position: 'sticky',
-              top: {
-                xs: `${i * 5}px`,
-                md: `${i * 5}px`,
-                md: `${i * 25}px`,
-                xl: `${25 + i * 55}px`,
-              },
-              py: { xs: '32px' },
-              px: { xs: '16px', md: '24px' },
+              color: 'primaryPalette.black',
+              width: 'clamp(300px,60vw,900px)',
+              textAlign: 'center',
+              mb: 4,
+              mt: 2,
             }}
           >
-            {item.mainTitle && item.mainDescription && (
-              <>
-                <PrimaryHeading
-                  variant="h2"
-                  sx={{ color: 'violetPalette.dark', textAlign: 'center' }}
-                >
-                  {item.mainTitle ? item.mainTitle : ''}
-                </PrimaryHeading>
-                <ParagraphHeading
-                  sx={{
-                    color: 'primaryPalette.black',
-                    width: 'clamp(300px,60vw,900px)',
-                    textAlign: 'center',
-                    mb: 4,
-                  }}
-                >
-                  {item.mainDescription ? item.mainDescription : ''}
-                </ParagraphHeading>
-              </>
-            )}
+            {quickTalentDiscoveryData.mainDescription}
+          </ParagraphHeading>
+        </Stack>
+        {quickTalentDiscoveryData.pathways.map((item, i) => {
+          return (
+            <Box
+              ref={(element) => (cardsRef.current[i] = element)}
+              key={i}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'start',
+                flexDirection: 'column',
+                transformOrigin: 'center',
 
-            <Grid
-              container
-              spaing={2}
-              alignItems="center"
-              justifyContent="center"
-              sx={{ width: '100%', height: '100%' }}
+                width: '100%',
+                height: {
+                  xs: `${i === 0 ? '100vh' : '90vh'}`,
+
+                  xl: `${i === 0 ? '90vh' : '80vh'}`,
+                },
+                borderRadius: 4,
+                backgroundColor: `${item.backgroundColor}`,
+                position: 'sticky',
+                top: {
+                  xs: `${i * 5}px`,
+                  md: `${i * 5}px`,
+                  lg: `${i * 25}px`,
+                  xl: `${25 + i * 55}px`,
+                },
+                py: { xs: '32px' },
+                px: { xs: '16px', md: '24px' },
+              }}
             >
-              <Grid item xs={12} md={5}>
-                <Stack
-                  flexDirection="column"
-                  alignItems="left"
-                  justifyContent="space-between"
-                >
-                  <Box sx={{ alignSelf: { xs: 'flex-start', md: 'center' } }}>
-                    <CustomImage
-                      sx={{ alignSelf: 'center' }}
-                      src={item.image}
-                      alt={item.title}
-                      width={{ xs: '150px', sm: '300px', lg: '300px' }}
-                      aspectRatio="1/1"
-                    />
-                  </Box>
-                  <TertiaryHeading sx={{ mb: 4, color: 'primary.black' }}>
-                    {item.title}
-                  </TertiaryHeading>
-                  <SubtitleHeading>{item.description}</SubtitleHeading>
-                </Stack>
-              </Grid>
+              <Grid
+                container
+                spaing={2}
+                alignItems="center"
+                justifyContent="center"
+                sx={{ width: '100%', height: '100%' }}
+              >
+                <Grid item xs={12} md={5}>
+                  <Stack
+                    flexDirection="column"
+                    alignItems="start"
+                    justifyContent="space-between"
+                  >
+                    <Box sx={{ alignSelf: { xs: 'flex-start', md: 'center' } }}>
+                      <CustomImage
+                        sx={{ alignSelf: 'center' }}
+                        src={item.image}
+                        alt={item.title}
+                        width={{ xs: '150px', sm: '300px', lg: '300px' }}
+                        aspectRatio="1/1"
+                      />
+                    </Box>
+                    <TertiaryHeading sx={{ mb: 4, color: 'primary.black' }}>
+                      {item.title}
+                    </TertiaryHeading>
+                    <SubtitleHeading>{item.description}</SubtitleHeading>
+                  </Stack>
+                </Grid>
 
-              <Grid item xs={12} md={7}>
-                <Stack alignItems="center" justifyContent="center">
-                  <CustomImage
-                    alt={item.title}
-                    src={item.mainImage}
-                    width={{
-                      xs: '280px',
-                      sm: '600px',
-                      lg: '525px',
-                      lg: '625px',
+                <Grid item xs={12} md={7}>
+                  <Stack
+                    alignItems={{
+                      xs: 'center',
+                      md: 'flex-end',
+                      xl: 'center',
                     }}
-                    aspectRatio="3/2"
-                    style={{ borderRadius: '16px' }}
-                  />
-                </Stack>
+                    justifyContent="center"
+                  >
+                    <CustomImage
+                      alt={item.title}
+                      src={item.mainImage}
+                      width={{
+                        xs: '280px',
+                        sm: '600px',
+                        lg: '525px',
+                        lg: '625px',
+                      }}
+                      aspectRatio="3/2"
+                      style={{ borderRadius: '16px' }}
+                    />
+                  </Stack>
+                </Grid>
               </Grid>
-            </Grid>
-          </Box>
-        );
-      })}
-    </Box>
+            </Box>
+          );
+        })}
+      </Box>
+    </>
   );
 }
 

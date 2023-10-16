@@ -10,6 +10,7 @@ import {
 } from '@/constants/Business/businessPageData';
 import { Box } from '@mui/material';
 import WhyRazorswiftSection from '@/components/pageBasedComponents/Business/WhyRazorswiftSection';
+import HeroSection from '@/components/pageBasedComponents/Aspirants/HeroSection';
 
 export const metadata = {
   title: 'Business | Razorswift',
@@ -18,7 +19,11 @@ export const metadata = {
 function Business() {
   return (
     <Box component="main">
-      <BannerSection
+      {/* <BannerSection
+        TickerBoxData={TickerBoxData}
+        heroSectionData={heroSectionData}
+      /> */}
+      <HeroSection
         TickerBoxData={TickerBoxData}
         heroSectionData={heroSectionData}
       />

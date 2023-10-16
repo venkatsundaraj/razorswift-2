@@ -61,3 +61,17 @@ export const messageValidation = (fieldName, required) => {
 
   return validation;
 };
+
+export const nameValidationwithNoRegex = (fieldName, required) => {
+  let validation = Yup.string()
+    .trim()
+    // .min(1, `${fieldName} must be at least 1 character`)
+    .max(100, `${fieldName} cannot be more than 100 characters`);
+  // .nullable();
+
+  if (required) {
+    validation = validation.required(`${fieldName} is required`);
+  }
+
+  return validation;
+};

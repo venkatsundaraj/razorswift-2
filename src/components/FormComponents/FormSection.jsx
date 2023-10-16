@@ -10,6 +10,7 @@ import {
   validateContactNumber,
   emailValidation,
   messageValidation,
+  nameValidationwithNoRegex,
 } from '@/utils/helpers/validationSchemas';
 import { reverseCheckAndSet } from '@/utils/helpers/CommonFunctions/Functions';
 import * as Yup from 'yup';
@@ -22,7 +23,8 @@ const initialValues = {
   fullName: '',
   email: '',
   mobileNumber: '',
-  message: '',
+  companyName: '',
+  moreInfo: '',
   reason: '',
 };
 
@@ -30,7 +32,8 @@ const validationSchema = Yup.object().shape({
   fullName: alphabetsValidationSchema('fullName', true),
   email: emailValidation('Email', true),
   mobileNumber: validateContactNumber('Mobile Number', true),
-  message: messageValidation('Message', true),
+  moreInfo: messageValidation('More Info', true),
+  companyName: nameValidationwithNoRegex('Company Name', false),
 });
 
 function FormSection() {
@@ -41,10 +44,11 @@ function FormSection() {
         validationSchema={validationSchema}
         onSubmit={async (values, { resetForm, setSubmitting }) => {
           try {
-            // const response = await callApi(
-            //   'contactRequest',
-            //   reverseCheckAndSet(values)
-            // );
+            setSubmitting(true);
+            const response = await callApi(
+              'contactRequest',
+              reverseCheckAndSet(values)
+            );
 
             console.log(values);
           } catch (err) {
@@ -94,7 +98,19 @@ function FormSection() {
                 value={values.fullName}
                 label="Full Name"
                 variant="standard"
+                required
                 error={errors.fullName}
+              />
+
+              <InputField
+                name="companyName"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                type="text"
+                value={values.companyName}
+                label="Company Name"
+                variant="standard"
+                error={errors.companyName}
               />
 
               <InputField
@@ -105,6 +121,7 @@ function FormSection() {
                 value={values.email}
                 label="Email ID"
                 variant="standard"
+                required
                 error={errors.email}
               />
 
@@ -112,6 +129,7 @@ function FormSection() {
                 name="mobileNumber"
                 onChange={handleChange}
                 onBlur={handleBlur}
+                required
                 type="number"
                 sx={{
                   '& input[type=number]::-webkit-outer-spin-button': {
@@ -131,16 +149,17 @@ function FormSection() {
               />
 
               <InputField
-                name="message"
+                name="moreInfo"
                 onChange={handleChange}
                 onBlur={handleBlur}
+                required
                 type="text"
                 multiline
                 rows={4}
-                value={values.message}
+                value={values.moreInfo}
                 label="Your Message"
                 variant="standard"
-                error={errors.message}
+                error={errors.moreInfo}
               />
 
               <SubmitButton disabled={isSubmitting} type="submit">

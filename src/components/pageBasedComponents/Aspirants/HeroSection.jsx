@@ -1,100 +1,126 @@
-"use client";
+'use client'
 
-import React from "react";
-import { Box, Stack, Typography, Container } from "@mui/material";
-import PrimaryHeading from "@/components/headingComponents/PrimaryHeading";
-import ExtraSuperText from "@/components/headingComponents/ExtraSuperText";
-import SuperText from "@/components/headingComponents/SuperText";
-import ViewportBoxComponent from "@/components/globalComponents/CustomContainer/ViewportBoxComponent";
-import Image from "next/image";
-import aspirantPageImagePaths from "@/constants/ImagePaths/Aspirants/aspirantPageImagePaths";
-import CenteredFlexComponent from "@/components/globalComponents/CustomContainer/CenteredFlexComponent";
-import ParagraphHeading from "@/components/headingComponents/ParagraphHeading";
-import { heroSectionData } from "@/constants/Aspirants/aspirantPageData";
-import PrimaryFillButton from "@/components/buttonComponents/PrimaryFillButton";
-import Link from "next/link";
-import { TickerBoxData } from "@/constants/Aspirants/aspirantPageData";
-import TickerComponent from "@/components/TickerComponent/TickerComponent";
-import CustomSection from "@/components/globalComponents/CustomContainer/CustomSection";
+import TickerComponent from '@/components/TickerComponent/TickerComponent'
+import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton'
+import CustomSection from '@/components/globalComponents/CustomContainer/CustomSection'
+import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
+import ExtraSuperText from '@/components/headingComponents/ExtraSuperText'
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
+import SuperText from '@/components/headingComponents/SuperText'
 
-function HeroSection() {
+import { Box, Grid, Stack } from '@mui/material'
+import React, { useEffect } from 'react'
+
+function HeroSection({ heroSectionData, TickerBoxData }) {
   return (
-    <CustomSection style={{ padding: "0px", height: "100vh" }}>
-      <Container
+    <CustomSection style={{ padding: '0px', height: '100vh' }}>
+      <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          height: "calc(100vh - 65px)",
-          width: "100%",
-          alignItems: "center",
-          justifyContent: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'relative',
+          height: 'calc(100vh - 65px)',
+          width: '100%',
+          alignItems: 'center',
+
+          justifyContent: { xs: 'start' },
+          pt: { xs: 12 },
         }}
       >
-        <CenteredFlexComponent sx={{ gap: "10px" }}>
-          <Image
-            src={aspirantPageImagePaths.homePage.icon2}
-            style={{
-              width: "clamp(60px,12vw,140px)",
-              height: "auto",
-              objectFit: "cover",
-            }}
-            alt="Unlock your potential"
-          />
-          <SuperText
-            component="h2"
-            sx={{
-              textTransform: "uppercase",
-              color: (theme) => theme.palette.pinkPalette.light,
-            }}
-          >
-            {heroSectionData.heading.primary}
-          </SuperText>
-        </CenteredFlexComponent>
-        <CenteredFlexComponent sx={{ gap: "10px", justifyContent: "center" }}>
-          <ExtraSuperText component="h1" sx={{ textTransform: "uppercase" }}>
-            {heroSectionData.heading.secondary}
-          </ExtraSuperText>
-          <Image
-            width={130}
-            src={aspirantPageImagePaths.homePage.icon1}
-            style={{
-              width: "clamp(60px,12vw,140px)",
-              height: "auto",
-              objectFit: "cover",
-            }}
-            alt="Unlock your potential"
-          />
-        </CenteredFlexComponent>
-        <ParagraphHeading
-          align="center"
-          sx={{ maxWidth: "400px", color: "primaryPalette.black" }}
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="center"
+          sx={{
+            width: '100%',
+            height: '100%',
+            justifyContent: { xs: 'start' },
+          }}
+          spacing={1}
         >
-          {heroSectionData.description}
-        </ParagraphHeading>
-        <Link href="#">
-          <PrimaryFillButton
-            varient="contained"
-            link="/about"
-            sx={{
-              marginTop: "18px",
-              backgroundColor: (theme) => theme.palette.pinkPalette.dark,
-              color: (theme) => theme.palette.primaryPalette.white,
-              "&:hover": {
-                backgroundColor: (theme) => theme.palette.pinkPalette.dark,
-              },
-            }}
-          >
-            {heroSectionData.buttonContent}
-          </PrimaryFillButton>
-        </Link>
-      </Container>
+          <Grid item xs={12} md={6}>
+            <Stack
+              flexDirection="column"
+              justifyContent="space-between"
+              alignItems={{ xs: 'start' }}
+              sx={{
+                pl: { xs: 4 },
+              }}
+            >
+              <SuperText
+                sx={{
+                  textAlign: { xs: 'left' },
+                  color: heroSectionData.heading.secondaryColor,
+                  textWrap: 'nowrap',
+                }}
+              >
+                {heroSectionData.heading.primary}
+              </SuperText>
+              <ExtraSuperText
+                sx={{
+                  textAlign: { xs: 'left' },
+                  color: heroSectionData.heading.primaryColor,
+                  textWrap: 'nowrap',
+                }}
+              >
+                {heroSectionData.heading.secondary}
+              </ExtraSuperText>
+              <ParagraphHeading
+                sx={{
+                  textAlign: { xs: 'left' },
+                  width: { xs: '60%' },
+                }}
+              >
+                {heroSectionData.description}
+              </ParagraphHeading>
+
+              <PrimaryFillButton
+                varient="contained"
+                href="/login"
+                sx={{
+                  width: 'max-content',
+                  marginTop: '18px',
+                  backgroundColor: (theme) => theme.palette.pinkPalette.dark,
+                  color: (theme) => theme.palette.primaryPalette.white,
+                  '&:hover': {
+                    backgroundColor: (theme) => theme.palette.pinkPalette.dark,
+                  },
+                }}
+              >
+                {heroSectionData.buttonContent}
+              </PrimaryFillButton>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Stack
+              sx={{
+                width: {
+                  xs: '100%',
+                },
+                aspectRatio: '667/386',
+              }}
+            >
+              <CustomImage
+                width="100%"
+                height="100%"
+                alt={heroSectionData.heading.primary}
+                src={heroSectionData.bannerImage}
+              />
+            </Stack>
+          </Grid>
+        </Grid>
+      </Box>
       <TickerComponent
         variant="div"
         data={TickerBoxData}
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
       />
     </CustomSection>
-  );
+  )
 }
 
-export default HeroSection;
+export default HeroSection

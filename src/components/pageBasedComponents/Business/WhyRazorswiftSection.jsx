@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import React from 'react';
-import DropDownWrapper from '@/components/dropDownComponents/DropDownWrapper';
-import { Grid, Stack, Box } from '@mui/material';
-import PrimaryHeading from '@/components/headingComponents/PrimaryHeading';
-import { whyRazorswiftSection } from '@/constants/Business/businessPageData';
-import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
-import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton';
-import Link from 'next/link';
-import FastrackCardLists from '@/components/CardComponents/AspirantCards/FastrackCardLists';
+import React from 'react'
+import DropDownWrapper from '@/components/dropDownComponents/DropDownWrapper'
+import { Grid, Stack, Box } from '@mui/material'
+import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
+import { whyRazorswiftSection } from '@/constants/Business/businessPageData'
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
+import PrimaryFillButton from '@/components/buttonComponents/PrimaryFillButton'
+import Link from 'next/link'
+import FastrackCardLists from '@/components/CardComponents/AspirantCards/FastrackCardLists'
 
 function WhyRazorswiftSection() {
   return (
@@ -39,18 +39,14 @@ function WhyRazorswiftSection() {
                 {whyRazorswiftSection.description}
               </ParagraphHeading>
               <PrimaryFillButton
+                href={`${whyRazorswiftSection.button.link}`}
                 sx={{
                   backgroundColor: 'violetPalette.dark',
                   mt: { xs: 0, md: 2 },
                   color: 'primaryPalette.white',
                 }}
               >
-                <Link
-                  style={{ textDecoration: 'none', color: 'inherit' }}
-                  href={`${whyRazorswiftSection.button.link}`}
-                >
-                  {whyRazorswiftSection.button.title}
-                </Link>
+                {whyRazorswiftSection.button.title}
               </PrimaryFillButton>
             </Stack>
           </Grid>
@@ -104,10 +100,10 @@ function WhyRazorswiftSection() {
         </Grid>
       </Box>
     </DropDownWrapper>
-  );
+  )
 }
 
-export default WhyRazorswiftSection;
+export default WhyRazorswiftSection
 
 {
   /* <Grid item xs={12} md={6}>

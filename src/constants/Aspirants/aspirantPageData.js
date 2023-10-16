@@ -1,8 +1,8 @@
 import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths';
 
 export const solutionsData = [
-  { id: 2, name: 'Aspirants', link: '/' },
-  { id: 1, name: 'Partners', link: '/' },
+  { id: 2, name: 'Aspirant', link: '/' },
+  { id: 1, name: 'Partner', link: '/' },
   { id: 3, name: 'Business', link: '/' },
 ];
 export const headerdData = {

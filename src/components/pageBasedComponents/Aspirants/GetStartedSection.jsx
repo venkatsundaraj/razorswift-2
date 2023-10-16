@@ -9,6 +9,7 @@ import SuperText from '@/components/headingComponents/SuperText'
 import Image from 'next/image'
 import { Container, Grid } from '@mui/material'
 import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
+import TertiaryHeading from '@/components/headingComponents/TertiaryHeading'
 
 function GetStartedSection({ readyToStartData }) {
   return (
@@ -40,24 +41,9 @@ function GetStartedSection({ readyToStartData }) {
         >
           {readyToStartData.title}
         </SuperText>
-        <ParagraphHeading>{readyToStartData.description}</ParagraphHeading>
-        {readyToStartData.buttonText && (
-          <NavButton>{readyToStartData.buttonText}</NavButton>
-        )}
-        {readyToStartData.qrImage && (
-          <CustomImage
-            alt={readyToStartData.title}
-            width={{ xs: '100px' }}
-            aspectRatio="1/1"
-            src={readyToStartData.qrImage}
-          />
-        )}
-        <CustomImage
-          alt={readyToStartData.title}
-          width={{ xs: '300px', md: '500px', lg: '560px', xl: '700px' }}
-          aspectRatio="1/0.85"
-          src={readyToStartData.mainImage}
-        />
+        <TertiaryHeading style={{ fontWeight: 'normal' }}>
+          {readyToStartData.description}
+        </TertiaryHeading>
         {readyToStartData.longDescription && (
           <Grid container>
             <Grid item xs={12} sm={1}></Grid>
@@ -69,6 +55,26 @@ function GetStartedSection({ readyToStartData }) {
             <Grid item xs={12} sm={1}></Grid>
           </Grid>
         )}
+        {readyToStartData.buttonText && (
+          <NavButton href="/contact-us">
+            {readyToStartData.buttonText}
+          </NavButton>
+        )}
+        {readyToStartData.qrImage && (
+          <CustomImage
+            alt={readyToStartData.title}
+            width={{ xs: '100px' }}
+            aspectRatio="1/1"
+            src={readyToStartData.qrImage}
+          />
+        )}
+
+        <CustomImage
+          alt={readyToStartData.title}
+          width={{ xs: '300px', md: '500px', lg: '560px', xl: '700px' }}
+          aspectRatio="1/0.85"
+          src={readyToStartData.mainImage}
+        />
       </Container>
     </CustomSection>
   )

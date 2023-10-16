@@ -23,9 +23,6 @@ function InputField({ error, ...props }) {
           }}
         />
         {meta && meta.error && meta.touched && (
-          // <SubtitleHeading sx={{ color: 'pinkPalette.light' }}>
-          //   {meta.error}
-          // </SubtitleHeading>
           <ErrorMessage
             name={props.name}
             render={(msg) => (
