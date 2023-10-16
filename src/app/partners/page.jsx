@@ -1,5 +1,3 @@
-'use client'
-
 import BannerSection from '@/components/pageBasedComponents/Aspirants/BannerSection'
 import GetStartedSection from '@/components/pageBasedComponents/Aspirants/GetStartedSection'
 import BusinessDropDownBody from '@/components/pageBasedComponents/Business/BusinessDropDownBody'
