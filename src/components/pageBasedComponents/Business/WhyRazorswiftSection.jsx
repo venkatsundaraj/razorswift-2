@@ -54,7 +54,7 @@ function WhyRazorswiftSection() {
           <Grid item xs={12} md={6}>
             <Grid
               container
-              spacing={{ xs: 0, md: 2 }}
+              spacing={{ xs: 1, md: 2 }}
               alignItems="center"
               justifyContent="center"
               sx={{ height: '100%', mt: { xs: 2, md: 0 } }}
