@@ -41,7 +41,7 @@ function GetStartedSection({ readyToStartData }) {
         >
           {readyToStartData.title}
         </SuperText>
-        <TertiaryHeading style={{ fontWeight: 'normal' }}>
+        <TertiaryHeading style={{ fontWeight: '500', textAlign: 'center' }}>
           {readyToStartData.description}
         </TertiaryHeading>
         {readyToStartData.longDescription && (
@@ -71,7 +71,13 @@ function GetStartedSection({ readyToStartData }) {
 
         <CustomImage
           alt={readyToStartData.title}
-          width={{ xs: '300px', md: '500px', lg: '560px', xl: '700px' }}
+          width={{
+            xs: '300px',
+            sm: '500px',
+            md: '500px',
+            lg: '560px',
+            xl: '700px',
+          }}
           aspectRatio="1/0.85"
           src={readyToStartData.mainImage}
         />

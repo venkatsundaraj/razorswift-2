@@ -1,6 +1,7 @@
 'use client'
 
 import CustomImage from '@/components/globalComponents/CustomImage/CustomImage'
+import ExtraParagraphHeading from '@/components/headingComponents/ExtraParagraphHeading'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
 import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
@@ -9,8 +10,6 @@ import { quickTalentDiscoveryData } from '@/constants/Business/businessPageData'
 import { Box, Grid, Stack } from '@mui/material'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-
-const backgroundColor = ['teal', 'tomato', 'orange', 'violet']
 
 const initialState = {
   id: 0,
@@ -71,16 +70,16 @@ function StickyContainerSection() {
         sx={{
           overflowX: 'unset',
           display: 'flex',
-          gap: '40px',
+          gap: { xs: '16px', md: '40px' },
           height: {
-            xs: `calc(4 * 90vh + 550px)`,
-            sm: `calc(4 * 90vh + 350px)`,
-            md: `calc(4 * 80vh + 550px)`,
+            xs: `calc(4 * 90vh + 350px)`,
+            sm: `calc(4 * 90vh + 550px)`,
+            md: `calc(4 * 90vh + 550px)`,
             xl: `calc(4 * 80vh + 350px)`,
           },
           width: '100%',
           backgroundColor: 'primaryPalette.white',
-          padding: { xs: '16px 16px', sm: '24px 24px', lg: '64px 24px' },
+          padding: { xs: '32px 16px', sm: '24px 24px', lg: '64px 24px' },
           flexDirection: 'column',
         }}
       >
@@ -96,8 +95,7 @@ function StickyContainerSection() {
               color: 'primaryPalette.black',
               width: 'clamp(300px,60vw,900px)',
               textAlign: 'center',
-              mb: 4,
-              mt: 2,
+              mt: 1,
             }}
           >
             {quickTalentDiscoveryData.mainDescription}
@@ -118,15 +116,17 @@ function StickyContainerSection() {
                 width: '100%',
                 height: {
                   xs: `${i === 0 ? '100vh' : '90vh'}`,
-
+                  sm: `${i === 0 ? '100vh' : '90vh'}`,
+                  md: `${i === 0 ? '90vh' : '80vh'}`,
+                  lg: `${i === 0 ? '100vh' : '90vh'}`,
                   xl: `${i === 0 ? '90vh' : '80vh'}`,
                 },
                 borderRadius: 4,
                 backgroundColor: `${item.backgroundColor}`,
                 position: 'sticky',
                 top: {
-                  xs: `${i * 5}px`,
-                  md: `${i * 5}px`,
+                  xs: `${i * 50}px`,
+                  md: `${i * 40}px`,
                   lg: `${i * 25}px`,
                   xl: `${25 + i * 55}px`,
                 },
@@ -144,10 +144,10 @@ function StickyContainerSection() {
                 <Grid item xs={12} md={5}>
                   <Stack
                     flexDirection="column"
-                    alignItems="start"
-                    justifyContent="space-between"
+                    alignItems={{ xs: 'center', md: 'start' }}
+                    justifyContent={{ md: 'space-between' }}
                   >
-                    <Box sx={{ alignSelf: { xs: 'flex-start', md: 'center' } }}>
+                    <Box sx={{ alignSelf: { xs: 'center' } }}>
                       <CustomImage
                         sx={{ alignSelf: 'center' }}
                         src={item.image}
@@ -156,10 +156,20 @@ function StickyContainerSection() {
                         aspectRatio="1/1"
                       />
                     </Box>
-                    <TertiaryHeading sx={{ mb: 4, color: 'primary.black' }}>
+                    <ExtraParagraphHeading
+                      sx={{
+                        mb: { xs: 2, md: 4 },
+                        color: 'primary.black',
+                        textAlign: { xs: 'center', md: 'left' },
+                      }}
+                    >
                       {item.title}
-                    </TertiaryHeading>
-                    <SubtitleHeading>{item.description}</SubtitleHeading>
+                    </ExtraParagraphHeading>
+                    <SubtitleHeading
+                      sx={{ textAlign: { xs: 'center', md: 'left' } }}
+                    >
+                      {item.description}
+                    </SubtitleHeading>
                   </Stack>
                 </Grid>
 
@@ -176,7 +186,7 @@ function StickyContainerSection() {
                       alt={item.title}
                       src={item.mainImage}
                       width={{
-                        xs: '300px',
+                        xs: '100%',
                         sm: '600px',
                         lg: '525px',
                         lg: '625px',

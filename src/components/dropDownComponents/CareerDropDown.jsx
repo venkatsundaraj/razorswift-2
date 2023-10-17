@@ -47,7 +47,7 @@ function CareerDropDown({ dropDownData, changeHandler }) {
           position: 'relative',
           '& .MuiSelect-icon': {
             top: 'calc(50% - 16px)',
-            right: { xs: '12px', sm: '24px' },
+            right: { xs: '12px', md: '24px' },
             transition: 'all 0.265s ease',
           },
         }}
