@@ -1,14 +1,16 @@
-'use client'
-import React from 'react'
-import { Box } from '@mui/system'
-import { Typography } from '@mui/material'
-import Link from '@mui/material/Link'
-import Image from 'next/image'
-import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths'
-import demosection from '@/constants/Homepage/demosection'
-import { motion } from 'framer-motion'
+'use client';
+import React from 'react';
+import { Box } from '@mui/system';
+import { Typography } from '@mui/material';
+import Link from '@mui/material/Link';
+import Image from 'next/image';
+import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths';
+import demosection from '@/constants/Homepage/demosection';
+import { motion } from 'framer-motion';
+import SuperText from '@/components/headingComponents/SuperText';
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
 const DemoSection = () => {
-  console.log(demosection)
+  console.log(demosection);
   const singlesec = {
     offscreen: {
       opacity: 0,
@@ -27,7 +29,7 @@ const DemoSection = () => {
         stiffness: 100,
       },
     },
-  }
+  };
   return (
     <Box
       sx={{
@@ -58,33 +60,23 @@ const DemoSection = () => {
                 alignItems: 'center',
               }}
             >
-              <Typography
+              <SuperText
                 variant="h1"
                 sx={{
                   color: 'primary.purp',
                   lineHeight: '1.0',
-                  fontSize: {
-                    xs: '25px',
-                    md: 'clamp(50px, 4vw, 64px)',
-                    lg: '94px',
-                  },
                 }}
               >
                 {demosection.title}
-              </Typography>
-              <Typography
+              </SuperText>
+              <ParagraphHeading
                 variant="body1"
                 sx={{
                   margin: '20px 0',
-                  fontSize: {
-                    xs: 'clamp(20px, 1.5vw, 28px)',
-                    md: 'clamp(20px, 1.5vw, 28px)',
-                    lg: '28px',
-                  },
                 }}
               >
                 {demosection.description}
-              </Typography>
+              </ParagraphHeading>
             </Box>
           </motion.div>
         </motion.div>
@@ -100,6 +92,14 @@ const DemoSection = () => {
               alignItems: 'center',
               zIndex: '1',
               cursor: 'pointer',
+              color: 'red',
+              '&:hover': {
+                color: 'white',
+                backgroundColor: 'primary.main',
+              },
+              '&:hover > a': {
+                color: 'white',
+              },
             }}
           >
             <Link
@@ -107,8 +107,6 @@ const DemoSection = () => {
               underline="none"
               sx={{
                 fontSize: '15px',
-
-                color: 'primary.main',
               }}
             >
               {demosection.button}
@@ -124,7 +122,7 @@ const DemoSection = () => {
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default DemoSection
+export default DemoSection;

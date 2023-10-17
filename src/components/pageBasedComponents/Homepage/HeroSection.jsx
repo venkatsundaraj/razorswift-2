@@ -1,27 +1,30 @@
-'use client'
-import React from 'react'
-import { Stack } from '@mui/material'
-import { Typography } from '@mui/material'
-import Link from '@mui/material/Link'
-import Box from '@mui/material/Box'
-import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths'
-import Image from 'next/image'
-import theme from '../../../themes/theme'
-import { motion } from 'framer-motion'
-import heroSectionData from '../../../constants/Homepage/heroSectionData'
+'use client';
+import React from 'react';
+import { Stack } from '@mui/material';
+import { Typography } from '@mui/material';
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths';
+import Image from 'next/image';
+import theme from '../../../themes/theme';
+import { motion } from 'framer-motion';
+import heroSectionData from '../../../constants/Homepage/heroSectionData';
 
-import styled from '@emotion/styled'
-import { TickerBoxData } from '@/constants/Homepage/TickerBoxData'
-import TickerComponent from '@/components/TickerComponent/TickerComponent'
-import fetchData from '@/utils/helpers/fetchData'
+import styled from '@emotion/styled';
+import { TickerBoxData } from '@/constants/Homepage/TickerBoxData';
+import TickerComponent from '@/components/TickerComponent/TickerComponent';
+import fetchData from '@/utils/helpers/fetchData';
+import ExtraSuperText from '@/components/headingComponents/ExtraSuperText';
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
+import SuperText from '@/components/headingComponents/SuperText';
 
-const TypographyOne = styled(Typography)(({ theme }) => ({}))
+const TypographyOne = styled(Typography)(({ theme }) => ({}));
 
 const HeroSection = () => {
   const banimg = {
     width: 'clamp(370px, 63.5vw, 1210px)',
     height: 'auto',
-  }
+  };
   const firstsec = {
     offscreen: {
       opacity: 0,
@@ -40,7 +43,7 @@ const HeroSection = () => {
         stiffness: 100,
       },
     },
-  }
+  };
 
   const parades = {
     offscreen: {
@@ -55,7 +58,7 @@ const HeroSection = () => {
         delay: 1,
       },
     },
-  }
+  };
 
   const parabutton = {
     offscreen: {
@@ -70,14 +73,14 @@ const HeroSection = () => {
         delay: 2,
       },
     },
-  }
+  };
 
   const secsecanime = {
     offscreen: {
       opacity: 0,
       y: 100,
     },
-  }
+  };
 
   return (
     <Stack
@@ -85,7 +88,7 @@ const HeroSection = () => {
         height: {
           xs: '100%',
 
-          md: '100vh',
+          md: 'calc(100vh - 65px)',
           lg: '100vh',
           xl: '100vh',
         },
@@ -197,24 +200,22 @@ const HeroSection = () => {
                 },
               }}
             >
-              <Typography
+              <ParagraphHeading
                 component="span"
                 sx={{
                   lineHeight: 1.2,
-                  fontSize: { md: '16px', lg: '18px', xl: '20px' },
                 }}
               >
                 {heroSectionData[0].title}
-              </Typography>
-              <Typography
+              </ParagraphHeading>
+              <ParagraphHeading
                 component="span"
                 sx={{
                   lineHeight: 1.2,
-                  fontSize: { md: '16px', lg: '18px', xl: '20px' },
                 }}
               >
                 {heroSectionData[0].titletwo}
-              </Typography>
+              </ParagraphHeading>
             </Typography>
           </motion.div>
         </motion.div>
@@ -237,6 +238,7 @@ const HeroSection = () => {
               }}
             >
               <Link
+                href="https://www.youtube.com/"
                 sx={{
                   textDecoration: 'none',
                   border: '1px solid',
@@ -249,6 +251,10 @@ const HeroSection = () => {
                   pl: 2,
                   pr: 2,
                   alignSelf: 'center',
+                  '&:hover': {
+                    backgroundColor: 'white',
+                    color: 'primary.light',
+                  },
                 }}
               >
                 <Typography
@@ -269,6 +275,10 @@ const HeroSection = () => {
                   pl: 2,
                   pr: 2,
                   alignSelf: 'center',
+                  '&:hover': {
+                    backgroundColor: 'primary.main',
+                    color: 'white',
+                  },
                 }}
               >
                 <Typography
@@ -335,7 +345,7 @@ const HeroSection = () => {
         </motion.div>
       </motion.div>
     </Stack>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
