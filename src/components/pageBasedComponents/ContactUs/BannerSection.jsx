@@ -10,7 +10,7 @@ import { Box, Container, Grid, Stack } from '@mui/material'
 
 function BannerSection() {
   return (
-    <CustomSection style={{ padding: '82px 0' }}>
+    <CustomSection style={{ padding: '96px 0' }}>
       <Container>
         <Box>
           <Grid container spacing={1} alignItems="center">
