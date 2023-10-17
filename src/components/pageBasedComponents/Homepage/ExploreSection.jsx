@@ -1,29 +1,32 @@
-'use client'
-import React from 'react'
-import { Box } from '@mui/material'
-import { Typography } from '@mui/material'
-import Link from '@mui/material/Link'
-import data from '../../../constants/Homepage/whyrazor.js'
-import { Grid } from '@mui/material'
-import exploreSection from '@/constants/Homepage/exploresection.js'
-import exploreSectiontwo from '@/constants/Homepage/exploresectiontwo.js'
-import { motion } from 'framer-motion'
-import { Stack } from '@mui/material'
-import FastrackCardLists from '@/components/CardComponents/AspirantCards/FastrackCardLists'
-
+'use client';
+import React from 'react';
+import { Box } from '@mui/material';
+import { Typography } from '@mui/material';
+import Link from '@mui/material/Link';
+import data from '../../../constants/Homepage/whyrazor.js';
+import { Grid } from '@mui/material';
+import exploreSection from '@/constants/Homepage/exploresection.js';
+import exploreSectiontwo from '@/constants/Homepage/exploresectiontwo.js';
+import { motion } from 'framer-motion';
+import { Stack } from '@mui/material';
+import FastrackCardLists from '@/components/CardComponents/AspirantCards/FastrackCardLists';
+import ExtraSuperText from '@/components/headingComponents/ExtraSuperText';
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
+import SuperText from '@/components/headingComponents/SuperText';
+import PrimaryHeading from '@/components/headingComponents/PrimaryHeading';
 const ExploreSection = ({ ...props }) => {
   const headfont = {
     fontSize: 'clamp(50px, 4vw, 64px)',
-  }
+  };
   // const paraone = {
   //   fontSize: "clamp(15px, 1.4vw, 20px)",
   // };
   const numbersec = {
     fontSize: 'clamp(30px, 2.4vw, 40px)',
-  }
+  };
   const numbersecdescription = {
     fontSize: 'clamp(10px, 1.1vw, 16px)',
-  }
+  };
   const firstsec = {
     offscreen: {
       opacity: 0,
@@ -42,7 +45,7 @@ const ExploreSection = ({ ...props }) => {
         stiffness: 100,
       },
     },
-  }
+  };
   const singlesec = {
     offscreen: {
       opacity: 0,
@@ -61,7 +64,7 @@ const ExploreSection = ({ ...props }) => {
         stiffness: 100,
       },
     },
-  }
+  };
   return (
     <Box
       sx={{
@@ -100,22 +103,18 @@ const ExploreSection = ({ ...props }) => {
                 whileInView={'onscreen'}
                 viewport={{ once: true }}
               >
-                <Typography
+                <PrimaryHeading
                   variant="h1"
                   sx={{
                     color: 'primary.purp',
-                    fontSize: {
-                      xs: '25px',
-                      md: 'clamp(50px, 4vw, 64px)',
-                      lg: 'clamp(50px, 4vw, 64px)',
-                    },
+
                     textAlign: 'left',
                     margin: '15px 0',
                     width: { xs: '300px', sm: '730px', md: '100%', lg: '100%' },
                   }}
                 >
                   {data[0].title}
-                </Typography>
+                </PrimaryHeading>
               </motion.div>
             </motion.div>
             <motion.div transition={{ staggerChildren: 1.9 }}>
@@ -125,14 +124,9 @@ const ExploreSection = ({ ...props }) => {
                 whileInView={'onscreen'}
                 viewport={{ once: true }}
               >
-                <Typography
+                <ParagraphHeading
                   variant="body1"
                   sx={{
-                    fontSize: {
-                      xs: '15px',
-                      md: 'clamp(15px, 1.4vw, 20px)',
-                      lg: 'clamp(15px, 1.4vw, 20px)',
-                    },
                     textAlign: 'center',
 
                     textAlign: 'justify',
@@ -141,7 +135,7 @@ const ExploreSection = ({ ...props }) => {
                   }}
                 >
                   {data[0].description}
-                </Typography>
+                </ParagraphHeading>
               </motion.div>
             </motion.div>
             <motion.div transition={{ staggerChildren: 1.9 }}>
@@ -164,6 +158,12 @@ const ExploreSection = ({ ...props }) => {
                     borderRadius: '200px',
                     marginTop: '10px',
                     cursor: 'pointer',
+                    '&:hover': {
+                      color: 'primary.purp',
+                      backgroundColor: 'common.white',
+                      border: '1px solid ',
+                      borderColor: 'primary.purp',
+                    },
                   }}
                 >
                   {data[0].button}
@@ -182,7 +182,7 @@ const ExploreSection = ({ ...props }) => {
               viewport={{ once: true }}
             >
               <Stack
-                sx={{ height: '100%', gap: 2 }}
+                sx={{ height: '100%', gap: 3 }}
                 alignItems={{ xs: 'center', md: 'end' }}
                 justifyContent="start"
                 flexDirection="column"
@@ -204,13 +204,16 @@ const ExploreSection = ({ ...props }) => {
               viewport={{ once: true }}
             >
               <Stack
-                sx={{ height: '100%', gap: 2 }}
+                sx={{ height: '100%', gap: 3 }}
                 alignItems={{ xs: 'center', md: 'start' }}
                 justifyContent="end"
                 flexDirection="column"
               >
                 <FastrackCardLists
-                  sx={{ alignSelf: 'start', width: '50%' }}
+                  sx={{
+                    alignSelf: 'start',
+                    width: '50%',
+                  }}
                   lists={exploreSectiontwo}
                 />
               </Stack>
@@ -219,6 +222,6 @@ const ExploreSection = ({ ...props }) => {
         </Grid>
       </Grid>
     </Box>
-  )
-}
-export default ExploreSection
+  );
+};
+export default ExploreSection;

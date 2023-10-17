@@ -1,5 +1,5 @@
-import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
-import { Box, Typography } from '@mui/material'
+import SubtitleHeading from '@/components/headingComponents/SubtitleHeading';
+import { Box, Typography } from '@mui/material';
 
 function FastrackCardLists({ lists, ...props }) {
   return (
@@ -13,6 +13,14 @@ function FastrackCardLists({ lists, ...props }) {
             borderRadius: 2,
             minHeight: { xs: '120px', sm: '86px', md: '120px' },
             width: { xs: '100%' },
+            '&:hover': {
+              transform: 'translateY(-10px)',
+              transitionDuration: '0.3s',
+              transitionTimingFunction: 'ease',
+              transitionDelay: '0s',
+              transitionProperty: 'all',
+              transitionBehavior: 'normal',
+            },
           }}
         >
           <Typography
@@ -29,7 +37,7 @@ function FastrackCardLists({ lists, ...props }) {
         </Box>
       ))}
     </>
-  )
+  );
 }
 
-export default FastrackCardLists
+export default FastrackCardLists;
