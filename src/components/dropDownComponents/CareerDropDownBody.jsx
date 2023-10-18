@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material';
-import Image from 'next/image';
-import PrimaryFillButton from '../buttonComponents/PrimaryFillButton';
-import CustomImage from '../globalComponents/CustomImage/CustomImage';
-import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading';
-import SecondaryHeading from '../headingComponents/SecondaryHeading';
-import SubtitleHeading from '../headingComponents/SubtitleHeading';
+import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material'
+import Image from 'next/image'
+import PrimaryFillButton from '../buttonComponents/PrimaryFillButton'
+import CustomImage from '../globalComponents/CustomImage/CustomImage'
+import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading'
+import SecondaryHeading from '../headingComponents/SecondaryHeading'
+import SubtitleHeading from '../headingComponents/SubtitleHeading'
 
 function CareerDropDownBody({ dropDownBodyData, ...props }) {
   return (
@@ -78,11 +78,14 @@ function CareerDropDownBody({ dropDownBodyData, ...props }) {
                     backgroundColor:
                       dropDownBodyData.buttonData?.backgroundColor,
                     color: dropDownBodyData.buttonData?.color,
+                    transition: 'all 300ms ease',
                     marginTop: '20px',
                     '&:hover': {
                       backgroundColor:
                         dropDownBodyData.buttonData?.backgroundColor,
                       color: dropDownBodyData.buttonData?.color,
+                      transform: 'translateY(-3px)',
+                      boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
                     },
                   }}
                 >
@@ -147,7 +150,22 @@ function CareerDropDownBody({ dropDownBodyData, ...props }) {
           >
             <Grid container spacing={2}>
               {dropDownBodyData.whatToExpect.map((item) => (
-                <Grid item xs={12} md={6} key={item.id}>
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  key={item.id}
+                  sx={{
+                    transitionDuration: '0.3s',
+                    '&:hover': {
+                      transform: 'translateY(-10px)',
+                      transitionTimingFunction: 'ease',
+                      transitionDelay: '0s',
+                      transitionProperty: 'all',
+                      transitionBehavior: 'normal',
+                    },
+                  }}
+                >
                   <Paper
                     sx={{
                       borderRadius: 2,
@@ -184,7 +202,7 @@ function CareerDropDownBody({ dropDownBodyData, ...props }) {
         </Grid>
       </Container>
     </Box>
-  );
+  )
 }
 
-export default CareerDropDownBody;
+export default CareerDropDownBody
