@@ -1,23 +1,23 @@
-'use client';
+'use client'
 
-import React from 'react';
-import InputField from './FormUI/InputField/InputField';
-import SubmitButton from './FormUI/SubmitButton/SubmitButton';
-import { Stack, Box } from '@mui/material';
-import { Form, Formik } from 'formik';
+import React from 'react'
+import InputField from './FormUI/InputField/InputField'
+import SubmitButton from './FormUI/SubmitButton/SubmitButton'
+import { Stack, Box } from '@mui/material'
+import { Form, Formik } from 'formik'
 import {
   alphabetsValidationSchema,
   validateContactNumber,
   emailValidation,
   messageValidation,
   nameValidationwithNoRegex,
-} from '@/utils/helpers/validationSchemas';
-import { reverseCheckAndSet } from '@/utils/helpers/CommonFunctions/Functions';
-import * as Yup from 'yup';
-import { callApi } from '@/utils/helpers/apiRequest';
-import { AxiosError } from 'axios';
-import SelectWrapper from './FormUI/Select/SelectWrapper';
-import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading';
+} from '@/utils/helpers/validationSchemas'
+import { reverseCheckAndSet } from '@/utils/helpers/CommonFunctions/Functions'
+import * as Yup from 'yup'
+import { callApi } from '@/utils/helpers/apiRequest'
+import { AxiosError } from 'axios'
+import SelectWrapper from './FormUI/Select/SelectWrapper'
+import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading'
 
 const initialValues = {
   fullName: '',
@@ -26,7 +26,7 @@ const initialValues = {
   companyName: '',
   moreInfo: '',
   reason: '',
-};
+}
 
 const validationSchema = Yup.object().shape({
   fullName: alphabetsValidationSchema('fullName', true),
@@ -34,7 +34,7 @@ const validationSchema = Yup.object().shape({
   mobileNumber: validateContactNumber('Mobile Number', true),
   moreInfo: messageValidation('More Info', true),
   companyName: nameValidationwithNoRegex('Company Name', false),
-});
+})
 
 function FormSection() {
   return (
@@ -44,19 +44,19 @@ function FormSection() {
         validationSchema={validationSchema}
         onSubmit={async (values, { resetForm, setSubmitting }) => {
           try {
-            setSubmitting(true);
+            setSubmitting(true)
             const response = await callApi(
               'contactRequest',
               reverseCheckAndSet(values)
-            );
+            )
 
-            console.log(values);
+            console.log(values)
           } catch (err) {
             if (err instanceof AxiosError) {
-              console.log(err);
+              console.log(err)
             }
           } finally {
-            setSubmitting(false);
+            setSubmitting(false)
             // resetForm();
           }
         }}
@@ -77,7 +77,9 @@ function FormSection() {
               justifyContent="start"
               gap={2}
             >
-              <ExtraParagraphHeading sx={{ color: 'violetPalette.dark' }}>
+              <ExtraParagraphHeading
+                sx={{ color: 'violetPalette.dark', display: 'none' }}
+              >
                 I am an/a
               </ExtraParagraphHeading>
               <SelectWrapper
@@ -170,7 +172,7 @@ function FormSection() {
         )}
       </Formik>
     </Box>
-  );
+  )
 }
 
-export default FormSection;
+export default FormSection

@@ -93,22 +93,46 @@ function StaticScrollSection({ stickySliderData }) {
                   }}
                 >
                   {stickySliderData.image.map((image) => (
-                    <Image
+                    <Box
                       key={image.id}
-                      alt="image"
-                      src={image.image}
-                      style={{
-                        width: '100%',
-                        left: '0',
+                      sx={{
                         top: `${image.id * 100}%`,
-                        position: 'absolute',
                         transform: `translateY(-${percentage * 100}%)`,
-                        borderRadius: '40px',
                         transition: 'transform 450ms ease-out',
-                        objectFit: 'contain',
+                        left: '0',
+                        display: 'flex',
+                        alignItems: { xs: 'center', xl: 'center' },
+                        justifyContent: 'center',
+                        '@media (min-width: 1536px)': {
+                          alignItems: 'flex-end',
+                        },
+                        position: 'absolute',
+                        width: '100%',
                         height: '100%',
                       }}
-                    />
+                    >
+                      <Box
+                        sx={{
+                          width: '100%',
+                          height: { xs: '100%', xl: '100%' },
+                          '@media (min-width: 1536px)': {
+                            height: '80%',
+                          },
+                        }}
+                      >
+                        <Image
+                          key={image.id}
+                          alt="image"
+                          src={image.image}
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            borderRadius: '40px',
+                            objectFit: 'contain',
+                          }}
+                        />
+                      </Box>
+                    </Box>
                   ))}
                 </Box>
               </Grid>

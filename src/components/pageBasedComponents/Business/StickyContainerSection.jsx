@@ -173,7 +173,10 @@ function StickyContainerSection() {
                         {item.title}
                       </ExtraParagraphHeading>
                       <SubtitleHeading
-                        sx={{ textAlign: { xs: 'center', md: 'left' } }}
+                        sx={{
+                          textAlign: { xs: 'center', md: 'left' },
+                          mb: { xs: 2, md: '0px' },
+                        }}
                       >
                         {item.description}
                       </SubtitleHeading>
