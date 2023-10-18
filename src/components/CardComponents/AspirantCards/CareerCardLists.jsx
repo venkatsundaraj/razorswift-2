@@ -23,6 +23,13 @@ function CareerCardLists({ pathway }) {
           borderRadius: (theme) => theme.spacing(1),
           boxShadow: 'unset',
           border: '1px solid #7070705e',
+          position: 'relative',
+          transition: 'transform 400ms ease, box-shadow 400ms ease 200ms',
+          '&:hover': {
+            transform: 'translate(-2px, -2px)',
+            border: '1px solid #712376',
+            boxShadow: '#712376 5px 5px ',
+          },
         }}
       >
         <ExtraSubtitleHeading
@@ -36,7 +43,15 @@ function CareerCardLists({ pathway }) {
         >
           {pathway.typeOfPathway}
         </ExtraSubtitleHeading>
-        <CardContent sx={{ minHeight: '125px' }}>
+        <CardContent
+          sx={{
+            minHeight: '125px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+          }}
+        >
           <ExtraParagraphHeading sx={{ color: 'pinkPalette.light', mb: 1 }}>
             {`Rs. ${pathway.amount}/-`}
           </ExtraParagraphHeading>

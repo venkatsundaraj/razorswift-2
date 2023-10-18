@@ -44,6 +44,12 @@ function WhyRazorswiftSection() {
                   backgroundColor: 'violetPalette.dark',
                   mt: { xs: 0, md: 2 },
                   color: 'primaryPalette.white',
+                  transition: 'all 300ms ease',
+                  border: '1px solid #672376',
+                  '&:hover': {
+                    backgroundColor: 'primaryPalette.white',
+                    color: 'violetPalette.dark',
+                  },
                 }}
               >
                 {whyRazorswiftSection.button.title}

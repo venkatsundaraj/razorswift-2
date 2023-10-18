@@ -56,7 +56,16 @@ function GetStartedSection({ readyToStartData }) {
           </Grid>
         )}
         {readyToStartData.buttonText && (
-          <NavButton href="/contact-us">
+          <NavButton
+            href="/contact-us"
+            sx={{
+              transition: 'all 300ms linear',
+              '&:hover': {
+                backgroundColor: 'pinkPalette.dark',
+                color: 'primaryPalette.white',
+              },
+            }}
+          >
             {readyToStartData.buttonText}
           </NavButton>
         )}

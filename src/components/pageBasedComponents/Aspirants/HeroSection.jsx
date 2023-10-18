@@ -82,8 +82,11 @@ function HeroSection({ heroSectionData, TickerBoxData }) {
                   marginTop: '18px',
                   backgroundColor: (theme) => theme.palette.pinkPalette.dark,
                   color: (theme) => theme.palette.primaryPalette.white,
+                  transition: 'all 300ms ease',
                   '&:hover': {
                     backgroundColor: (theme) => theme.palette.pinkPalette.dark,
+                    transform: 'translateY(-3px)',
+                    boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
                   },
                 }}
               >

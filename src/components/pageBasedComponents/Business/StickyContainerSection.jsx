@@ -7,7 +7,7 @@ import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
 import SubtitleHeading from '@/components/headingComponents/SubtitleHeading'
 import TertiaryHeading from '@/components/headingComponents/TertiaryHeading'
 import { quickTalentDiscoveryData } from '@/constants/Business/businessPageData'
-import { Box, Grid, Stack } from '@mui/material'
+import { Box, Container, Grid, Stack } from '@mui/material'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
@@ -109,17 +109,17 @@ function StickyContainerSection() {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'start',
+                justifyContent: 'center',
                 flexDirection: 'column',
                 transformOrigin: 'center',
 
                 width: '100%',
                 height: {
-                  xs: `${i === 0 ? '100vh' : '90vh'}`,
-                  sm: `${i === 0 ? '100vh' : '90vh'}`,
-                  md: `${i === 0 ? '90vh' : '80vh'}`,
-                  lg: `${i === 0 ? '100vh' : '90vh'}`,
-                  xl: `${i === 0 ? '90vh' : '80vh'}`,
+                  xs: `${i === 0 ? '90vh' : '90vh'}`,
+                  sm: `${i === 0 ? '90vh' : '90vh'}`,
+                  md: `${i === 0 ? '80vh' : '80vh'}`,
+                  lg: `${i === 0 ? '90vh' : '90vh'}`,
+                  xl: `${i === 0 ? '80vh' : '80vh'}`,
                 },
                 borderRadius: 4,
                 backgroundColor: `${item.backgroundColor}`,
@@ -134,69 +134,77 @@ function StickyContainerSection() {
                 px: { xs: '16px', md: '24px' },
               }}
             >
-              <Grid
-                container
-                spaing={2}
-                alignItems="center"
-                justifyContent="center"
-                sx={{ width: '100%', height: '100%' }}
+              <Container
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
               >
-                <Grid item xs={12} md={5}>
-                  <Stack
-                    flexDirection="column"
-                    alignItems={{ xs: 'center', md: 'start' }}
-                    justifyContent={{ md: 'space-between' }}
-                  >
-                    <Box sx={{ alignSelf: { xs: 'center' } }}>
-                      <CustomImage
-                        sx={{ alignSelf: 'center' }}
-                        src={item.image}
-                        alt={item.title}
-                        width={{ xs: '200px', sm: '300px', lg: '300px' }}
-                        aspectRatio="1/1"
-                      />
-                    </Box>
-                    <ExtraParagraphHeading
-                      sx={{
-                        mb: { xs: 2, md: 4 },
-                        color: 'primary.black',
-                        textAlign: { xs: 'center', md: 'left' },
-                      }}
+                <Grid
+                  container
+                  spaing={2}
+                  alignItems="center"
+                  justifyContent="center"
+                  sx={{ width: '100%', height: '100%' }}
+                >
+                  <Grid item xs={12} md={5}>
+                    <Stack
+                      flexDirection="column"
+                      alignItems={{ xs: 'center', md: 'start' }}
+                      justifyContent={{ md: 'space-between' }}
                     >
-                      {item.title}
-                    </ExtraParagraphHeading>
-                    <SubtitleHeading
-                      sx={{ textAlign: { xs: 'center', md: 'left' } }}
-                    >
-                      {item.description}
-                    </SubtitleHeading>
-                  </Stack>
-                </Grid>
+                      <Box sx={{ alignSelf: { xs: 'center' } }}>
+                        <CustomImage
+                          sx={{ alignSelf: 'center' }}
+                          src={item.image}
+                          alt={item.title}
+                          width={{ xs: '200px', sm: '300px', lg: '300px' }}
+                          aspectRatio="1/1"
+                        />
+                      </Box>
+                      <ExtraParagraphHeading
+                        sx={{
+                          mb: { xs: 2, md: 4 },
+                          color: 'primary.black',
+                          textAlign: { xs: 'center', md: 'left' },
+                        }}
+                      >
+                        {item.title}
+                      </ExtraParagraphHeading>
+                      <SubtitleHeading
+                        sx={{ textAlign: { xs: 'center', md: 'left' } }}
+                      >
+                        {item.description}
+                      </SubtitleHeading>
+                    </Stack>
+                  </Grid>
 
-                <Grid item xs={12} md={7}>
-                  <Stack
-                    alignItems={{
-                      xs: 'center',
-                      md: 'flex-end',
-                      xl: 'center',
-                    }}
-                    justifyContent="center"
-                  >
-                    <CustomImage
-                      alt={item.title}
-                      src={item.mainImage}
-                      width={{
-                        xs: '100%',
-                        sm: '600px',
-                        lg: '525px',
-                        lg: '625px',
+                  <Grid item xs={12} md={7}>
+                    <Stack
+                      alignItems={{
+                        xs: 'center',
+                        md: 'flex-end',
+                        xl: 'center',
                       }}
-                      aspectRatio="3/2"
-                      style={{ borderRadius: '16px' }}
-                    />
-                  </Stack>
+                      justifyContent="center"
+                    >
+                      <CustomImage
+                        alt={item.title}
+                        src={item.mainImage}
+                        width={{
+                          xs: '100%',
+                          sm: '600px',
+                          lg: '525px',
+                          lg: '625px',
+                        }}
+                        aspectRatio="3/2"
+                        style={{ borderRadius: '16px' }}
+                      />
+                    </Stack>
+                  </Grid>
                 </Grid>
-              </Grid>
+              </Container>
             </Box>
           )
         })}
