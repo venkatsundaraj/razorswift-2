@@ -1,30 +1,30 @@
-'use client';
-import React from 'react';
-import { Stack } from '@mui/material';
-import { Typography } from '@mui/material';
-import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
-import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths';
-import Image from 'next/image';
-import theme from '../../../themes/theme';
-import { motion } from 'framer-motion';
-import heroSectionData from '../../../constants/Homepage/heroSectionData';
+'use client'
+import React from 'react'
+import { Stack } from '@mui/material'
+import { Typography } from '@mui/material'
+import Link from '@mui/material/Link'
+import Box from '@mui/material/Box'
+import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths'
+import Image from 'next/image'
+import theme from '../../../themes/theme'
+import { motion } from 'framer-motion'
+import heroSectionData from '../../../constants/Homepage/heroSectionData'
 
-import styled from '@emotion/styled';
-import { TickerBoxData } from '@/constants/Homepage/TickerBoxData';
-import TickerComponent from '@/components/TickerComponent/TickerComponent';
-import fetchData from '@/utils/helpers/fetchData';
-import ExtraSuperText from '@/components/headingComponents/ExtraSuperText';
-import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
-import SuperText from '@/components/headingComponents/SuperText';
+import styled from '@emotion/styled'
+import { TickerBoxData } from '@/constants/Homepage/TickerBoxData'
+import TickerComponent from '@/components/TickerComponent/TickerComponent'
+import fetchData from '@/utils/helpers/fetchData'
+import ExtraSuperText from '@/components/headingComponents/ExtraSuperText'
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
+import SuperText from '@/components/headingComponents/SuperText'
 
-const TypographyOne = styled(Typography)(({ theme }) => ({}));
+const TypographyOne = styled(Typography)(({ theme }) => ({}))
 
 const HeroSection = () => {
   const banimg = {
     width: 'clamp(370px, 63.5vw, 1210px)',
     height: 'auto',
-  };
+  }
   const firstsec = {
     offscreen: {
       opacity: 0,
@@ -43,7 +43,7 @@ const HeroSection = () => {
         stiffness: 100,
       },
     },
-  };
+  }
 
   const parades = {
     offscreen: {
@@ -58,7 +58,7 @@ const HeroSection = () => {
         delay: 1,
       },
     },
-  };
+  }
 
   const parabutton = {
     offscreen: {
@@ -73,14 +73,14 @@ const HeroSection = () => {
         delay: 2,
       },
     },
-  };
+  }
 
   const secsecanime = {
     offscreen: {
       opacity: 0,
       y: 100,
     },
-  };
+  }
 
   return (
     <Stack
@@ -251,9 +251,16 @@ const HeroSection = () => {
                   pl: 2,
                   pr: 2,
                   alignSelf: 'center',
+                  transitionDuration: '0.3s',
                   '&:hover': {
                     backgroundColor: 'white',
                     color: 'primary.light',
+                    transform: 'translateY(-10px)',
+                    transitionDuration: '0.3s',
+                    transitionTimingFunction: 'ease',
+                    transitionDelay: '0s',
+                    transitionProperty: 'all',
+                    transitionBehavior: 'normal',
                   },
                 }}
               >
@@ -275,9 +282,16 @@ const HeroSection = () => {
                   pl: 2,
                   pr: 2,
                   alignSelf: 'center',
+                  transitionDuration: '0.3s',
                   '&:hover': {
                     backgroundColor: 'primary.main',
                     color: 'white',
+                    transform: 'translateY(-10px)',
+                    transitionDuration: '0.3s',
+                    transitionTimingFunction: 'ease',
+                    transitionDelay: '0s',
+                    transitionProperty: 'all',
+                    transitionBehavior: 'normal',
                   },
                 }}
               >
@@ -345,7 +359,7 @@ const HeroSection = () => {
         </motion.div>
       </motion.div>
     </Stack>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

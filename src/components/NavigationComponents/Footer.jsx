@@ -80,6 +80,7 @@ const footer = () => {
 
             mb: '30px',
             fontSize: { xs: '17px', lg: '28px' },
+            textAlign: 'center',
           }}
         >
           {footerdata[0].accord[0].description}

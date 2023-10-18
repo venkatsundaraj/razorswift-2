@@ -7,7 +7,8 @@ const footerdata = [
         img: homePageImagePaths.pathimgone,
         title: 'New Age Marketplace for',
         titleone: 'Talent Acquisition',
-        description: 'Grow your expertise and business with us!',
+        description:
+          'A dynamic ecosystem where talent and opportunities converge',
       },
     ],
   },
