@@ -1,7 +1,31 @@
+'use client'
 import React from 'react'
 import { Box } from '@mui/material'
 import { Typography } from '@mui/material'
+import { motion } from 'framer-motion'
+import SuperText from '@/components/headingComponents/SuperText'
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
+import herosection from '@/constants/Blogs/herosection'
 const HeroSection = () => {
+  const firstsec = {
+    offscreen: {
+      opacity: 0,
+      rotate: 0,
+      y: -30,
+    },
+    onscreen: {
+      opacity: [0.5, 0.6, 0.7, 0.8, 0.9, 1],
+      rotate: [0, 20, -20, 20, 0],
+      y: 0,
+      transition: {
+        type: 'spring',
+        duration: 2,
+        ease: 'easeInOut',
+        damping: 9.8,
+        stiffness: 100,
+      },
+    },
+  }
   return (
     <Box
       sx={{
@@ -11,19 +35,27 @@ const HeroSection = () => {
         marginTop: '120px',
       }}
     >
-      <Typography
-        sx={{
-          fontSize: { xs: '40px', md: '80px' },
-          fontWeight: '500',
-          color: '#A62973',
-          textAlign: 'center',
-        }}
-      >
-        A treasure trove of knowledge
-      </Typography>
-      <Typography sx={{ fontSize: '24px', textAlign: 'center' }}>
-        Knowledge hub, written for igniting growth and fueling ambitions.
-      </Typography>
+      <motion.div transition={{ staggerChildren: 1.9 }}>
+        <motion.div
+          variants={firstsec}
+          initial={'offscreen'}
+          whileInView={'onscreen'}
+          viewport={{ once: true }}
+        >
+          <SuperText
+            sx={{
+              fontWeight: '500',
+              color: '#A62973',
+              textAlign: 'center',
+            }}
+          >
+            {herosection[0].title}
+          </SuperText>
+          <ParagraphHeading sx={{ textAlign: 'center' }}>
+            {herosection[0].article}
+          </ParagraphHeading>
+        </motion.div>
+      </motion.div>
     </Box>
   )
 }
