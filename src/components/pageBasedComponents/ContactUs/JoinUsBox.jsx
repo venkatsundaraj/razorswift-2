@@ -35,7 +35,7 @@ function JoinUsBox({ joinUsData, ...props }) {
                 <CustomImage
                   src={joinUsData.joinUsIcon}
                   alt={joinUsData.title}
-                  width="250px"
+                  width="140px"
                   aspectRatio="4/3"
                 />
                 <TertiaryHeading
@@ -55,9 +55,13 @@ function JoinUsBox({ joinUsData, ...props }) {
               >
                 <PrimaryFillButton
                   href="/login"
-                  style={{ padding: '4px 16px', borderRadius: '8px' }}
+                  style={{
+                    padding: '4px 16px',
+                    borderRadius: '8px',
+                    width: '',
+                  }}
                   sx={{
-                    backgroundColor: 'pinkPalette.navLight',
+                    backgroundColor: '#f2b8ff',
                     color: 'pinkPalette.dark',
                     width: 'fit-content',
                     '&:hover': {
