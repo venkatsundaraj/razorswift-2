@@ -7,10 +7,12 @@ import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
 import { heroSection } from '@/constants/ContactUs/contactUsPageData'
 import { Box, Container, Grid, Stack } from '@mui/material'
+import { useInView } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 function BannerSection() {
   return (
-    <CustomSection style={{ padding: '96px 0' }}>
+    <CustomSection style={{ padding: 'clamp(96px,10vw, 136px) 0' }}>
       <Container>
         <Box>
           <Grid container spacing={1} alignItems="center">

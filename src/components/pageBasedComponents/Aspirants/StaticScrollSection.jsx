@@ -76,9 +76,6 @@ function StaticScrollSection({ stickySliderData }) {
                     md: '90%',
                     xl: '70%',
                   },
-                  // display: 'flex',
-                  // alignItems: {xs:'center', lg:"flex-end"},
-                  // justifyContent: 'center',
                   alignSelf: { xs: 'center' },
                   justifSelf: 'center',
                 }}

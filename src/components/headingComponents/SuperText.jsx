@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Typography } from '@mui/material';
-import styled from '@emotion/styled';
+import React from 'react'
+import { Typography } from '@mui/material'
+import styled from '@emotion/styled'
 
 const Heading = styled(Typography)(({ theme }) => ({
   lineHeight: 1.05,
@@ -20,14 +20,14 @@ const Heading = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up('xl')]: {
     fontSize: '112px',
   },
-}));
+}))
 
 function SuperText({ children, ...props }) {
   return (
     <Heading variant="h2" {...props}>
       {children}
     </Heading>
-  );
+  )
 }
 
-export default SuperText;
+export default SuperText

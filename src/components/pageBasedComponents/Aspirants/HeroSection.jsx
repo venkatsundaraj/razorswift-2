@@ -9,7 +9,9 @@ import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import SuperText from '@/components/headingComponents/SuperText'
 
 import { Box, Grid, Stack } from '@mui/material'
-import React, { useEffect } from 'react'
+import { useInView } from 'framer-motion'
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 function HeroSection({ heroSectionData, TickerBoxData }) {
   return (
