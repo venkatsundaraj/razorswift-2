@@ -8,7 +8,7 @@ import Image from 'next/image'
 import blog from '@/constants/ImagePaths/blog/blog'
 import { Stack } from '@mui/system'
 import { Typography } from '@mui/material'
-import Link from 'next/link'
+import { Link } from '@mui/material'
 import blogscarddata from '@/constants/Blogs/blogscarddata'
 import { Container } from '@mui/material'
 import { motion } from 'framer-motion'
@@ -38,7 +38,7 @@ const BlogCard = () => {
     },
   }
   return (
-    <DropDownWrapper style={{ width: '100%' }}>
+    <Box sx={{ paddingBottom: '64px' }} style={{ width: '100%' }}>
       <Container>
         <motion.div transition={{ staggerChildren: 1.9 }}>
           <motion.div
@@ -68,7 +68,13 @@ const BlogCard = () => {
                         }}
                       >
                         <Link
-                          style={{ textDecoration: 'none', color: 'black' }}
+                          sx={{
+                            textDecoration: 'none',
+                            color: 'black',
+                            '&:hover': {
+                              textDecoration: 'underline',
+                            },
+                          }}
                           href=""
                         >
                           {item.title}
@@ -97,7 +103,7 @@ const BlogCard = () => {
           </motion.div>
         </motion.div>
       </Container>
-    </DropDownWrapper>
+    </Box>
   )
 }
 
