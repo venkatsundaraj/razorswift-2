@@ -38,7 +38,7 @@ const BlogCard = () => {
     },
   }
   return (
-    <DropDownWrapper style={{ width: '100%' }}>
+    <Box sx={{ paddingBottom: '64px' }} style={{ width: '100%' }}>
       <Container>
         <motion.div transition={{ staggerChildren: 1.9 }}>
           <motion.div
@@ -97,7 +97,7 @@ const BlogCard = () => {
           </motion.div>
         </motion.div>
       </Container>
-    </DropDownWrapper>
+    </Box>
   )
 }
 
