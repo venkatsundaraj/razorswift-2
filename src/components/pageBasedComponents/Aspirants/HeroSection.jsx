@@ -11,12 +11,9 @@ import SuperText from '@/components/headingComponents/SuperText'
 import { Box, Grid, Stack } from '@mui/material'
 import { useInView } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 function HeroSection({ heroSectionData, TickerBoxData }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref)
-
-  console.log(isInView)
   return (
     <CustomSection style={{ padding: '0px', height: '100vh' }}>
       <Box
@@ -53,7 +50,6 @@ function HeroSection({ heroSectionData, TickerBoxData }) {
               }}
             >
               <SuperText
-                ref={ref}
                 sx={{
                   textAlign: { xs: 'left' },
                   color: heroSectionData.heading.secondaryColor,

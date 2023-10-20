@@ -18,7 +18,6 @@ function BannerSection() {
           <Grid container spacing={1} alignItems="center">
             <Grid item xs={12} md={6}>
               <PrimaryHeading
-                ref={ref}
                 component="h1"
                 sx={{
                   color: 'violetPalette.dark',
