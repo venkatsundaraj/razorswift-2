@@ -32,7 +32,7 @@ const HeroSection = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop: '200px',
+        marginTop: { xs: '110px', lg: '200px' },
       }}
     >
       <motion.div transition={{ staggerChildren: 1.9 }}>

@@ -8,7 +8,7 @@ import Image from 'next/image'
 import blog from '@/constants/ImagePaths/blog/blog'
 import { Stack } from '@mui/system'
 import { Typography } from '@mui/material'
-import Link from 'next/link'
+import { Link } from '@mui/material'
 import blogscarddata from '@/constants/Blogs/blogscarddata'
 import { Container } from '@mui/material'
 import { motion } from 'framer-motion'
@@ -68,7 +68,13 @@ const BlogCard = () => {
                         }}
                       >
                         <Link
-                          style={{ textDecoration: 'none', color: 'black' }}
+                          sx={{
+                            textDecoration: 'none',
+                            color: 'black',
+                            '&:hover': {
+                              textDecoration: 'underline',
+                            },
+                          }}
                           href=""
                         >
                           {item.title}
