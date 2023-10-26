@@ -1,32 +1,32 @@
-'use client';
-import React from 'react';
-import { Box } from '@mui/material';
-import { Typography } from '@mui/material';
-import Link from '@mui/material/Link';
-import data from '../../../constants/Homepage/whyrazor.js';
-import { Grid } from '@mui/material';
-import exploreSection from '@/constants/Homepage/exploresection.js';
-import exploreSectiontwo from '@/constants/Homepage/exploresectiontwo.js';
-import { motion } from 'framer-motion';
-import { Stack } from '@mui/material';
-import FastrackCardLists from '@/components/CardComponents/AspirantCards/FastrackCardLists';
-import ExtraSuperText from '@/components/headingComponents/ExtraSuperText';
-import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
-import SuperText from '@/components/headingComponents/SuperText';
-import PrimaryHeading from '@/components/headingComponents/PrimaryHeading';
+'use client'
+import React from 'react'
+import { Box } from '@mui/material'
+import { Typography } from '@mui/material'
+import Link from '@mui/material/Link'
+import data from '../../../constants/Homepage/whyrazor.js'
+import { Grid } from '@mui/material'
+import exploreSection from '@/constants/Homepage/exploresection.js'
+import exploreSectiontwo from '@/constants/Homepage/exploresectiontwo.js'
+import { motion } from 'framer-motion'
+import { Stack } from '@mui/material'
+import FastrackCardLists from '@/components/CardComponents/AspirantCards/FastrackCardLists'
+import ExtraSuperText from '@/components/headingComponents/ExtraSuperText'
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
+import SuperText from '@/components/headingComponents/SuperText'
+import PrimaryHeading from '@/components/headingComponents/PrimaryHeading'
 const ExploreSection = ({ ...props }) => {
   const headfont = {
     fontSize: 'clamp(50px, 4vw, 64px)',
-  };
+  }
   // const paraone = {
   //   fontSize: "clamp(15px, 1.4vw, 20px)",
   // };
   const numbersec = {
     fontSize: 'clamp(30px, 2.4vw, 40px)',
-  };
+  }
   const numbersecdescription = {
     fontSize: 'clamp(10px, 1.1vw, 16px)',
-  };
+  }
   const firstsec = {
     offscreen: {
       opacity: 0,
@@ -45,7 +45,7 @@ const ExploreSection = ({ ...props }) => {
         stiffness: 100,
       },
     },
-  };
+  }
   const singlesec = {
     offscreen: {
       opacity: 0,
@@ -64,7 +64,7 @@ const ExploreSection = ({ ...props }) => {
         stiffness: 100,
       },
     },
-  };
+  }
   return (
     <Box
       sx={{
@@ -146,6 +146,7 @@ const ExploreSection = ({ ...props }) => {
                 viewport={{ once: true }}
               >
                 <Link
+                  href={data[0].link}
                   variant="body1"
                   underline="none"
                   sx={{
@@ -222,6 +223,6 @@ const ExploreSection = ({ ...props }) => {
         </Grid>
       </Grid>
     </Box>
-  );
-};
-export default ExploreSection;
+  )
+}
+export default ExploreSection

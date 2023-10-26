@@ -111,7 +111,10 @@ const footer = () => {
               gap: '15px',
             }}
           >
-            <Link sx={{ cursor: 'pointer' }}>
+            <Link
+              href="https://twitter.com/wearerazorswift"
+              sx={{ cursor: 'pointer' }}
+            >
               <Image
                 alt="razorswift"
                 style={footerimg}
@@ -125,14 +128,20 @@ const footer = () => {
                 src={homePageImagePaths.fb}
               />
             </Link>
-            <Link sx={{ cursor: 'pointer' }}>
+            <Link
+              href="https://www.linkedin.com/company/razorswift"
+              sx={{ cursor: 'pointer' }}
+            >
               <Image
                 alt="razorswift"
                 style={footerimg}
                 src={homePageImagePaths.linkedin}
               />
             </Link>
-            <Link sx={{ cursor: 'pointer' }}>
+            <Link
+              href="https://www.instagram.com/wearerazorswift/"
+              sx={{ cursor: 'pointer' }}
+            >
               <Image
                 alt="razorswift"
                 style={footerimg}

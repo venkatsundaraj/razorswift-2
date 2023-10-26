@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material';
-import Image from 'next/image';
-import PrimaryFillButton from '../buttonComponents/PrimaryFillButton';
-import CustomImage from '../globalComponents/CustomImage/CustomImage';
-import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading';
-import SecondaryHeading from '../headingComponents/SecondaryHeading';
-import SubtitleHeading from '../headingComponents/SubtitleHeading';
+import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material'
+import Image from 'next/image'
+import PrimaryFillButton from '../buttonComponents/PrimaryFillButton'
+import CustomImage from '../globalComponents/CustomImage/CustomImage'
+import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading'
+import SecondaryHeading from '../headingComponents/SecondaryHeading'
+import SubtitleHeading from '../headingComponents/SubtitleHeading'
 
 function CareerDropDownBody({ dropDownBodyData, ...props }) {
   return (
@@ -73,7 +73,7 @@ function CareerDropDownBody({ dropDownBodyData, ...props }) {
               {dropDownBodyData.buttonData && (
                 <PrimaryFillButton
                   varient="contained"
-                  href="/contact-us"
+                  href={dropDownBodyData.buttonData.link}
                   sx={{
                     backgroundColor:
                       dropDownBodyData.buttonData?.backgroundColor,
@@ -184,7 +184,7 @@ function CareerDropDownBody({ dropDownBodyData, ...props }) {
         </Grid>
       </Container>
     </Box>
-  );
+  )
 }
 
-export default CareerDropDownBody;
+export default CareerDropDownBody
