@@ -22,6 +22,7 @@ export const businessDropDownBodyData = {
     title: 'Ask for Demo',
     backgroundColor: '#FFFFFF',
     color: '#A62973',
+    link: '/contact-us',
   },
   trophyImage: businessPageImagePaths.dropDownSection.clock,
   description:
