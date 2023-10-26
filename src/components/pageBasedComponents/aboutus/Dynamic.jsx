@@ -11,7 +11,9 @@ const Dynamic = () => {
       <Container>
         <Grid container spacing={1}>
           <Grid sx={{}} item md={6}>
-            <Typography>{DynamicConst[0].description}</Typography>
+            <Typography sx={{ color: '#EE5064', fontSize: '28px' }}>
+              {DynamicConst[0].description}
+            </Typography>
           </Grid>
           <Grid sx={{}} item md={6}>
             <Image alt="bannerImage" src={DynamicConst[0].img} />

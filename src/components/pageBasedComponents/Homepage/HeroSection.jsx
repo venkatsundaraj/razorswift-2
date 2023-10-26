@@ -1,22 +1,16 @@
 'use client'
-import React from 'react'
-import { Stack } from '@mui/material'
-import { Typography } from '@mui/material'
-import Link from '@mui/material/Link'
-import Box from '@mui/material/Box'
-import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths'
-import Image from 'next/image'
-import theme from '../../../themes/theme'
-import { motion } from 'framer-motion'
-import heroSectionData from '../../../constants/Homepage/heroSectionData'
-
-import styled from '@emotion/styled'
-import { TickerBoxData } from '@/constants/Homepage/TickerBoxData'
-import TickerComponent from '@/components/TickerComponent/TickerComponent'
-import fetchData from '@/utils/helpers/fetchData'
-import ExtraSuperText from '@/components/headingComponents/ExtraSuperText'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
-import SuperText from '@/components/headingComponents/SuperText'
+import TickerComponent from '@/components/TickerComponent/TickerComponent'
+import { TickerBoxData } from '@/constants/Homepage/TickerBoxData'
+import styled from '@emotion/styled'
+import { Stack, Typography } from '@mui/material'
+import Box from '@mui/material/Box'
+import Link from '@mui/material/Link'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import React from 'react'
+import heroSectionData from '../../../constants/Homepage/heroSectionData'
+import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths'
 
 const TypographyOne = styled(Typography)(({ theme }) => ({}))
 
@@ -238,7 +232,7 @@ const HeroSection = () => {
               }}
             >
               <Link
-                href="https://www.youtube.com/"
+                href="/login"
                 sx={{
                   textDecoration: 'none',
                   border: '1px solid',
@@ -272,6 +266,7 @@ const HeroSection = () => {
                 </Typography>
               </Link>
               <Link
+                href="/contact-us"
                 sx={{
                   textDecoration: 'none',
                   border: '1px solid',
@@ -292,6 +287,7 @@ const HeroSection = () => {
                     transitionDelay: '0s',
                     transitionProperty: 'all',
                     transitionBehavior: 'normal',
+                    cursor: 'pointer',
                   },
                 }}
               >

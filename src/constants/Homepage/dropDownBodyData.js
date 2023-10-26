@@ -14,6 +14,7 @@ const dropDownBodyData = [
       title: 'Ask for Demo',
       backgroundColor: '#FFFFFF',
       color: '#A62973',
+      link: '/contact-us',
     },
     whatToExpect: [
       {
@@ -59,6 +60,7 @@ const dropDownBodyData = [
       title: 'Create your Profile',
       backgroundColor: '#FFFFFF',
       color: '#A62973',
+      link: '/profile',
     },
     whatToExpect: [
       {
@@ -100,6 +102,7 @@ const dropDownBodyData = [
       title: 'Partner with Us',
       backgroundColor: '#FFFFFF',
       color: '#A62973',
+      link: '/partners',
     },
     whatToExpect: [
       {
