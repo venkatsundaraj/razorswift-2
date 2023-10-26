@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import HeroSec from '@/components/pageBasedComponents/aboutus/HeroSec'
-import RazorswiftForYou from '@/components/pageBasedComponents/aboutus/RazorswiftForYou'
+import Dynamic from '@/components/pageBasedComponents/aboutus/Dynamic'
 import RazorSwiftForBusinesses from '@/components/pageBasedComponents/aboutus/RazorSwiftForBusinesses'
 import ForBussiness from '@/components/pageBasedComponents/aboutus/ForBussiness'
 import OurCommitment from '@/components/pageBasedComponents/aboutus/OurCommitment'
@@ -12,7 +12,7 @@ const About = () => {
   return (
     <Box sx={{ overflowX: 'hidden' }} component="main">
       <HeroSec />
-      <RazorswiftForYou />
+      <Dynamic />
       <RazorSwiftForBusinesses />
       <ForBussiness />
       <MeettheTeam />

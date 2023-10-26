@@ -7,10 +7,6 @@ import Image from 'next/image'
 import footerdata from '@/constants/Homepage/footerdata'
 import homePageImagePaths from '@/constants/ImagePaths/Homepage/homePageImagePaths'
 const footer = () => {
-  const fontstyle = {
-    color: 'white',
-    fontSize: '24px',
-  }
   const footerimg = {
     width: '80%',
   }
@@ -44,12 +40,12 @@ const footer = () => {
 
             fontWeight: '600',
             textAlign: 'center',
-            lineHeight: '1.2',
+            lineHeight: '1.5',
 
             fontSize: {
               xs: '25px',
               md: 'clamp(40px,3.1vw,64px)',
-              lg: '64px',
+              lg: '48px',
             },
           }}
         >
@@ -67,7 +63,7 @@ const footer = () => {
             fontSize: {
               xs: '25px',
               md: 'clamp(40px,3.1vw,64px)',
-              lg: '64px',
+              lg: '48px',
             },
           }}
         >
@@ -79,7 +75,7 @@ const footer = () => {
             color: 'common.white',
 
             mb: '30px',
-            fontSize: { xs: '17px', lg: '28px' },
+            fontSize: { xs: '17px', lg: '20px' },
             textAlign: 'center',
           }}
         >
@@ -103,7 +99,9 @@ const footer = () => {
           }}
         >
           <Box>
-            <Image alt="razorswift" src={homePageImagePaths.footerlogo} />
+            <Link href="/">
+              <Image alt="razorswift" src={homePageImagePaths.footerlogo} />
+            </Link>
           </Box>
           <Box
             sx={{
@@ -153,14 +151,16 @@ const footer = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', mt: '3%' }}>
             {footerdata[1].accord.map((item, index) => (
               <Link
+                href={item.href}
                 key={index}
                 variant="body1"
                 underline="none"
-                style={fontstyle}
                 sx={{
                   cursor: 'pointer',
                   fontWeight: index == 0 ? '600' : '',
                   lineHeight: 2,
+                  fontSize: { xs: '16px', xl: '24px' },
+                  color: 'white',
                 }}
               >
                 {item.title}
@@ -170,14 +170,16 @@ const footer = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', mt: '3%' }}>
             {footerdata[2].accord.map((item, index) => (
               <Link
+                href={item.href}
                 key={index}
                 variant="body1"
                 underline="none"
-                style={fontstyle}
                 sx={{
                   cursor: 'pointer',
                   fontWeight: '500',
                   lineHeight: 2,
+                  fontSize: { xs: '16px', xl: '24px' },
+                  color: 'white',
                 }}
               >
                 {item.title}
@@ -201,7 +203,7 @@ const footer = () => {
           variant="body1"
           sx={{
             color: 'common.white',
-            fontSize: { xs: '16px', lg: '20px' },
+            fontSize: { xs: '16px', xl: '24px' },
             textDecoration: 'none',
             cursor: 'pointer',
           }}
@@ -213,7 +215,7 @@ const footer = () => {
             variant="body1"
             sx={{
               color: 'common.white',
-              fontSize: { xs: '16px', lg: '20px' },
+              fontSize: { xs: '16px', xl: '24px' },
               textDecoration: 'none',
               cursor: 'pointer',
             }}
@@ -224,7 +226,7 @@ const footer = () => {
             variant="body1"
             sx={{
               color: 'common.white',
-              fontSize: { xs: '16px', lg: '20px' },
+              fontSize: { xs: '16px', xl: '24px' },
               textDecoration: 'none',
               cursor: 'pointer',
             }}

@@ -20,12 +20,15 @@ const footerdata = [
       },
       {
         title: 'Aspirants',
+        href: '/aspirants',
       },
       {
         title: 'Businesses',
+        href: '/business',
       },
       {
         title: 'Partners',
+        href: '/partners',
       },
     ],
   },
@@ -34,12 +37,15 @@ const footerdata = [
     accord: [
       {
         title: 'Courses',
+        href: '/courses',
       },
       {
         title: 'About',
+        href: '/aboutus',
       },
       {
         title: 'Contact Us',
+        href: '/contactUs',
       },
     ],
   },

@@ -10,6 +10,8 @@ import { Container } from '@mui/material'
 import { motion } from 'framer-motion'
 import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 import futuredsection from '@/constants/Blogs/futuredsection'
+import Link from 'next/link'
+import { useRef } from 'react'
 const Futuredsection = () => {
   const banimg = {
     width: 'clamp(300px, 36.2vw, 530px)',
@@ -35,6 +37,7 @@ const Futuredsection = () => {
       },
     },
   }
+
   return (
     <DropDownWrapper style={{ width: '100%' }}>
       <motion.div transition={{ staggerChildren: 1.9 }}>
@@ -81,6 +84,7 @@ const Futuredsection = () => {
                     >
                       {futuredsection[0].para}
                     </ParagraphHeading>
+
                     <Typography
                       sx={{
                         fontSize: '20px',
