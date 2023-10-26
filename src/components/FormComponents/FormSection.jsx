@@ -1,23 +1,22 @@
 'use client'
 
-import React from 'react'
-import InputField from './FormUI/InputField/InputField'
-import SubmitButton from './FormUI/SubmitButton/SubmitButton'
-import { Stack, Box } from '@mui/material'
-import { Form, Formik } from 'formik'
+import { reverseCheckAndSet } from '@/utils/helpers/CommonFunctions/Functions'
+import { callApi } from '@/utils/helpers/apiRequest'
 import {
   alphabetsValidationSchema,
-  validateContactNumber,
   emailValidation,
   messageValidation,
   nameValidationwithNoRegex,
+  validateContactNumber,
 } from '@/utils/helpers/validationSchemas'
-import { reverseCheckAndSet } from '@/utils/helpers/CommonFunctions/Functions'
-import * as Yup from 'yup'
-import { callApi } from '@/utils/helpers/apiRequest'
+import { Box, Stack } from '@mui/material'
 import { AxiosError } from 'axios'
-import SelectWrapper from './FormUI/Select/SelectWrapper'
+import { Form, Formik } from 'formik'
+import * as Yup from 'yup'
 import ExtraParagraphHeading from '../headingComponents/ExtraParagraphHeading'
+import InputField from './FormUI/InputField/InputField'
+import SelectWrapper from './FormUI/Select/SelectWrapper'
+import SubmitButton from '@/components/FormComponents/FormUI/SubmitButton/SubmitButton'
 
 const initialValues = {
   fullName: '',
@@ -45,9 +44,8 @@ function FormSection() {
         onSubmit={async (values, { resetForm, setSubmitting }) => {
           try {
             setSubmitting(true)
-            // await callApi('contactRequest', reverseCheckAndSet(values))
-            await new Promise((resolve) => setTimeout(resolve, 4000))
-            console.log(values)
+            await callApi('contactRequest', reverseCheckAndSet(values))
+            // await new Promise((resolve) => setTimeout(resolve, 4000))
           } catch (err) {
             if (err instanceof AxiosError) {
               console.log(err)

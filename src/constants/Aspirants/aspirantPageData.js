@@ -7,9 +7,9 @@ export const solutionsData = [
 ]
 export const headerdData = {
   navItems: [
-    { id: 2, name: 'Aspirants', link: '/' },
-    { id: 1, name: 'Partners', link: '/' },
-    { id: 3, name: 'Business', link: '/' },
+    { id: 2, name: 'Aspirants', link: '/aspirants' },
+    { id: 1, name: 'Partners', link: '/partners' },
+    { id: 3, name: 'Business', link: '/business' },
   ],
   forMenu: [
     { id: 1, text: 'M' },
@@ -49,7 +49,7 @@ export const headerdData = {
     {
       id: 3,
       name: 'About',
-      link: '/',
+      link: '/about-us',
     },
     ,
     {
@@ -189,6 +189,7 @@ export const dropDownBodyData = [
       title: 'Explore',
       backgroundColor: '#FFFFFF',
       color: '#A62973',
+      link: '/contact-us',
     },
     trophyImage: aspirantPageImagePaths.dropDownSection.trophy,
     description:
@@ -230,6 +231,7 @@ export const dropDownBodyData = [
       title: 'Explore',
       backgroundColor: '#FFFFFF',
       color: '#A62973',
+      link: '/contact-us',
     },
     trophyImage: aspirantPageImagePaths.dropDownSection.spring,
     description:

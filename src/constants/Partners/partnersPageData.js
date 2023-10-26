@@ -23,6 +23,7 @@ export const partnersDropDownBodyData = {
     title: 'Partner with Us',
     backgroundColor: '#FFFFFF',
     color: '#EE5064',
+    link: '/contact-us',
   },
   trophyImage: businessPageImagePaths.dropDownSection.clock,
   description:

@@ -37,7 +37,7 @@ function Navigation({ headerdData }) {
         {headerdData.navItems.map((item) => (
           <ListItem key={item.id} sx={{ px: 1 }}>
             <NavButton
-              link={`${item.link}`}
+              href={item.link}
               sx={{ color: 'primaryPalette.black' }}
               startIcon={<ExitToAppIcon />}
             >
