@@ -3,6 +3,7 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 import styled from '@emotion/styled'
+import { motion } from 'framer-motion'
 
 const Heading = styled(Typography)(({ theme }) => ({
   lineHeight: 1.05,
