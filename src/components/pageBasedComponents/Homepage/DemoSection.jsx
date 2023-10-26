@@ -1,16 +1,16 @@
-'use client';
-import React from 'react';
-import { Box } from '@mui/system';
-import { Typography } from '@mui/material';
-import Link from '@mui/material/Link';
-import Image from 'next/image';
-import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths';
-import demosection from '@/constants/Homepage/demosection';
-import { motion } from 'framer-motion';
-import SuperText from '@/components/headingComponents/SuperText';
-import ParagraphHeading from '@/components/headingComponents/ParagraphHeading';
+'use client'
+import React from 'react'
+import { Box } from '@mui/system'
+import { Typography } from '@mui/material'
+import Link from '@mui/material/Link'
+import Image from 'next/image'
+import homePageImagePaths from '../../../constants/ImagePaths/Homepage/homePageImagePaths'
+import demosection from '@/constants/Homepage/demosection'
+import { motion } from 'framer-motion'
+import SuperText from '@/components/headingComponents/SuperText'
+import ParagraphHeading from '@/components/headingComponents/ParagraphHeading'
 const DemoSection = () => {
-  console.log(demosection);
+  console.log(demosection)
   const singlesec = {
     offscreen: {
       opacity: 0,
@@ -29,7 +29,7 @@ const DemoSection = () => {
         stiffness: 100,
       },
     },
-  };
+  }
   return (
     <Box
       sx={{
@@ -38,7 +38,6 @@ const DemoSection = () => {
         flexDirection: 'column',
         alignItems: 'center',
         height: { xs: '100%', sm: '', md: '' },
-
         justifyContent: 'center',
         padding: '40px 0',
       }}
@@ -80,7 +79,6 @@ const DemoSection = () => {
             </Box>
           </motion.div>
         </motion.div>
-
         <Box sx={{ display: 'flex', gap: 5 }}>
           <Box
             sx={{
@@ -103,6 +101,7 @@ const DemoSection = () => {
             }}
           >
             <Link
+              href={demosection.link}
               variant="body1"
               underline="none"
               sx={{
@@ -122,7 +121,6 @@ const DemoSection = () => {
         </Box>
       </Box>
     </Box>
-  );
-};
-
-export default DemoSection;
+  )
+}
+export default DemoSection

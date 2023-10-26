@@ -1,19 +1,19 @@
-'use client';
-import pathwayheads from '@/constants/Homepage/pathwayheads.js';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import { Grid } from '@mui/material';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
-import { Box } from '@mui/system';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from '@mui/material/Link';
-import * as React from 'react';
-import { useState } from 'react';
-import datatwo from '../../../constants/Homepage/pathwaytwo.js';
+'use client'
+import pathwayheads from '@/constants/Homepage/pathwayheads.js'
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
+import { Grid } from '@mui/material'
+import MuiAccordion from '@mui/material/Accordion'
+import MuiAccordionDetails from '@mui/material/AccordionDetails'
+import MuiAccordionSummary from '@mui/material/AccordionSummary'
+import { styled } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import { Box } from '@mui/system'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import Link from '@mui/material/Link'
+import * as React from 'react'
+import { useState } from 'react'
+import datatwo from '../../../constants/Homepage/pathwaytwo.js'
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -25,7 +25,7 @@ const Accordion = styled((props) => (
   '&:before': {
     display: 'none',
   },
-}));
+}))
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
@@ -42,89 +42,89 @@ const AccordionSummary = styled((props) => (
   '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
   },
-}));
+}))
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: '1px solid rgba(0, 0, 0, .125)',
-}));
+}))
 
 const fonttitle = {
   fontWeight: 'bold',
-};
+}
 
 const fontdes = {
   fontSize: 'clamp(15px, 1.2vw, 20px)',
 
   fontWeight: '500',
   height: 'clamp(75px, 5.5vw, 110px)',
-};
+}
 
 const fontaspithree = {
   textDecoration: 'none',
   fontWeight: '500',
-};
+}
 
 const fontaspithreemob = {
   textDecoration: 'none',
   fontWeight: '500',
   display: 'flex',
   justifyContent: 'center',
-};
+}
 
 const accordimg = {
   width: 'clamp(280px, 21.7vw, 360px)',
 
   height: 'auto',
-};
+}
 
 export default function PathwaySection() {
-  const [expanded, setExpanded] = React.useState('panel0');
-  const [expandedone, setExpandedone] = React.useState('panelone0');
+  const [expanded, setExpanded] = React.useState('panel0')
+  const [expandedone, setExpandedone] = React.useState('panelone0')
   // const handleChange = (panel) => (event, newExpanded) => {
   //   setExpanded(newExpanded ? panel : null)
   // }
-  const [lastaccord, setLastaccord] = React.useState('panelone0');
+  const [lastaccord, setLastaccord] = React.useState('panelone0')
   const handleChangeone = (panelone) => (eventone, newExpandedone) => {
-    setLastaccord(panelone);
-    if (expandedone === panelone) return;
-    setExpandedone(newExpandedone ? panelone : null);
-  };
+    setLastaccord(panelone)
+    if (expandedone === panelone) return
+    setExpandedone(newExpandedone ? panelone : null)
+  }
 
-  const [clickedId, setClickedId] = useState();
-  const [content, setContent] = useState(datatwo[0]);
-  const [selectedItemId, setSelectedItemId] = useState(1);
-  const [selectedAccordId, setSelectedAccordId] = useState(datatwo[0]);
-  const [mobileDescription, setMobileDescription] = useState(pathwayheads[0]);
+  const [clickedId, setClickedId] = useState()
+  const [content, setContent] = useState(datatwo[0])
+  const [selectedItemId, setSelectedItemId] = useState(1)
+  const [selectedAccordId, setSelectedAccordId] = useState(datatwo[0])
+  const [mobileDescription, setMobileDescription] = useState(pathwayheads[0])
   const handleTitleClick = (id) => {
     // Find the item in datatwo with a matching id
     const matchingItem = datatwo.find(
       (item) => item.id.toString() === id.toString()
-    );
+    )
 
-    setContent(matchingItem);
+    setContent(matchingItem)
 
-    setClickedId(matchingItem);
-    console.log(clickedId);
-    setSelectedItemId(id);
-  };
+    setClickedId(matchingItem)
+    console.log(clickedId)
+    setSelectedItemId(id)
+  }
 
   const handleMobileClick = (id) => {
     const matchingcont = pathwayheads.find(
       (item) => item.id.toString() === id.toString()
-    );
-    setMobileDescription(matchingcont);
+    )
+    setMobileDescription(matchingcont)
     const matchingItem = datatwo.find(
       (item) => item.id.toString() === id.toString()
-    );
+    )
 
-    setContent(matchingItem);
-    setSelectedItemId(id);
-  };
+    setContent(matchingItem)
+    setSelectedItemId(id)
+  }
   const handleTitleAccord = (id) => {
-    setSelectedAccordId(id);
-  };
-  console.log(mobileDescription?.description);
+    setSelectedAccordId(id)
+  }
+  console.log(mobileDescription?.description)
   const containerVariants = {
     open: {
       opacity: 1,
@@ -142,7 +142,7 @@ export default function PathwaySection() {
         height: { type: 'spring', stiffness: 100, damping: 10 },
       },
     },
-  };
+  }
 
   const firstsec = {
     offscreen: {
@@ -162,7 +162,7 @@ export default function PathwaySection() {
         stiffness: 100,
       },
     },
-  };
+  }
 
   const secondsec = {
     offscreen: {
@@ -182,7 +182,7 @@ export default function PathwaySection() {
         stiffness: 100,
       },
     },
-  };
+  }
 
   const thirdsec = {
     offscreen: {
@@ -202,7 +202,7 @@ export default function PathwaySection() {
         stiffness: 100,
       },
     },
-  };
+  }
   return (
     <Box
       sx={{
@@ -537,5 +537,5 @@ export default function PathwaySection() {
         </Grid>
       </Grid>
     </Box>
-  );
+  )
 }

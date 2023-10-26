@@ -12,7 +12,6 @@ const footer = () => {
   }
   const d = new Date()
   let year = d.getFullYear()
-
   return (
     <Box
       sx={{
@@ -37,11 +36,9 @@ const footer = () => {
           variant="body1"
           sx={{
             color: 'common.white',
-
             fontWeight: '600',
             textAlign: 'center',
             lineHeight: '1.5',
-
             fontSize: {
               xs: '25px',
               md: 'clamp(40px,3.1vw,64px)',
@@ -55,7 +52,6 @@ const footer = () => {
           variant="body1"
           sx={{
             color: 'common.white',
-
             fontWeight: '600',
             textAlign: 'center',
             lineHeight: '1',
@@ -73,7 +69,6 @@ const footer = () => {
           variant="body1"
           sx={{
             color: 'common.white',
-
             mb: '30px',
             fontSize: { xs: '17px', lg: '20px' },
             textAlign: 'center',
@@ -111,7 +106,10 @@ const footer = () => {
               gap: '15px',
             }}
           >
-            <Link sx={{ cursor: 'pointer' }}>
+            <Link
+              href="https://twitter.com/wearerazorswift"
+              sx={{ cursor: 'pointer' }}
+            >
               <Image
                 alt="razorswift"
                 style={footerimg}
@@ -125,14 +123,20 @@ const footer = () => {
                 src={homePageImagePaths.fb}
               />
             </Link>
-            <Link sx={{ cursor: 'pointer' }}>
+            <Link
+              href="https://www.linkedin.com/company/razorswift"
+              sx={{ cursor: 'pointer' }}
+            >
               <Image
                 alt="razorswift"
                 style={footerimg}
                 src={homePageImagePaths.linkedin}
               />
             </Link>
-            <Link sx={{ cursor: 'pointer' }}>
+            <Link
+              href="https://www.instagram.com/wearerazorswift/"
+              sx={{ cursor: 'pointer' }}
+            >
               <Image
                 alt="razorswift"
                 style={footerimg}
@@ -238,5 +242,4 @@ const footer = () => {
     </Box>
   )
 }
-
 export default footer

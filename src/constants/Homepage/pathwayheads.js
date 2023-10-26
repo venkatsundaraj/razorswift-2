@@ -4,15 +4,14 @@ const pathwayheads = [
     title: 'Businesses',
     description: 'Standardise assessments and training.',
     button: 'Craft your pathway now',
-    link: 'https://www.razorswift.net/',
+    link: '/contact-us',
   },
   {
     id: 2,
     title: 'Aspirants',
     description: 'Be a niche specialist to achieve your potential',
     button: 'Choose your pathway now',
-    link: 'https://www.razorswift.net/',
+    link: '/signup',
   },
 ]
-
 export default pathwayheads
