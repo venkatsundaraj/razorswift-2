@@ -11,6 +11,7 @@ const Aboutusimagepathway = {
   parga: require('/public/images/Aboutus/Parga.webp').default,
   priyanka: require('/public/images/Aboutus/Priyanka.webp').default,
   newbanner: require('/public/images/Aboutus/about-us-banner.svg').default,
-};
+  puzzlenew: require('/public/images/Aboutus/puzzle-vector.svg').default,
+}
 
-export default Aboutusimagepathway;
+export default Aboutusimagepathway
