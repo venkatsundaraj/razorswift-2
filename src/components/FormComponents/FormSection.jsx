@@ -45,11 +45,8 @@ function FormSection() {
         onSubmit={async (values, { resetForm, setSubmitting }) => {
           try {
             setSubmitting(true)
-            const response = await callApi(
-              'contactRequest',
-              reverseCheckAndSet(values)
-            )
-
+            // await callApi('contactRequest', reverseCheckAndSet(values))
+            await new Promise((resolve) => setTimeout(resolve, 4000))
             console.log(values)
           } catch (err) {
             if (err instanceof AxiosError) {
@@ -57,7 +54,7 @@ function FormSection() {
             }
           } finally {
             setSubmitting(false)
-            // resetForm();
+            resetForm()
           }
         }}
       >
@@ -86,8 +83,7 @@ function FormSection() {
                 placeholder="Looking for"
                 name="reason"
                 label="Reason"
-                textLabel="Reason"
-                noTextLabel
+                textlabel="Reason"
                 required
               />
             </Stack>

@@ -1,5 +1,5 @@
-import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths';
-import businessPageImagePaths from '../ImagePaths/Business/businessPageImagePaths';
+import aspirantPageImagePaths from '../ImagePaths/Aspirants/aspirantPageImagePaths'
+import businessPageImagePaths from '../ImagePaths/Business/businessPageImagePaths'
 
 export const heroSectionData = {
   heading: {
@@ -11,7 +11,7 @@ export const heroSectionData = {
   description: 'A dynamic ecosystem where talent and opportunities converge',
   buttonContent: 'Ask for Demo',
   bannerImage: businessPageImagePaths.heroSection.banner,
-};
+}
 
 export const businessDropDownBodyData = {
   id: 1,
@@ -56,7 +56,7 @@ export const businessDropDownBodyData = {
         'Enhanced exposure and increased recognition among aspirants with corporate pathways',
     },
   ],
-};
+}
 
 export const whyRazorswiftSection = {
   title: 'WHY RAZORSWIFT',
@@ -95,14 +95,14 @@ export const whyRazorswiftSection = {
         'Millennials with mentors felt empowered and had greater confidence at work',
     },
   ],
-};
+}
 
 export const readyToStartData = {
   title: 'READY TO GET STARTED?',
   description: 'Hire at scale with the click of a button',
   mainImage: businessPageImagePaths.readyToGetStarted.mainImage,
   buttonText: 'Get a Demo',
-};
+}
 
 export const quickTalentDiscoveryData = {
   mainTitle: 'Razorswift PATHWAYS - QUICK TALENT DISCOVERY',
@@ -122,7 +122,7 @@ export const quickTalentDiscoveryData = {
       id: 2,
       title: 'ROI driven efficiency',
       description:
-        'Leverage AI and data insights along with their party integrations for unparalleled cost and time efficiency.',
+        'Leverage AI and data insights along with third party integrations for unparalleled cost and time efficiency.',
       backgroundColor: '#E5BED5',
       image: businessPageImagePaths.pathwayIcons.icon2,
       mainImage: businessPageImagePaths.dropDownSection.mainImage2,
@@ -146,4 +146,4 @@ export const quickTalentDiscoveryData = {
       mainImage: businessPageImagePaths.dropDownSection.mainImage4,
     },
   ],
-};
+}

@@ -10,7 +10,6 @@ function ContactUs() {
     <Box component="main">
       <BannerSection />
       <JoinUsBox joinUsData={joinUsData} />
-      {/* <ContactBox /> */}
     </Box>
   )
 }

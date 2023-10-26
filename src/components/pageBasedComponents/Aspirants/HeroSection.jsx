@@ -50,6 +50,9 @@ function HeroSection({ heroSectionData, TickerBoxData }) {
               }}
             >
               <SuperText
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                as={motion.div}
                 sx={{
                   textAlign: { xs: 'left' },
                   color: heroSectionData.heading.secondaryColor,
